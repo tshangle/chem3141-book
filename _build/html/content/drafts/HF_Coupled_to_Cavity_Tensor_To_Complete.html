@@ -1,0 +1,1504 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Introduction to Molecular CQED &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'content/drafts/HF_Coupled_to_Cavity_Tensor_To_Complete';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="My sample book - Home"/>
+    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    5. Hydrogen Atom
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Lecture Notes</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../lecture_notes/qm_postulates_two_level.html">Chapter 1: Introduction to Quantum Phenomena</a></li>
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../lecture_notes/qm_postulates.html">Chapter 2: The Postulates Revisited</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lecture_notes/translation.html">Chapter 3: Translational Motion</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="../lecture_notes/vibration.html">Chapter 4: Vibrational Motion</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../lecture_notes/rotation.html">Chapter 5: Angular Momentum, and Rotational Motion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lecture_notes/hydrogen.html">Chapter 6: The Hydrogen Atom</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lecture_notes/variation.html">Chapter 7: The Variation Theorem</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lecture_notes/perturbation.html">Chapter 8: Perturbation Theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lecture_notes/SphHarm_visualize.html">Visualizing Spherical harmonics</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Problem Sets</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../problem_sets/ps_1.html">Problem Set 1</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Computational Sets</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../computational_sets/note05.html">Additional Notes on Spin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../computational_sets/Spin_one_half.html">Computational Set 1: Introduction to Spin 1/2</a></li>
+
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Resources</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../resources/formula_sheet.html">Useful Formulae</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../resources/note01.html">Hydrogenlike atoms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../resources/note03.html">Atomic orbitals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../resources/note05.html">Additional Notes on Spin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../resources/notebooks.html">Content with notebooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../resources/spin_background.html">Spin</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/FoleyLab/chem3141-book/blob/main/content/drafts/HF_Coupled_to_Cavity_Tensor_To_Complete.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/FoleyLab/chem3141-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/FoleyLab/chem3141-book/issues/new?title=Issue%20on%20page%20%2Fcontent/drafts/HF_Coupled_to_Cavity_Tensor_To_Complete.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/content/drafts/HF_Coupled_to_Cavity_Tensor_To_Complete.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Introduction to Molecular CQED</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Introduction to Molecular CQED</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-statements">Import Statements</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#details-of-the-matter-subsystem-within-the-harmonic-approximation">Details of the Matter Subsystem within the Harmonic Approximation</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#unit-system">Unit system</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#printing-matrices">Printing matrices</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#extensions-to-anharmonic-oscillators">Extensions to Anharmonic Oscillators</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#modeling-electronic-strong-coupling">Modeling Electronic Strong Coupling</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="introduction-to-molecular-cqed">
+<h1>Introduction to Molecular CQED<a class="headerlink" href="#introduction-to-molecular-cqed" title="Link to this heading">#</a></h1>
+<p>Foley Lab, UNC Charlotte</p>
+<section id="import-statements">
+<h2>Import Statements<a class="headerlink" href="#import-statements" title="Link to this heading">#</a></h2>
+<p>We will use several libraries for numerical computations and plotting in this notebook.  Run the next code cell to import all necessary libraries <strong>before</strong> proceeding to any subsequent lines of code!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="kn">import</span> <span class="n">linalg</span> <span class="k">as</span> <span class="n">la</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">matplotlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">cm</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">matplotlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">rcParams</span>
+<span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;font.family&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;serif&#39;</span>
+<span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;font.size&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">12</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="overview">
+<h1>Overview<a class="headerlink" href="#overview" title="Link to this heading">#</a></h1>
+<p>In this notebook we will consider vibrational strong coupling between a cavity and the HF molecule where the cavity
+is tuned to the fundamental transition of HF within the Harmonic Oscillator approximation.</p>
+<p>We will deploy two different Hamiltonians: The minimal coupling Hamiltonian ( “p dot A”), and the “d dot E” Hamiltonian from Eq. (2.50) and Eq. (2.51) of Chapter 2.</p>
+<p>The form of these coupled Hamiltonians are
+\begin{equation}
+\mathcal{H}<em>{\rm p \cdot A} = \mathcal{H}</em>{\rm m} \otimes \mathcal{I}<em>{\rm P} + \mathcal{I}</em>{\rm M} \otimes \mathcal{H}<em>{\rm c} + \mathcal{I}</em>{\rm M} \otimes \mathcal{H}<em>{\rm dia} + \mathcal{H}</em>{\rm int},
+\end{equation}
+for the minimal coupling Hamiltonian, and
+\begin{equation}
+\mathcal{H}<em>{\rm PF} = \mathcal{H}</em>{\rm m} \otimes \mathcal{I}<em>{\rm P} + \mathcal{I}</em>{\rm M} \otimes \mathcal{H}<em>{\rm c} + \mathcal{H}</em>{\rm dse} \otimes \mathcal{I}<em>{\rm P}  + \mathcal{H}</em>{\rm int},
+\end{equation}
+for the Pauli-Fierz Hamiltonian.</p>
+<p>The operator forms of the bare matter term is given in Eq. 2.14, the bare cavity term in Eq. 2.18, the interaction and diamagnetic terms for the “p dot A” Hamiltonian are given in Eq. 2.25, and the interaction and dipole self energy terms for the Pauli-Fierz Hamiltonian are given in Eq. 2.43.  Each term can be expressed in terms of the
+raising and lowering operators for either the matter, photon, or (for the interaction terms) both subsystems.  So, a key first step for building the matrix representations of the Hamiltonians will be to build matrix representations of the ladder operators for each subsystem.  We will define a function <code class="docutils literal notranslate"><span class="pre">build_ladder_operator_matrix(dimension)</span></code> that will do just this; because the ladder operators for the matter subsystem within the Harmonic oscillator approximation obey the same rules as the ladder operators for the photonic subsystem, we can use the same function for both subsystems, we will just store the matrices in different variables to keep track of them in the execution of our code.</p>
+<p>The next code block will define this function and illustrate its use for several different truncations of the dimension of the basis.  This function will be called upon later in this notebook when we start building terms in the Hamiltonian matrices.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">build_ladder_operator_matrices</span><span class="p">(</span><span class="n">dimension</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Builds the matrix representation of the bosonic raising and lowering operators to be used </span>
+<span class="sd">    for the matter subsystem within the Harmonic oscillator approximation and the photonic subsystem</span>
+<span class="sd">    </span>
+<span class="sd">    Arguments</span>
+<span class="sd">    ---------</span>
+<span class="sd">    </span>
+<span class="sd">    dimension : The dimension of the truncated Hilbert space.</span>
+<span class="sd">    </span>
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    raise_mat : the raising operator as a NumPy array</span>
+<span class="sd">    </span>
+<span class="sd">    lower_mat : the lowering operator as a NumPy array</span>
+<span class="sd">    </span>
+<span class="sd">    Example</span>
+<span class="sd">    --------</span>
+<span class="sd">    a_dag, a = build_ladder_operator_matrices(3)</span>
+<span class="sd">    </span>
+<span class="sd">    &gt;&gt;&gt; a  </span>
+<span class="sd">    &gt;&gt;&gt;       [[0.         1.         0.        ]</span>
+<span class="sd">              [0.         0.         1.41421356]</span>
+<span class="sd">              [0.         0.         0.        ]]</span>
+<span class="sd">    </span>
+<span class="sd">    &gt;&gt;&gt; a_dag</span>
+<span class="sd">    &gt;&gt;&gt;       [[0.         0.         0.        ]</span>
+<span class="sd">               [1.         0.         0.        ]</span>
+<span class="sd">               [0.         1.41421356 0.        ]]</span>
+<span class="sd">    </span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># initialize the lowering operator as a dim x dim array of zeros</span>
+    <span class="c1"># &lt; INSERT CODE HERE &gt;</span>
+    
+    <span class="c1"># populate the i,i+1 elements such that a[i,i+1] = sqrt(i+1)</span>
+    <span class="c1"># terminating at element a[dim-1,dim]</span>
+    <span class="c1"># &lt; INSERT CODE HERE &gt;</span>
+    
+    <span class="c1"># define the raising operator as the adjoint of the lowering operator (a.conj().T)</span>
+    <span class="c1"># &lt; INSERT CODE HERE &gt;</span>
+    
+    <span class="c1"># return the raising and lowering operators </span>
+    <span class="c1"># &lt; INSERT CODE HERE &gt;</span>
+    
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># build ladder operator when matter Hilbert space is truncated to include 4 states</span>
+<span class="n">a_dag</span><span class="p">,</span> <span class="n">a</span> <span class="o">=</span> <span class="n">build_ladder_operator_matrices</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+
+<span class="c1"># print raising operator</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The raising operator matrix for the matter Hilbert space truncated to include 4 states&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a_dag</span><span class="p">)</span>
+
+<span class="c1"># print lowering opreator</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The lowering operator matrix for the matter Hilbert space truncated to include 4 states&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+
+<span class="c1"># build ladder operator when matter Hilbert space is truncated to include 4 states</span>
+<span class="n">b_dag</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">build_ladder_operator_matrices</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+
+<span class="c1"># print raising operator</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The raising operator matrix for the photonic Hilbert space truncated to include 2 states&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">b_dag</span><span class="p">)</span>
+
+<span class="c1"># print lowering opreator</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The lowering operator matrix for the photonic Hilbert space truncated to include 2 states&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># build ladder operator when matter Hilbert space is truncated to include 4 states</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">a_dag</span><span class="p">,</span> <span class="n">a</span> <span class="o">=</span> <span class="n">build_ladder_operator_matrices</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="c1"># print raising operator</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The raising operator matrix for the matter Hilbert space truncated to include 4 states&quot;</span><span class="p">)</span>
+
+<span class="ne">TypeError</span>: cannot unpack non-iterable NoneType object
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="details-of-the-matter-subsystem-within-the-harmonic-approximation">
+<h1>Details of the Matter Subsystem within the Harmonic Approximation<a class="headerlink" href="#details-of-the-matter-subsystem-within-the-harmonic-approximation" title="Link to this heading">#</a></h1>
+<p>We will model the matter subsystem as the vibrational structure of the hydrogen fluoride molecule (HF) within the Harmonic approximation.  Here we discuss the relevant parameters that will enter into the bare matter Hamiltonian terms and the coupling terms in both Hamiltonians.</p>
+<p>In the coupled Hamiltonians, <span class="math notranslate nohighlight">\(z\)</span> is the effective charge of the HF molecule, <span class="math notranslate nohighlight">\(\mu\)</span> is the reduced mass of the HF molecule,
+\begin{equation}
+\mu = \frac{m_F \cdot m_H}{m_F + m_H}
+\end{equation}
+and we will define the potential <span class="math notranslate nohighlight">\(V(x)\)</span> to be the Harmonic potential of HF as,
+\begin{equation}
+V(x) = \frac{1}{2} k x^2 = \frac{1}{2} \mu \omega^2 x^2.
+\end{equation}</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="unit-system">
+<h1>Unit system<a class="headerlink" href="#unit-system" title="Link to this heading">#</a></h1>
+<p>We will work in atomic units.  In atomic units, so the mass of H and F, the Harmonic force constant, the cavity frequency, the charge
+associated with the dipole operator, and the vector potential must all be expressed in atomic units.  We will consider an arbitrary range of values for the vector potential, but all other values will be fixed as follows:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Quantity</p></th>
+<th class="head"><p>Value in Atomic Units</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>mass of F</p></td>
+<td><p>34616.6811</p></td>
+</tr>
+<tr class="row-odd"><td><p>mass of H</p></td>
+<td><p>1837.4731</p></td>
+</tr>
+<tr class="row-even"><td><p>Force Constant  of HF*</p></td>
+<td><p>0.6377</p></td>
+</tr>
+<tr class="row-odd"><td><p>Equilibrium bondlength*</p></td>
+<td><p>1.7310</p></td>
+</tr>
+<tr class="row-even"><td><p>Charge*</p></td>
+<td><p>-0.4688</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cavity frequency*</p></td>
+<td><p>0.01911</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>The force constant, charge, and cavity frequency are all quantities that we have derived from some calculations.<br />
+We estimated the force constant using quantum chemistry calculations, specifically using numerical derivatives of CCSD(T)/cc-pVTZ
+energies about the equilibrium geometry located by a geometry optimization at the same level.  Similarly, we computed the RHF/cc-pVTZ dipole moment at this optimized geometry and derived the effective charge as the dipole moment divided by the equilibrium bond length.  The
+cavity frequency is matched to the fundamental frequency of HF, which is derived from the Harmonic approximation as follows:
+\begin{equation}
+\omega_{\rm cav} = \omega_{\rm f} = \sqrt{ \frac{k}{\mu} }
+\end{equation}
+where <span class="math notranslate nohighlight">\(k\)</span> is the force constant and <span class="math notranslate nohighlight">\(\mu\)</span> is the reduced mass and <span class="math notranslate nohighlight">\(\omega_{\rm f}\)</span> indicates the fundamental frequency of the HF molecule.</p>
+<p>In the block below, we will assign or compute these parameters.  In a subsequent block, we will also plot the vibrational
+energy levels and the potential of the HF molecule in atomic units.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Force constant of HF in atomic units as computed using centered finite differences at the CCSD(T)/cc-pVTZ level </span>
+<span class="c1"># about an equilibrium bondlength of 1.73106 atomic units (0.9160 Angstroms )</span>
+<span class="c1"># &lt; INSERT CODE TO DEFINE k_au HERE &gt;</span>
+
+<span class="c1"># reduced mass of HF</span>
+<span class="c1"># &lt; INSERT CODE TO DEFINE mF_au HERE &gt;</span>
+<span class="c1"># &lt; INSERT CODE TO DEFINE mH_au HERE &gt;</span>
+
+<span class="c1"># &lt; INSERT CODE TO DEFINE mu_au HERE &gt;</span>
+
+
+<span class="c1"># fundamental frequency of HF in atomic units</span>
+<span class="c1"># &lt; INSERT CODE TO COMPUTE omega_au HERE &gt;</span>
+
+
+<span class="c1"># set cavity frequency equal to fundamental</span>
+<span class="c1"># &lt; INSERT CODE TO DEFINE omega_cav HERE &gt; </span>
+
+<span class="c1"># set charge</span>
+<span class="c1"># &lt; INSERT CODE TO DEFINE z_au HERE &gt;</span>
+
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">F</span><span class="s1">&#39; Cavity Frequency in Atomic Units is </span><span class="si">{</span><span class="n">omega_cav</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="n">hbar</span> <span class="o">=</span> <span class="mf">1.0</span>  <span class="c1"># reduced Planck&#39;s constant (arbitrary units)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>In the block below, we will define a function to compute and plot the potential along with the first few eigenvalues.<br />
+We will need to use information about the frequency, reduced mass, and array of displacement values for the potential.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">potential</span><span class="p">(</span><span class="n">omega</span><span class="p">,</span> <span class="n">mu</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Function to plot the Harmonic oscillator potential</span>
+<span class="sd">    </span>
+<span class="sd">    Arguments</span>
+<span class="sd">    ---------</span>
+<span class="sd">    omega : float</span>
+<span class="sd">         the fundamental frequency</span>
+<span class="sd">         </span>
+<span class="sd">    mu : float</span>
+<span class="sd">         the reduced mass</span>
+<span class="sd">         </span>
+<span class="sd">    x : float or array of floats</span>
+<span class="sd">         the displacements</span>
+<span class="sd">         </span>
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    V_x : float or array of floats</span>
+<span class="sd">         the potential along the displacemnts as V_x = 1/2 * mu * omega ** 2 * x ** 2</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># &lt; INSERT CODE TO COMPUTE V_x HERE &gt;</span>
+    
+    <span class="c1"># &lt; INSERT CODE TO RETURN V_x HERE &gt;</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">energy</span><span class="p">(</span><span class="n">omega</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Function to compute the energy eigenvalue of the Harmonic oscillator in atomic units</span>
+<span class="sd">    </span>
+<span class="sd">    Arguments</span>
+<span class="sd">    ---------</span>
+<span class="sd">    omega : float</span>
+<span class="sd">         the fundamental frequency</span>
+<span class="sd">         </span>
+<span class="sd">    n : int</span>
+<span class="sd">         the quantum number</span>
+<span class="sd">         </span>
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    E_n : float </span>
+<span class="sd">        the energy eigenvalue of quantum state n as E_n = hbar * omega * (n + 1/2)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">hbar</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1"># in atomic units</span>
+    
+    <span class="c1"># &lt; INSERT CODE TO COMPUTE E_n HERE &gt;</span>
+    
+    
+    <span class="c1"># &lt; INSERT CODE TO RETURN E_n HERE &gt;</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">turning_points</span><span class="p">(</span><span class="n">omega</span><span class="p">,</span> <span class="n">mu</span><span class="p">,</span> <span class="n">E_n</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Function to compute the turning points on the potential for state with energy E_n.</span>
+<span class="sd">    The turning points are the values of displacement where the potential is equal to the total </span>
+<span class="sd">    energy: </span>
+<span class="sd">    </span>
+<span class="sd">    E_n = 1/2 * k * x_0 ** 2 -&gt; x_0 = sqrt(2 * E_n / k) = sqrt(2 * E_n / (mu * omega ** 2))</span>
+<span class="sd">    </span>
+<span class="sd">    Arguments</span>
+<span class="sd">    ---------</span>
+<span class="sd">    omega : float</span>
+<span class="sd">         the fundamental frequency</span>
+<span class="sd">         </span>
+<span class="sd">    mu : float</span>
+<span class="sd">         the reduced mass</span>
+<span class="sd">         </span>
+<span class="sd">    E_n : float</span>
+<span class="sd">         the energy eigenvalue of state n</span>
+<span class="sd">         </span>
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    _x_max, x_max : floats </span>
+<span class="sd">        positive and negative turning points of state n</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">x_max</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">E_n</span> <span class="o">/</span> <span class="p">(</span><span class="n">mu</span> <span class="o">*</span> <span class="n">omega</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span>
+    <span class="k">return</span> <span class="o">-</span><span class="n">x_max</span><span class="p">,</span> <span class="n">x_max</span>
+
+<span class="c1"># Define range for x</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
+<span class="n">V</span> <span class="o">=</span> <span class="n">potential</span><span class="p">(</span><span class="n">omega_au</span><span class="p">,</span> <span class="n">mu_au</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+
+<span class="c1"># Plot the potential</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">V</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Potential Energy&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
+
+<span class="c1"># Plot the energy eigenstates</span>
+<span class="n">n_max</span> <span class="o">=</span> <span class="mi">3</span>  <span class="c1"># number of eigenstates to plot</span>
+<span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_max</span><span class="p">):</span>
+    <span class="n">E_n</span> <span class="o">=</span> <span class="n">energy</span><span class="p">(</span><span class="n">omega_au</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+    <span class="n">x_min</span><span class="p">,</span> <span class="n">x_max</span> <span class="o">=</span> <span class="n">turning_points</span><span class="p">(</span><span class="n">omega_au</span><span class="p">,</span> <span class="n">mu_au</span><span class="p">,</span> <span class="n">E_n</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">hlines</span><span class="p">(</span><span class="n">E_n</span><span class="p">,</span> <span class="n">x_min</span><span class="p">,</span> <span class="n">x_max</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;Energy Level n&#39;</span> <span class="k">if</span> <span class="n">n</span><span class="o">==</span><span class="mi">0</span> <span class="k">else</span> <span class="kc">None</span><span class="p">)</span>
+
+<span class="c1"># Add labels and legend</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Harmonic Oscillator Potential with Energy Eigenstates&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Position (Bohr Radii)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Energy (Hartrees)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">energy</span><span class="p">(</span><span class="n">omega_au</span><span class="p">,</span> <span class="n">n_max</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+
+<span class="c1"># Show the plot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>With these basic parameters having been computed or assigned, we will write functions that compute matrix
+representations of each term in the two Hamiltonians we are considering.  These functions will all have a common structure that
+they will take arguments that specify the dimension of the matter or/and photonic subspaces, and include all relevant parameters (<span class="math notranslate nohighlight">\(\omega_f\)</span>, <span class="math notranslate nohighlight">\(\omega_c\)</span>, <span class="math notranslate nohighlight">\(E_0\)</span>, etc) to complete the matrix.  Each function will call on the <code class="docutils literal notranslate"><span class="pre">build_ladder_operator_matrices</span></code> function build the matrix representation of the relevant ladder operators.</p>
+<p>The function <code class="docutils literal notranslate"><span class="pre">compute_matter_energy_matrix()</span></code> will compute the matrix representation of the bare matter Hamiltonian:</p>
+<p>\begin{equation}
+\mathcal{H}_{\rm m} = \hbar \omega_f \left(\mathcal{A}^{\dagger} \mathcal{A} + \frac{1}{2} \mathcal{I} \right)
+\end{equation}
+where we use <span class="math notranslate nohighlight">\(\mathcal{A}^{\dagger}\)</span> and <span class="math notranslate nohighlight">\(\mathcal{A}\)</span> to denote the matrix representation of the ladder operators in the matter Hilbert subspace and <span class="math notranslate nohighlight">\(\mathcal{I}\)</span> is the identity matrix in this subspace.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">compute_matter_energy_matrix</span><span class="p">(</span><span class="n">matter_dim</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">mu</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; </span>
+<span class="sd">    Builds the matrix representation of the matter energy operator.</span>
+
+<span class="sd">    Arguments</span>
+<span class="sd">    ---------</span>
+<span class="sd">    matter_dim : int</span>
+<span class="sd">      the dimension of the matter basis</span>
+
+<span class="sd">    k : float</span>
+<span class="sd">      force constant</span>
+
+<span class="sd">    mu : float</span>
+<span class="sd">      reduced mass</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    matter_Hamiltonian : the matter Hamiltonian as a NumPy array</span>
+
+<span class="sd">    Example</span>
+<span class="sd">    -------</span>
+<span class="sd">    &gt;&gt;&gt; compute_matter_energy_matrix(2, 1, 1)</span>
+<span class="sd">    &gt;&gt;&gt; array([[0.5, 0.0],</span>
+<span class="sd">            [0.0, 1.5]])</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># build raising and lowering operators for the matter subspace using the build_ladder_operator_matrices() function</span>
+    <span class="c1"># &lt; INSERT CODE TO compute a_dagger and a  &gt;</span>
+
+    <span class="c1"># compute the fundamental frequency</span>
+    <span class="c1"># &lt; INSERT CODE TO compute omega_f using formula omega_f = sqrt(k/mu) &gt; </span>
+
+    <span class="c1"># compute the matter Hamiltonian = omega * ( a^dagger a + 1/2 I)</span>
+    <span class="c1"># &lt; INSERT CODE TO compute bare matter hamiltonian &gt; </span>
+    
+    <span class="c1"># return Matter Hamiltonian</span>
+    <span class="k">return</span> <span class="n">matter_Hamiltonian</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The function <code class="docutils literal notranslate"><span class="pre">compute_cavity_energy_matrix()</span></code> will compute the matrix representation of the bare cavity Hamiltonian:</p>
+<p>\begin{equation}
+\mathcal{H}_{\rm c} = \hbar \omega_c \left(\mathcal{B}^{\dagger} \mathcal{B} + \frac{1}{2} \mathcal{I} \right)
+\end{equation}
+where we use <span class="math notranslate nohighlight">\(\mathcal{B}^{\dagger}\)</span> and <span class="math notranslate nohighlight">\(\mathcal{B}\)</span> to denote the matrix representation of the ladder operators in the photonic Hilbert subspace and <span class="math notranslate nohighlight">\(\mathcal{I}\)</span> is the identity matrix in this subspace.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">compute_cavity_energy_matrix</span><span class="p">(</span><span class="n">cavity_dim</span><span class="p">,</span> <span class="n">omega_cav</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; </span>
+<span class="sd">    Builds the matrix representation of the matter energy operator.</span>
+
+<span class="sd">    Arguments</span>
+<span class="sd">    ---------</span>
+<span class="sd">    cavity_dim : int</span>
+<span class="sd">      the dimension of the photon basis</span>
+
+<span class="sd">    omega_cav : float</span>
+<span class="sd">      the cavity frequency</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    cavity_Hamiltonian : the cavity Hamiltonian as a NumPy array</span>
+
+<span class="sd">    Example</span>
+<span class="sd">    -------</span>
+<span class="sd">    &gt;&gt;&gt; compute_cavity_energy_matrix(2, 1)</span>
+<span class="sd">    &gt;&gt;&gt; array([[0.5, 0.0],</span>
+<span class="sd">            [0.0, 1.5]])</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># build raising and lowering operators for the cavity subspace using the build_ladder_operator_matrices() function</span>
+    <span class="c1"># &lt; INSERT CODE TO compute b_dagger and b  &gt; </span>
+
+    <span class="c1"># compute the cavity Hamiltonian = omega_cav * ( b^dagger b + 1/2 I)</span>
+    <span class="c1"># &lt; INSERT CODE TO compute bare cavity  hamiltonian &gt; </span>
+
+    <span class="c1"># return cavity_Hamiltonian</span>
+    <span class="k">return</span> <span class="n">cavity_Hamiltonian</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The function <code class="docutils literal notranslate"><span class="pre">compute_diamagnetic_matrix_p_dot_A()</span></code> will compute the matrix representation of the diamagnetic Hamiltonian:</p>
+<p>\begin{equation}
+\mathcal{H}_{\rm dia} = \frac{z^2}{2 \mu} {\bf A}_0^2\left(\mathcal{B}^{\dagger} + \mathcal{B} \right)^2
+\end{equation}
+where we <span class="math notranslate nohighlight">\(z\)</span> denotes the charge of the matter subsystem, <span class="math notranslate nohighlight">\(\mu\)</span> is the reduced mass of the matter subsystem, and <span class="math notranslate nohighlight">\({\bf A}_0\)</span> is the magnitude of the vector potential.</p>
+<p>This function is unique to the “p dot A” Hamiltonian.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">compute_diamagnetic_matrix_p_dot_A</span><span class="p">(</span><span class="n">cavity_dim</span><span class="p">,</span> <span class="n">z_charge</span><span class="p">,</span> <span class="n">A0</span><span class="p">,</span> <span class="n">mu</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Computes the matrix representation of the diamagnetic Hamiltonian for the p dot A Hamiltonian in the photonic basis</span>
+<span class="sd">    </span>
+<span class="sd">    Arguments</span>
+<span class="sd">    ---------</span>
+
+<span class="sd">    cavity_dim : int</span>
+<span class="sd">      the dimension of the photon basis</span>
+
+<span class="sd">    z_charge : float</span>
+<span class="sd">        the effective charge of the matter subsystem</span>
+
+<span class="sd">    A0 : float</span>
+<span class="sd">        the magnitude of the vector potential of the photonic subsystem</span>
+
+<span class="sd">    mu : float</span>
+<span class="sd">        the reduced mass of the matter subsystem</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+
+<span class="sd">    diamag_Hamiltonian : numpy array</span>
+<span class="sd">        Diamagnetic matrix</span>
+
+<span class="sd">    Example</span>
+<span class="sd">    ------- </span>
+<span class="sd">    &gt;&gt;&gt; compute_diamagnetic_matrix_p_dot_A(3, 1, 1, 1)</span>
+<span class="sd">    &gt;&gt;&gt; array([[0.5        0.         0.70710678]</span>
+<span class="sd">               [0.         1.5        0.        ]</span>
+<span class="sd">               [0.70710678 0.         1.        ]])</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># build raising and lowering operators for the cavity subspace using the build_ladder_operator_matrices() function</span>
+    <span class="c1"># &lt; INSERT CODE TO compute b_dagger and b  &gt; </span>
+
+    <span class="c1"># compute pre-factor z^2/(2 mu) A_0^2</span>
+    <span class="c1"># &lt; INSERT CODE TO compute pre factor, store as fac &gt;</span>
+
+    <span class="c1"># take sum of b_dag and b matrices</span>
+    <span class="c1"># &lt; INSERT CODE TO compute b_dagger + b sum and store in b_sum &gt;</span>
+
+
+    <span class="c1"># take product of b_sum</span>
+    <span class="c1"># &lt; INSERT CODE TO compute b_sum_squared by doing b_sum @ b_sum &gt; </span>
+
+
+    <span class="c1"># compute diamagnetic Hamiltonian</span>
+    <span class="c1"># &lt; INSERT CODE TO compute diamag_Hamiltonian, fac * b_sum_squared&gt; </span>
+
+
+    <span class="k">return</span> <span class="n">diamag_Hamiltonian</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The function <code class="docutils literal notranslate"><span class="pre">compute_interaction_matrix_p_dot_A()</span></code> will compute the matrix representation of the interaction Hamiltonian:</p>
+<p>\begin{equation}
+\mathcal{H}_{\rm int} = -i\frac{z}{\mu} \sqrt{\frac{\mu \hbar \omega_f}{2} } {\bf A}_0 \left(\mathcal{A}^{\dagger} - \mathcal{A} \right) \otimes \left(\mathcal{B}^{\dagger} + \mathcal{B} \right).
+\end{equation}</p>
+<p>This function is unique to the “p dot A” Hamiltonian.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">compute_interaction_matrix_p_dot_A</span><span class="p">(</span><span class="n">matter_dim</span><span class="p">,</span> <span class="n">cavity_dim</span><span class="p">,</span> <span class="n">mu</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">z_charge</span><span class="p">,</span> <span class="n">A0</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;  Builds the matrix representation of the interaction operator in the tensor product basis for the p dot A Hamiltonian</span>
+
+<span class="sd">    Arguments</span>
+<span class="sd">    ---------</span>
+<span class="sd">    matter_dim : int</span>
+<span class="sd">      the dimension of the matter basis</span>
+
+<span class="sd">    cavity_dim : int</span>
+<span class="sd">      the dimension of the photon basis</span>
+
+<span class="sd">    z_charge : float</span>
+<span class="sd">        the effective charge of the matter subsystem</span>
+
+<span class="sd">    A0 : float</span>
+<span class="sd">        the magnitude of the vector potential of the photonic subsystem</span>
+
+<span class="sd">    k : float</span>
+<span class="sd">        the force constant of the matter subsystem</span>
+
+<span class="sd">    mu : float</span>
+<span class="sd">        the reduced mass of the matter subsystem</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+
+<span class="sd">    interaction_Hamiltonian : numpy array</span>
+<span class="sd">        Interaction matrix</span>
+
+<span class="sd">    Example</span>
+<span class="sd">    -------</span>
+<span class="sd">    &gt;&gt;&gt; compute_interaction_matrix_p_dot_A(2, 2, 1, 1, 1, 0.1)</span>
+<span class="sd">    &gt;&gt;&gt; array([[0.+0.j         0.+0.j         0.+0.j         0.+0.07071068j]</span>
+<span class="sd">               [0.+0.j         0.+0.j         0.+0.07071068j 0.+0.j        ]</span>
+<span class="sd">               [0.+0.j         0.-0.07071068j 0.+0.j         0.+0.j        ]</span>
+<span class="sd">               [0.-0.07071068j 0.+0.j         0.+0.j         0.+0.j        ]])</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+
+    <span class="c1"># compute the matter ladder operators</span>
+    <span class="c1"># INSERT CODE HERE to create matter ladder operators and save as a_dagger and a</span>
+
+    <span class="c1"># compute the cavity ladder operators</span>
+    <span class="c1"># INSERT CODE HERE to create cavity ladder operators as b_dagger and b</span>
+
+    <span class="c1"># compute the difference between the matter ladder operators</span>
+    <span class="c1"># INSERT CODE HERE to compute difference a_diff = a_dag - a</span>
+
+    <span class="c1"># compute the sum of the cavity ladder operators</span>
+    <span class="c1"># INSERT CODE HERE to compute sum b_sum = b_dag + b</span>
+
+    <span class="c1"># compute fundamental frequency</span>
+    <span class="c1"># INSERT CODE HERE to compute omega_f = sqrt(k / mu)</span>
+
+    <span class="c1"># compute the prefactor for the Hamiltonian matrix</span>
+    <span class="c1"># INSERT CODE HERE to compute fac</span>
+
+    <span class="c1"># take the Kronecker product of a_diff and b_sum and multiply it by the prefactor</span>
+    <span class="c1"># INSERT CODE HERE to compute interaction hamiltonian</span>
+
+    <span class="k">return</span> <span class="n">interaction_Hamiltonian</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The remaining two functions are particular to the Paul-Fierz Hamiltonian.
+The function <code class="docutils literal notranslate"><span class="pre">compute_interaction_matrix_PF()</span></code> will compute the matrix representation of the interaction Hamiltonian:
+\begin{equation}
+\mathcal{H}<em>{int} = - z \frac{\hbar}{2} \sqrt{\frac{\omega</em>{cav}}{\mu \omega_f}} {\bf E}_0 \left(\mathcal{A}^{\dagger} + \mathcal{A} \right) \otimes \left(\mathcal{B}^{\dagger} + \mathcal{B} \right)
+\end{equation}</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">compute_interaction_matrix_PF</span><span class="p">(</span><span class="n">matter_dim</span><span class="p">,</span> <span class="n">cavity_dim</span><span class="p">,</span> <span class="n">omega_cav</span><span class="p">,</span> <span class="n">mu</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">z_charge</span><span class="p">,</span> <span class="n">A0</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Arguments</span>
+<span class="sd">    ---------</span>
+<span class="sd">    matter_dim : int</span>
+<span class="sd">      the dimension of the matter basis</span>
+
+<span class="sd">    cavity_dim : int</span>
+<span class="sd">      the dimension of the photon basis</span>
+
+<span class="sd">    omega_cav : float</span>
+<span class="sd">        cavity frequency</span>
+
+<span class="sd">    z_charge : float</span>
+<span class="sd">        the effective charge of the matter subsystem</span>
+
+<span class="sd">    A0 : float</span>
+<span class="sd">        the magnitude of the vector potential of the photonic subsystem</span>
+
+<span class="sd">    k : float</span>
+<span class="sd">        the force constant of the matter subsystem</span>
+
+<span class="sd">    mu : float</span>
+<span class="sd">        the reduced mass of the matter subsystem</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+
+<span class="sd">    interaction_matrix : numpy array</span>
+<span class="sd">        Interaction matrix</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># compute the fundamental frequency for the matter subsystem</span>
+    <span class="c1"># &lt; INSERT CODE TO compute omega_f using formula omega_f = sqrt(k/mu) &gt;</span>
+
+
+    <span class="c1"># compute the electric field mangitude from the vector potential magnitude</span>
+    <span class="c1"># &lt; INSERT CODE TO compute E0 using formula: E0 = sqrt(2* omega_cav) * A0 &gt; </span>
+
+
+    <span class="c1"># compute the prefactor for the Hamiltonian matrix -z/2   * sqrt(omega_cav/ (mu*omega_f)) * E0</span>
+    <span class="c1"># &lt; INSERT CODE TO compute pre factor, store as fac &gt; </span>
+
+
+    <span class="c1"># build raising and lowering operators for the matter subsystem</span>
+    <span class="c1"># &lt; INSERT CODE TO compute a_dagger and a  &gt; </span>
+
+
+    <span class="c1"># build raising and lowering operators for the cavity subsystem</span>
+    <span class="c1"># &lt; INSERT CODE TO compute b_dagger and b  &gt; </span>
+
+
+    <span class="c1"># build the sum of the ladder operators for the matter subsystem</span>
+    <span class="c1"># &lt; INSERT CODE TO compute sum of a_dagger and a  &gt; </span>
+
+    <span class="c1"># build the sum of the ladder operators for the cavity subsystem</span>
+    <span class="c1"># &lt; INSERT CODE TO compute sum of b_dagger and b  &gt; </span>
+
+
+    <span class="c1"># compute the interaction Hamiltonian in the tensor product basis</span>
+    <span class="c1"># &lt; INSERT CODE TO compute interaction_Hamiltonian &gt; </span>
+
+    <span class="k">return</span> <span class="n">interaction_Hamiltonian</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The function <code class="docutils literal notranslate"><span class="pre">compute_dipole_self_energy_matrix_PF()</span></code> will compute the matrix representation of the dipole self energy
+\begin{equation}
+\mathcal{H}<em>{int} = z^2\frac{\hbar}{4\mu \omega</em>{f}} {\bf E}_0^2 \left(\mathcal{A}^{\dagger} + \mathcal{A} \right)^2
+\end{equation}</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">compute_dipole_self_energy_PF</span><span class="p">(</span><span class="n">matter_dim</span><span class="p">,</span> <span class="n">omega_cav</span><span class="p">,</span> <span class="n">mu</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">z_charge</span><span class="p">,</span> <span class="n">A0</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Compute the matrix representation of the dipole self energy operator in the matter basis</span>
+
+<span class="sd">    Arguments</span>
+<span class="sd">    ---------</span>
+<span class="sd">    matter_dim : int</span>
+<span class="sd">        the dimension of the truncated matter Hilbert</span>
+
+<span class="sd">    omega_cav : float</span>
+<span class="sd">        cavity frequency</span>
+<span class="sd">      </span>
+<span class="sd">    mu : float</span>
+<span class="sd">        reduced mass</span>
+
+<span class="sd">    k : float</span>
+<span class="sd">        force constant</span>
+
+<span class="sd">    z_charge : float</span>
+<span class="sd">        the effective charge of the matter subsystem</span>
+
+<span class="sd">    A0 : float</span>
+<span class="sd">        the magnitude of the vector potential of the photonic subsystem</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    dipole_self_energy_matrix : numpy array</span>
+<span class="sd">        Dipole self energy matrix</span>
+
+<span class="sd">    Example</span>
+<span class="sd">    -------</span>
+<span class="sd">    &gt;&gt;&gt; compute_dipole_self_energy_PF(2, 1, 1, 1, 1, 0.1)</span>
+<span class="sd">    &gt;&gt;&gt; array([[0.005 0.   ]</span>
+<span class="sd">               [0.    0.005]])</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="c1"># compute the fundamental frequency for the matter subsystem</span>
+    <span class="c1"># &lt; INSERT CODE TO compute omega_f using formula omega_f = sqrt(k/mu) &gt; </span>
+
+    <span class="c1"># compute the electric field mangitude from the vector potential magnitude</span>
+    <span class="c1"># &lt; INSERT CODE TO compute E0 &gt; </span>
+
+
+    <span class="c1"># factor z^2\frac{\hbar}{4\mu \omega} {\bf E}_0^2 </span>
+    <span class="c1"># &lt; INSERT CODE TO compute pre factor, store as fac &gt; </span>
+
+    <span class="c1"># create matter ladder operators</span>
+    <span class="c1"># &lt; INSERT CODE TO compute a_dagger and a  &gt; </span>
+
+    <span class="c1"># compute the sum of a_dag and a</span>
+    <span class="c1"># &lt; INSERT CODE TO compute sum of a_dagger and a, store as a_sum &gt; </span>
+
+
+    <span class="c1"># compute the dipole self energy matrix</span>
+    <span class="c1"># &lt; INSERT CODE TO compute dipole_self_energy_matrix, remember to square a_sum  &gt; </span>
+    
+
+    <span class="k">return</span> <span class="n">dipole_self_energy_matrix</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We will now build the entire “p dot A” and Pauli-Fierz Hamiltonians in a tensor product basis and find their eigenvalues and ensure they agree.  We will also plot the first few eigenvalues of the Pauli-Fierz Hamiltonian on top of the matter vibrational states to show how the polariton states split from the first excited state energy of the bare matter subsystem.  We will repeat these builds in a minimal basis in a subsequent code block with print statements for each sub-matrix so that interested readers can inspect the form of each matrix in the uncoupled and tensor product bases.</p>
+<p>The size of the uncoupled photonic basis can be changed by changing the variable <code class="docutils literal notranslate"><span class="pre">photon_dim</span></code> and the size of the uncoupled matter basis can be changed by changing the variable <code class="docutils literal notranslate"><span class="pre">matter_dim</span></code>.  We also encourage the reader to explore how the eigenvalues converge with increasing basis set size for different magnitudes of the vector potential (here set by the variable <code class="docutils literal notranslate"><span class="pre">A0_val</span></code>).  The other material parameters have been set in an earlier code block in the variables <code class="docutils literal notranslate"><span class="pre">k_au</span></code>, <code class="docutils literal notranslate"><span class="pre">mu_au</span></code>, and <code class="docutils literal notranslate"><span class="pre">z_val</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># define dimensions of each subspace</span>
+<span class="n">photon_dim</span> <span class="o">=</span> <span class="mi">2</span> <span class="c1"># can make this as small as 2 or as large as you dare... 100 is pretty large and will be slow</span>
+<span class="n">matter_dim</span> <span class="o">=</span> <span class="mi">2</span> <span class="c1"># can make this as small as 2 or as large as you dare... 100 is pretty large and will be slow</span>
+
+<span class="c1"># compute identity matrix on the matter subspace</span>
+<span class="n">I_matter</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="n">matter_dim</span><span class="p">)</span>
+
+<span class="c1"># compute identity matrix on the photon subspace</span>
+<span class="n">I_photon</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="n">photon_dim</span><span class="p">)</span>
+
+<span class="c1"># set the photon frequency to be equal to the fundamental frequency of HF in atomic units</span>
+<span class="n">omega_p_au</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span> <span class="n">k_au</span> <span class="o">/</span> <span class="n">mu_au</span><span class="p">)</span>
+
+<span class="c1"># assign a magnitude of the vector potential in atomic units</span>
+<span class="n">A0_au</span> <span class="o">=</span> <span class="mf">2.0</span>
+
+<span class="c1"># compute matter Hamiltonian in the matter basis</span>
+<span class="n">H_matter</span> <span class="o">=</span> <span class="n">compute_matter_energy_matrix</span><span class="p">(</span><span class="n">matter_dim</span><span class="p">,</span> <span class="n">k_au</span><span class="p">,</span> <span class="n">mu_au</span><span class="p">)</span>
+
+<span class="c1"># compute matter Hamiltonian in the tensor product basis</span>
+<span class="n">H_matter_tp</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">kron</span><span class="p">(</span><span class="n">H_matter</span><span class="p">,</span> <span class="n">I_photon</span><span class="p">)</span>
+
+<span class="c1"># compute photon Hamiltonian in the photon basis</span>
+<span class="n">H_photon</span> <span class="o">=</span> <span class="n">compute_cavity_energy_matrix</span><span class="p">(</span><span class="n">photon_dim</span><span class="p">,</span> <span class="n">omega_p_au</span><span class="p">)</span>
+
+<span class="c1"># compute photon Hamiltonian in the tensor product basis</span>
+<span class="n">H_photon_tp</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">kron</span><span class="p">(</span><span class="n">I_matter</span><span class="p">,</span> <span class="n">H_photon</span><span class="p">)</span>
+
+<span class="c1"># compute diamagnetic Hamiltonian in the photon basis</span>
+<span class="n">H_diamag</span> <span class="o">=</span> <span class="n">compute_diamagnetic_matrix_p_dot_A</span><span class="p">(</span><span class="n">photon_dim</span><span class="p">,</span> <span class="n">z_au</span><span class="p">,</span> <span class="n">A0_au</span><span class="p">,</span> <span class="n">mu_au</span><span class="p">)</span>
+
+
+<span class="c1"># compute diamagnetic Hamiltonian in the tensor product basis</span>
+<span class="n">H_diamag_tp</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">kron</span><span class="p">(</span><span class="n">I_matter</span><span class="p">,</span> <span class="n">H_diamag</span><span class="p">)</span>
+
+<span class="c1"># compute the interaction Hamiltonian for p dot A</span>
+<span class="n">H_interaction_pda</span> <span class="o">=</span> <span class="n">compute_interaction_matrix_p_dot_A</span><span class="p">(</span><span class="n">matter_dim</span><span class="p">,</span> <span class="n">photon_dim</span><span class="p">,</span> <span class="n">mu_au</span><span class="p">,</span> <span class="n">k_au</span><span class="p">,</span> <span class="n">z_au</span><span class="p">,</span> <span class="n">A0_au</span><span class="p">)</span>
+
+
+<span class="c1"># compute the total p dot A Hamiltonian in the tensor product basis</span>
+<span class="n">H_pda_tp</span> <span class="o">=</span> <span class="n">H_matter_tp</span> <span class="o">+</span> <span class="n">H_photon_tp</span> <span class="o">+</span> <span class="n">H_diamag_tp</span> <span class="o">+</span> <span class="n">H_interaction_pda</span>
+
+
+<span class="c1"># compute the interaction Hamiltonian for PF</span>
+<span class="n">H_interaction_PF</span> <span class="o">=</span> <span class="n">compute_interaction_matrix_PF</span><span class="p">(</span><span class="n">matter_dim</span><span class="p">,</span> <span class="n">photon_dim</span><span class="p">,</span> <span class="n">omega_p_au</span><span class="p">,</span> <span class="n">mu_au</span><span class="p">,</span> <span class="n">k_au</span><span class="p">,</span> <span class="n">z_au</span><span class="p">,</span> <span class="n">A0_au</span><span class="p">)</span>
+
+<span class="c1"># compute the dipole self energy for PF in the matter basis</span>
+<span class="n">H_dipole_self_energy_PF</span> <span class="o">=</span> <span class="n">compute_dipole_self_energy_PF</span><span class="p">(</span><span class="n">matter_dim</span><span class="p">,</span> <span class="n">omega_p_au</span><span class="p">,</span> <span class="n">mu_au</span><span class="p">,</span> <span class="n">k_au</span><span class="p">,</span> <span class="n">z_au</span><span class="p">,</span> <span class="n">A0_au</span><span class="p">)</span>
+
+<span class="c1"># compute the dipole self energy for PF in the tensor product basis</span>
+<span class="n">H_dipole_self_energy_PF_tp</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">kron</span><span class="p">(</span><span class="n">H_dipole_self_energy_PF</span><span class="p">,</span> <span class="n">I_photon</span><span class="p">)</span>
+
+<span class="c1"># compute the total Pauli-Fierz Hamiltonian</span>
+<span class="n">H_PF_tp</span> <span class="o">=</span> <span class="n">H_matter_tp</span> <span class="o">+</span> <span class="n">H_photon_tp</span> <span class="o">+</span> <span class="n">H_dipole_self_energy_PF_tp</span> <span class="o">+</span> <span class="n">H_interaction_PF</span>
+
+<span class="c1"># compute eigenvalues of the Pauli-Fierz Hamiltonian</span>
+<span class="n">vals_pf</span><span class="p">,</span> <span class="n">vecs_pf</span> <span class="o">=</span> <span class="n">la</span><span class="o">.</span><span class="n">eigh</span><span class="p">(</span><span class="n">H_PF_tp</span><span class="p">)</span>
+
+<span class="c1"># compute eigenvalues of the p dot A Hamiltonian</span>
+<span class="n">vals_pda</span><span class="p">,</span> <span class="n">vecs_pda</span> <span class="o">=</span> <span class="n">la</span><span class="o">.</span><span class="n">eigh</span><span class="p">(</span><span class="n">H_pda_tp</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Eigenvalues of the total Pauli-Fierz Hamiltonian&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">vals_pf</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Eigenvalues of the total p dot A Hamiltonian&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">vals_pda</span><span class="p">)</span>
+
+<span class="c1"># these are expected eigenvalues for a minimal basis - if we are using a minimal basis</span>
+<span class="c1"># test to see that we match these</span>
+<span class="n">expected_eigenvalues</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.00968507</span><span class="p">,</span> <span class="mf">0.02673352</span><span class="p">,</span> <span class="mf">0.03112254</span><span class="p">,</span> <span class="mf">0.04817098</span><span class="p">])</span>
+
+<span class="k">if</span> <span class="n">matter_dim</span> <span class="o">==</span> <span class="mi">2</span> <span class="ow">and</span> <span class="n">photon_dim</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">F</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Minimal basis selected, testing eigenvalues against expected eigenvalues from a minimal basis calculation!&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">F</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Eigenvalues from Pauli-Fierz Match Expected Eigenvalues: </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">vals_pf</span><span class="p">,</span><span class="w"> </span><span class="n">expected_eigenvalues</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">F</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Eigenvalues from p dot A Match Expected Eigenvalues:     </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">vals_pda</span><span class="p">,</span><span class="w"> </span><span class="n">expected_eigenvalues</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Here we will replot the HF potential and eigenvalues along with the first few eigenvalues of the d dot A Hamiltonian (which we have already determined are identical to the eigenvalues of the d dot E Hamiltonian)!  You can see that the ground state of the coupled system is quite close, but just a little above, the uncoupled ground state.  However, there is a striking difference in the 1st and second excited states of the coupled system, which are the polariton states that are split below and above the 1st excited state of the uncoupled system.  This splitting is known as the Rabi splitting.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Replot the potential</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">V</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Potential Energy&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
+
+<span class="c1"># Plot the energy eigenstates</span>
+<span class="n">n_max</span> <span class="o">=</span> <span class="mi">3</span>  <span class="c1"># number of eigenstates to plot</span>
+<span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_max</span><span class="p">):</span>
+    <span class="n">E_n</span> <span class="o">=</span> <span class="n">energy</span><span class="p">(</span><span class="n">omega_au</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+    <span class="n">pol_En</span> <span class="o">=</span> <span class="n">vals_pda</span><span class="p">[</span><span class="n">n</span><span class="p">]</span>
+    <span class="n">x_min</span><span class="p">,</span> <span class="n">x_max</span> <span class="o">=</span> <span class="n">turning_points</span><span class="p">(</span><span class="n">omega_au</span><span class="p">,</span> <span class="n">mu_au</span><span class="p">,</span> <span class="n">E_n</span><span class="p">)</span>
+    <span class="n">pol_x_min</span><span class="p">,</span> <span class="n">pol_x_max</span> <span class="o">=</span> <span class="n">turning_points</span><span class="p">(</span><span class="n">omega_au</span><span class="p">,</span> <span class="n">mu_au</span><span class="p">,</span> <span class="n">pol_En</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">hlines</span><span class="p">(</span><span class="n">E_n</span><span class="p">,</span> <span class="n">x_min</span><span class="p">,</span> <span class="n">x_max</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;Uncoupled Energy Level n&#39;</span> <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span> <span class="k">else</span> <span class="kc">None</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">hlines</span><span class="p">(</span><span class="n">pol_En</span><span class="p">,</span> <span class="n">pol_x_min</span><span class="p">,</span> <span class="n">pol_x_max</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;purple&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;Coupled Energy Level n&#39;</span> <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span> <span class="k">else</span> <span class="kc">None</span><span class="p">)</span>
+
+<span class="c1"># Add labels and legend</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Harmonic Oscillator + Coupled System&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Position (Bohr Radii)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Energy (Hartrees)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">energy</span><span class="p">(</span><span class="n">omega_au</span><span class="p">,</span> <span class="n">n_max</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+
+<span class="c1"># Show the plot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="printing-matrices">
+<h1>Printing matrices<a class="headerlink" href="#printing-matrices" title="Link to this heading">#</a></h1>
+<p>It can be instructive to inspect the forms of each submatrix for the p dot A and Pauli-Fierz Hamiltonian.  The code block below repeats the builds for these matrices in a minimal basis for the matter and photon subsystems and prints each matrix with a heading.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># define dimensions of each subspace</span>
+<span class="n">photon_dim</span> <span class="o">=</span> <span class="mi">2</span> <span class="c1"># can make this as small as 2 or as large as you dare... 100 is pretty large and will be slow</span>
+<span class="n">matter_dim</span> <span class="o">=</span> <span class="mi">2</span> <span class="c1"># can make this as small as 2 or as large as you dare... 100 is pretty large and will be slow</span>
+
+<span class="c1"># compute identity matrix on the matter subspace</span>
+<span class="n">I_matter</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="n">matter_dim</span><span class="p">)</span>
+
+<span class="c1"># compute identity matrix on the photon subspace</span>
+<span class="n">I_photon</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="n">photon_dim</span><span class="p">)</span>
+
+
+
+<span class="c1"># set k to be the force constant of HF in atomic units from the top of this notebook</span>
+<span class="n">k_val</span> <span class="o">=</span> <span class="n">k_au</span>
+
+<span class="c1"># set mu to be the reduced mass of HF in atomic units from the top of this notebook</span>
+<span class="n">mu_val</span> <span class="o">=</span> <span class="n">mu_au</span>
+
+<span class="c1"># set z to be the charge of HF in atomic units from the top of this notebook</span>
+<span class="n">z_val</span> <span class="o">=</span> <span class="n">z_au</span>
+
+<span class="c1"># set the photon frequency to be equal to the fundamental frequency of HF</span>
+<span class="n">omega_p_val</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span> <span class="n">k_au</span> <span class="o">/</span> <span class="n">mu_au</span><span class="p">)</span>
+
+<span class="c1"># assign a magnitude of the vector potential</span>
+<span class="n">A0_val</span> <span class="o">=</span> <span class="mf">2.0</span>
+
+<span class="c1"># compute matter Hamiltonian in the matter basis</span>
+<span class="n">H_matter</span> <span class="o">=</span> <span class="n">compute_matter_energy_matrix</span><span class="p">(</span><span class="n">matter_dim</span><span class="p">,</span> <span class="n">k_val</span><span class="p">,</span> <span class="n">mu_val</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Bare matter Hamiltonian in the matter basis&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">H_matter</span><span class="p">)</span>
+
+<span class="c1"># compute matter Hamiltonian in the tensor product basis</span>
+<span class="n">H_matter_tp</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">kron</span><span class="p">(</span><span class="n">H_matter</span><span class="p">,</span> <span class="n">I_photon</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Matter Hamiltonian in the tensor product basis&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">H_matter_tp</span><span class="p">)</span>
+
+<span class="c1"># compute photon Hamiltonian in the photon basis</span>
+<span class="n">H_photon</span> <span class="o">=</span> <span class="n">compute_cavity_energy_matrix</span><span class="p">(</span><span class="n">photon_dim</span><span class="p">,</span> <span class="n">omega_cav</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Bare photon Hamiltonian in the photon basis&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">H_photon</span><span class="p">)</span>
+
+<span class="c1"># compute photon Hamiltonian in the tensor product basis</span>
+<span class="n">H_photon_tp</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">kron</span><span class="p">(</span><span class="n">I_matter</span><span class="p">,</span> <span class="n">H_photon</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Photon Hamiltonian in the tensor product basis&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">H_photon_tp</span><span class="p">)</span>
+
+<span class="c1"># compute diamagnetic Hamiltonian in the photon basis</span>
+<span class="n">H_diamag</span> <span class="o">=</span> <span class="n">compute_diamagnetic_matrix_p_dot_A</span><span class="p">(</span><span class="n">photon_dim</span><span class="p">,</span> <span class="n">z_val</span><span class="p">,</span> <span class="n">A0_val</span><span class="p">,</span> <span class="n">mu_val</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Diamagnetic Hamiltonian in the photon basis&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">H_diamag</span><span class="p">)</span>
+
+<span class="c1"># compute diamagnetic Hamiltonian in the tensor product basis</span>
+<span class="n">H_diamag_tp</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">kron</span><span class="p">(</span><span class="n">I_matter</span><span class="p">,</span> <span class="n">H_diamag</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Diamagnetic Hamiltonian in the tensor product basis&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">H_diamag_tp</span><span class="p">)</span>
+
+<span class="c1"># compute the interaction Hamiltonian for p dot A</span>
+<span class="n">H_interaction_pda</span> <span class="o">=</span> <span class="n">compute_interaction_matrix_p_dot_A</span><span class="p">(</span><span class="n">matter_dim</span><span class="p">,</span> <span class="n">photon_dim</span><span class="p">,</span> <span class="n">mu_val</span><span class="p">,</span> <span class="n">k_val</span><span class="p">,</span> <span class="n">z_val</span><span class="p">,</span> <span class="n">A0_val</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;p dot A Interaction Hamiltonian in the tensor product basis&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">H_interaction_pda</span><span class="p">)</span>
+
+<span class="c1"># compute the total p dot A Hamiltonian in the tensor product basis</span>
+<span class="n">H_pda_tp</span> <span class="o">=</span> <span class="n">H_matter_tp</span> <span class="o">+</span> <span class="n">H_photon_tp</span> <span class="o">+</span> <span class="n">H_diamag_tp</span> <span class="o">+</span> <span class="n">H_interaction_pda</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Total p dot A Hamiltonian in the tensor product basis&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">H_pda_tp</span><span class="p">)</span>
+
+
+<span class="c1"># compute the interaction Hamiltonian for PF</span>
+<span class="n">H_interaction_PF</span> <span class="o">=</span> <span class="n">compute_interaction_matrix_PF</span><span class="p">(</span><span class="n">matter_dim</span><span class="p">,</span> <span class="n">photon_dim</span><span class="p">,</span> <span class="n">omega_cav</span><span class="p">,</span> <span class="n">mu_val</span><span class="p">,</span> <span class="n">k_val</span><span class="p">,</span> <span class="n">z_val</span><span class="p">,</span> <span class="n">A0_val</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;PF Interaction Hamiltonian in the tensor product basis&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">H_interaction_PF</span><span class="p">)</span>
+
+<span class="c1"># compute the dipole self energy for PF in the matter basis</span>
+<span class="n">H_dipole_self_energy_PF</span> <span class="o">=</span> <span class="n">compute_dipole_self_energy_PF</span><span class="p">(</span><span class="n">matter_dim</span><span class="p">,</span> <span class="n">omega_cav</span><span class="p">,</span> <span class="n">mu_val</span><span class="p">,</span> <span class="n">k_val</span><span class="p">,</span> <span class="n">z_val</span><span class="p">,</span> <span class="n">A0_val</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Dipole self energy in the matter basis&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">H_dipole_self_energy_PF</span><span class="p">)</span>
+
+<span class="c1"># compute the dipole self energy for PF in the tensor product basis</span>
+<span class="n">H_dipole_self_energy_PF_tp</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">kron</span><span class="p">(</span><span class="n">H_dipole_self_energy_PF</span><span class="p">,</span> <span class="n">I_photon</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Dipole self energy in the tensor product basis&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">H_dipole_self_energy_PF_tp</span><span class="p">)</span>
+
+<span class="c1"># compute the total Pauli-Fierz Hamiltonian</span>
+<span class="n">H_PF_tp</span> <span class="o">=</span> <span class="n">H_matter_tp</span> <span class="o">+</span> <span class="n">H_photon_tp</span> <span class="o">+</span> <span class="n">H_dipole_self_energy_PF_tp</span> <span class="o">+</span> <span class="n">H_interaction_PF</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Total Pauli-Fierz Hamiltonian in the tensor product basis&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">H_PF_tp</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="extensions-to-anharmonic-oscillators">
+<h1>Extensions to Anharmonic Oscillators<a class="headerlink" href="#extensions-to-anharmonic-oscillators" title="Link to this heading">#</a></h1>
+<p>The Harmonic approximation neglects important features of the vibrational structure of molecules.  In particular, the Harmonic approximation does not permit dissociation of chemical bonds, does not adequately capture the fact that higher vibrational states are associated with average and most probable bond lengths that are stretched from equilibrium, does predict distinct vibrational transition energies seen in hot bands, and does not predict that overtone transitions can be spectroscopically excited.</p>
+<p>While beyond the scope of this primer, we wish to point out that the code above can be adapted to model potentials that capture anhoarmonic effects and that can recover the features described above.  There are a couple of trade offs that we wish to point out if one develops these models for general anharmonic oscillator potential.  The first trade off is that the simple rules of the ladder operators that enabled simple construction of the bare matter Hamiltonian, the dipole self energy, and the coupling matrices will no longer be suitable for anharmonic oscillators, and so one will have to adapt the construction of these operators accordingly.  The second tradeoff is that the eigenspectra of the p dot A and Pauli-Fierz Hamiltonians will typically not agree with each other at the same level of basis truncation.  They will converge to the same spectra in the complete basis limit, but depending on how strong the coupling is (i.e. the magnitude of <span class="math notranslate nohighlight">\({\bf A}_0\)</span>, agreement between the two spectra may require a very large number of basis states for the matter and photonic subsystems.</p>
+<p>We direct the interested reader to python code treating the p dot A, d dot E, and Pauli-Fierz Hamiltonians using the Morse potential for the vibrational structure <a class="reference external" href="https://github.com/FoleyLab/ACS_Digital_Primer/blob/main/morse.py">here</a> with an associated notebook implementing this approach <a class="reference external" href="https://github.com/FoleyLab/ACS_Digital_Primer/blob/main/Morse_fundamental.ipynb">here</a></p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="modeling-electronic-strong-coupling">
+<h1>Modeling Electronic Strong Coupling<a class="headerlink" href="#modeling-electronic-strong-coupling" title="Link to this heading">#</a></h1>
+<p>While we have focused specifically on vibrational strong coupling in this notebook and in Chapter 2 of this primer, the formalism presented can also be applied to electronic strong coupling.  We direct the interested reader to an example where the magnesium hydride cation is coupled through an electronic transition to a cavity mode at ultraviolet frequencies <a class="reference external" href="https://github.com/FoleyLab/MolSSI-MAPOL-Charlotte-CMS/blob/main/polariton_project/polariton_data/MgH_polaritonic_for_solutions.ipynb">here</a>.  Just as in the Morse oscillator case, one will sacrifice simple analytical terms for the bilinear coupling and dipole self energy terms, but further, one will sacrifice analytical expressions even for the matter energy eigenstates.  In the linked notebook, we obtain energies and transition dipole moments from the time-dependent density functional theory formalism for the magnesium hydride subsystem, and use those quantities to parameterize our coupled model.  We also note that in this notebook, we effectively implement the Jaynes-Cummings model, which neglects the dipole self energy (and certain bilinear coupling elements known as the counter-rotating terms).  We encourage the interested reader to work through this example, and consider adding dipole self energy and counter rotating terms to evaluate their impact for different coupling strengths!</p>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./content/drafts"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Introduction to Molecular CQED</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-statements">Import Statements</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#details-of-the-matter-subsystem-within-the-harmonic-approximation">Details of the Matter Subsystem within the Harmonic Approximation</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#unit-system">Unit system</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#printing-matrices">Printing matrices</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#extensions-to-anharmonic-oscillators">Extensions to Anharmonic Oscillators</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#modeling-electronic-strong-coupling">Modeling Electronic Strong Coupling</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Jay Foley
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

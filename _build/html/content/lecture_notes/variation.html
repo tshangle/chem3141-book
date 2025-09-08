@@ -204,36 +204,9 @@
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../problem_sets/ps_1.html">Problem Set 1</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Advanced Topics</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../advanced_topics/HF_Coupled_to_Cavity_Tensor_To_Complete.html">Introduction to Molecular CQED</a></li>
-
-
-
-
-
-
-<li class="toctree-l1"><a class="reference internal" href="../advanced_topics/Linear_Variational_Method_Quartic_Oscillator_and_Zeeman_Effect.html">Linear Variational Method - Anharmonic Oscillator</a></li>
-
-
-<li class="toctree-l1"><a class="reference internal" href="../advanced_topics/Zeeman_Effect_Hydrogen_Atom.html">Zeeman Effect</a></li>
-
-
-</ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Computational Sets</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../computational_sets/CO_Perturbation_Theory.html">Computing Fundamental Transition of CO under different levels of approximation</a></li>
-
-
-
-<li class="toctree-l1"><a class="reference internal" href="../computational_sets/hydrogen_wavefunctions.html">DEMO: H wavefunctions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../computational_sets/linear_variational_method.html">Linear Variational Method</a></li>
-
 <li class="toctree-l1"><a class="reference internal" href="../computational_sets/note05.html">Additional Notes on Spin</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../computational_sets/pib_delta_potential_dynamics.html">Dynamics of particle in a box with a delta potential</a></li>
-
-
-
 <li class="toctree-l1"><a class="reference internal" href="../computational_sets/Spin_one_half.html">Computational Set 1: Introduction to Spin 1/2</a></li>
 
 
@@ -625,18 +598,8 @@ N x(L-x)\text{, } &amp;0 \le x \le L \\
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/x2/ggtknn9s49s3dcq96ckcgfgh0000gn/T/ipykernel_16940/2584263596.py:13: DeprecationWarning: `trapz` is deprecated. Use `trapezoid` instead, or one of the numerical integration functions in `scipy.integrate`.
-  N = 1.0 / np.sqrt(np.trapz(phi**2, x))
-</pre></div>
-</div>
 <img alt="../../_images/898e3e70b6a5a9ae53f75f3434677e5d030ade810222f8e57accec68462de074.png" src="../../_images/898e3e70b6a5a9ae53f75f3434677e5d030ade810222f8e57accec68462de074.png" />
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>W =    4.99792 Eh
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/x2/ggtknn9s49s3dcq96ckcgfgh0000gn/T/ipykernel_16940/2584263596.py:28: DeprecationWarning: `trapz` is deprecated. Use `trapezoid` instead, or one of the numerical integration functions in `scipy.integrate`.
-  W = N * np.trapz(phi, x)
-/var/folders/x2/ggtknn9s49s3dcq96ckcgfgh0000gn/T/ipykernel_16940/2584263596.py:30: DeprecationWarning: `trapz` is deprecated. Use `trapezoid` instead, or one of the numerical integration functions in `scipy.integrate`.
-  print(&#39;W = %10.5f Eh&#39; % (W / np.trapz(phi**2, x)))
 </pre></div>
 </div>
 </div>
@@ -770,20 +733,6 @@ W = \frac{\langle \phi | \hat{H} \phi \rangle}{\langle \phi |\phi \rangle}
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c1 =    1.50478
 c2 =    0.37209
 w  =    4.93487 Eh
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/x2/ggtknn9s49s3dcq96ckcgfgh0000gn/T/ipykernel_16940/3308021524.py:32: DeprecationWarning: `trapz` is deprecated. Use `trapezoid` instead, or one of the numerical integration functions in `scipy.integrate`.
-  N1 = 1.0 / np.sqrt(np.trapz(phi_1**2, x))
-/var/folders/x2/ggtknn9s49s3dcq96ckcgfgh0000gn/T/ipykernel_16940/3308021524.py:40: DeprecationWarning: `trapz` is deprecated. Use `trapezoid` instead, or one of the numerical integration functions in `scipy.integrate`.
-  N2 = 1.0 / np.sqrt(np.trapz(phi_2**2, x))
-/var/folders/x2/ggtknn9s49s3dcq96ckcgfgh0000gn/T/ipykernel_16940/3308021524.py:47: DeprecationWarning: `trapz` is deprecated. Use `trapezoid` instead, or one of the numerical integration functions in `scipy.integrate`.
-  H11 = -0.5 * np.trapz(phi_1 * phi_1pp, x)
-/var/folders/x2/ggtknn9s49s3dcq96ckcgfgh0000gn/T/ipykernel_16940/3308021524.py:51: DeprecationWarning: `trapz` is deprecated. Use `trapezoid` instead, or one of the numerical integration functions in `scipy.integrate`.
-  H12 = -0.5 * np.trapz(phi_1 * phi_2pp, x)
-/var/folders/x2/ggtknn9s49s3dcq96ckcgfgh0000gn/T/ipykernel_16940/3308021524.py:54: DeprecationWarning: `trapz` is deprecated. Use `trapezoid` instead, or one of the numerical integration functions in `scipy.integrate`.
-  H22 = -0.5 * np.trapz(phi_2 * phi_2pp, x)
-/var/folders/x2/ggtknn9s49s3dcq96ckcgfgh0000gn/T/ipykernel_16940/3308021524.py:59: DeprecationWarning: `trapz` is deprecated. Use `trapezoid` instead, or one of the numerical integration functions in `scipy.integrate`.
-  S12 = np.trapz(phi_1 * phi_2, x)
 </pre></div>
 </div>
 </div>
@@ -963,10 +912,6 @@ N x(L-x)(L/2 - x) \text{, } &amp;0 \le x \le L \\
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/x2/ggtknn9s49s3dcq96ckcgfgh0000gn/T/ipykernel_16940/2360394166.py:13: DeprecationWarning: `trapz` is deprecated. Use `trapezoid` instead, or one of the numerical integration functions in `scipy.integrate`.
-  N = 1.0 / np.sqrt(np.trapz(phi**2, x))
-</pre></div>
-</div>
 <img alt="../../_images/7ad52952575c21c450656327e717c23f593bc06b54e5b7bc19d1d6c8c9c245dd.png" src="../../_images/7ad52952575c21c450656327e717c23f593bc06b54e5b7bc19d1d6c8c9c245dd.png" />
 </div>
 </div>
@@ -1595,20 +1540,6 @@ c &amp;= H_{11} H_{22} - H_{12}H_{21}
 W3  =   51.06507 Eh
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/x2/ggtknn9s49s3dcq96ckcgfgh0000gn/T/ipykernel_16940/922517624.py:8: DeprecationWarning: `trapz` is deprecated. Use `trapezoid` instead, or one of the numerical integration functions in `scipy.integrate`.
-  N1 = 1.0 / np.sqrt(np.trapz(phi_1**2, x))
-/var/folders/x2/ggtknn9s49s3dcq96ckcgfgh0000gn/T/ipykernel_16940/922517624.py:16: DeprecationWarning: `trapz` is deprecated. Use `trapezoid` instead, or one of the numerical integration functions in `scipy.integrate`.
-  N2 = 1.0 / np.sqrt(np.trapz(phi_2**2, x))
-/var/folders/x2/ggtknn9s49s3dcq96ckcgfgh0000gn/T/ipykernel_16940/922517624.py:23: DeprecationWarning: `trapz` is deprecated. Use `trapezoid` instead, or one of the numerical integration functions in `scipy.integrate`.
-  H11 = -0.5 * np.trapz(phi_1 * phi_1pp, x)
-/var/folders/x2/ggtknn9s49s3dcq96ckcgfgh0000gn/T/ipykernel_16940/922517624.py:27: DeprecationWarning: `trapz` is deprecated. Use `trapezoid` instead, or one of the numerical integration functions in `scipy.integrate`.
-  H12 = -0.5 * np.trapz(phi_1 * phi_2pp, x)
-/var/folders/x2/ggtknn9s49s3dcq96ckcgfgh0000gn/T/ipykernel_16940/922517624.py:30: DeprecationWarning: `trapz` is deprecated. Use `trapezoid` instead, or one of the numerical integration functions in `scipy.integrate`.
-  H22 = -0.5 * np.trapz(phi_2 * phi_2pp, x)
-/var/folders/x2/ggtknn9s49s3dcq96ckcgfgh0000gn/T/ipykernel_16940/922517624.py:35: DeprecationWarning: `trapz` is deprecated. Use `trapezoid` instead, or one of the numerical integration functions in `scipy.integrate`.
-  S12 = np.trapz(phi_1 * phi_2, x)
-</pre></div>
-</div>
 </div>
 </div>
 <p>Wow! <span class="math notranslate nohighlight">\(W_1\)</span> calculcated in this way, which provides an estimate for the exact ground-state energy, <span class="math notranslate nohighlight">\(E_1,\)</span> is identical to the estimate we found earlier by explicit numerical minimization of the variational integral. As a reminder, this estimate shows only a 0.001% error relative to the exact ground-state energy for the PIB problem, 4.93480 <span class="math notranslate nohighlight">\(E_\text{h}\)</span>! Moreover, we also have an estimate to the energy of the first excited state of even parity, which corresponds to the second excited-state energy overall, <span class="math notranslate nohighlight">\(E_3\)</span>. Recall</p>
@@ -1701,20 +1632,6 @@ H_{ij} &amp;= \langle f_i | \hat{H} | f_j \rangle \\
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>W2  =   19.75077 Eh
 W4  =  100.24872 Eh
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/x2/ggtknn9s49s3dcq96ckcgfgh0000gn/T/ipykernel_16940/4200106038.py:8: DeprecationWarning: `trapz` is deprecated. Use `trapezoid` instead, or one of the numerical integration functions in `scipy.integrate`.
-  N3 = 1.0 / np.sqrt(np.trapz(phi_3**2, x))
-/var/folders/x2/ggtknn9s49s3dcq96ckcgfgh0000gn/T/ipykernel_16940/4200106038.py:16: DeprecationWarning: `trapz` is deprecated. Use `trapezoid` instead, or one of the numerical integration functions in `scipy.integrate`.
-  N4 = 1.0 / np.sqrt(np.trapz(phi_4**2, x))
-/var/folders/x2/ggtknn9s49s3dcq96ckcgfgh0000gn/T/ipykernel_16940/4200106038.py:23: DeprecationWarning: `trapz` is deprecated. Use `trapezoid` instead, or one of the numerical integration functions in `scipy.integrate`.
-  H33 = 0.5 * np.trapz(phi_3p * phi_3p, x)
-/var/folders/x2/ggtknn9s49s3dcq96ckcgfgh0000gn/T/ipykernel_16940/4200106038.py:27: DeprecationWarning: `trapz` is deprecated. Use `trapezoid` instead, or one of the numerical integration functions in `scipy.integrate`.
-  H34 = 0.5 * np.trapz(phi_3p * phi_4p, x)
-/var/folders/x2/ggtknn9s49s3dcq96ckcgfgh0000gn/T/ipykernel_16940/4200106038.py:30: DeprecationWarning: `trapz` is deprecated. Use `trapezoid` instead, or one of the numerical integration functions in `scipy.integrate`.
-  H44 = 0.5 * np.trapz(phi_4p * phi_4p, x)
-/var/folders/x2/ggtknn9s49s3dcq96ckcgfgh0000gn/T/ipykernel_16940/4200106038.py:35: DeprecationWarning: `trapz` is deprecated. Use `trapezoid` instead, or one of the numerical integration functions in `scipy.integrate`.
-  S34 = np.trapz(phi_3 * phi_4, x)
 </pre></div>
 </div>
 </div>
@@ -1942,14 +1859,6 @@ H_{ij} &amp;= \langle f_i | \hat{H} | f_j \rangle \\
         
         <span class="c1"># kinetic energy term</span>
         <span class="n">H</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span> <span class="o">+=</span> <span class="n">hbar</span><span class="o">**</span><span class="mi">2</span> <span class="o">/</span> <span class="p">(</span><span class="mf">2.0</span> <span class="o">*</span> <span class="n">m</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">trapz</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">*</span> <span class="n">df</span><span class="p">[</span><span class="n">j</span><span class="p">],</span> <span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/x2/ggtknn9s49s3dcq96ckcgfgh0000gn/T/ipykernel_16940/3025880124.py:12: DeprecationWarning: `trapz` is deprecated. Use `trapezoid` instead, or one of the numerical integration functions in `scipy.integrate`.
-  H[i, j] = np.trapz(f[i] * V * f[j], x = x)
-/var/folders/x2/ggtknn9s49s3dcq96ckcgfgh0000gn/T/ipykernel_16940/3025880124.py:15: DeprecationWarning: `trapz` is deprecated. Use `trapezoid` instead, or one of the numerical integration functions in `scipy.integrate`.
-  H[i, j] += hbar**2 / (2.0 * m) * np.trapz(df[i] * df[j], x = x)
 </pre></div>
 </div>
 </div>

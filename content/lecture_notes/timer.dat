@@ -404,3 +404,192 @@ JK: JK                              :      1.767u      0.000s      1.055w     30
 JK: AO2USO                          :      0.000u      0.000s      0.000w     30 calls
 
 **************************************************************************************
+
+Host: CHEM9QDFT72ALT
+
+Timers On : Thu Jul 10 15:37:16 2025
+Timers Off: Thu Jul 10 15:37:27 2025
+
+Wall Time:       10.72 seconds
+
+                                                       Time (seconds)
+Module                                       User      System        Wall        Calls
+Total PK formation time             :      0.217u      0.000s      0.108w    156 calls
+Libint2ERI::Libint2ERI              :      0.017u      0.000s      0.013w    468 calls
+HF: Form core H                     :      0.000u      0.050s      0.035w    156 calls
+HF: Form S/X                        :      0.000u      0.017s      0.005w    156 calls
+HF: Guess                           :      0.667u      0.033s      0.451w    156 calls
+SAD Guess                           :      0.617u      0.033s      0.409w    156 calls
+HF: Form G                          :      0.017u      0.000s      0.009w    833 calls
+JK: D                               :      0.000u      0.000s      0.001w    833 calls
+JK: USO2AO                          :      0.000u      0.000s      0.001w    833 calls
+JK: JK                              :      0.017u      0.000s      0.004w    833 calls
+PK computes JK                      :      0.017u      0.000s      0.003w    833 calls
+JK: AO2USO                          :      0.000u      0.000s      0.000w    833 calls
+HF: Form F                          :      0.000u      0.017s      0.001w    833 calls
+HF: Form D                          :      0.000u      0.000s      0.001w    833 calls
+HF: DIIS                            :      0.850u      0.100s      0.602w    677 calls
+HF: Form C                          :      0.017u      0.000s      0.047w    677 calls
+CIWave: CIvect write                :      0.000u      0.033s      0.016w   3492 calls
+CIWave: CIvect read                 :      0.000u      0.050s      0.023w  15666 calls
+CIWave: s2                          :      0.000u      0.000s      0.001w    456 calls
+CIWave: s3                          :      0.000u      0.000s      0.005w    456 calls
+FNOCC: Initializing Integrals       :      0.017u      0.000s      0.001w     78 calls
+FNOCC: Two Elec Int Trans.          :      0.033u      0.217s      0.168w     78 calls
+FNOCC: CC energy                    :      0.250u      1.950s      1.322w     78 calls
+FNOCC: triples                      :      0.033u      0.133s      0.102w     78 calls
+
+--------------------------------------------------------------------------------------
+Total PK formation time             :      0.217u      0.000s      0.108w    156 calls
+| Libint2ERI::Libint2ERI            :      0.000u      0.000s      0.009w    312 calls
+HF: Form core H                     :      0.000u      0.050s      0.035w    156 calls
+HF: Form S/X                        :      0.000u      0.017s      0.005w    156 calls
+HF: Guess                           :      0.667u      0.033s      0.451w    156 calls
+| SAD Guess                         :      0.617u      0.033s      0.409w    156 calls
+HF: Form G                          :      0.017u      0.000s      0.009w    833 calls
+| JK: D                             :      0.000u      0.000s      0.001w    833 calls
+| JK: USO2AO                        :      0.000u      0.000s      0.001w    833 calls
+| JK: JK                            :      0.017u      0.000s      0.004w    833 calls
+| | PK computes JK                  :      0.017u      0.000s      0.003w    833 calls
+| JK: AO2USO                        :      0.000u      0.000s      0.000w    833 calls
+HF: Form F                          :      0.000u      0.017s      0.001w    833 calls
+HF: Form D                          :      0.000u      0.000s      0.001w    833 calls
+HF: DIIS                            :      0.850u      0.100s      0.602w    677 calls
+HF: Form C                          :      0.017u      0.000s      0.047w    677 calls
+Libint2ERI::Libint2ERI              :      0.017u      0.000s      0.004w    156 calls
+CIWave: CIvect write                :      0.000u      0.033s      0.016w   3492 calls
+CIWave: CIvect read                 :      0.000u      0.050s      0.023w  15666 calls
+CIWave: s2                          :      0.000u      0.000s      0.001w    456 calls
+CIWave: s3                          :      0.000u      0.000s      0.005w    456 calls
+FNOCC: Initializing Integrals       :      0.017u      0.000s      0.001w     78 calls
+FNOCC: Two Elec Int Trans.          :      0.033u      0.217s      0.168w     78 calls
+FNOCC: CC energy                    :      0.250u      1.950s      1.322w     78 calls
+| FNOCC: triples                    :      0.033u      0.133s      0.102w     78 calls
+
+**************************************************************************************
+
+Host: CHEM9QDFT72ALT
+
+Timers On : Thu Jul 10 15:51:23 2025
+Timers Off: Thu Jul 10 15:51:33 2025
+
+Wall Time:       10.63 seconds
+
+                                                       Time (seconds)
+Module                                       User      System        Wall        Calls
+Total PK formation time             :      0.200u      0.000s      0.108w    156 calls
+Libint2ERI::Libint2ERI              :      0.033u      0.000s      0.012w    468 calls
+HF: Form core H                     :      0.017u      0.083s      0.032w    156 calls
+HF: Form S/X                        :      0.000u      0.000s      0.005w    156 calls
+HF: Guess                           :      0.617u      0.083s      0.454w    156 calls
+SAD Guess                           :      0.550u      0.083s      0.412w    156 calls
+HF: Form G                          :      0.000u      0.000s      0.009w    833 calls
+JK: D                               :      0.000u      0.000s      0.001w    833 calls
+JK: USO2AO                          :      0.000u      0.000s      0.001w    833 calls
+JK: JK                              :      0.000u      0.000s      0.004w    833 calls
+PK computes JK                      :      0.000u      0.000s      0.003w    833 calls
+JK: AO2USO                          :      0.000u      0.000s      0.000w    833 calls
+HF: Form F                          :      0.017u      0.000s      0.001w    833 calls
+HF: Form D                          :      0.000u      0.000s      0.001w    833 calls
+HF: DIIS                            :      1.100u      0.100s      0.599w    677 calls
+HF: Form C                          :      0.083u      0.000s      0.047w    677 calls
+CIWave: CIvect write                :      0.000u      0.017s      0.017w   3492 calls
+CIWave: CIvect read                 :      0.017u      0.017s      0.023w  15666 calls
+CIWave: s2                          :      0.000u      0.000s      0.001w    456 calls
+CIWave: s3                          :      0.017u      0.000s      0.005w    456 calls
+FNOCC: Initializing Integrals       :      0.000u      0.000s      0.001w     78 calls
+FNOCC: Two Elec Int Trans.          :      0.017u      0.233s      0.167w     78 calls
+FNOCC: CC energy                    :      0.167u      1.917s      1.323w     78 calls
+FNOCC: triples                      :      0.033u      0.150s      0.104w     78 calls
+
+--------------------------------------------------------------------------------------
+Total PK formation time             :      0.200u      0.000s      0.108w    156 calls
+| Libint2ERI::Libint2ERI            :      0.017u      0.000s      0.009w    312 calls
+HF: Form core H                     :      0.017u      0.083s      0.032w    156 calls
+HF: Form S/X                        :      0.000u      0.000s      0.005w    156 calls
+HF: Guess                           :      0.617u      0.083s      0.454w    156 calls
+| SAD Guess                         :      0.550u      0.083s      0.412w    156 calls
+HF: Form G                          :      0.000u      0.000s      0.009w    833 calls
+| JK: D                             :      0.000u      0.000s      0.001w    833 calls
+| JK: USO2AO                        :      0.000u      0.000s      0.001w    833 calls
+| JK: JK                            :      0.000u      0.000s      0.004w    833 calls
+| | PK computes JK                  :      0.000u      0.000s      0.003w    833 calls
+| JK: AO2USO                        :      0.000u      0.000s      0.000w    833 calls
+HF: Form F                          :      0.017u      0.000s      0.001w    833 calls
+HF: Form D                          :      0.000u      0.000s      0.001w    833 calls
+HF: DIIS                            :      1.100u      0.100s      0.599w    677 calls
+HF: Form C                          :      0.083u      0.000s      0.047w    677 calls
+Libint2ERI::Libint2ERI              :      0.017u      0.000s      0.004w    156 calls
+CIWave: CIvect write                :      0.000u      0.017s      0.017w   3492 calls
+CIWave: CIvect read                 :      0.017u      0.017s      0.023w  15666 calls
+CIWave: s2                          :      0.000u      0.000s      0.001w    456 calls
+CIWave: s3                          :      0.017u      0.000s      0.005w    456 calls
+FNOCC: Initializing Integrals       :      0.000u      0.000s      0.001w     78 calls
+FNOCC: Two Elec Int Trans.          :      0.017u      0.233s      0.167w     78 calls
+FNOCC: CC energy                    :      0.167u      1.917s      1.323w     78 calls
+| FNOCC: triples                    :      0.033u      0.150s      0.104w     78 calls
+
+**************************************************************************************
+
+Host: CHEM9QDFT72ALT
+
+Timers On : Thu Jul 10 16:02:03 2025
+Timers Off: Thu Jul 10 16:02:13 2025
+
+Wall Time:       10.33 seconds
+
+                                                       Time (seconds)
+Module                                       User      System        Wall        Calls
+Total PK formation time             :      0.217u      0.017s      0.103w    156 calls
+Libint2ERI::Libint2ERI              :      0.017u      0.000s      0.012w    468 calls
+HF: Form core H                     :      0.033u      0.033s      0.033w    156 calls
+HF: Form S/X                        :      0.000u      0.000s      0.005w    156 calls
+HF: Guess                           :      0.617u      0.067s      0.434w    156 calls
+SAD Guess                           :      0.467u      0.050s      0.394w    156 calls
+HF: Form G                          :      0.017u      0.000s      0.009w    833 calls
+JK: D                               :      0.000u      0.000s      0.001w    833 calls
+JK: USO2AO                          :      0.000u      0.000s      0.001w    833 calls
+JK: JK                              :      0.000u      0.000s      0.004w    833 calls
+PK computes JK                      :      0.000u      0.000s      0.002w    833 calls
+JK: AO2USO                          :      0.000u      0.000s      0.000w    833 calls
+HF: Form F                          :      0.000u      0.000s      0.001w    833 calls
+HF: Form D                          :      0.000u      0.017s      0.001w    833 calls
+HF: DIIS                            :      0.733u      0.133s      0.580w    677 calls
+HF: Form C                          :      0.183u      0.000s      0.045w    677 calls
+CIWave: CIvect write                :      0.000u      0.050s      0.017w   3492 calls
+CIWave: CIvect read                 :      0.000u      0.000s      0.023w  15666 calls
+CIWave: s2                          :      0.000u      0.000s      0.001w    456 calls
+CIWave: s3                          :      0.000u      0.000s      0.005w    456 calls
+FNOCC: Initializing Integrals       :      0.000u      0.000s      0.001w     78 calls
+FNOCC: Two Elec Int Trans.          :      0.017u      0.150s      0.159w     78 calls
+FNOCC: CC energy                    :      0.217u      1.917s      1.276w     78 calls
+FNOCC: triples                      :      0.050u      0.117s      0.103w     78 calls
+
+--------------------------------------------------------------------------------------
+Total PK formation time             :      0.217u      0.017s      0.103w    156 calls
+| Libint2ERI::Libint2ERI            :      0.000u      0.000s      0.009w    312 calls
+HF: Form core H                     :      0.033u      0.033s      0.033w    156 calls
+HF: Form S/X                        :      0.000u      0.000s      0.005w    156 calls
+HF: Guess                           :      0.617u      0.067s      0.434w    156 calls
+| SAD Guess                         :      0.467u      0.050s      0.394w    156 calls
+HF: Form G                          :      0.017u      0.000s      0.009w    833 calls
+| JK: D                             :      0.000u      0.000s      0.001w    833 calls
+| JK: USO2AO                        :      0.000u      0.000s      0.001w    833 calls
+| JK: JK                            :      0.000u      0.000s      0.004w    833 calls
+| | PK computes JK                  :      0.000u      0.000s      0.002w    833 calls
+| JK: AO2USO                        :      0.000u      0.000s      0.000w    833 calls
+HF: Form F                          :      0.000u      0.000s      0.001w    833 calls
+HF: Form D                          :      0.000u      0.017s      0.001w    833 calls
+HF: DIIS                            :      0.733u      0.133s      0.580w    677 calls
+HF: Form C                          :      0.183u      0.000s      0.045w    677 calls
+Libint2ERI::Libint2ERI              :      0.017u      0.000s      0.004w    156 calls
+CIWave: CIvect write                :      0.000u      0.050s      0.017w   3492 calls
+CIWave: CIvect read                 :      0.000u      0.000s      0.023w  15666 calls
+CIWave: s2                          :      0.000u      0.000s      0.001w    456 calls
+CIWave: s3                          :      0.000u      0.000s      0.005w    456 calls
+FNOCC: Initializing Integrals       :      0.000u      0.000s      0.001w     78 calls
+FNOCC: Two Elec Int Trans.          :      0.017u      0.150s      0.159w     78 calls
+FNOCC: CC energy                    :      0.217u      1.917s      1.276w     78 calls
+| FNOCC: triples                    :      0.050u      0.117s      0.103w     78 calls
+
+**************************************************************************************

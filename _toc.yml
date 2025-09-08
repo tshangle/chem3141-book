@@ -17,12 +17,8 @@ parts:
   - caption: Problem Sets
     chapters:
       - file: content/problem_sets/ps_1
+      - file: content/problem_sets/ps_2
 
-  - caption: Advanced Topics
-    chapters:
-      - file: content/advanced_topics/HF_Coupled_to_Cavity_Tensor_To_Complete
-      - file: content/advanced_topics/Linear_Variational_Method_Quartic_Oscillator_and_Zeeman_Effect
-      - file: content/advanced_topics/Zeeman_Effect_Hydrogen_Atom
 
   - caption: Computational Sets
     chapters:
@@ -32,7 +28,6 @@ parts:
       - file: content/computational_sets/note05
       - file: content/computational_sets/pib_delta_potential_dynamics
       - file: content/computational_sets/Spin_one_half
-      # optionally: - file: content/computational_sets/Spin_one_half_old
 
   - caption: Resources
     chapters:
@@ -42,4 +37,6 @@ parts:
       - file: content/resources/note05
       - file: content/resources/notebooks
       - file: content/resources/spin_background
+
+
 

@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -203,37 +203,11 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Problem Sets</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../problem_sets/ps_1.html">Problem Set 1</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Advanced Topics</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../advanced_topics/HF_Coupled_to_Cavity_Tensor_To_Complete.html">Introduction to Molecular CQED</a></li>
-
-
-
-
-
-
-<li class="toctree-l1"><a class="reference internal" href="../advanced_topics/Linear_Variational_Method_Quartic_Oscillator_and_Zeeman_Effect.html">Linear Variational Method - Anharmonic Oscillator</a></li>
-
-
-<li class="toctree-l1"><a class="reference internal" href="../advanced_topics/Zeeman_Effect_Hydrogen_Atom.html">Zeeman Effect</a></li>
-
-
+<li class="toctree-l1"><a class="reference internal" href="../problem_sets/ps_2.html">Problem Set 2</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Computational Sets</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../computational_sets/CO_Perturbation_Theory.html">Computing Fundamental Transition of CO under different levels of approximation</a></li>
-
-
-
-<li class="toctree-l1"><a class="reference internal" href="../computational_sets/hydrogen_wavefunctions.html">DEMO: H wavefunctions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../computational_sets/linear_variational_method.html">Linear Variational Method</a></li>
-
 <li class="toctree-l1"><a class="reference internal" href="../computational_sets/note05.html">Additional Notes on Spin</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../computational_sets/pib_delta_potential_dynamics.html">Dynamics of particle in a box with a delta potential</a></li>
-
-
-
 <li class="toctree-l1"><a class="reference internal" href="../computational_sets/Spin_one_half.html">Computational Set 1: Introduction to Spin 1/2</a></li>
 
 
@@ -508,6 +482,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#wavefunctions">Wavefunctions</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#boundary-conditions">Boundary Conditions</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#procedure-for-visualizing-the-allowable-wavefunctions">Procedure for visualizing the allowable wavefunctions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#practice">Practice</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tunneling-through-a-barrier">Tunneling Through a Barrier</a></li>
@@ -606,13 +581,9 @@ Then click below to reveal the full worked-out solution.</p>
 <p>This result indicates that the state described by this function has a well-defined (or definite) value of the momentum in the <span class="math notranslate nohighlight">\(x\)</span>-direction. Recall, <span class="math notranslate nohighlight">\(k = +\left ( \frac{2mE}{\hbar^2} \right )^{1/2},\)</span> so, <span class="math notranslate nohighlight">\(k \ge 0\)</span> and <span class="math notranslate nohighlight">\(\hbar k \ge 0\)</span>, which implies that <span class="math notranslate nohighlight">\(p_x \ge 0\)</span>. Since the momentum of the particle is positive and well-defined, the state described by <span class="math notranslate nohighlight">\(\psi(x) = Ae^{ikx}\)</span> corresponds to the case where the free particle is traveling in the <span class="math notranslate nohighlight">\(+x\)</span> direction, with momentum <span class="math notranslate nohighlight">\(\hbar k\)</span>. If this interpretation is not clear, recall the following</p>
 <ol class="arabic simple">
 <li><p>Any function can be expanded in terms of eigenfunctions of a Hermitian operator, <span class="math notranslate nohighlight">\(\hat{B}\)</span>, as
-$<span class="math notranslate nohighlight">\( \begin{align}
-\psi = \sum_i c_i g_i
-\end{align}\)</span><span class="math notranslate nohighlight">\(
+<span class="math notranslate nohighlight">\(\psi = \sum_i c_i g_i\)</span>
 where
-\)</span><span class="math notranslate nohighlight">\(\begin{align}
-\hat{B} g_i = b_i g_i 
-\end{align}\)</span>$</p></li>
+<span class="math notranslate nohighlight">\(\hat{B} g_i = b_i g_i\)</span></p></li>
 <li><p>Any measurement of <span class="math notranslate nohighlight">\(B\)</span> results in one of the eigenvalues, <span class="math notranslate nohighlight">\(b_i\)</span>. The probability with which we observe <span class="math notranslate nohighlight">\(b_i\)</span> is proportional to <span class="math notranslate nohighlight">\(|c_i|^2\)</span>. The proportionality becomes an equality of the wave function is normalized.</p></li>
 <li><p>If <span class="math notranslate nohighlight">\(\psi\)</span> is exactly equal to an eigenfunction of <span class="math notranslate nohighlight">\(\hat{B}\)</span>, then there is only one term in the sum above, and the only value of <span class="math notranslate nohighlight">\(B\)</span> that would ever be observed would be the corresponding eigenvalue. In the case above, we have <span class="math notranslate nohighlight">\(\psi(x) = A e^{ikx}\)</span>, which we showed is an eigenfunction of <span class="math notranslate nohighlight">\(\hat{p}_x\)</span>.</p></li>
 </ol>
@@ -817,46 +788,46 @@ f = \sum_k c_k g_k
 \end{align}\end{split}\]</div>
 <p>because, as we learned in the last notebook, the commutator of any operator with any power of itself is zero.</p>
 <blockquote>
-<div><p>Practice</p>
-<p>Question 1: Derive the result</p>
+<div><p><strong>Practice</strong></p>
+<p><strong>Question 1:</strong> Derive the result</p>
 <div class="math notranslate nohighlight">
-\[\begin{align}
-\Delta x \Delta p_x \ge \frac{1}{2} \hbar
-\end{align}\]</div>
-<p>using the general expression for Heisenberg’s Uncertainty principle</p>
+\[\Delta x \, \Delta p_x \ge \frac{1}{2} \hbar\]</div>
+<p>using the general expression for Heisenberg’s Uncertainty principle:</p>
 <div class="math notranslate nohighlight">
-\[\begin{align}
-\Delta x \Delta p_x \ge \frac{1}{2} | \langle [ \hat{x}, \hat{p}_x ] \rangle |
-\end{align}\]</div>
-<details>
-<summary>Answer 1</summary> 
-Let us first evaluate the commutator of $\hat{x}$ and $\hat{p}_x$:
-$$\begin{align}
+\[\Delta x \, \Delta p_x \ge \frac{1}{2} \left| \langle [ \hat{x}, \hat{p}_x ] \rangle \right|\]</div>
 </div></blockquote>
-<p>[\hat{x}, \hat{p}_x]f &amp;= x \left ( -i\hbar \frac{d}{dx}\right ) f - \left (-i\hbar \frac{d}{dx}\right ) x f \
-&amp;= -i\hbar x f^\prime + i\hbar( f + x f^\prime) \
-[\hat{x}, \hat{p}_x]f &amp;= i\hbar f
-\end{align}$$</p>
-<blockquote>
-<div><p>Therefore <span class="math notranslate nohighlight">\([\hat{x}, \hat{p}_x] = i\hbar\)</span>. Now, insert this result into the expression for the joint uncertainty in <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(p_x\)</span>
-$<span class="math notranslate nohighlight">\(\begin{align}
-\Delta x \Delta p_x \ge \frac{1}{2} | \langle i\hbar \rangle |
-\end{align}\)</span><span class="math notranslate nohighlight">\(
-For the expectation value, we have
-\)</span><span class="math notranslate nohighlight">\(\begin{align}
-\langle i\hbar \rangle &amp;= \frac{\langle \psi | i \hbar | \psi \rangle }{\langle \psi | \psi \rangle }\\
-&amp;= i \hbar \frac{\langle \psi | \psi \rangle }{\langle \psi | \psi \rangle } \\
-&amp;= i\hbar
-\end{align}\)</span><span class="math notranslate nohighlight">\(
-For any non-zero wave function, \)</span>\psi<span class="math notranslate nohighlight">\(. So
-\)</span><span class="math notranslate nohighlight">\(\begin{align}\Delta x \Delta p_x &amp;\ge \frac{1}{2} | i\hbar |\\
-&amp;\ge \frac{1}{2} \hbar
-\end{align}\)</span><span class="math notranslate nohighlight">\(
-because
-\)</span><span class="math notranslate nohighlight">\(\begin{align}
-|i\hbar| = \left [ (-i\hbar)(i\hbar) \right]^{1/2} = \left [ \hbar^2 \right ]^{1/2} = \hbar
-\end{align}\)</span>$</p>
-</details></div></blockquote>
+<details>
+<summary><strong>Answer 1</strong></summary>
+<p>Let us first evaluate the commutator of <span class="math notranslate nohighlight">\(\hat{x}\)</span> and <span class="math notranslate nohighlight">\(\hat{p}_x\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[[\hat{x}, \hat{p}_x]f = x\left(-i\hbar \frac{d}{dx}\right)f - \left(-i\hbar \frac{d}{dx}\right)xf\]</div>
+<div class="math notranslate nohighlight">
+\[= -i\hbar x f' + i\hbar \left(f + x f'\right)\]</div>
+<div class="math notranslate nohighlight">
+\[[\hat{x}, \hat{p}_x]f = i\hbar f\]</div>
+<p>Therefore:</p>
+<div class="math notranslate nohighlight">
+\[[\hat{x}, \hat{p}_x] = i\hbar\]</div>
+<p>Now, insert this result into the expression for the joint uncertainty in <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(p_x\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\Delta x \, \Delta p_x \ge \frac{1}{2} \left| \langle i\hbar \rangle \right|\]</div>
+<p>For the expectation value, we have:</p>
+<div class="math notranslate nohighlight">
+\[\langle i\hbar \rangle = \frac{\langle \psi | i\hbar | \psi \rangle}{\langle \psi | \psi \rangle}\]</div>
+<div class="math notranslate nohighlight">
+\[= i\hbar \frac{\langle \psi | \psi \rangle}{\langle \psi | \psi \rangle}\]</div>
+<div class="math notranslate nohighlight">
+\[= i\hbar\]</div>
+<p>For any non-zero wave function <span class="math notranslate nohighlight">\(\psi\)</span>.</p>
+<p>So:</p>
+<div class="math notranslate nohighlight">
+\[\Delta x \, \Delta p_x \ge \frac{1}{2} | i\hbar |\]</div>
+<div class="math notranslate nohighlight">
+\[= \frac{1}{2} \hbar\]</div>
+<p>because:</p>
+<div class="math notranslate nohighlight">
+\[|i\hbar| = \left[ (-i\hbar)(i\hbar) \right]^{1/2} = \left[ \hbar^2 \right]^{1/2} = \hbar\]</div>
+</details>
 </section>
 </section>
 </section>
@@ -1520,23 +1491,23 @@ Use the relation <span class="math notranslate nohighlight">\( E = \frac{hc}{\la
 </div>
 </div>
 <p>The second trend of interest is the scaling of the transition dipole moment with the size of the cyanine system, which we can again estimate from the particle in a box system.  Here, we want to compute the transition dipole moment between the particle in a box energy eigenfunctions that are reasonable models for the HOMO and LUMO orbitals:
-\begin{equation}
-\mu_{n_i\rightarrow n_f} = \int_0^L \psi_{n_f}(x) : \hat{\mu} : \psi_{n_i}(x) dx.
-\end{equation}
+$<span class="math notranslate nohighlight">\(
+\mu_{n_i\rightarrow n_f} = \int_0^L \psi_{n_f}(x) \: \hat{\mu} \: \psi_{n_i}(x) dx.
+\)</span><span class="math notranslate nohighlight">\(
 Here, the particle in a box energy eigenfunctions have the form
-\begin{equation}
-\psi_n(x) = \sqrt{\frac{2}{L}} : {\rm sin}\left( \frac{n \pi x}{L} \right),
-\end{equation}
+\)</span><span class="math notranslate nohighlight">\(
+\psi_n(x) = \sqrt{\frac{2}{L}} \: {\rm sin}\left( \frac{n \pi x}{L} \right),
+\)</span><span class="math notranslate nohighlight">\(
 and the transition dipole operator has the form
-\begin{equation}
+\)</span><span class="math notranslate nohighlight">\(
 \hat{\mu} = -e x
-\end{equation}
-where <span class="math notranslate nohighlight">\(e\)</span> is the electron charge and <span class="math notranslate nohighlight">\(x\)</span> is displacement or position operator along the <span class="math notranslate nohighlight">\(x\)</span> axis.  The full expression for the transition dipole moment integrals can be found on page 5 of the supporting information of <a class="reference external" href="https://pubs.acs.org/doi/abs/10.1021/acsphotonics.6b00773">this paper</a>.</p>
+\)</span><span class="math notranslate nohighlight">\(
+where \)</span>e<span class="math notranslate nohighlight">\( is the electron charge and \)</span>x<span class="math notranslate nohighlight">\( is displacement or position operator along the \)</span>x$ axis.  The full expression for the transition dipole moment integrals can be found on page 5 of the supporting information of <a class="reference external" href="https://pubs.acs.org/doi/abs/10.1021/acsphotonics.6b00773">this paper</a>.</p>
 <p>Given that the quantum numbers for the HOMO-LUMO transitions always differ by one, the relevant HOMO-LUMO transition dipole moments from the particle in a box model take on a fairly simple form as follows:
-\begin{equation}
+$<span class="math notranslate nohighlight">\(
 \mu_{i\rightarrow f} = 2eL \left(  \frac{1}{( n_f + n_i )^2 \pi^2 } - \frac{1}{\pi^2} \right).
-\end{equation}
-From this, we can see that the transition dipole moment approaches a value of <span class="math notranslate nohighlight">\(\frac{-2eL}{\pi^2}\)</span> in the limit of large <span class="math notranslate nohighlight">\(k\)</span> (which is also the limit of large <span class="math notranslate nohighlight">\(L\)</span>); thus from this particle in a box model, we would expect the transition dipole momento to scale linearly with the length of the cyanine dye system.  We see from the plot below, this is the case!  Note in the podcast, we could not remember how it scaled and speculated it scaled as the square root of <span class="math notranslate nohighlight">\(L\)</span>, so we were being too conservative by a factor of <span class="math notranslate nohighlight">\(L^{1/2}\)</span>!</p>
+\)</span><span class="math notranslate nohighlight">\(
+From this, we can see that the transition dipole moment approaches a value of \)</span>\frac{-2eL}{\pi^2}<span class="math notranslate nohighlight">\( in the limit of large \)</span>k<span class="math notranslate nohighlight">\( (which is also the limit of large \)</span>L<span class="math notranslate nohighlight">\(); thus from this particle in a box model, we would expect the transition dipole momento to scale linearly with the length of the cyanine dye system.  We see from the plot below, this is the case!  Note in the podcast, we could not remember how it scaled and speculated it scaled as the square root of \)</span>L<span class="math notranslate nohighlight">\(, so we were being too conservative by a factor of \)</span>L^{1/2}$!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># charge of the electron</span>
@@ -1770,7 +1741,7 @@ E = \frac{h^2}{8ma^2} \left ( n_x^2 + n_y^2 \right )
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x10a78ae10&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x120cfde50&gt;
 </pre></div>
 </div>
 <img alt="../../_images/ce2a05565d6c2eac2155db63ce3d0c460580a2d09755f331238d423bd1f7a7b7.png" src="../../_images/ce2a05565d6c2eac2155db63ce3d0c460580a2d09755f331238d423bd1f7a7b7.png" />
@@ -1833,37 +1804,40 @@ T = \frac{p^2}{2m}
 \end{align}\]</div>
 <p>Having <span class="math notranslate nohighlight">\(T &lt; 0\)</span> would imply that the momentum is imaginary! This result is clearly nonsense and is rejected as non-physical.</p>
 <blockquote>
-<div><p>Practice</p>
-<p>Question 3: Prove that the expectation value of the kinetic energy operator in the <span class="math notranslate nohighlight">\(x\)</span> direction is non-negative.</p>
-<details>
-<summary>Answer 3</summary> 
-We would like to show
-$$\begin{align}
+<div><p><strong>Practice</strong></p>
+<p><strong>Question 3:</strong> Prove that the expectation value of the kinetic energy operator in the <span class="math notranslate nohighlight">\(x\)</span> direction is non-negative.</p>
 </div></blockquote>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>\langle \hat{T}_x \rangle &amp;= \frac{\langle \psi | \hat{T}_x | \psi \rangle }{\langle \psi | \psi \rangle} \ge 0 \\
-</pre></div>
-</div>
-<p>\end{align}$$</p>
-<blockquote>
-<div><p>To simplify things, let us assume that <span class="math notranslate nohighlight">\(\psi\)</span> is normalized, i.e., <span class="math notranslate nohighlight">\(\langle \psi | \psi \rangle = 1\)</span>, so we have
-$<span class="math notranslate nohighlight">\(\begin{align}
-    \langle \hat{T}_x \rangle &amp;= \langle \psi | \hat{T}_x | \psi \rangle \\
-    &amp;= \int_{-\infty}^{\infty} \psi(x)^* \frac{\hat{p}_x^2}{2m} \psi(x) dx \\
-    &amp;= \frac{1}{2m} \int_{-\infty}^{\infty} \psi(x)^* \hat{p}_x \hat{p}_x \psi(x) dx \\
-    &amp;= \frac{1}{2m} \int_{-\infty}^{\infty} \psi(x)^* \hat{p}_x f(x) dx \\
-\end{align}\)</span><span class="math notranslate nohighlight">\(
-where we have introduced a function, \)</span>f(x) = \hat{p}_x \psi(x)<span class="math notranslate nohighlight">\(. Now, because \)</span>\hat{p}_x<span class="math notranslate nohighlight">\( is Hermitian, the last line can be reexpressed as
-\)</span><span class="math notranslate nohighlight">\( \begin{align}
-    \langle \hat{T}_x \rangle &amp;= \frac{1}{2m} \left ( \int_{-\infty}^{\infty} f(x)^* \hat{p}_x \psi(x) dx \right ) ^* \\
-    &amp;= \frac{1}{2m} \left ( \int_{-\infty}^{\infty} f(x)^* f(x) dx \right ) ^* \\
-    &amp;= \frac{1}{2m} \int_{-\infty}^{\infty} f(x)^* f(x) dx \\
-    &amp;= \frac{1}{2m} \int_{-\infty}^{\infty} |f(x)|^2 dx
-\end{align}\)</span><span class="math notranslate nohighlight">\(
-The square modulus of any function is a non-negative function, the integral of a non-negative function over all space is  non-negative, and the mass, \)</span>m<span class="math notranslate nohighlight">\( is also non-negative, which means that
-\)</span><span class="math notranslate nohighlight">\( \begin{align}
-\langle \hat{T}_x \rangle \ge 0
-\end{align}\)</span>$</p>
-</details></div></blockquote>
+<details>
+<summary><strong>Answer 3</strong></summary>
+<p>We would like to show:</p>
+<div class="math notranslate nohighlight">
+\[\langle \hat{T}_x \rangle = \frac{\langle \psi | \hat{T}_x | \psi \rangle}{\langle \psi | \psi \rangle} \ge 0\]</div>
+<p>To simplify things, let us assume that <span class="math notranslate nohighlight">\(\psi\)</span> is normalized, i.e., <span class="math notranslate nohighlight">\(\langle \psi | \psi \rangle = 1\)</span>, so we have:</p>
+<div class="math notranslate nohighlight">
+\[\langle \hat{T}_x \rangle = \langle \psi | \hat{T}_x | \psi \rangle\]</div>
+<div class="math notranslate nohighlight">
+\[= \int_{-\infty}^{\infty} \psi(x)^* \frac{\hat{p}_x^2}{2m} \psi(x) \, dx\]</div>
+<div class="math notranslate nohighlight">
+\[= \frac{1}{2m} \int_{-\infty}^{\infty} \psi(x)^* \hat{p}_x \hat{p}_x \psi(x) \, dx\]</div>
+<div class="math notranslate nohighlight">
+\[= \frac{1}{2m} \int_{-\infty}^{\infty} \psi(x)^* \hat{p}_x f(x) \, dx\]</div>
+<p>where we have introduced a function <span class="math notranslate nohighlight">\(f(x) = \hat{p}_x \psi(x)\)</span>.</p>
+<p>Now, because <span class="math notranslate nohighlight">\(\hat{p}_x\)</span> is Hermitian, the last line can be re-expressed as:</p>
+<div class="math notranslate nohighlight">
+\[\langle \hat{T}_x \rangle = \frac{1}{2m} \left( \int_{-\infty}^{\infty} f(x)^* \hat{p}_x \psi(x) \, dx \right)^*\]</div>
+<div class="math notranslate nohighlight">
+\[= \frac{1}{2m} \left( \int_{-\infty}^{\infty} f(x)^* f(x) \, dx \right)^*\]</div>
+<div class="math notranslate nohighlight">
+\[= \frac{1}{2m} \int_{-\infty}^{\infty} f(x)^* f(x) \, dx\]</div>
+<div class="math notranslate nohighlight">
+\[= \frac{1}{2m} \int_{-\infty}^{\infty} |f(x)|^2 \, dx\]</div>
+<p>The square modulus of any function is a non-negative function,<br />
+the integral of a non-negative function over all space is non-negative,<br />
+and the mass <span class="math notranslate nohighlight">\(m\)</span> is also non-negative.</p>
+<p>Therefore:</p>
+<div class="math notranslate nohighlight">
+\[\langle \hat{T}_x \rangle \ge 0\]</div>
+</details>
 </section>
 <section id="finite-square-well-potential">
 <h2>Finite Square Well Potential<a class="headerlink" href="#finite-square-well-potential" title="Link to this heading">#</a></h2>
@@ -2071,7 +2045,7 @@ E - V(x) &amp;= T_x \\
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/x2/ggtknn9s49s3dcq96ckcgfgh0000gn/T/ipykernel_16937/4185230906.py:9: RuntimeWarning: divide by zero encountered in divide
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/dp/63x0n7nd4_q9b8cbskjk1xpr0000gp/T/ipykernel_13278/4185230906.py:9: RuntimeWarning: divide by zero encountered in divide
   rhs = 2 * np.sqrt(V0-E) * np.sqrt(E) / (2 * E - V0)
 </pre></div>
 </div>
@@ -2178,12 +2152,6 @@ E - V(x) &amp;= T_x \\
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/x2/ggtknn9s49s3dcq96ckcgfgh0000gn/T/ipykernel_16937/337456428.py:7: DeprecationWarning: `trapz` is deprecated. Use `trapezoid` instead, or one of the numerical integration functions in `scipy.integrate`.
-  N = np.sqrt(1.0 / np.trapz(psi2[:, state], x = x))
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2212,79 +2180,67 @@ E - V(x) &amp;= T_x \\
 <img alt="../../_images/492b5cd4faa478892eb5725cf086e5c532ad21b742c050b7f9aa742c1e6022dd.png" src="../../_images/492b5cd4faa478892eb5725cf086e5c532ad21b742c050b7f9aa742c1e6022dd.png" />
 </div>
 </div>
-<blockquote>
-<div><h3 class="rubric" id="practice">Practice</h3>
+</section>
+<section id="practice">
+<h3>Practice<a class="headerlink" href="#practice" title="Link to this heading">#</a></h3>
 <p>Now, you should re-run this part of the notebook with different values for the mass (<span class="math notranslate nohighlight">\(m\)</span>), the width of the well (<span class="math notranslate nohighlight">\(L\)</span>), and the height of the potential outside of the well (<span class="math notranslate nohighlight">\(V_0\)</span>). Ask yourself the following questions:</p>
+<hr class="docutils" />
 <blockquote>
-<div><p>Question 4: Does increasing <span class="math notranslate nohighlight">\(V_0\)</span> increase or decrease the number of bound states?</p>
+<div><p><strong>Question 4:</strong> Does increasing <span class="math notranslate nohighlight">\(V_0\)</span> increase or decrease the number of bound states?</p>
+</div></blockquote>
 <details>
-</div></blockquote>
-</div></blockquote>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;summary&gt;Answer 4&lt;/summary&gt; 
-As $V_0$ is increased, the well should be able to support a larger number of bound states.
-&lt;/details&gt;    
-</pre></div>
-</div>
+<summary><strong>Answer 4</strong></summary>
+<p>As <span class="math notranslate nohighlight">\(V_0\)</span> is increased, the well should be able to support a larger number of bound states.</p>
+</details>
+<hr class="docutils" />
 <blockquote>
-<div><blockquote>
-<div><p>Question 5: Does increasing <span class="math notranslate nohighlight">\(L\)</span> increase or decrease the number of bound states?</p>
+<div><p><strong>Question 5:</strong> Does increasing <span class="math notranslate nohighlight">\(L\)</span> increase or decrease the number of bound states?</p>
+</div></blockquote>
 <details>
-</div></blockquote>
-</div></blockquote>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;summary&gt;Answer 5&lt;/summary&gt;  
-As $L$ is increased, the well should be able to support a larger number of bound states. We can rationalize this result by thinking about the form of the energy for the infinite square well potential model (the particle in a box):
-$$\begin{align}
-E_n = \frac{h^2 n^2}{8mL^2}
-\end{align}$$
-As $L$ increases, the spacing between energy levels decreases. Hence, for the finite square well potential model, it is reasonable to expect that a similar trend will occur, resulting in a larger number states with $E &lt; V_0$. 
-&lt;/details&gt;
-</pre></div>
-</div>
+<summary><strong>Answer 5</strong></summary>
+<p>As <span class="math notranslate nohighlight">\(L\)</span> is increased, the well should be able to support a larger number of bound states.</p>
+<p>We can rationalize this result by thinking about the form of the energy for the infinite square well potential model (the particle in a box):</p>
+<div class="math notranslate nohighlight">
+\[E_n = \frac{h^2 n^2}{8mL^2}\]</div>
+<p>As <span class="math notranslate nohighlight">\(L\)</span> increases, the spacing between energy levels decreases. Hence, for the finite square well potential model, it is reasonable to expect that a similar trend will occur, resulting in a larger number of states with <span class="math notranslate nohighlight">\(E &lt; V_0\)</span>.</p>
+</details>
+<hr class="docutils" />
 <blockquote>
-<div><blockquote>
-<div><p>Question 6: Does increasing <span class="math notranslate nohighlight">\(m\)</span> increase or decrease the number of bound states?</p>
+<div><p><strong>Question 6:</strong> Does increasing <span class="math notranslate nohighlight">\(m\)</span> increase or decrease the number of bound states?</p>
+</div></blockquote>
 <details>
-</div></blockquote>
-</div></blockquote>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;summary&gt;Answer 6&lt;/summary&gt;  
-As $m$ is increased, the well should be able to support a larger number of bound states. Again, we can rationalize this result by thinking about the form of the energy for the infinite square well potential model (the particle in a box):
-$$\begin{align}
-E_n = \frac{h^2 n^2}{8mL^2}
-\end{align}$$
-As $m$ increases, the spacing between energy levels decreases. Hence, for the finite square well potential model, it is reasonable to expect that a similar trend will occur, resulting in a larger number states with $E &lt; V_0$. 
-&lt;/details&gt;
-</pre></div>
-</div>
+<summary><strong>Answer 6</strong></summary>
+<p>As <span class="math notranslate nohighlight">\(m\)</span> is increased, the well should be able to support a larger number of bound states.</p>
+<p>Again, we can rationalize this result by thinking about the form of the energy for the infinite square well potential model (the particle in a box):</p>
+<div class="math notranslate nohighlight">
+\[E_n = \frac{h^2 n^2}{8mL^2}\]</div>
+<p>As <span class="math notranslate nohighlight">\(m\)</span> increases, the spacing between energy levels decreases. Hence, for the finite square well potential model, it is reasonable to expect that a similar trend will occur, resulting in a larger number of states with <span class="math notranslate nohighlight">\(E &lt; V_0\)</span>.</p>
+</details>
+<hr class="docutils" />
 <blockquote>
-<div><blockquote>
-<div><p>Question 7: For a given <span class="math notranslate nohighlight">\(m\)</span>, <span class="math notranslate nohighlight">\(L\)</span>, and <span class="math notranslate nohighlight">\(V_0\)</span>, which bound states have the highest / lowest tunneling probability (the probability of finding the particle outside of the well)? Can you rationalize this result?</p>
+<div><p><strong>Question 7:</strong> For a given <span class="math notranslate nohighlight">\(m\)</span>, <span class="math notranslate nohighlight">\(L\)</span>, and <span class="math notranslate nohighlight">\(V_0\)</span>, which bound states have the highest / lowest tunneling probability (the probability of finding the particle outside of the well)? Can you rationalize this result?</p>
+</div></blockquote>
 <details>
-</div></blockquote>
-</div></blockquote>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;summary&gt;Answer 7&lt;/summary&gt;
-The highest-energy bound states should have the largest tunneling probability. The lowest-energy bound states should have the lowest tunneling probability. We can rationalize this result by considering the form of the wave function in region III:
-$$ \begin{align}
-\psi_{III}(x) = G e^{-\alpha x}
-\end{align}$$
-Recall that 
-$$\begin{align}
-\alpha = ( 2 m [V_0 - E] / \hbar^2)^{1/2}
-\end{align}$$
-The quantity $V_0 - E$ is related to how rapidly the wave function decays with increasing $x$ in this region of space. As $E$ increases, $V_0 - E$ decreases, which implies that the wave function will decay more slowly in this region. 
-&lt;/details&gt;
-</pre></div>
-</div>
+<summary><strong>Answer 7</strong></summary>
+<p>The highest-energy bound states should have the largest tunneling probability.<br />
+The lowest-energy bound states should have the lowest tunneling probability.</p>
+<p>We can rationalize this result by considering the form of the wave function in region III:</p>
+<div class="math notranslate nohighlight">
+\[\psi_{III}(x) = G e^{-\alpha x}\]</div>
+<p>Recall that:</p>
+<div class="math notranslate nohighlight">
+\[\alpha = \sqrt{\frac{2 m [V_0 - E]}{\hbar^2}}\]</div>
+<p>The quantity <span class="math notranslate nohighlight">\(V_0 - E\)</span> is related to how rapidly the wave function decays with increasing <span class="math notranslate nohighlight">\(x\)</span> in this region of space.<br />
+As <span class="math notranslate nohighlight">\(E\)</span> increases, <span class="math notranslate nohighlight">\(V_0 - E\)</span> decreases, which implies that the wave function will decay more slowly in this region.</p>
+</details>
+<hr class="docutils" />
 <blockquote>
-<div><blockquote>
-<div><p>Question 8: Can the number of bound states ever be zero, for certain combinations of <span class="math notranslate nohighlight">\(m\)</span>, <span class="math notranslate nohighlight">\(L\)</span>, and <span class="math notranslate nohighlight">\(V_0\)</span>?</p>
+<div><p><strong>Question 8:</strong> Can the number of bound states ever be zero, for certain combinations of <span class="math notranslate nohighlight">\(m\)</span>, <span class="math notranslate nohighlight">\(L\)</span>, and <span class="math notranslate nohighlight">\(V_0\)</span>?</p>
+</div></blockquote>
 <details>
-</div></blockquote>
-</div></blockquote>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;summary&gt;Answer 8&lt;/summary&gt;
-</pre></div>
-</div>
-<p>No, the minimum number of bound states is one, no matter what values we have for <span class="math notranslate nohighlight">\(m\)</span>, <span class="math notranslate nohighlight">\(L\)</span>, and <span class="math notranslate nohighlight">\(V_0\)</span>.
-</details></p>
+<summary><strong>Answer 8</strong></summary>
+<p>No, the minimum number of bound states is one, no matter what values we have for <span class="math notranslate nohighlight">\(m\)</span>, <span class="math notranslate nohighlight">\(L\)</span>, and <span class="math notranslate nohighlight">\(V_0\)</span>.</p>
+</details>
 <p>This ananlysis has assumed that the potential barrier height, <span class="math notranslate nohighlight">\(V_0\)</span>, is greater than the energy for the particle, <span class="math notranslate nohighlight">\(E\)</span>. What if <span class="math notranslate nohighlight">\(E &gt; V_0\)</span>? In this case, the particle should be able to overcome the potential barrier to “escape” the box. Let us inspect the general form of the wave function in region I given above, (before the application of any boundary conditions). We had</p>
 <div class="math notranslate nohighlight">
 \[ \begin{align}
@@ -2556,6 +2512,7 @@ T &amp;= \frac{|F|^2}{|A|^2} \\
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#wavefunctions">Wavefunctions</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#boundary-conditions">Boundary Conditions</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#procedure-for-visualizing-the-allowable-wavefunctions">Procedure for visualizing the allowable wavefunctions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#practice">Practice</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tunneling-through-a-barrier">Tunneling Through a Barrier</a></li>

@@ -1,0 +1,1352 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Configuration Interaction with Single Electronic and Photonic Excitations applied to the Pauli-Fierz Hamiltonian &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'content/drafts/QED-CIS-1';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="My sample book - Home"/>
+    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    5. Hydrogen Atom
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Lecture Notes</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../lecture_notes/qm_postulates_two_level.html">Chapter 1: Introduction to Quantum Phenomena</a></li>
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../lecture_notes/qm_postulates.html">Chapter 2: The Postulates Revisited</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lecture_notes/translation.html">Chapter 3: Translational Motion</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="../lecture_notes/vibration.html">Chapter 4: Vibrational Motion</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../lecture_notes/rotation.html">Chapter 5: Angular Momentum, and Rotational Motion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lecture_notes/hydrogen.html">Chapter 6: The Hydrogen Atom</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lecture_notes/variation.html">Chapter 7: The Variation Theorem</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lecture_notes/perturbation.html">Chapter 8: Perturbation Theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lecture_notes/SphHarm_visualize.html">Visualizing Spherical harmonics</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Problem Sets</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../problem_sets/ps_1.html">Problem Set 1</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Computational Sets</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../computational_sets/note05.html">Additional Notes on Spin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../computational_sets/Spin_one_half.html">Computational Set 1: Introduction to Spin 1/2</a></li>
+
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Resources</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../resources/formula_sheet.html">Useful Formulae</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../resources/note01.html">Hydrogenlike atoms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../resources/note03.html">Atomic orbitals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../resources/note05.html">Additional Notes on Spin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../resources/notebooks.html">Content with notebooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../resources/spin_background.html">Spin</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/FoleyLab/chem3141-book/blob/main/content/drafts/QED-CIS-1.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/FoleyLab/chem3141-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/FoleyLab/chem3141-book/issues/new?title=Issue%20on%20page%20%2Fcontent/drafts/QED-CIS-1.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/content/drafts/QED-CIS-1.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Configuration Interaction with Single Electronic and Photonic Excitations applied to the Pauli-Fierz Hamiltonian</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Configuration Interaction with Single Electronic and Photonic Excitations applied to the Pauli-Fierz Hamiltonian</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#i-theoretical-overview">I. Theoretical Overview</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#qed-cis-1-ansatz"><em>QED-CIS-1 Ansatz</em></a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#the-polaritonic-energy-eigenfunctions-for-state-i-in-the-qed-cis-1-ansatz-can-be-written-as-a-linear-combination-of-the-qed-hf-reference-and-products-of-all-possible-single-excitations-out-of-the-qed-hf-reference-the-qed-hf-reference-involves-the-product-of-an-electronic-slater-determinant-with-the-photon-vacuum-state-phi-o-rangle-0-rangle-so-single-excitations-can-occur-as-electronic-excitations-from-an-occupied-orbital-phi-i-to-a-virtual-orbital-phi-a-the-raising-of-the-photon-number-state-from-0-rangle-rightarrow-1-rangle-or-both-we-therefore-write-the-qed-cis-1-wavefunction-for-state-i-as-begin-equation-label-eq-qed-cis-1-psi-i-c-0-0-phi-0-rangle-0-rangle-sum-i-a-c-ia-0-phi-i-a-rangle-0-rangle-c-0-1-phi-0-rangle-1-rangle-sum-i-a-c-ia-1-phi-i-a-rangle-1-rangle-tag-9-end-equation-where-the-coefficients-c-denote-the-contribution-of-a-given-term-to-the-wavefunction-and-we-have-denoted-the-electronic-excitations-in-the-subscript-and-the-photonic-excitations-in-the-superscript-of-these-coefficients-for-the-case-of-multiple-modes-the-photonic-basis-states-will-be-augmented-to-consider-all-possible-combinations-of-the-occupations-of-those-modes-within-a-maximum-photon-number-these-coefficients-and-the-corresponding-energy-eigenvalues-for-a-given-qed-cis-1-state-i-may-be-obtained-by-diagonalizing-the-hamiltonian-matrix-built-in-the-basis-shown-below-in-eq-10-we-spin-adapt-this-basis-such-that-phi-i-a-rangle-frac-1-sqrt-2-left-phi-i-alpha-a-alpha-rangle-phi-i-beta-a-beta-rangle-right-where-alpha-and-beta-label-the-spin-orbitals-as-being-occupied-by-spin-up-and-spin-down-electrons-respectively-the-matrix-can-be-written-schematically-as-begin-equation-begin-bmatrix-0-0-0-hbar-bf-g-0-bf-a-delta-hbar-bf-g-dagger-hbar-bf-g-0-hbar-bf-g-hbar-omega-0-hbar-bf-g-dagger-hbar-bf-g-0-bf-a-delta-hbar-omega-end-bmatrix-begin-bmatrix-bf-c-0-0-bf-c-0-ia-bf-c-1-0-bf-c-1-ia-end-bmatrix">The polaritonic energy eigenfunctions for state <span class="math notranslate nohighlight">\(I\)</span> in the
+QED-CIS-1 ansatz can be written as a linear combination of the QED-HF reference and products of all possible single excitations out of the QED-HF reference.  The QED-HF reference involves the product of an electronic Slater determinant with the photon vacuum state <span class="math notranslate nohighlight">\(|\Phi_o\rangle |0\rangle\)</span>, so single excitations can occur as electronic excitations from an occupied orbital <span class="math notranslate nohighlight">\(\phi_i\)</span> to a virtual orbital <span class="math notranslate nohighlight">\(\phi_a\)</span>, the raising of the photon number state from <span class="math notranslate nohighlight">\(|0\rangle \rightarrow |1\rangle\)</span>, or both.  We therefore write the QED-CIS-1 wavefunction for state <span class="math notranslate nohighlight">\(I\)</span> as
+\begin{equation}\label{eq:QED-CIS-1}
+\Psi_I = c_0^0 |\Phi_0\rangle |0\rangle +
+\sum_{i,a} c_{ia}^0 |\Phi_i^a\rangle |0\rangle +
+c_0^1 |\Phi_0\rangle |1\rangle +
+\sum_{i,a} c_{ia}^1 |\Phi_i^a\rangle |1\rangle \tag{9}.
+\end{equation}
+where the coefficients <span class="math notranslate nohighlight">\(c\)</span> denote the contribution of a given term to the wavefunction and we have denoted the electronic excitations in the subscript and the photonic excitations in the superscript of these coefficients. For the case of multiple modes, the photonic basis states will be augmented to consider all possible combinations of the occupations of those modes within a maximum photon number.  These coefficients, and the corresponding energy eigenvalues for a given QED-CIS-1 state <span class="math notranslate nohighlight">\(I\)</span>, may be obtained by diagonalizing the Hamiltonian matrix built in the basis shown below in Eq. (10).  We spin adapt this basis such that <span class="math notranslate nohighlight">\(|\Phi_i^a\rangle = \frac{1}{\sqrt{2}}\left(|\Phi_{i\alpha}^{a \alpha} \rangle + |\Phi_{i\beta}^{a\beta}\rangle \right)\)</span>, where <span class="math notranslate nohighlight">\(\alpha\)</span> and <span class="math notranslate nohighlight">\(\beta\)</span> label the spin orbitals as being occupied by spin-up and spin-down electrons, respectively.  The matrix can be written schematically as
+\begin{equation}
+\begin{bmatrix}
+0 &amp; 0 &amp; 0 &amp; \hbar {\bf g} \
+0 &amp; {\bf A} +\Delta  &amp; \hbar {\bf g}^{\dagger}  &amp; \hbar {\bf G} \
+0 &amp; \hbar {\bf g} &amp; \hbar \omega &amp; 0 \
+\hbar {\bf g}^{\dagger} &amp; \hbar {\bf G} &amp; 0 &amp; {\bf A} + \Delta + \hbar \Omega
+\end{bmatrix}
+\begin{bmatrix}
+{\bf c}^0_0 \
+{\bf c}^0_{ia} \
+{\bf c}^1_0 \
+{\bf c}^1_{ia}
+\end{bmatrix}</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-implementation">II. Implementation</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-same-basis-states-but-neglecting-the-delta-matrix-from-the-qed-cis-1-method-we-arrive-at-a-qed-cis-1-approach-to-the-jaynes-cummings-hamiltonian-begin-equation-label-eq-qed-cis-1-jc-begin-bmatrix-0-0-0-hbar-bf-g-0-bf-a-hbar-bf-g-dagger-hbar-bf-g-0-hbar-bf-g-hbar-omega-0-hbar-bf-g-dagger-hbar-bf-g-0-bf-a-hbar-omega-end-bmatrix-begin-bmatrix-bf-c-0-0-bf-c-0-ia-bf-c-1-0-bf-c-1-ia-end-bmatrix">Using the same basis states but neglecting the <span class="math notranslate nohighlight">\(\Delta\)</span> matrix from the QED-CIS-1 method, we arrive at a QED-CIS-1 approach to the Jaynes-Cummings Hamiltonian:
+\begin{equation}\label{eq:QED-CIS-1-JC}
+\begin{bmatrix}
+0 &amp; 0 &amp; 0 &amp; \hbar {\bf g} \
+0 &amp; {\bf A}  &amp; \hbar {\bf g}^{\dagger}  &amp; \hbar {\bf G} \
+0 &amp; \hbar {\bf g} &amp; \hbar \omega &amp; 0 \
+\hbar {\bf g}^{\dagger} &amp; \hbar {\bf G} &amp; 0 &amp; {\bf A} + \hbar \Omega
+\end{bmatrix}
+\begin{bmatrix}
+{\bf c}^0_0 \
+{\bf c}^0_{ia} \
+{\bf c}^1_0 \
+{\bf c}^1_{ia}
+\end{bmatrix}</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#if-we-eliminate-the-simultaneous-single-excitations-in-the-photonic-and-electronic-degrees-of-freedom-we-arrive-at-the-qed-cis-method-which-has-direct-analogy-to-the-tda-pf-method-described-by-shao-and-co-workers-begin-equation-begin-bmatrix-bf-a-delta-hbar-bf-g-dagger-hbar-bf-g-hbar-omega-end-bmatrix-begin-bmatrix-bf-c-0-ia-bf-c-1-0-end-bmatrix">If we eliminate the simultaneous single-excitations in the photonic and electronic
+degrees of freedom, we arrive at the QED-CIS method which has direct analogy to the TDA-PF
+method described by Shao and co-workers:
+\begin{equation}
+\begin{bmatrix}
+{\bf A} +\Delta  &amp; \hbar {\bf g}^{\dagger}  \
+\hbar {\bf g} &amp; \hbar \omega
+\end{bmatrix}
+\begin{bmatrix}
+{\bf c}^0_{ia} \
+{\bf c}^1_0
+\end{bmatrix}</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#if-we-neglect-the-delta-matrix-in-the-qed-cis-hamiltonian-we-arrive-at-the-jc-cis-method-in-direct-analogy-with-the-tda-jc-method-described-by-shao-and-co-workers-begin-equation-begin-bmatrix-bf-a-hbar-bf-g-dagger-hbar-bf-g-hbar-omega-end-bmatrix-begin-bmatrix-bf-c-0-ia-bf-c-1-0-end-bmatrix">If we neglect the <span class="math notranslate nohighlight">\(\Delta\)</span> matrix in the QED-CIS Hamiltonian, we arrive at the JC-CIS method in direct analogy with the TDA-JC method described by Shao and co-workers:
+\begin{equation}
+\begin{bmatrix}
+{\bf A}  &amp; \hbar {\bf g}^{\dagger}  \
+\hbar {\bf g} &amp; \hbar \omega
+\end{bmatrix}
+\begin{bmatrix}
+{\bf c}^0_{ia} \
+{\bf c}^1_0
+\end{bmatrix}</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#check-the-first-3-states-of-the-qed-cis-1-calculation">Check the first 3 states of the QED-CIS-1 Calculation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="configuration-interaction-with-single-electronic-and-photonic-excitations-applied-to-the-pauli-fierz-hamiltonian">
+<h1>Configuration Interaction with Single Electronic and Photonic Excitations applied to the Pauli-Fierz Hamiltonian<a class="headerlink" href="#configuration-interaction-with-single-electronic-and-photonic-excitations-applied-to-the-pauli-fierz-hamiltonian" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;Tutorial implementing a QED-CIS-1 and related methods&quot;&quot;&quot;</span>
+
+<span class="n">__authors__</span> <span class="o">=</span> <span class="s2">&quot;J. McTague, J. Foley, A. E. DePrince III&quot;</span>
+<span class="n">__credits__</span> <span class="o">=</span> <span class="s2">&quot;J. McTague, J. Foley, A. E. DePrince III&quot;</span>
+<span class="n">__email__</span>   <span class="o">=</span> <span class="s2">&quot;jfoley19@uncc.edu, deprince@fsu.edu&quot;</span>
+
+<span class="n">__copyright__</span> <span class="o">=</span> <span class="s2">&quot;(c) 2014-2018, The Psi4NumPy Developers&quot;</span>
+<span class="n">__license__</span>   <span class="o">=</span> <span class="s2">&quot;BSD-3-Clause&quot;</span>
+<span class="n">__date__</span>      <span class="o">=</span> <span class="s2">&quot;6/15/2022&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="i-theoretical-overview">
+<h1>I. Theoretical Overview<a class="headerlink" href="#i-theoretical-overview" title="Link to this heading">#</a></h1>
+<p>For details on the Pauli-Fierz Hamiltonian and the Hartree-Fock method applied to the Hamiltonian,
+see the <a class="reference internal" href="QED-HF_Tutorial.html"><span class="std std-doc">QED-HF tutorial</span></a>.</p>
+<section id="qed-cis-1-ansatz">
+<h2><em>QED-CIS-1 Ansatz</em><a class="headerlink" href="#qed-cis-1-ansatz" title="Link to this heading">#</a></h2>
+<p>A mean-field description of the excited states of the molecular system strongly interacting with photonic degrees of freedom, and a correction to the ground-state that contains coupling between the QED-HF reference and simultaneous electronic and photonic excitations, may be obtained through a configuration interaction  ansatz that includes up to simultaneous single excitations of the electronic and photonic degrees of freedom.  Although previously referred to as the CQED-CIS method, here we refer to this as the QED-CIS-1 method
+to denote that simultaneous single excitations on the electron and photon degrees of freedom are included in this ansatz.   In the following presentation, we assume the QED-HF reference which will be computed by a helper function imported by this notebook.</p>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="the-polaritonic-energy-eigenfunctions-for-state-i-in-the-qed-cis-1-ansatz-can-be-written-as-a-linear-combination-of-the-qed-hf-reference-and-products-of-all-possible-single-excitations-out-of-the-qed-hf-reference-the-qed-hf-reference-involves-the-product-of-an-electronic-slater-determinant-with-the-photon-vacuum-state-phi-o-rangle-0-rangle-so-single-excitations-can-occur-as-electronic-excitations-from-an-occupied-orbital-phi-i-to-a-virtual-orbital-phi-a-the-raising-of-the-photon-number-state-from-0-rangle-rightarrow-1-rangle-or-both-we-therefore-write-the-qed-cis-1-wavefunction-for-state-i-as-begin-equation-label-eq-qed-cis-1-psi-i-c-0-0-phi-0-rangle-0-rangle-sum-i-a-c-ia-0-phi-i-a-rangle-0-rangle-c-0-1-phi-0-rangle-1-rangle-sum-i-a-c-ia-1-phi-i-a-rangle-1-rangle-tag-9-end-equation-where-the-coefficients-c-denote-the-contribution-of-a-given-term-to-the-wavefunction-and-we-have-denoted-the-electronic-excitations-in-the-subscript-and-the-photonic-excitations-in-the-superscript-of-these-coefficients-for-the-case-of-multiple-modes-the-photonic-basis-states-will-be-augmented-to-consider-all-possible-combinations-of-the-occupations-of-those-modes-within-a-maximum-photon-number-these-coefficients-and-the-corresponding-energy-eigenvalues-for-a-given-qed-cis-1-state-i-may-be-obtained-by-diagonalizing-the-hamiltonian-matrix-built-in-the-basis-shown-below-in-eq-10-we-spin-adapt-this-basis-such-that-phi-i-a-rangle-frac-1-sqrt-2-left-phi-i-alpha-a-alpha-rangle-phi-i-beta-a-beta-rangle-right-where-alpha-and-beta-label-the-spin-orbitals-as-being-occupied-by-spin-up-and-spin-down-electrons-respectively-the-matrix-can-be-written-schematically-as-begin-equation-begin-bmatrix-0-0-0-hbar-bf-g-0-bf-a-delta-hbar-bf-g-dagger-hbar-bf-g-0-hbar-bf-g-hbar-omega-0-hbar-bf-g-dagger-hbar-bf-g-0-bf-a-delta-hbar-omega-end-bmatrix-begin-bmatrix-bf-c-0-0-bf-c-0-ia-bf-c-1-0-bf-c-1-ia-end-bmatrix">
+<h1>The polaritonic energy eigenfunctions for state <span class="math notranslate nohighlight">\(I\)</span> in the
+QED-CIS-1 ansatz can be written as a linear combination of the QED-HF reference and products of all possible single excitations out of the QED-HF reference.  The QED-HF reference involves the product of an electronic Slater determinant with the photon vacuum state <span class="math notranslate nohighlight">\(|\Phi_o\rangle |0\rangle\)</span>, so single excitations can occur as electronic excitations from an occupied orbital <span class="math notranslate nohighlight">\(\phi_i\)</span> to a virtual orbital <span class="math notranslate nohighlight">\(\phi_a\)</span>, the raising of the photon number state from <span class="math notranslate nohighlight">\(|0\rangle \rightarrow |1\rangle\)</span>, or both.  We therefore write the QED-CIS-1 wavefunction for state <span class="math notranslate nohighlight">\(I\)</span> as
+\begin{equation}\label{eq:QED-CIS-1}
+\Psi_I = c_0^0 |\Phi_0\rangle |0\rangle +
+\sum_{i,a} c_{ia}^0 |\Phi_i^a\rangle |0\rangle +
+c_0^1 |\Phi_0\rangle |1\rangle +
+\sum_{i,a} c_{ia}^1 |\Phi_i^a\rangle |1\rangle \tag{9}.
+\end{equation}
+where the coefficients <span class="math notranslate nohighlight">\(c\)</span> denote the contribution of a given term to the wavefunction and we have denoted the electronic excitations in the subscript and the photonic excitations in the superscript of these coefficients. For the case of multiple modes, the photonic basis states will be augmented to consider all possible combinations of the occupations of those modes within a maximum photon number.  These coefficients, and the corresponding energy eigenvalues for a given QED-CIS-1 state <span class="math notranslate nohighlight">\(I\)</span>, may be obtained by diagonalizing the Hamiltonian matrix built in the basis shown below in Eq. (10).  We spin adapt this basis such that <span class="math notranslate nohighlight">\(|\Phi_i^a\rangle = \frac{1}{\sqrt{2}}\left(|\Phi_{i\alpha}^{a \alpha} \rangle + |\Phi_{i\beta}^{a\beta}\rangle \right)\)</span>, where <span class="math notranslate nohighlight">\(\alpha\)</span> and <span class="math notranslate nohighlight">\(\beta\)</span> label the spin orbitals as being occupied by spin-up and spin-down electrons, respectively.  The matrix can be written schematically as
+\begin{equation}
+\begin{bmatrix}
+0 &amp; 0 &amp; 0 &amp; \hbar {\bf g} \
+0 &amp; {\bf A} +\Delta  &amp; \hbar {\bf g}^{\dagger}  &amp; \hbar {\bf G} \
+0 &amp; \hbar {\bf g} &amp; \hbar \omega &amp; 0 \
+\hbar {\bf g}^{\dagger} &amp; \hbar {\bf G} &amp; 0 &amp; {\bf A} + \Delta + \hbar \Omega
+\end{bmatrix}
+\begin{bmatrix}
+{\bf c}^0_0 \
+{\bf c}^0_{ia} \
+{\bf c}^1_0 \
+{\bf c}^1_{ia}
+\end{bmatrix}<a class="headerlink" href="#the-polaritonic-energy-eigenfunctions-for-state-i-in-the-qed-cis-1-ansatz-can-be-written-as-a-linear-combination-of-the-qed-hf-reference-and-products-of-all-possible-single-excitations-out-of-the-qed-hf-reference-the-qed-hf-reference-involves-the-product-of-an-electronic-slater-determinant-with-the-photon-vacuum-state-phi-o-rangle-0-rangle-so-single-excitations-can-occur-as-electronic-excitations-from-an-occupied-orbital-phi-i-to-a-virtual-orbital-phi-a-the-raising-of-the-photon-number-state-from-0-rangle-rightarrow-1-rangle-or-both-we-therefore-write-the-qed-cis-1-wavefunction-for-state-i-as-begin-equation-label-eq-qed-cis-1-psi-i-c-0-0-phi-0-rangle-0-rangle-sum-i-a-c-ia-0-phi-i-a-rangle-0-rangle-c-0-1-phi-0-rangle-1-rangle-sum-i-a-c-ia-1-phi-i-a-rangle-1-rangle-tag-9-end-equation-where-the-coefficients-c-denote-the-contribution-of-a-given-term-to-the-wavefunction-and-we-have-denoted-the-electronic-excitations-in-the-subscript-and-the-photonic-excitations-in-the-superscript-of-these-coefficients-for-the-case-of-multiple-modes-the-photonic-basis-states-will-be-augmented-to-consider-all-possible-combinations-of-the-occupations-of-those-modes-within-a-maximum-photon-number-these-coefficients-and-the-corresponding-energy-eigenvalues-for-a-given-qed-cis-1-state-i-may-be-obtained-by-diagonalizing-the-hamiltonian-matrix-built-in-the-basis-shown-below-in-eq-10-we-spin-adapt-this-basis-such-that-phi-i-a-rangle-frac-1-sqrt-2-left-phi-i-alpha-a-alpha-rangle-phi-i-beta-a-beta-rangle-right-where-alpha-and-beta-label-the-spin-orbitals-as-being-occupied-by-spin-up-and-spin-down-electrons-respectively-the-matrix-can-be-written-schematically-as-begin-equation-begin-bmatrix-0-0-0-hbar-bf-g-0-bf-a-delta-hbar-bf-g-dagger-hbar-bf-g-0-hbar-bf-g-hbar-omega-0-hbar-bf-g-dagger-hbar-bf-g-0-bf-a-delta-hbar-omega-end-bmatrix-begin-bmatrix-bf-c-0-0-bf-c-0-ia-bf-c-1-0-bf-c-1-ia-end-bmatrix" title="Link to this heading">#</a></h1>
+<p>E_{\rm QED-CIS-1}
+\begin{bmatrix}
+{\bf c}^0_0 \
+{\bf c}^0_{ia} \
+{\bf c}^1_0 \
+{\bf c}^1_{ia}, \tag{10}
+\end{bmatrix}
+\end{equation}
+where we have shifted the QED-CIS-1 Hamiltonian by QED-HF energy.</p>
+<p>In the QED-CIS-1 Hamiltonian matrix above, the elements of <span class="math notranslate nohighlight">\({\bf A}\)</span> are similar to Canonical CIS theory,
+\begin{equation}
+A_{ia,jb} = F^{\rm C}<em>{ab} \delta</em>{ij} -  F^{\rm C}<em>{ij }\delta</em>{ab} + 2(ia|jb) - (ij|ab) \tag{11},
+\end{equation}
+with an important difference being that the two-electron integrals are performed in the QED-HF basis and the orbital energies result from the QED-HF calculation and contain dipole self energy contributions of the reference wavefunction.  The dipole self energy in the subspace of single-excitations is contained in the <span class="math notranslate nohighlight">\(\Delta\)</span> matrix,
+\begin{equation}
+\Delta_{ia,jb} =F^{\rm DSE}<em>{ab} \delta</em>{ij} -  F^{\rm DSE}<em>{ij }\delta</em>{ab} + 2 d_{ia} d_{jb}
+-d_{ij} d_{ab} \tag{12}.
+\end{equation}
+The photonic energy is contained in <span class="math notranslate nohighlight">\(\hbar \omega\)</span> and <span class="math notranslate nohighlight">\(\hbar \Omega\)</span> as follows:
+\begin{equation}
+\Omega_{ia,jb} = \omega \delta_{ij} \delta_{ab} \tag{13}.
+\end{equation}
+The bilinear coupling contributes to blocks that couple singly-excited determinants to the reference, and to blocks that couple singly-excited determinants in the bra and the ket.
+The coupling between singly-excited determinants and the reference through elements of <span class="math notranslate nohighlight">\({\bf g}\)</span>,
+\begin{equation}
+g_{ia} = -\sqrt{\omega} d_{ia}\tag{14},
+\end{equation}
+and the coupling between singly-excited determinants are captured through elements of <span class="math notranslate nohighlight">\({\bf G}\)</span>,
+\begin{equation}
+G_{ia,jb} = \sqrt{\frac{\omega}{2}} \left( d_{ij} \delta_{ab}
+-  d_{ab} \delta_{ij} \right)\tag{15}.
+\end{equation}</p>
+<section id="ii-implementation">
+<h2>II. Implementation<a class="headerlink" href="#ii-implementation" title="Link to this heading">#</a></h2>
+<p>Using the above overview, we will implement the QED-CIS-1 method using <span style="font-variant: small-caps"> Psi4 </span> and NumPy.  We will also import a helper function that
+will perform an intial QED-HF calculation to get the orbital basis for the subsequent QED-CIS-1 calculations.  First, we need to import these Python modules and set some basic <span style="font-variant: small-caps"> Psi4 </span> options.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ==&gt; Import Psi4, NumPy, linear algebra package from scipy, time,</span>
+<span class="c1">#     and helper_cqed_rhf to perform the requisite HF-PF calculation &lt;==</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">psi4</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">helper_cqed_rhf</span><span class="w"> </span><span class="kn">import</span> <span class="n">cqed_rhf</span>
+
+<span class="c1"># ==&gt; Set Basic Psi4 Options &lt;==</span>
+<span class="c1"># Memory specification</span>
+<span class="n">psi4</span><span class="o">.</span><span class="n">set_memory</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="mf">5e8</span><span class="p">))</span>
+<span class="n">numpy_memory</span> <span class="o">=</span> <span class="mi">2</span>
+
+<span class="c1"># Set output file</span>
+<span class="n">psi4</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">set_output_file</span><span class="p">(</span><span class="s1">&#39;output.dat&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Memory set to 476.837 MiB by Python driver.
+</pre></div>
+</div>
+</div>
+</div>
+<p>Next we will define the molecular geometry along
+with <span style="font-variant: small-caps"> Psi4 </span> options for the basis set and convergence criteria
+for the QED-HF calculation.  The helper function that performs
+QED-HF calculations will expect the molecular geometry in a string
+representation and options as a dictionary.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># MgH Test Case</span>
+<span class="n">molecule_string</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">Mg</span>
+<span class="s2">H 1 2.2</span>
+<span class="s2">symmetry c1</span>
+<span class="s2">1 1</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="c1"># options dict</span>
+<span class="n">options_dict</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;basis&quot;</span><span class="p">:</span> <span class="s2">&quot;cc-pVDZ&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;save_jk&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s2">&quot;scf_type&quot;</span><span class="p">:</span> <span class="s2">&quot;pk&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;e_convergence&quot;</span><span class="p">:</span> <span class="mf">1e-10</span><span class="p">,</span>
+    <span class="s2">&quot;d_convergence&quot;</span><span class="p">:</span> <span class="mf">1e-10</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Next we will define the parameters that define the photon energy and the coupling
+vector. In particular, we will define the photon energy as</p>
+<div class="math notranslate nohighlight">
+\[ \hbar \omega = 4.75  \: {\rm eV} = 0.1745 \: {\rm a.u.}\]</div>
+<p>and the coupling vector as</p>
+<div class="math notranslate nohighlight">
+\[ \lambda = (0, 0, 0.0125) \: {\rm a.u.} \]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># photon energy</span>
+<span class="n">omega_val</span> <span class="o">=</span> <span class="mf">4.75</span> <span class="o">/</span> <span class="n">psi4</span><span class="o">.</span><span class="n">constants</span><span class="o">.</span><span class="n">Hartree_energy_in_eV</span>
+
+<span class="c1"># coupling vector</span>
+<span class="n">lambda_vector</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.0125</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We will run a preliminary RHF calculation using <span style="font-variant: small-caps"> Psi4 </span> and save the wavefunction object
+to help us get 1 and 2-electron integrals.  We will also use the helper_cqed_rhf function to run the QED-HF calculation.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># set the options in psi4</span>
+<span class="n">psi4</span><span class="o">.</span><span class="n">set_options</span><span class="p">(</span><span class="n">options_dict</span><span class="p">)</span>
+<span class="c1"># define the molecule based on the string representation of the geometry</span>
+<span class="n">mol</span> <span class="o">=</span> <span class="n">psi4</span><span class="o">.</span><span class="n">geometry</span><span class="p">(</span><span class="n">molecule_string</span><span class="p">)</span>
+<span class="c1"># run an RHF calculation with psi4 and save the wavefunction object and RHF energy</span>
+<span class="n">scf_e</span><span class="p">,</span> <span class="n">wfn</span> <span class="o">=</span> <span class="n">psi4</span><span class="o">.</span><span class="n">energy</span><span class="p">(</span><span class="s1">&#39;scf&#39;</span><span class="p">,</span> <span class="n">return_wfn</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># compute QED-HF wavefunction and energy </span>
+<span class="n">cqed_rhf_dict</span> <span class="o">=</span> <span class="n">cqed_rhf</span><span class="p">(</span><span class="n">lambda_vector</span><span class="p">,</span> <span class="n">molecule_string</span><span class="p">,</span> <span class="n">options_dict</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Start SCF iterations:
+
+Canonical RHF One-electron energy = -281.6658725092590316
+CQED-RHF One-electron energy      = -281.6660217365257495
+Nuclear repulsion energy          = 2.8864211491090908
+Dipole energy                     = 0.0009465637016116
+SCF Iteration   1: Energy = -199.8633303817345563   dE = -1.99863E+02   dRMS = 2.52850E-05
+SCF Iteration   2: Energy = -199.8633315502315213   dE = -1.16850E-06   dRMS = 9.55045E-06
+SCF Iteration   3: Energy = -199.8633316895823668   dE = -1.39351E-07   dRMS = 3.61517E-06
+SCF Iteration   4: Energy = -199.8633317095170696   dE = -1.99347E-08   dRMS = 1.37921E-06
+SCF Iteration   5: Energy = -199.8633317124264011   dE = -2.90933E-09   dRMS = 5.28065E-07
+SCF Iteration   6: Energy = -199.8633317128550289   dE = -4.28628E-10   dRMS = 2.02751E-07
+SCF Iteration   7: Energy = -199.8633317129181535   dE = -6.31246E-11   dRMS = 7.79875E-08
+SCF Iteration   8: Energy = -199.8633317129277032   dE = -9.54969E-12   dRMS = 3.00308E-08
+SCF Iteration   9: Energy = -199.8633317129291811   dE = -1.47793E-12   dRMS = 1.15716E-08
+SCF Iteration  10: Energy = -199.8633317129295222   dE = -3.41061E-13   dRMS = 4.46056E-09
+SCF Iteration  11: Energy = -199.8633317129294085   dE =  1.13687E-13   dRMS = 1.71984E-09
+SCF Iteration  12: Energy = -199.8633317129293516   dE =  5.68434E-14   dRMS = 6.63204E-10
+SCF Iteration  13: Energy = -199.8633317129293800   dE = -2.84217E-14   dRMS = 2.55767E-10
+SCF Iteration  14: Energy = -199.8633317129292095   dE =  1.70530E-13   dRMS = 9.86428E-11
+Total time for SCF iterations: 0.014 seconds 
+
+QED-RHF   energy: -199.86333171 hartree
+Psi4  SCF energy: -199.86395910 hartree
+</pre></div>
+</div>
+</div>
+</div>
+<p>We need to prepare the arrays that will be used in the elements of the QED-CIS-1 matrix.  We will need access to 2-electron repulsion integrals, dipole integrals, and quadrupole integrals all in the QED-HF basis, and we will also need the orbital energies that arise from QED-HF.  The following block will use results from the previously-run QED-HF calculation on the molecule defined above to obtain the QED-HF orbitals and orbital energies needed to transform all integrals to the QED-HF basis.  These quantities are returned as a dictionary from the QED-HF calculation.  If you want to see all of the available keys, you can do so with the following lines of python:</p>
+<p><code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">key,</span> <span class="pre">items</span> <span class="pre">in</span> <span class="pre">cqed_rhf_dict.items():</span>&#160;&#160;&#160;&#160; <span class="pre">print(key)</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># grab necessary quantities from cqed_rhf_dict</span>
+<span class="c1"># molecular RHF energy</span>
+<span class="n">scf_e</span> <span class="o">=</span> <span class="n">cqed_rhf_dict</span><span class="p">[</span><span class="s2">&quot;RHF ENERGY&quot;</span><span class="p">]</span>
+<span class="c1"># energy from the HF-PF calculation</span>
+<span class="n">cqed_scf_e</span> <span class="o">=</span> <span class="n">cqed_rhf_dict</span><span class="p">[</span><span class="s2">&quot;CQED-RHF ENERGY&quot;</span><span class="p">]</span>
+<span class="c1"># psi4&#39;s wavefunction object</span>
+<span class="n">wfn</span> <span class="o">=</span> <span class="n">cqed_rhf_dict</span><span class="p">[</span><span class="s2">&quot;PSI4 WFN&quot;</span><span class="p">]</span>
+<span class="c1"># transformation vectors from HF-PF calculation</span>
+<span class="n">C</span> <span class="o">=</span> <span class="n">cqed_rhf_dict</span><span class="p">[</span><span class="s2">&quot;CQED-RHF C&quot;</span><span class="p">]</span>
+<span class="c1"># CQED-RHF Density matrix</span>
+<span class="n">D</span> <span class="o">=</span> <span class="n">cqed_rhf_dict</span><span class="p">[</span><span class="s2">&quot;CQED-RHF DENSITY MATRIX&quot;</span><span class="p">]</span>
+<span class="c1"># orbital energies from HF-PF calculation</span>
+<span class="n">eps</span> <span class="o">=</span> <span class="n">cqed_rhf_dict</span><span class="p">[</span><span class="s2">&quot;CQED-RHF EPS&quot;</span><span class="p">]</span>
+<span class="c1"># dipole moment from HF-PF calculation</span>
+<span class="n">cqed_rhf_dipole_moment</span> <span class="o">=</span> <span class="n">cqed_rhf_dict</span><span class="p">[</span><span class="s2">&quot;CQED-RHF DIPOLE MOMENT&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We will get some more relevant quantities directly from the wavefunction object
+that we saved from <span style="font-variant: small-caps"> Psi4’s </span> RHF calculation.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Grab data from wavfunction</span>
+<span class="c1"># number of doubly occupied orbitals</span>
+<span class="n">ndocc</span> <span class="o">=</span> <span class="n">wfn</span><span class="o">.</span><span class="n">nalpha</span><span class="p">()</span>
+
+<span class="c1"># total number of orbitals</span>
+<span class="n">nmo</span> <span class="o">=</span> <span class="n">wfn</span><span class="o">.</span><span class="n">nmo</span><span class="p">()</span>
+
+<span class="c1"># number of virtual orbitals</span>
+<span class="n">nvirt</span> <span class="o">=</span> <span class="n">nmo</span> <span class="o">-</span> <span class="n">ndocc</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The wavefunction object also has an attribute that contains the transformation vectors that define the AO-&gt;MO transformation.  For our QED-CIS-1 calculation, we are interested in the HF-PF transformation vectors rather than the canonical HF transformation vectors. Our QED-HF transformation vectors are now stored to the array <code class="docutils literal notranslate"><span class="pre">C</span></code> from the previous block, and so we can swap these vectors out for the canonical MO vectors by using a set of built-in <span style="font-variant: small-caps"> Psi4 </span> functions that maps the wavefunction object to a dictionary, changing the values of the dictionary items that store the canoncal MO transformation vectors to the values that define the QED-HF transformation vectors, and then mapping that dictionary back to a <span style="font-variant: small-caps"> Psi4’s </span> wavefunction object.  The block below performs these operations.  This seems like a lot of work, but <span style="font-variant: small-caps"> Psi4 </span> has some built-in functions that will perform 4-index transformations efficiently utilizing the transformation vectors stored as core <span style="font-variant: small-caps"> Psi4 </span> matrices, so it really benefits us to do this to utilize this machinery!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># need to update the Co and Cv core matrix objects so we can</span>
+<span class="c1"># utlize psi4s fast integral transformation!</span>
+<span class="c1"># collect rhf wfn object as dictionary</span>
+<span class="n">wfn_dict</span> <span class="o">=</span> <span class="n">psi4</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">Wavefunction</span><span class="o">.</span><span class="n">to_file</span><span class="p">(</span><span class="n">wfn</span><span class="p">)</span>
+
+<span class="c1"># update wfn_dict with orbitals from CQED-RHF</span>
+<span class="n">wfn_dict</span><span class="p">[</span><span class="s2">&quot;matrix&quot;</span><span class="p">][</span><span class="s2">&quot;Ca&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">C</span>
+<span class="n">wfn_dict</span><span class="p">[</span><span class="s2">&quot;matrix&quot;</span><span class="p">][</span><span class="s2">&quot;Cb&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">C</span>
+<span class="c1"># update wfn object</span>
+<span class="n">wfn</span> <span class="o">=</span> <span class="n">psi4</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">Wavefunction</span><span class="o">.</span><span class="n">from_file</span><span class="p">(</span><span class="n">wfn_dict</span><span class="p">)</span>
+
+<span class="c1"># get all orbitals</span>
+<span class="n">Ca</span> <span class="o">=</span> <span class="n">wfn</span><span class="o">.</span><span class="n">Ca</span><span class="p">()</span>
+<span class="c1"># occupied orbitals as psi4 objects but they correspond to CQED-RHF orbitals</span>
+<span class="n">Co</span> <span class="o">=</span> <span class="n">wfn</span><span class="o">.</span><span class="n">Ca_subset</span><span class="p">(</span><span class="s2">&quot;AO&quot;</span><span class="p">,</span> <span class="s2">&quot;OCC&quot;</span><span class="p">)</span>
+
+<span class="c1"># virtual orbitals same way</span>
+<span class="n">Cv</span> <span class="o">=</span> <span class="n">wfn</span><span class="o">.</span><span class="n">Ca_subset</span><span class="p">(</span><span class="s2">&quot;AO&quot;</span><span class="p">,</span> <span class="s2">&quot;VIR&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now that we have the correct QED-HF transformation vectors (<code class="docutils literal notranslate"><span class="pre">Co</span></code> for the occupied subspace and <code class="docutils literal notranslate"><span class="pre">Cv</span></code> for the virtual subspace), we will obtain the 2-electron repulsion integrals (2ERI) in the QED-HF basis.  We can make use of helper functions associated with the <span style="font-variant: small-caps"> Psi4 </span> mints library to transform the integrals from the AO to QED-HF basis given the transformation vectors as arguments.  We need 2ERIs of the type <span class="math notranslate nohighlight">\((ia|jb)\)</span> and <span class="math notranslate nohighlight">\((ij|ab)\)</span> for the QED-CIS-1 equations, and we will store these integrals in arrays called <code class="docutils literal notranslate"><span class="pre">ovov</span></code> and <code class="docutils literal notranslate"><span class="pre">oovv</span></code>, respectively.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create instance of MintsHelper class</span>
+<span class="n">mints</span> <span class="o">=</span> <span class="n">psi4</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">MintsHelper</span><span class="p">(</span><span class="n">wfn</span><span class="o">.</span><span class="n">basisset</span><span class="p">())</span>
+<span class="c1"># use built-in mints function to build the (ov|ov)</span>
+<span class="c1"># integrals in the HF-PF basis using Co and Cv</span>
+<span class="n">ovov</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">mints</span><span class="o">.</span><span class="n">mo_eri</span><span class="p">(</span><span class="n">Co</span><span class="p">,</span> <span class="n">Cv</span><span class="p">,</span> <span class="n">Co</span><span class="p">,</span> <span class="n">Cv</span><span class="p">))</span>
+
+<span class="c1"># use built-in mints function to build the (oo|vv)</span>
+<span class="c1"># integrals in the HF-PF basis using Co and Cv</span>
+<span class="n">oovv</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">mints</span><span class="o">.</span><span class="n">mo_eri</span><span class="p">(</span><span class="n">Co</span><span class="p">,</span> <span class="n">Co</span><span class="p">,</span> <span class="n">Cv</span><span class="p">,</span> <span class="n">Cv</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We need the occupied and virtual QED-HF orbital energies, <span class="math notranslate nohighlight">\(\epsilon_i\)</span> and <span class="math notranslate nohighlight">\(\epsilon_a\)</span> respectively, which we will store in arrays called <code class="docutils literal notranslate"><span class="pre">\eps_o</span></code> and <code class="docutils literal notranslate"><span class="pre">eps_v</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># strip out occupied orbital energies, eps_o spans 0..ndocc-1</span>
+<span class="n">eps_o</span> <span class="o">=</span> <span class="n">eps</span><span class="p">[:</span><span class="n">ndocc</span><span class="p">]</span>
+
+<span class="c1"># strip out virtual orbital energies, eps_v spans 0..nvirt-1</span>
+<span class="n">eps_v</span> <span class="o">=</span> <span class="n">eps</span><span class="p">[</span><span class="n">ndocc</span><span class="p">:]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Terms of the form <span class="math notranslate nohighlight">\(d_{pq}^{\xi} = \lambda^{\xi} \mu_{pq}^{\xi}\)</span> require dipole integrals in the QED-HF basis dotted into the electric field vector <span class="math notranslate nohighlight">\(\vec{\lambda}\)</span>.</p>
+<p>Here we will obtain the Cartesian components of the dipole integrals in the AO basis using the mints helper class and store them in arrays <code class="docutils literal notranslate"><span class="pre">mu_ao_x</span></code>, <code class="docutils literal notranslate"><span class="pre">mu_ao_y</span></code>, and <code class="docutils literal notranslate"><span class="pre">mu_ao_z</span></code>.  We will then transform them to the QED-HF basis using the transformation vectors stored in an array called <code class="docutils literal notranslate"><span class="pre">C</span></code>. Finally, we will accumulate the dot product of these integrals and the <span class="math notranslate nohighlight">\(\lambda\)</span> vector and store the result in an array called <code class="docutils literal notranslate"><span class="pre">d_el</span></code>.  The terms shown in Eqs. (12), (14), and (15) will utilize the <code class="docutils literal notranslate"><span class="pre">d_el</span></code> array.  The expectation value of <span class="math notranslate nohighlight">\(\hat{d}\)</span> with respect to the QED-HF wavefunction will
+be stored in the variable <code class="docutils literal notranslate"><span class="pre">d_exp</span></code>.  The constant contribution from the dipole self energy to the electronic energy
+is given by <span class="math notranslate nohighlight">\(d_e = \frac{1}{2} \langle d \rangle ^2\)</span> and is stored in the variable <code class="docutils literal notranslate"><span class="pre">d_c</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># dipole arrays in AO basis</span>
+<span class="n">mu_ao_x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">mints</span><span class="o">.</span><span class="n">ao_dipole</span><span class="p">()[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">mu_ao_y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">mints</span><span class="o">.</span><span class="n">ao_dipole</span><span class="p">()[</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">mu_ao_z</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">mints</span><span class="o">.</span><span class="n">ao_dipole</span><span class="p">()[</span><span class="mi">2</span><span class="p">])</span>
+
+<span class="c1"># transform dipole array to QED-HF basis</span>
+<span class="n">mu_cmo_x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">C</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">mu_ao_x</span><span class="p">)</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">C</span><span class="p">)</span>
+<span class="n">mu_cmo_y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">C</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">mu_ao_y</span><span class="p">)</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">C</span><span class="p">)</span>
+<span class="n">mu_cmo_z</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">C</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">mu_ao_z</span><span class="p">)</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">C</span><span class="p">)</span>
+
+<span class="c1"># electronic dipole expectation value with QED-HF density</span>
+<span class="n">mu_exp_x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">einsum</span><span class="p">(</span><span class="s2">&quot;pq,pq-&gt;&quot;</span><span class="p">,</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">mu_ao_x</span><span class="p">,</span> <span class="n">D</span><span class="p">)</span>
+<span class="n">mu_exp_y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">einsum</span><span class="p">(</span><span class="s2">&quot;pq,pq-&gt;&quot;</span><span class="p">,</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">mu_ao_y</span><span class="p">,</span> <span class="n">D</span><span class="p">)</span>
+<span class="n">mu_exp_z</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">einsum</span><span class="p">(</span><span class="s2">&quot;pq,pq-&gt;&quot;</span><span class="p">,</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">mu_ao_z</span><span class="p">,</span> <span class="n">D</span><span class="p">)</span>
+
+<span class="c1"># get electronic dipole expectation value</span>
+<span class="n">mu_exp_el</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">mu_exp_x</span><span class="p">,</span> <span class="n">mu_exp_y</span><span class="p">,</span> <span class="n">mu_exp_z</span><span class="p">])</span>
+
+<span class="c1"># \lambda \cdot &lt; \mu &gt; where &lt; \mu &gt; contains only electronic terms </span>
+<span class="n">d_exp</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">lambda_vector</span><span class="p">,</span> <span class="n">mu_exp_el</span><span class="p">)</span>
+
+<span class="c1"># \lambda \cdot \mu_{el}</span>
+<span class="n">d_el</span> <span class="o">=</span> <span class="n">lambda_vector</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">mu_cmo_x</span>
+<span class="n">d_el</span> <span class="o">+=</span> <span class="n">lambda_vector</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="n">mu_cmo_y</span>
+<span class="n">d_el</span> <span class="o">+=</span> <span class="n">lambda_vector</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">*</span> <span class="n">mu_cmo_z</span>
+
+<span class="c1"># dipole constants to add to QED-CIS-1 Energy</span>
+<span class="n">d_c</span> <span class="o">=</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">d_exp</span><span class="o">**</span><span class="mi">2</span>
+
+<span class="c1"># If we have done these transformations correctly, the d_c above</span>
+<span class="c1"># will agree with what we have from QED-HF calculation</span>
+<span class="k">assert</span> <span class="n">np</span><span class="o">.</span><span class="n">isclose</span><span class="p">(</span><span class="n">d_c</span><span class="p">,</span> <span class="n">cqed_rhf_dict</span><span class="p">[</span><span class="s2">&quot;DIPOLE ENERGY&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Build the <span class="math notranslate nohighlight">\({\bf g}\)</span> and <span class="math notranslate nohighlight">\({\bf g}^{\dagger}\)</span> matrices (Eq. (14)).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># build g matrix and its adjoint</span>
+<span class="n">g</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span><span class="n">ndocc</span> <span class="o">*</span> <span class="n">nvirt</span><span class="p">))</span>
+<span class="n">g_dag</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">ndocc</span> <span class="o">*</span> <span class="n">nvirt</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">ndocc</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">nvirt</span><span class="p">):</span>
+        <span class="n">A</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">ndocc</span>
+        <span class="n">ia</span> <span class="o">=</span> <span class="n">i</span> <span class="o">*</span> <span class="n">nvirt</span> <span class="o">+</span> <span class="n">a</span> 
+        <span class="n">g</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="n">ia</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">omega_val</span><span class="p">)</span> <span class="o">*</span> <span class="n">d_el</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">A</span><span class="p">]</span>
+        <span class="p">)</span>
+
+<span class="c1"># Now compute the adjoint of g</span>
+<span class="n">g_dag</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">conj</span><span class="p">(</span><span class="n">g</span><span class="p">)</span><span class="o">.</span><span class="n">T</span>
+<span class="c1">#print(g_dag)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Build the <span class="math notranslate nohighlight">\({\bf A}\)</span>, <span class="math notranslate nohighlight">\(\Delta\)</span>, <span class="math notranslate nohighlight">\(\Omega\)</span>, and <span class="math notranslate nohighlight">\({\bf G}\)</span> matrices from Eqs. (11), (12), (13), and (15), respectively.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># A</span>
+<span class="n">A_matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">ndocc</span> <span class="o">*</span> <span class="n">nvirt</span><span class="p">,</span> <span class="n">ndocc</span> <span class="o">*</span> <span class="n">nvirt</span><span class="p">))</span>
+<span class="c1"># Delta</span>
+<span class="n">D_matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">ndocc</span> <span class="o">*</span> <span class="n">nvirt</span><span class="p">,</span> <span class="n">ndocc</span> <span class="o">*</span> <span class="n">nvirt</span><span class="p">))</span>
+<span class="c1"># G</span>
+<span class="n">G</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">ndocc</span> <span class="o">*</span> <span class="n">nvirt</span><span class="p">,</span> <span class="n">ndocc</span> <span class="o">*</span> <span class="n">nvirt</span><span class="p">))</span>
+<span class="c1"># \Omega</span>
+<span class="n">Omega</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">ndocc</span> <span class="o">*</span> <span class="n">nvirt</span><span class="p">,</span> <span class="n">ndocc</span> <span class="o">*</span> <span class="n">nvirt</span><span class="p">))</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">ndocc</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">nvirt</span><span class="p">):</span>
+        <span class="n">A</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">ndocc</span>
+        <span class="n">ia</span> <span class="o">=</span> <span class="n">i</span> <span class="o">*</span> <span class="n">nvirt</span> <span class="o">+</span> <span class="n">a</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">ndocc</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">nvirt</span><span class="p">):</span>
+                <span class="n">B</span> <span class="o">=</span> <span class="n">b</span> <span class="o">+</span> <span class="n">ndocc</span>
+                <span class="n">jb</span> <span class="o">=</span> <span class="n">j</span> <span class="o">*</span> <span class="n">nvirt</span> <span class="o">+</span> <span class="n">b</span>
+                
+                <span class="c1"># ERI contribution to A + \Delta</span>
+                <span class="n">A_matrix</span><span class="p">[</span><span class="n">ia</span><span class="p">,</span> <span class="n">jb</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="mf">2.0</span> <span class="o">*</span> <span class="n">ovov</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">b</span><span class="p">]</span> <span class="o">-</span> <span class="n">oovv</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">])</span>
+                
+                <span class="c1"># 2-electron dipole contribution to A + \Delta</span>
+                <span class="n">D_matrix</span><span class="p">[</span><span class="n">ia</span><span class="p">,</span> <span class="n">jb</span><span class="p">]</span> <span class="o">+=</span> <span class="mf">2.0</span> <span class="o">*</span> <span class="n">d_el</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">A</span><span class="p">]</span> <span class="o">*</span> <span class="n">d_el</span><span class="p">[</span><span class="n">j</span><span class="p">,</span> <span class="n">B</span><span class="p">]</span>
+                <span class="n">D_matrix</span><span class="p">[</span><span class="n">ia</span><span class="p">,</span> <span class="n">jb</span><span class="p">]</span> <span class="o">-=</span> <span class="n">d_el</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span> <span class="o">*</span> <span class="n">d_el</span><span class="p">[</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">]</span>
+                
+                <span class="c1"># bilinear coupling contributions to G</span>
+                <span class="c1"># off-diagonal terms (plus occasional diagonal terms)</span>
+                <span class="n">G</span><span class="p">[</span><span class="n">ia</span><span class="p">,</span> <span class="n">jb</span><span class="p">]</span> <span class="o">+=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">omega_val</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">d_el</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="n">a</span> <span class="o">==</span> <span class="n">b</span><span class="p">)</span>
+                <span class="n">G</span><span class="p">[</span><span class="n">ia</span><span class="p">,</span> <span class="n">jb</span><span class="p">]</span> <span class="o">-=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">omega_val</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">d_el</span><span class="p">[</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="n">i</span> <span class="o">==</span> <span class="n">j</span><span class="p">)</span>
+                
+                <span class="c1"># diagonal contributions to A_p_D, G, and \Omega matrix</span>
+                <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="n">j</span> <span class="ow">and</span> <span class="n">a</span> <span class="o">==</span> <span class="n">b</span><span class="p">:</span>
+                    <span class="c1"># orbital energy contribution to A + \Delta ... this also includes </span>
+                    <span class="c1"># the DSE terms that contributed to the CQED-RHF energy </span>
+                    <span class="n">A_matrix</span><span class="p">[</span><span class="n">ia</span><span class="p">,</span> <span class="n">jb</span><span class="p">]</span> <span class="o">+=</span> <span class="n">eps_v</span><span class="p">[</span><span class="n">a</span><span class="p">]</span>
+                    <span class="n">A_matrix</span><span class="p">[</span><span class="n">ia</span><span class="p">,</span> <span class="n">jb</span><span class="p">]</span> <span class="o">-=</span> <span class="n">eps_o</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> 
+                    
+                    <span class="c1"># diagonal \omega term</span>
+                    <span class="n">Omega</span><span class="p">[</span><span class="n">ia</span><span class="p">,</span> <span class="n">jb</span><span class="p">]</span> <span class="o">=</span> <span class="n">omega_val</span>
+                    
+<span class="c1"># Optional printing</span>
+<span class="c1">#print(G)</span>
+<span class="c1">#print(Omega)</span>
+<span class="c1">#print(A_matrix)</span>
+<span class="c1">#print(A_matrix + D_matrix)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now that we have the sub-blocks formed, we can map these subblocks to the supermatrix that comprises the
+QED-CIS-1 matrix.  The ordering of the basis vectors can be illustrated schematically as follows:</p>
+<p>\begin{equation}
+|R,0\rangle, |S,0\rangle, |R,1\rangle, |S,1\rangle
+\end{equation}
+where <span class="math notranslate nohighlight">\(|R\rangle\)</span> denotes the reference electronic basis state (of which there is only 1) and <span class="math notranslate nohighlight">\(|S\rangle\)</span> denotes all singly-excited electronic basis states (of which there are <span class="math notranslate nohighlight">\(N_v N_o\)</span> states).  Therefore, we can define
+offsets for the blocks of the matrices as follows:</p>
+<p><span class="math notranslate nohighlight">\(|R,0\rangle\)</span> offset = <span class="math notranslate nohighlight">\(0\)</span></p>
+<p><span class="math notranslate nohighlight">\(|S,0\rangle\)</span> offset = <span class="math notranslate nohighlight">\(1\)</span></p>
+<p><span class="math notranslate nohighlight">\(|R,1\rangle\)</span> offset = <span class="math notranslate nohighlight">\(N_v N_o + 1\)</span></p>
+<p><span class="math notranslate nohighlight">\(|S,1\rangle\)</span> offset = <span class="math notranslate nohighlight">\(N_v N_o + 2\)</span></p>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="using-the-same-basis-states-but-neglecting-the-delta-matrix-from-the-qed-cis-1-method-we-arrive-at-a-qed-cis-1-approach-to-the-jaynes-cummings-hamiltonian-begin-equation-label-eq-qed-cis-1-jc-begin-bmatrix-0-0-0-hbar-bf-g-0-bf-a-hbar-bf-g-dagger-hbar-bf-g-0-hbar-bf-g-hbar-omega-0-hbar-bf-g-dagger-hbar-bf-g-0-bf-a-hbar-omega-end-bmatrix-begin-bmatrix-bf-c-0-0-bf-c-0-ia-bf-c-1-0-bf-c-1-ia-end-bmatrix">
+<h1>Using the same basis states but neglecting the <span class="math notranslate nohighlight">\(\Delta\)</span> matrix from the QED-CIS-1 method, we arrive at a QED-CIS-1 approach to the Jaynes-Cummings Hamiltonian:
+\begin{equation}\label{eq:QED-CIS-1-JC}
+\begin{bmatrix}
+0 &amp; 0 &amp; 0 &amp; \hbar {\bf g} \
+0 &amp; {\bf A}  &amp; \hbar {\bf g}^{\dagger}  &amp; \hbar {\bf G} \
+0 &amp; \hbar {\bf g} &amp; \hbar \omega &amp; 0 \
+\hbar {\bf g}^{\dagger} &amp; \hbar {\bf G} &amp; 0 &amp; {\bf A} + \hbar \Omega
+\end{bmatrix}
+\begin{bmatrix}
+{\bf c}^0_0 \
+{\bf c}^0_{ia} \
+{\bf c}^1_0 \
+{\bf c}^1_{ia}
+\end{bmatrix}<a class="headerlink" href="#using-the-same-basis-states-but-neglecting-the-delta-matrix-from-the-qed-cis-1-method-we-arrive-at-a-qed-cis-1-approach-to-the-jaynes-cummings-hamiltonian-begin-equation-label-eq-qed-cis-1-jc-begin-bmatrix-0-0-0-hbar-bf-g-0-bf-a-hbar-bf-g-dagger-hbar-bf-g-0-hbar-bf-g-hbar-omega-0-hbar-bf-g-dagger-hbar-bf-g-0-bf-a-hbar-omega-end-bmatrix-begin-bmatrix-bf-c-0-0-bf-c-0-ia-bf-c-1-0-bf-c-1-ia-end-bmatrix" title="Link to this heading">#</a></h1>
+<p>E_{\rm JC-CIS-1}
+\begin{bmatrix}
+{\bf c}^0_0 \
+{\bf c}^0_{ia} \
+{\bf c}^1_0 \
+{\bf c}^1_{ia}, \tag{16}
+\end{bmatrix}
+\end{equation}</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># define the offsets</span>
+<span class="n">R0_offset</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">S0_offset</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">R1_offset</span> <span class="o">=</span> <span class="n">ndocc</span> <span class="o">*</span> <span class="n">nvirt</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="n">S1_offset</span> <span class="o">=</span> <span class="n">ndocc</span> <span class="o">*</span> <span class="n">nvirt</span> <span class="o">+</span> <span class="mi">2</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># CISS Hamiltonians</span>
+<span class="n">H_QED_CIS_1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">ndocc</span> <span class="o">*</span> <span class="n">nvirt</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span><span class="p">,</span> <span class="n">ndocc</span> <span class="o">*</span> <span class="n">nvirt</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span><span class="p">))</span>
+<span class="n">H_JC_CIS_1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">ndocc</span> <span class="o">*</span> <span class="n">nvirt</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span><span class="p">,</span> <span class="n">ndocc</span> <span class="o">*</span> <span class="n">nvirt</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span><span class="p">))</span>
+
+<span class="c1"># build the supermatrix</span>
+<span class="c1"># g coupling</span>
+<span class="c1"># QED-CIS-1</span>
+<span class="n">H_QED_CIS_1</span><span class="p">[</span><span class="n">R0_offset</span><span class="p">:</span><span class="n">S0_offset</span><span class="p">,</span> <span class="n">S1_offset</span><span class="p">:]</span> <span class="o">=</span> <span class="n">g</span>
+<span class="n">H_QED_CIS_1</span><span class="p">[</span><span class="n">S0_offset</span><span class="p">:</span><span class="n">R1_offset</span><span class="p">,</span> <span class="n">R1_offset</span><span class="p">:</span><span class="n">S1_offset</span><span class="p">]</span> <span class="o">=</span> <span class="n">g_dag</span>
+<span class="n">H_QED_CIS_1</span><span class="p">[</span><span class="n">R1_offset</span><span class="p">:</span><span class="n">S1_offset</span><span class="p">,</span> <span class="n">S0_offset</span><span class="p">:</span><span class="n">R1_offset</span><span class="p">]</span> <span class="o">=</span> <span class="n">g</span> 
+<span class="n">H_QED_CIS_1</span><span class="p">[</span><span class="n">S1_offset</span><span class="p">:,</span>          <span class="n">R0_offset</span><span class="p">:</span><span class="n">S0_offset</span><span class="p">]</span> <span class="o">=</span> <span class="n">g_dag</span> 
+<span class="c1"># JC-CIS-1</span>
+<span class="n">H_JC_CIS_1</span><span class="p">[</span><span class="n">R0_offset</span><span class="p">:</span><span class="n">S0_offset</span><span class="p">,</span> <span class="n">S1_offset</span><span class="p">:]</span> <span class="o">=</span> <span class="n">g</span>
+<span class="n">H_JC_CIS_1</span><span class="p">[</span><span class="n">S0_offset</span><span class="p">:</span><span class="n">R1_offset</span><span class="p">,</span> <span class="n">R1_offset</span><span class="p">:</span><span class="n">S1_offset</span><span class="p">]</span> <span class="o">=</span> <span class="n">g_dag</span>
+<span class="n">H_JC_CIS_1</span><span class="p">[</span><span class="n">R1_offset</span><span class="p">:</span><span class="n">S1_offset</span><span class="p">,</span> <span class="n">S0_offset</span><span class="p">:</span><span class="n">R1_offset</span><span class="p">]</span> <span class="o">=</span> <span class="n">g</span>
+<span class="n">H_JC_CIS_1</span><span class="p">[</span><span class="n">S1_offset</span><span class="p">:,</span>          <span class="n">R0_offset</span><span class="p">:</span><span class="n">S0_offset</span><span class="p">]</span> <span class="o">=</span> <span class="n">g_dag</span>
+
+<span class="c1"># A + \Delta for QED-CIS-1</span>
+<span class="n">H_QED_CIS_1</span><span class="p">[</span><span class="n">S0_offset</span><span class="p">:</span><span class="n">R1_offset</span><span class="p">,</span> <span class="n">S0_offset</span><span class="p">:</span><span class="n">R1_offset</span><span class="p">]</span> <span class="o">=</span> <span class="n">A_matrix</span> <span class="o">+</span> <span class="n">D_matrix</span>
+
+<span class="c1"># A for JC</span>
+<span class="n">H_JC_CIS_1</span><span class="p">[</span><span class="n">S0_offset</span><span class="p">:</span><span class="n">R1_offset</span><span class="p">,</span> <span class="n">S0_offset</span><span class="p">:</span><span class="n">R1_offset</span><span class="p">]</span> <span class="o">=</span> <span class="n">A_matrix</span>
+
+<span class="c1"># omega</span>
+<span class="c1"># QED-CIS-1</span>
+<span class="n">H_QED_CIS_1</span><span class="p">[</span><span class="n">R1_offset</span><span class="p">,</span> <span class="n">R1_offset</span><span class="p">]</span> <span class="o">=</span> <span class="n">omega_val</span>
+<span class="c1"># JC-CIS-1</span>
+<span class="n">H_JC_CIS_1</span><span class="p">[</span><span class="n">R1_offset</span><span class="p">,</span> <span class="n">R1_offset</span><span class="p">]</span> <span class="o">=</span> <span class="n">omega_val</span>
+
+<span class="c1"># A + \Delta + \Omega for QED-CIS-1</span>
+<span class="n">H_QED_CIS_1</span><span class="p">[</span><span class="n">S1_offset</span><span class="p">:,</span> <span class="n">S1_offset</span><span class="p">:]</span> <span class="o">=</span> <span class="n">A_matrix</span> <span class="o">+</span> <span class="n">D_matrix</span> <span class="o">+</span> <span class="n">Omega</span>
+
+<span class="c1"># A + \Omega for JC-CIS-1</span>
+<span class="n">H_JC_CIS_1</span><span class="p">[</span><span class="n">S1_offset</span><span class="p">:,</span> <span class="n">S1_offset</span><span class="p">:]</span> <span class="o">=</span> <span class="n">A_matrix</span> <span class="o">+</span> <span class="n">Omega</span>
+
+<span class="c1"># G coupling</span>
+<span class="c1"># QED-CIS-1</span>
+<span class="n">H_QED_CIS_1</span><span class="p">[</span><span class="n">S1_offset</span><span class="p">:,</span><span class="n">S0_offset</span><span class="p">:</span><span class="n">R1_offset</span><span class="p">]</span> <span class="o">=</span> <span class="n">G</span> 
+<span class="n">H_QED_CIS_1</span><span class="p">[</span><span class="n">S0_offset</span><span class="p">:</span><span class="n">R1_offset</span><span class="p">,</span> <span class="n">S1_offset</span><span class="p">:]</span> <span class="o">=</span> <span class="n">G</span> 
+<span class="c1"># JC-CIS-1</span>
+<span class="n">H_JC_CIS_1</span><span class="p">[</span><span class="n">S1_offset</span><span class="p">:,</span><span class="n">S0_offset</span><span class="p">:</span><span class="n">R1_offset</span><span class="p">]</span> <span class="o">=</span> <span class="n">G</span>
+<span class="n">H_JC_CIS_1</span><span class="p">[</span><span class="n">S0_offset</span><span class="p">:</span><span class="n">R1_offset</span><span class="p">,</span> <span class="n">S1_offset</span><span class="p">:]</span> <span class="o">=</span> <span class="n">G</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="if-we-eliminate-the-simultaneous-single-excitations-in-the-photonic-and-electronic-degrees-of-freedom-we-arrive-at-the-qed-cis-method-which-has-direct-analogy-to-the-tda-pf-method-described-by-shao-and-co-workers-begin-equation-begin-bmatrix-bf-a-delta-hbar-bf-g-dagger-hbar-bf-g-hbar-omega-end-bmatrix-begin-bmatrix-bf-c-0-ia-bf-c-1-0-end-bmatrix">
+<h1>If we eliminate the simultaneous single-excitations in the photonic and electronic
+degrees of freedom, we arrive at the QED-CIS method which has direct analogy to the TDA-PF
+method described by Shao and co-workers:
+\begin{equation}
+\begin{bmatrix}
+{\bf A} +\Delta  &amp; \hbar {\bf g}^{\dagger}  \
+\hbar {\bf g} &amp; \hbar \omega
+\end{bmatrix}
+\begin{bmatrix}
+{\bf c}^0_{ia} \
+{\bf c}^1_0
+\end{bmatrix}<a class="headerlink" href="#if-we-eliminate-the-simultaneous-single-excitations-in-the-photonic-and-electronic-degrees-of-freedom-we-arrive-at-the-qed-cis-method-which-has-direct-analogy-to-the-tda-pf-method-described-by-shao-and-co-workers-begin-equation-begin-bmatrix-bf-a-delta-hbar-bf-g-dagger-hbar-bf-g-hbar-omega-end-bmatrix-begin-bmatrix-bf-c-0-ia-bf-c-1-0-end-bmatrix" title="Link to this heading">#</a></h1>
+<p>E_{\rm QED-CIS}
+\begin{bmatrix}
+{\bf c}^0_{ia} \
+{\bf c}^1_0
+\end{bmatrix}. \tag{17}
+\end{equation}</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="if-we-neglect-the-delta-matrix-in-the-qed-cis-hamiltonian-we-arrive-at-the-jc-cis-method-in-direct-analogy-with-the-tda-jc-method-described-by-shao-and-co-workers-begin-equation-begin-bmatrix-bf-a-hbar-bf-g-dagger-hbar-bf-g-hbar-omega-end-bmatrix-begin-bmatrix-bf-c-0-ia-bf-c-1-0-end-bmatrix">
+<h1>If we neglect the <span class="math notranslate nohighlight">\(\Delta\)</span> matrix in the QED-CIS Hamiltonian, we arrive at the JC-CIS method in direct analogy with the TDA-JC method described by Shao and co-workers:
+\begin{equation}
+\begin{bmatrix}
+{\bf A}  &amp; \hbar {\bf g}^{\dagger}  \
+\hbar {\bf g} &amp; \hbar \omega
+\end{bmatrix}
+\begin{bmatrix}
+{\bf c}^0_{ia} \
+{\bf c}^1_0
+\end{bmatrix}<a class="headerlink" href="#if-we-neglect-the-delta-matrix-in-the-qed-cis-hamiltonian-we-arrive-at-the-jc-cis-method-in-direct-analogy-with-the-tda-jc-method-described-by-shao-and-co-workers-begin-equation-begin-bmatrix-bf-a-hbar-bf-g-dagger-hbar-bf-g-hbar-omega-end-bmatrix-begin-bmatrix-bf-c-0-ia-bf-c-1-0-end-bmatrix" title="Link to this heading">#</a></h1>
+<p>E_{\rm JC-CIS}
+\begin{bmatrix}
+{\bf c}^0_{ia} \
+{\bf c}^1_0
+\end{bmatrix}. \tag{18}
+\end{equation}</p>
+<p>The ordering of the basis vectors for the two CIS methods above can be illustrated schematically as follows:</p>
+<p>\begin{equation}
+|S,0\rangle, |R,1\rangle
+\end{equation}
+We can define
+offsets for the blocks of the matrices as follows:</p>
+<p><span class="math notranslate nohighlight">\(|S,0\rangle\)</span> offset = <span class="math notranslate nohighlight">\(0\)</span></p>
+<p><span class="math notranslate nohighlight">\(|R,1\rangle\)</span> offset = <span class="math notranslate nohighlight">\(N_v N_o\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># define the CIS offsets</span>
+<span class="n">CIS_S0_offset</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">CIS_R1_offset</span> <span class="o">=</span> <span class="n">ndocc</span> <span class="o">*</span> <span class="n">nvirt</span>
+
+<span class="c1"># CIS Hamiltonians</span>
+<span class="n">H_QED_CIS</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">ndocc</span> <span class="o">*</span> <span class="n">nvirt</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">ndocc</span> <span class="o">*</span> <span class="n">nvirt</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span>
+<span class="n">H_JC_CIS</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">ndocc</span> <span class="o">*</span> <span class="n">nvirt</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">ndocc</span> <span class="o">*</span> <span class="n">nvirt</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span>
+
+<span class="c1"># build the supermatrix</span>
+<span class="c1"># g coupling</span>
+<span class="c1"># QED-CIS</span>
+<span class="n">H_QED_CIS</span><span class="p">[</span><span class="n">CIS_R1_offset</span><span class="p">:,</span> <span class="n">CIS_S0_offset</span><span class="p">:</span><span class="n">CIS_R1_offset</span><span class="p">]</span> <span class="o">=</span> <span class="n">g</span> 
+<span class="n">H_QED_CIS</span><span class="p">[</span><span class="n">CIS_S0_offset</span><span class="p">:</span><span class="n">CIS_R1_offset</span><span class="p">,</span> <span class="n">CIS_R1_offset</span><span class="p">:]</span> <span class="o">=</span> <span class="n">g_dag</span> 
+<span class="c1"># JC-CIS</span>
+<span class="n">H_JC_CIS</span><span class="p">[</span><span class="n">CIS_R1_offset</span><span class="p">:,</span> <span class="n">CIS_S0_offset</span><span class="p">:</span><span class="n">CIS_R1_offset</span><span class="p">]</span> <span class="o">=</span> <span class="n">g</span>
+<span class="n">H_JC_CIS</span><span class="p">[</span><span class="n">CIS_S0_offset</span><span class="p">:</span><span class="n">CIS_R1_offset</span><span class="p">,</span> <span class="n">CIS_R1_offset</span><span class="p">:]</span> <span class="o">=</span> <span class="n">g_dag</span> 
+
+<span class="c1"># A + \Delta for QED-CIS</span>
+<span class="n">H_QED_CIS</span><span class="p">[</span><span class="n">CIS_S0_offset</span><span class="p">:</span><span class="n">CIS_R1_offset</span><span class="p">,</span> <span class="n">CIS_S0_offset</span><span class="p">:</span><span class="n">CIS_R1_offset</span><span class="p">]</span> <span class="o">=</span> <span class="n">A_matrix</span> <span class="o">+</span> <span class="n">D_matrix</span>
+<span class="c1"># A  for JC-CIS</span>
+<span class="n">H_JC_CIS</span><span class="p">[</span><span class="n">CIS_S0_offset</span><span class="p">:</span><span class="n">CIS_R1_offset</span><span class="p">,</span> <span class="n">CIS_S0_offset</span><span class="p">:</span><span class="n">CIS_R1_offset</span><span class="p">]</span> <span class="o">=</span> <span class="n">A_matrix</span>
+
+<span class="c1"># omega</span>
+<span class="c1"># QED-CIS</span>
+<span class="n">H_QED_CIS</span><span class="p">[</span><span class="n">CIS_R1_offset</span><span class="p">,</span> <span class="n">CIS_R1_offset</span><span class="p">]</span> <span class="o">=</span> <span class="n">omega_val</span>
+<span class="c1"># JC-CIS</span>
+<span class="n">H_QED_CIS</span><span class="p">[</span><span class="n">CIS_R1_offset</span><span class="p">,</span> <span class="n">CIS_R1_offset</span><span class="p">]</span> <span class="o">=</span> <span class="n">omega_val</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now we can diagonalize the different supermatrices formed above to obtain the
+eigenvalues and eigenvectors from these 4 related levels of theory.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># diagonalize tall of the matrices!</span>
+<span class="n">E_QED_CIS_1</span><span class="p">,</span> <span class="n">C_QED_CIS_1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">eigh</span><span class="p">(</span><span class="n">H_QED_CIS_1</span><span class="p">)</span>
+<span class="n">E_JC_CIS_1</span><span class="p">,</span> <span class="n">C_JC_CIS_1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">eigh</span><span class="p">(</span><span class="n">H_JC_CIS_1</span><span class="p">)</span>
+
+<span class="n">E_QED_CIS</span><span class="p">,</span> <span class="n">C_QED_CIS</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">eigh</span><span class="p">(</span><span class="n">H_QED_CIS</span><span class="p">)</span>
+<span class="n">E_JC_CIS</span><span class="p">,</span> <span class="n">C_JC_CIS</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">eigh</span><span class="p">(</span><span class="n">H_JC_CIS</span><span class="p">)</span>
+
+
+<span class="c1"># store the results in a dictionary</span>
+<span class="n">prism_dict</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;RHF ENERGY&quot;</span><span class="p">:</span> <span class="n">scf_e</span><span class="p">,</span>
+    <span class="s2">&quot;CQED-RHF ENERGY&quot;</span><span class="p">:</span> <span class="n">cqed_scf_e</span><span class="p">,</span>
+    <span class="s2">&quot;QED-CIS-1 ENERGY&quot;</span><span class="p">:</span> <span class="n">E_QED_CIS_1</span><span class="p">,</span>
+    <span class="s2">&quot;JC-CIS-1 ENERGY&quot;</span><span class="p">:</span> <span class="n">E_JC_CIS_1</span><span class="p">,</span>
+    <span class="s2">&quot;QED-CIS ENERGY&quot;</span><span class="p">:</span> <span class="n">E_QED_CIS</span><span class="p">,</span>
+    <span class="s2">&quot;JC-CIS ENERGY&quot;</span><span class="p">:</span> <span class="n">E_JC_CIS</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="check-the-first-3-states-of-the-qed-cis-1-calculation">
+<h2>Check the first 3 states of the QED-CIS-1 Calculation<a class="headerlink" href="#check-the-first-3-states-of-the-qed-cis-1-calculation" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># expected QED-CIS-1 Energies relative to QED-HF Energy</span>
+<span class="n">expected_vals</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="o">-</span><span class="mf">2.50831265e-04</span><span class="p">,</span>  
+                          <span class="mf">1.65570838e-01</span><span class="p">,</span>
+                          <span class="mf">1.82666685e-01</span><span class="p">,</span>
+                          <span class="mf">2.33013344e-01</span><span class="p">,</span>
+                          <span class="mf">2.33013344e-01</span><span class="p">])</span>
+
+<span class="n">psi4</span><span class="o">.</span><span class="n">compare_values</span><span class="p">(</span><span class="n">expected_vals</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">prism_dict</span><span class="p">[</span><span class="s1">&#39;QED-CIS-1 ENERGY&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;QED-CIS-1 Ground State&#39;</span><span class="p">)</span>
+<span class="n">psi4</span><span class="o">.</span><span class="n">compare_values</span><span class="p">(</span><span class="n">expected_vals</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">prism_dict</span><span class="p">[</span><span class="s1">&#39;QED-CIS-1 ENERGY&#39;</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span> <span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;QED-CIS-1 Lower Polariton State&#39;</span><span class="p">)</span>
+<span class="n">psi4</span><span class="o">.</span><span class="n">compare_values</span><span class="p">(</span><span class="n">expected_vals</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">prism_dict</span><span class="p">[</span><span class="s1">&#39;QED-CIS-1 ENERGY&#39;</span><span class="p">][</span><span class="mi">2</span><span class="p">],</span> <span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;QED-CIS-1 Upper Polariton State&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>    QED-CIS-1 Ground State................................................................PASSED
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>    QED-CIS-1 Lower Polariton State.......................................................PASSED
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>    QED-CIS-1 Upper Polariton State.......................................................PASSED
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="references">
+<h2>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://aip.scitation.org/doi/10.1063/5.0091953">[McTague:2022:154103]</a>] J. McTague, J. J. Foley IV, <em>J. Chem. Phys.</em> <strong>156</strong>, 154103 (2022)</p></li>
+<li><p><a class="reference external" href="https://aip.scitation.org/doi/full/10.1063/5.0057542">[Shao:2021:064107]</a> J. Yang, Q. Ou, Z. Pei, H. Wang, B. Weng, Z. Shuai, K. Mullen, Y. Shao, <em>J. Chem. Phys.</em> <strong>155</strong>, 064107 (2021)</p></li>
+</ul>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./content/drafts"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Configuration Interaction with Single Electronic and Photonic Excitations applied to the Pauli-Fierz Hamiltonian</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#i-theoretical-overview">I. Theoretical Overview</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#qed-cis-1-ansatz"><em>QED-CIS-1 Ansatz</em></a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#the-polaritonic-energy-eigenfunctions-for-state-i-in-the-qed-cis-1-ansatz-can-be-written-as-a-linear-combination-of-the-qed-hf-reference-and-products-of-all-possible-single-excitations-out-of-the-qed-hf-reference-the-qed-hf-reference-involves-the-product-of-an-electronic-slater-determinant-with-the-photon-vacuum-state-phi-o-rangle-0-rangle-so-single-excitations-can-occur-as-electronic-excitations-from-an-occupied-orbital-phi-i-to-a-virtual-orbital-phi-a-the-raising-of-the-photon-number-state-from-0-rangle-rightarrow-1-rangle-or-both-we-therefore-write-the-qed-cis-1-wavefunction-for-state-i-as-begin-equation-label-eq-qed-cis-1-psi-i-c-0-0-phi-0-rangle-0-rangle-sum-i-a-c-ia-0-phi-i-a-rangle-0-rangle-c-0-1-phi-0-rangle-1-rangle-sum-i-a-c-ia-1-phi-i-a-rangle-1-rangle-tag-9-end-equation-where-the-coefficients-c-denote-the-contribution-of-a-given-term-to-the-wavefunction-and-we-have-denoted-the-electronic-excitations-in-the-subscript-and-the-photonic-excitations-in-the-superscript-of-these-coefficients-for-the-case-of-multiple-modes-the-photonic-basis-states-will-be-augmented-to-consider-all-possible-combinations-of-the-occupations-of-those-modes-within-a-maximum-photon-number-these-coefficients-and-the-corresponding-energy-eigenvalues-for-a-given-qed-cis-1-state-i-may-be-obtained-by-diagonalizing-the-hamiltonian-matrix-built-in-the-basis-shown-below-in-eq-10-we-spin-adapt-this-basis-such-that-phi-i-a-rangle-frac-1-sqrt-2-left-phi-i-alpha-a-alpha-rangle-phi-i-beta-a-beta-rangle-right-where-alpha-and-beta-label-the-spin-orbitals-as-being-occupied-by-spin-up-and-spin-down-electrons-respectively-the-matrix-can-be-written-schematically-as-begin-equation-begin-bmatrix-0-0-0-hbar-bf-g-0-bf-a-delta-hbar-bf-g-dagger-hbar-bf-g-0-hbar-bf-g-hbar-omega-0-hbar-bf-g-dagger-hbar-bf-g-0-bf-a-delta-hbar-omega-end-bmatrix-begin-bmatrix-bf-c-0-0-bf-c-0-ia-bf-c-1-0-bf-c-1-ia-end-bmatrix">The polaritonic energy eigenfunctions for state <span class="math notranslate nohighlight">\(I\)</span> in the
+QED-CIS-1 ansatz can be written as a linear combination of the QED-HF reference and products of all possible single excitations out of the QED-HF reference.  The QED-HF reference involves the product of an electronic Slater determinant with the photon vacuum state <span class="math notranslate nohighlight">\(|\Phi_o\rangle |0\rangle\)</span>, so single excitations can occur as electronic excitations from an occupied orbital <span class="math notranslate nohighlight">\(\phi_i\)</span> to a virtual orbital <span class="math notranslate nohighlight">\(\phi_a\)</span>, the raising of the photon number state from <span class="math notranslate nohighlight">\(|0\rangle \rightarrow |1\rangle\)</span>, or both.  We therefore write the QED-CIS-1 wavefunction for state <span class="math notranslate nohighlight">\(I\)</span> as
+\begin{equation}\label{eq:QED-CIS-1}
+\Psi_I = c_0^0 |\Phi_0\rangle |0\rangle +
+\sum_{i,a} c_{ia}^0 |\Phi_i^a\rangle |0\rangle +
+c_0^1 |\Phi_0\rangle |1\rangle +
+\sum_{i,a} c_{ia}^1 |\Phi_i^a\rangle |1\rangle \tag{9}.
+\end{equation}
+where the coefficients <span class="math notranslate nohighlight">\(c\)</span> denote the contribution of a given term to the wavefunction and we have denoted the electronic excitations in the subscript and the photonic excitations in the superscript of these coefficients. For the case of multiple modes, the photonic basis states will be augmented to consider all possible combinations of the occupations of those modes within a maximum photon number.  These coefficients, and the corresponding energy eigenvalues for a given QED-CIS-1 state <span class="math notranslate nohighlight">\(I\)</span>, may be obtained by diagonalizing the Hamiltonian matrix built in the basis shown below in Eq. (10).  We spin adapt this basis such that <span class="math notranslate nohighlight">\(|\Phi_i^a\rangle = \frac{1}{\sqrt{2}}\left(|\Phi_{i\alpha}^{a \alpha} \rangle + |\Phi_{i\beta}^{a\beta}\rangle \right)\)</span>, where <span class="math notranslate nohighlight">\(\alpha\)</span> and <span class="math notranslate nohighlight">\(\beta\)</span> label the spin orbitals as being occupied by spin-up and spin-down electrons, respectively.  The matrix can be written schematically as
+\begin{equation}
+\begin{bmatrix}
+0 &amp; 0 &amp; 0 &amp; \hbar {\bf g} \
+0 &amp; {\bf A} +\Delta  &amp; \hbar {\bf g}^{\dagger}  &amp; \hbar {\bf G} \
+0 &amp; \hbar {\bf g} &amp; \hbar \omega &amp; 0 \
+\hbar {\bf g}^{\dagger} &amp; \hbar {\bf G} &amp; 0 &amp; {\bf A} + \Delta + \hbar \Omega
+\end{bmatrix}
+\begin{bmatrix}
+{\bf c}^0_0 \
+{\bf c}^0_{ia} \
+{\bf c}^1_0 \
+{\bf c}^1_{ia}
+\end{bmatrix}</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-implementation">II. Implementation</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-same-basis-states-but-neglecting-the-delta-matrix-from-the-qed-cis-1-method-we-arrive-at-a-qed-cis-1-approach-to-the-jaynes-cummings-hamiltonian-begin-equation-label-eq-qed-cis-1-jc-begin-bmatrix-0-0-0-hbar-bf-g-0-bf-a-hbar-bf-g-dagger-hbar-bf-g-0-hbar-bf-g-hbar-omega-0-hbar-bf-g-dagger-hbar-bf-g-0-bf-a-hbar-omega-end-bmatrix-begin-bmatrix-bf-c-0-0-bf-c-0-ia-bf-c-1-0-bf-c-1-ia-end-bmatrix">Using the same basis states but neglecting the <span class="math notranslate nohighlight">\(\Delta\)</span> matrix from the QED-CIS-1 method, we arrive at a QED-CIS-1 approach to the Jaynes-Cummings Hamiltonian:
+\begin{equation}\label{eq:QED-CIS-1-JC}
+\begin{bmatrix}
+0 &amp; 0 &amp; 0 &amp; \hbar {\bf g} \
+0 &amp; {\bf A}  &amp; \hbar {\bf g}^{\dagger}  &amp; \hbar {\bf G} \
+0 &amp; \hbar {\bf g} &amp; \hbar \omega &amp; 0 \
+\hbar {\bf g}^{\dagger} &amp; \hbar {\bf G} &amp; 0 &amp; {\bf A} + \hbar \Omega
+\end{bmatrix}
+\begin{bmatrix}
+{\bf c}^0_0 \
+{\bf c}^0_{ia} \
+{\bf c}^1_0 \
+{\bf c}^1_{ia}
+\end{bmatrix}</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#if-we-eliminate-the-simultaneous-single-excitations-in-the-photonic-and-electronic-degrees-of-freedom-we-arrive-at-the-qed-cis-method-which-has-direct-analogy-to-the-tda-pf-method-described-by-shao-and-co-workers-begin-equation-begin-bmatrix-bf-a-delta-hbar-bf-g-dagger-hbar-bf-g-hbar-omega-end-bmatrix-begin-bmatrix-bf-c-0-ia-bf-c-1-0-end-bmatrix">If we eliminate the simultaneous single-excitations in the photonic and electronic
+degrees of freedom, we arrive at the QED-CIS method which has direct analogy to the TDA-PF
+method described by Shao and co-workers:
+\begin{equation}
+\begin{bmatrix}
+{\bf A} +\Delta  &amp; \hbar {\bf g}^{\dagger}  \
+\hbar {\bf g} &amp; \hbar \omega
+\end{bmatrix}
+\begin{bmatrix}
+{\bf c}^0_{ia} \
+{\bf c}^1_0
+\end{bmatrix}</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#if-we-neglect-the-delta-matrix-in-the-qed-cis-hamiltonian-we-arrive-at-the-jc-cis-method-in-direct-analogy-with-the-tda-jc-method-described-by-shao-and-co-workers-begin-equation-begin-bmatrix-bf-a-hbar-bf-g-dagger-hbar-bf-g-hbar-omega-end-bmatrix-begin-bmatrix-bf-c-0-ia-bf-c-1-0-end-bmatrix">If we neglect the <span class="math notranslate nohighlight">\(\Delta\)</span> matrix in the QED-CIS Hamiltonian, we arrive at the JC-CIS method in direct analogy with the TDA-JC method described by Shao and co-workers:
+\begin{equation}
+\begin{bmatrix}
+{\bf A}  &amp; \hbar {\bf g}^{\dagger}  \
+\hbar {\bf g} &amp; \hbar \omega
+\end{bmatrix}
+\begin{bmatrix}
+{\bf c}^0_{ia} \
+{\bf c}^1_0
+\end{bmatrix}</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#check-the-first-3-states-of-the-qed-cis-1-calculation">Check the first 3 states of the QED-CIS-1 Calculation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Jay Foley
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -204,36 +204,9 @@
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../problem_sets/ps_1.html">Problem Set 1</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Advanced Topics</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../advanced_topics/HF_Coupled_to_Cavity_Tensor_To_Complete.html">Introduction to Molecular CQED</a></li>
-
-
-
-
-
-
-<li class="toctree-l1"><a class="reference internal" href="../advanced_topics/Linear_Variational_Method_Quartic_Oscillator_and_Zeeman_Effect.html">Linear Variational Method - Anharmonic Oscillator</a></li>
-
-
-<li class="toctree-l1"><a class="reference internal" href="../advanced_topics/Zeeman_Effect_Hydrogen_Atom.html">Zeeman Effect</a></li>
-
-
-</ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Computational Sets</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../computational_sets/CO_Perturbation_Theory.html">Computing Fundamental Transition of CO under different levels of approximation</a></li>
-
-
-
-<li class="toctree-l1"><a class="reference internal" href="../computational_sets/hydrogen_wavefunctions.html">DEMO: H wavefunctions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../computational_sets/linear_variational_method.html">Linear Variational Method</a></li>
-
 <li class="toctree-l1"><a class="reference internal" href="../computational_sets/note05.html">Additional Notes on Spin</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../computational_sets/pib_delta_potential_dynamics.html">Dynamics of particle in a box with a delta potential</a></li>
-
-
-
 <li class="toctree-l1"><a class="reference internal" href="../computational_sets/Spin_one_half.html">Computational Set 1: Introduction to Spin 1/2</a></li>
 
 
@@ -1212,10 +1185,6 @@ $<span class="math notranslate nohighlight">\(\begin{align}
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The overlap of the 1s and 2pz orbitals is  0.000000000000
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/x2/ggtknn9s49s3dcq96ckcgfgh0000gn/T/ipykernel_16926/3417250103.py:2: DeprecationWarning: `trapz` is deprecated. Use `trapezoid` instead, or one of the numerical integration functions in `scipy.integrate`.
-  overlap = np.trapz(wfn_1s.conj() * wfn_2pz, z)
-</pre></div>
-</div>
 </div>
 </div>
 <p>Now, let’s continue to explore the properties of Hermitian operators. We proved above that eigenfunctions of a Hermitian operator that have different eigenvalues must be orthogonal. What if the eigenvalues are the same?</p>
@@ -1652,7 +1621,7 @@ E_n = \frac{\hbar^2\pi^2n^2}{2ml^2}
 <span class="g g-Whitespace">     </span><span class="mi">84</span> <span class="kn">from</span><span class="w"> </span><span class="nn">IPython.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">HTML</span>
 <span class="ne">---&gt; </span><span class="mi">85</span> <span class="n">HTML</span><span class="p">(</span><span class="n">anim</span><span class="o">.</span><span class="n">to_html5_video</span><span class="p">())</span>
 
-<span class="nn">File ~/miniforge3/envs/jbook/lib/python3.12/site-packages/matplotlib/animation.py:1302,</span> in <span class="ni">Animation.to_html5_video</span><span class="nt">(self, embed_limit)</span>
+<span class="nn">File ~/miniconda3/envs/jbook/lib/python3.11/site-packages/matplotlib/animation.py:1302,</span> in <span class="ni">Animation.to_html5_video</span><span class="nt">(self, embed_limit)</span>
 <span class="g g-Whitespace">   </span><span class="mi">1299</span> <span class="n">path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">tmpdir</span><span class="p">,</span> <span class="s2">&quot;temp.m4v&quot;</span><span class="p">)</span>
 <span class="g g-Whitespace">   </span><span class="mi">1300</span> <span class="c1"># We create a writer manually so that we can get the</span>
 <span class="g g-Whitespace">   </span><span class="mi">1301</span> <span class="c1"># appropriate size for the tag</span>
@@ -1662,7 +1631,7 @@ E_n = \frac{\hbar^2\pi^2n^2}{2ml^2}
 <span class="g g-Whitespace">   </span><span class="mi">1305</span>                 <span class="n">fps</span><span class="o">=</span><span class="mf">1000.</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">_interval</span><span class="p">)</span>
 <span class="g g-Whitespace">   </span><span class="mi">1306</span> <span class="bp">self</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">path</span><span class="p">),</span> <span class="n">writer</span><span class="o">=</span><span class="n">writer</span><span class="p">)</span>
 
-<span class="nn">File ~/miniforge3/envs/jbook/lib/python3.12/site-packages/matplotlib/animation.py:121,</span> in <span class="ni">MovieWriterRegistry.__getitem__</span><span class="nt">(self, name)</span>
+<span class="nn">File ~/miniconda3/envs/jbook/lib/python3.11/site-packages/matplotlib/animation.py:121,</span> in <span class="ni">MovieWriterRegistry.__getitem__</span><span class="nt">(self, name)</span>
 <span class="g g-Whitespace">    </span><span class="mi">119</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_available</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
 <span class="g g-Whitespace">    </span><span class="mi">120</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_registered</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
 <span class="ne">--&gt; </span><span class="mi">121</span> <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Requested MovieWriter (</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">) not available&quot;</span><span class="p">)</span>

@@ -1,0 +1,45 @@
+Traceback (most recent call last):
+  File "/Users/jfoley19/miniconda3/envs/jbook/lib/python3.11/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+    executenb(
+  File "/Users/jfoley19/miniconda3/envs/jbook/lib/python3.11/site-packages/nbclient/client.py", line 1319, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jfoley19/miniconda3/envs/jbook/lib/python3.11/site-packages/jupyter_core/utils/__init__.py", line 165, in wrapped
+    return loop.run_until_complete(inner)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jfoley19/miniconda3/envs/jbook/lib/python3.11/asyncio/base_events.py", line 650, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Users/jfoley19/miniconda3/envs/jbook/lib/python3.11/contextlib.py", line 222, in __aexit__
+    await self.gen.athrow(typ, value, traceback)
+  File "/Users/jfoley19/miniconda3/envs/jbook/lib/python3.11/site-packages/nbclient/client.py", line 654, in async_setup_kernel
+    yield
+  File "/Users/jfoley19/miniconda3/envs/jbook/lib/python3.11/site-packages/nbclient/client.py", line 709, in async_execute
+    await self.async_execute_cell(
+  File "/Users/jfoley19/miniconda3/envs/jbook/lib/python3.11/site-packages/nbclient/client.py", line 1062, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/Users/jfoley19/miniconda3/envs/jbook/lib/python3.11/site-packages/nbclient/client.py", line 918, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+# Take slices of information for Eg, Ee, and mu_eg only
+Eg_array = np.copy(Es[0,:])
+Ee_array = np.copy(Es[1,:])
+tdm_array = np.copy(mu_z[0,:])
+
+
+assert np.allclose(Eg_array, _expected_Eg_array)
+assert np.allclose(Ee_array, _expected_Ee_array)
+assert np.allclose(tdm_array, _expected_tdm_array)
+------------------
+
+
+[31m---------------------------------------------------------------------------[39m
+[31mAssertionError[39m                            Traceback (most recent call last)
+[36mCell[39m[36m [39m[32mIn[5][39m[32m, line 9[39m
+[32m      7[39m [38;5;28;01massert[39;00m np.allclose(Eg_array, _expected_Eg_array)
+[32m      8[39m [38;5;28;01massert[39;00m np.allclose(Ee_array, _expected_Ee_array)
+[32m----> [39m[32m9[39m [38;5;28;01massert[39;00m np.allclose(tdm_array, _expected_tdm_array)
+
+[31mAssertionError[39m: 
+

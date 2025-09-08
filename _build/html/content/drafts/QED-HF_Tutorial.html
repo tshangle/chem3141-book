@@ -1,0 +1,1092 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Hartree-Fock Self-Consistent Field Theory for the Pauli-Fierz Hamiltonian (QED-HF) &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'content/drafts/QED-HF_Tutorial';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="My sample book - Home"/>
+    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    5. Hydrogen Atom
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Lecture Notes</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../lecture_notes/qm_postulates_two_level.html">Chapter 1: Introduction to Quantum Phenomena</a></li>
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../lecture_notes/qm_postulates.html">Chapter 2: The Postulates Revisited</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lecture_notes/translation.html">Chapter 3: Translational Motion</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="../lecture_notes/vibration.html">Chapter 4: Vibrational Motion</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../lecture_notes/rotation.html">Chapter 5: Angular Momentum, and Rotational Motion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lecture_notes/hydrogen.html">Chapter 6: The Hydrogen Atom</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lecture_notes/variation.html">Chapter 7: The Variation Theorem</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lecture_notes/perturbation.html">Chapter 8: Perturbation Theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lecture_notes/SphHarm_visualize.html">Visualizing Spherical harmonics</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Problem Sets</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../problem_sets/ps_1.html">Problem Set 1</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Computational Sets</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../computational_sets/note05.html">Additional Notes on Spin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../computational_sets/Spin_one_half.html">Computational Set 1: Introduction to Spin 1/2</a></li>
+
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Resources</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../resources/formula_sheet.html">Useful Formulae</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../resources/note01.html">Hydrogenlike atoms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../resources/note03.html">Atomic orbitals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../resources/note05.html">Additional Notes on Spin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../resources/notebooks.html">Content with notebooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../resources/spin_background.html">Spin</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/FoleyLab/chem3141-book/blob/main/content/drafts/QED-HF_Tutorial.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/FoleyLab/chem3141-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/FoleyLab/chem3141-book/issues/new?title=Issue%20on%20page%20%2Fcontent/drafts/QED-HF_Tutorial.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/content/drafts/QED-HF_Tutorial.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Hartree-Fock Self-Consistent Field Theory for the Pauli-Fierz Hamiltonian (QED-HF)</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Hartree-Fock Self-Consistent Field Theory for the Pauli-Fierz Hamiltonian (QED-HF)</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#i-theoretical-overview">I. Theoretical Overview</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#electronic-term"><em>Electronic Term</em></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#photonic-term"><em>Photonic Term</em></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bilinear-coupling-term"><em>Bilinear Coupling Term</em></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dipole-self-energy-term"><em>Dipole Self Energy Term</em></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hartree-fock-reference"><em>Hartree-Fock Reference</em></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-implementation">II. Implementation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="hartree-fock-self-consistent-field-theory-for-the-pauli-fierz-hamiltonian-qed-hf">
+<h1>Hartree-Fock Self-Consistent Field Theory for the Pauli-Fierz Hamiltonian (QED-HF)<a class="headerlink" href="#hartree-fock-self-consistent-field-theory-for-the-pauli-fierz-hamiltonian-qed-hf" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;Tutorial implementing a QED-HF program&quot;&quot;&quot;</span>
+
+<span class="n">__authors__</span> <span class="o">=</span> <span class="s2">&quot;J. McTague, J. Foley, A. E. DePrince III&quot;</span>
+<span class="n">__credits__</span> <span class="o">=</span> <span class="s2">&quot;J. McTague, J. Foley, A. E. DePrince III&quot;</span>
+<span class="n">__email__</span>   <span class="o">=</span> <span class="s2">&quot;jfoley19@uncc.edu, deprince@fsu.edu&quot;</span>
+
+<span class="n">__copyright__</span> <span class="o">=</span> <span class="s2">&quot;(c) 2014-2018, The Psi4NumPy Developers&quot;</span>
+<span class="n">__license__</span>   <span class="o">=</span> <span class="s2">&quot;BSD-3-Clause&quot;</span>
+<span class="n">__date__</span>      <span class="o">=</span> <span class="s2">&quot;6/15/2022&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="i-theoretical-overview">
+<h1>I. Theoretical Overview<a class="headerlink" href="#i-theoretical-overview" title="Link to this heading">#</a></h1>
+<p>The Pauli-Fierz Hamiltonian, <span class="math notranslate nohighlight">\(\hat{H}_{PF}\)</span>, is defined in the dipole approximation and in the coherent state basis as:
+$<span class="math notranslate nohighlight">\(\hat{H}_{PF} = \hat{H}_e + \hat{H}_p + \hat{H}_{ep} + \hat{H}_{dse}\tag{1}\)</span>$</p>
+<hr class="docutils" />
+<section id="electronic-term">
+<h2><em>Electronic Term</em><a class="headerlink" href="#electronic-term" title="Link to this heading">#</a></h2>
+<p>The term <span class="math notranslate nohighlight">\(\hat{H}_e\)</span> represents the electronic Hamiltonian and is given through:
+$<span class="math notranslate nohighlight">\(\hat{H}_e = \sum^{N_e}_{i} \hat{T}_e(x_i) + \sum^{N_e}_i \sum^{N_N}_A \hat{V}_{eN}(x_i, X_A) + \sum^{N_e}_i \sum^{N_e}_j (\hat{V}_{ee}(x_i, x_j) + V_{N,N}\tag{2}\)</span><span class="math notranslate nohighlight">\(
+Where \)</span>\hat{T}<em>e(x_i)<span class="math notranslate nohighlight">\( is the electronic kinetic operator for electron \)</span>i<span class="math notranslate nohighlight">\(, \)</span>\hat{V}</em>{eN}(x_i, X_A)<span class="math notranslate nohighlight">\( is the attractive coulomb operator for electron \)</span>i<span class="math notranslate nohighlight">\( and nucleus \)</span>A<span class="math notranslate nohighlight">\(, \)</span>\hat{V}<em>{ee}(x_i , x_j)<span class="math notranslate nohighlight">\( is the repulsive coulomb operator for electrons \)</span>i<span class="math notranslate nohighlight">\( and \)</span>j<span class="math notranslate nohighlight">\(, and \)</span>V</em>{N,N}<span class="math notranslate nohighlight">\( is the total repulsive coulomb potential between all nuclei. When using the Born-Oppenheimer Approximation, the term \)</span>V_{N,N}$ is treated a constant. Additionally, we can neglect the nuclear kinetic energy, and the electron-nuclear attraction will depend upon the coordinates of the fixed nuclear coordinates.</p>
+<hr class="docutils" />
+</section>
+<section id="photonic-term">
+<h2><em>Photonic Term</em><a class="headerlink" href="#photonic-term" title="Link to this heading">#</a></h2>
+<p>The next term considered within the Pauli-Fierz Hamiltonian is the photonic Hamiltonian, <span class="math notranslate nohighlight">\(\hat{H}_p\)</span>, which is defined as:
+$<span class="math notranslate nohighlight">\(\hat{H}_p = \omega\hat{b}^{\dagger{}}\hat{b}\tag{3}\)</span><span class="math notranslate nohighlight">\(
+Here, \)</span>\omega$ represents the frequency of a photon.</p>
+<hr class="docutils" />
+</section>
+<section id="bilinear-coupling-term">
+<h2><em>Bilinear Coupling Term</em><a class="headerlink" href="#bilinear-coupling-term" title="Link to this heading">#</a></h2>
+<p>The third term in the Hamiltonian is a bilinear coupling term that describes coupling of the photonic and electronic degrees of freedom given by, <span class="math notranslate nohighlight">\(\hat{H}_{ep}\)</span> and is defined as:
+$<span class="math notranslate nohighlight">\(\hat{H}_{ep} = \sqrt{\frac{\omega}{2}}\left(\lambda \cdot (\bf{\hat{\mu}}_{\rm e} - \langle {\bf{\hat{\mu}}}_{\rm e} \rangle)\right)\left(\hat{b}^{\dagger{}}+\hat{b}\right)\tag{6}\)</span>$</p>
+<p>Where <span class="math notranslate nohighlight">\(\lambda\)</span> describes the coupling vector, <span class="math notranslate nohighlight">\(\hat{\mu}_{\rm e}\)</span> is the electronic dipole operator, and <span class="math notranslate nohighlight">\(\langle \hat{\mu}_{\rm e} \rangle\)</span> is the electronic dipole expectation value in the ground state.</p>
+<hr class="docutils" />
+</section>
+<section id="dipole-self-energy-term">
+<h2><em>Dipole Self Energy Term</em><a class="headerlink" href="#dipole-self-energy-term" title="Link to this heading">#</a></h2>
+<p>The final component of the Hamiltonian, <span class="math notranslate nohighlight">\(\hat{H}_{dse}\)</span> is the dipole self energy term, and is defined through:
+$<span class="math notranslate nohighlight">\(\hat{H}_{dse} = \frac{1}{2}\left(\lambda \cdot (\bf{\hat{\mu}}_{\rm e} - \langle {\bf{\hat{\mu}}}_{\rm e} \rangle)\right)^2\tag{8}\)</span>$</p>
+<hr class="docutils" />
+</section>
+<section id="hartree-fock-reference">
+<h2><em>Hartree-Fock Reference</em><a class="headerlink" href="#hartree-fock-reference" title="Link to this heading">#</a></h2>
+<p>Having discussed the terms that comprise our Hamiltonian, we can now begin our HF-PF procedure, which we initiate through the introduciton of a product wavefunction, <span class="math notranslate nohighlight">\(|R\rangle\)</span>. Here, we define <span class="math notranslate nohighlight">\(|R\rangle\)</span> through the following:
+$<span class="math notranslate nohighlight">\(|R\rangle = |\Phi_{0}\rangle |0\rangle\tag{9}\)</span><span class="math notranslate nohighlight">\(
+Here, we have defined \)</span>|R\rangle<span class="math notranslate nohighlight">\( as the product wavefunciton between an electronic Slater determinant, \)</span>\Phi_{0}<span class="math notranslate nohighlight">\( and a zero-photon number state, \)</span>|0\rangle<span class="math notranslate nohighlight">\(.  We assume \)</span>|\Phi_{0}\rangle<span class="math notranslate nohighlight">\( is a restricted reference. We can begin by performing a canonical RHF calculation to initialize the Slater determinant. 
+With \)</span>|R\rangle<span class="math notranslate nohighlight">\( defined, we can now apply Equation 9 to Equation 1, arriving at the following:
+\)</span><span class="math notranslate nohighlight">\(\langle R|\hat{H}_{ep}|R\rangle + \langle 0|\hat{H}_{p}|0\rangle + \langle \Phi_{0}| \hat{H}_{e} + \hat{H}_{dse}|\Phi_{0}\rangle\tag{10}\)</span>$</p>
+<p>As we are using a zero-photon number state, we find that the <span class="math notranslate nohighlight">\(\hat{H}_{ep}\)</span> and <span class="math notranslate nohighlight">\(\hat{H}_{p}\)</span> terms both go to zero, leaving behind only the <span class="math notranslate nohighlight">\(\hat{H}_e\)</span> and <span class="math notranslate nohighlight">\(\hat{H}_{dse}\)</span>. The resulting terms are seen in Equation 11.
+$<span class="math notranslate nohighlight">\(\langle\Phi_{0}|\hat{H}_{e}|\Phi_{0}\rangle + \langle\Phi_{0}|\hat{H}_{dse}|\Phi_{0}\rangle\tag{11}\)</span>$</p>
+<p>From this new equation, our QED-HF implementation differs from ordinary HF via the dipole self energy term–as <span class="math notranslate nohighlight">\(\hat{H}_{e}\)</span> provides the ordinary terms to the Fock matrix.</p>
+<hr class="docutils" />
+<p>The QED-HF energy can be written as
+\begin{equation}
+E = \sum_{\mu\nu} ( T_{\mu\nu} + V_{\mu\nu} + \frac{1}{2} J_{\mu\nu} - \frac{1}{2} K_{\mu\nu}) \gamma_{\rm \mu\nu}  \nonumber \
++ \langle \frac{1}{2} [{\bf{\lambda}} \cdot ({\bf{\hat{\mu}}} - \langle {\bf{\hat{\mu}}} \rangle)]^2 \rangle \tag{12}
+\end{equation}
+Here, <span class="math notranslate nohighlight">\(\mu\)</span> and <span class="math notranslate nohighlight">\(\nu\)</span> represent atomic basis functions, and
+<span class="math notranslate nohighlight">\(T_{\mu\nu}\)</span>, <span class="math notranslate nohighlight">\(V_{\mu\nu}\)</span>, <span class="math notranslate nohighlight">\(J_{\mu\nu}\)</span>, and <span class="math notranslate nohighlight">\(K_{\mu\nu}\)</span> are electron kinetic energy integrals, electron-nucleus potential energy integrals, elements of the Coulomb matrix, and elements of the exchange matrix, respectively. The elements of the Coulomb and exchange matrices are defined by
+\begin{equation}
+J_{\mu\nu} = \sum_{\lambda \sigma} (\mu\nu|\lambda\sigma) \gamma_{\lambda \sigma}  \tag{13}
+\end{equation}
+and
+\begin{equation}
+K_{\mu\nu} = \sum_{\lambda \sigma} (\mu \lambda | \sigma \nu)  \gamma_{\lambda\sigma} \tag{14}
+\end{equation}
+where the symbol <span class="math notranslate nohighlight">\((\mu\nu|\lambda\sigma)\)</span> represents a two-electron repulsion integral in chemists’ notation, and
+<span class="math notranslate nohighlight">\(\gamma_{\mu\nu} = \sum_i^{N_{\rm e}} c^*_{\mu i} c_{\nu i}\)</span> is the one-particle reduced density matrix
+(with <span class="math notranslate nohighlight">\(\{c_{\mu i}\}\)</span> and <span class="math notranslate nohighlight">\(N_{\rm e}\)</span> being molecular orbital coefficients and the number of electrons, respectively).
+The last term in Eq. (12) is the dipole self-energy; note that, in the coherent-state basis, this quantity depends on only electronic degrees of freedom. Note also that the bilinear coupling term does not contribute to the QED-HF total energy when the Hamiltonian is represented in the coherent-state basis. ).</p>
+<p>We expand the dipole self-energy operator as
+\begin{eqnarray}
+\label{EQN:DSE_OPERATOR}
+\frac{1}{2} [{\bf{\lambda}} \cdot ({\bf{\hat{\mu}}}<em>e - \langle {\bf{\hat{\mu}}}<em>e \rangle)]^2 &amp;=&amp; \frac{1}{2} ( {\bf{\lambda}}\cdot  {\bf{\hat{\mu}}}</em>{\rm e} ) ^2 -  ( {\bf{\lambda}}\cdot {\bf{\hat{\mu}}}</em>{\rm e} ) ( {\bf{\lambda}}\cdot \langle {\bf{\hat{\mu}}}<em>{\rm e}\rangle )+ \frac{1}{2} ( {\bf{\lambda}}\cdot \langle {\bf{\hat{\mu}}}</em>{\rm e}\rangle ) ^2. \tag{15}
+\end{eqnarray}
+Now, the square of the electric dipole operator (the first term on the right-hand side of Eq.~\ref{EQN:DSE_OPERATOR}) can be expanded in terms of one- and two-electron contributions as
+\begin{equation}
+\label{EQN:DIPOLE_SQUARED_FIRST_QUANTIZATION}
+( {\bf{\lambda}}\cdot  {\bf{\hat{\mu}}}<em>{\rm e} ) ^2 = \sum</em>{i \neq j} [ {\bf{\lambda}}\cdot  {\bf{\hat{\mu}}}<em>{\rm e}(i) ][ {\bf{\lambda}}\cdot  {\bf{\hat{\mu}}}</em>{\rm e}(j)] + \sum_i [ {\bf{\lambda}}\cdot  {\bf{\hat{\mu}}}<em>{\rm e}(i) ]^2. \tag{16}
+\end{equation}
+where <span class="math notranslate nohighlight">\(i\)</span> and <span class="math notranslate nohighlight">\(j\)</span> represent different electrons.
+The right-hand side of Eq. (16) can be expressed in second-quantized notation as
+\begin{eqnarray}
+\label{EQN:DIPOLE_SQUARED}
+( {\bf{\lambda}}\cdot  {\bf{\hat{\mu}}}</em>{\rm e} ) ^2 &amp;=&amp;  \sum_{\mu\nu\lambda\sigma} d_{\mu\nu} d_{\lambda\sigma} \hat{a}^\dagger_\mu \hat{a}^\dagger_\lambda \hat{a}<em>\sigma \hat{a}</em>\nu - \sum_{\mu\nu} q_{\mu\nu} \hat{a}^\dagger_\mu \hat{a}<em>\nu. \tag{17}
+\end{eqnarray}
+where <span class="math notranslate nohighlight">\(\hat{a}^\dagger\)</span> and <span class="math notranslate nohighlight">\(\hat{a}\)</span> represent fermionic creation and annihilation operators, respectively. The symbols <span class="math notranslate nohighlight">\(d_{\mu\nu}\)</span> and <span class="math notranslate nohighlight">\(q_{\mu\nu}\)</span> represent modified electric dipole and electric quadrupole integrals, which have the form
+\begin{equation}
+d</em>{\mu\nu} = - \sum_{a \in {x,y,z}} \lambda_a \int \chi^<em><em>\mu r_a \chi</em>{\nu} d\tau, \tag{18}
+\end{equation}
+and
+\begin{equation}
+q_{\mu\nu} = - \sum_{ab \in {x,y,z}} \lambda_a \lambda_b \int \chi^</em><em>\mu r_a r_b \chi</em>{\nu} d\tau. \tag{19}
+\end{equation}
+respectively, and are evaluated over atomic basis functions, <span class="math notranslate nohighlight">\(\chi_\mu\)</span>. Here, <span class="math notranslate nohighlight">\(\lambda_a\)</span> is a cartesian component of <span class="math notranslate nohighlight">\({\bf{\lambda}}\)</span>, and <span class="math notranslate nohighlight">\(r_a\)</span> is a cartesian component of the position vector [{\it e.g.}, for <span class="math notranslate nohighlight">\({\mathbf{r}} = (x, y, z)\)</span>, <span class="math notranslate nohighlight">\(r_x\)</span> = <span class="math notranslate nohighlight">\(x\)</span>].</p>
+<p>For a single Slater determinant, the expectation value of Eq. (15) is</p>
+<p>\begin{equation}
+\langle \frac{1}{2} [{\bf{\lambda}} \cdot ({\bf{\hat{\mu}}}<em>e - \langle {\bf{\hat{\mu}}}<em>e \rangle)]^2 \rangle = \frac{1}{2} \sum</em>{\mu\nu\lambda\sigma} d</em>{\mu\nu} d_{\lambda\sigma} ( \gamma_{\mu\nu} \gamma_{\lambda\sigma} - \gamma_{\mu\sigma}\gamma_{\lambda\nu}) + \sum_{\mu\nu}O^{\rm DSE}<em>{\mu\nu} \gamma</em>{\mu\nu}+ \frac{1}{2} ({\bf{\lambda}}\cdot\langle {\bf{\mu}}_{\rm e}\rangle)^2, \tag{20}
+\end{equation}</p>
+<p>or
+\begin{eqnarray}
+\langle \frac{1}{2} [{\bf{\lambda}} \cdot ({\bf{\hat{\mu}}}<em>e - \langle {\bf{\hat{\mu}}}<em>e \rangle)]^2 \rangle &amp;=&amp; \sum</em>{\mu\nu} (\frac{1}{2} J^{\rm DSE}</em>{\mu\nu} - \frac{1}{2} K^{\rm DSE}<em>{\mu\nu} + O^{\rm DSE}</em>{\mu\nu} ) \gamma_{\mu\nu} \nonumber \
+&amp;+&amp; \frac{1}{2} ({\bf{\lambda}}\cdot\langle {\bf{\mu}}<em>{\rm e}\rangle)^2, \tag{21}
+\end{eqnarray}
+where
+\begin{equation}
+J^{\rm DSE}</em>{\mu\nu} = d_{\mu\nu} \sum_{\lambda \sigma} d_{\lambda \sigma} \gamma_{\lambda\sigma} \tag{22}
+\end{equation}
+and
+\begin{equation}
+K^{\rm DSE}<em>{\mu\nu} = \sum</em>{\lambda \sigma} d_{\mu\sigma} d_{\lambda \nu} \gamma_{\lambda\sigma}. \tag{23}
+\end{equation}</p>
+<p>With all of the components of the energy defined, we can make this energy stationary with respect to the orbitals that define</p>
+<p>QED-HF are determined as eigenfunctions of the modified
+Fock matrix,
+\begin{eqnarray}
+F_{\mu\nu} &amp;=&amp; T_{\mu\nu} + V_{\mu\nu} + J_{\mu\nu} - K_{\mu\nu} \nonumber \
+&amp;+&amp; O^{\rm DSE}<em>{\rm \mu\nu} + J</em>{\mu\nu}^{\rm DSE} - K_{\mu\nu}^{\rm DSE}  \tag{24}
+\end{eqnarray}
+where we can identify the last three terms as the unique contribution to the Fock operator coming from the dipole self energy,
+<span class="math notranslate nohighlight">\(F^{{\rm DSE}}_{\mu\nu} = O^{\rm DSE}_{\rm \mu\nu} + J_{\mu\nu}^{\rm DSE} - K_{\mu\nu}^{\rm DSE}\)</span>. For organizational purposes, we will refer to
+the first four terms that contribute to the canonical Fock operator as <span class="math notranslate nohighlight">\(F^{\rm C}_{\mu\nu}\)</span>.</p>
+</section>
+<section id="ii-implementation">
+<h2>II. Implementation<a class="headerlink" href="#ii-implementation" title="Link to this heading">#</a></h2>
+<p>Using the above overview, let’s write a HF-PF program using <span style="font-variant: small-caps"> Psi4 </span> and NumPy.  First, we need to import these Python modules:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ==&gt; Import Psi4 &amp; NumPy &lt;==</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">psi4</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We will set some basic Psi4 options in the next blook.  For more detailed information, you may wish to refer to the <a class="reference external" href="https://github.com/psi4/psi4numpy/tree/master/Tutorials">Psi4Numpy Tutorials</a>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ==&gt; Set Basic Psi4 Options &lt;==</span>
+<span class="c1"># Memory specification</span>
+<span class="n">psi4</span><span class="o">.</span><span class="n">set_memory</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="mf">5e8</span><span class="p">))</span>
+<span class="n">numpy_memory</span> <span class="o">=</span> <span class="mi">2</span>
+
+<span class="c1"># Set output file</span>
+<span class="n">psi4</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">set_output_file</span><span class="p">(</span><span class="s1">&#39;output.dat&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+
+<span class="c1"># Define Physicist&#39;s water -- don&#39;t forget C1 symmetry!</span>
+<span class="n">mol</span> <span class="o">=</span> <span class="n">psi4</span><span class="o">.</span><span class="n">geometry</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">O</span>
+<span class="s2">H 1 1.1</span>
+<span class="s2">H 1 1.1 2 104</span>
+<span class="s2">symmetry c1</span>
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+
+<span class="c1"># Set computation options</span>
+<span class="n">psi4</span><span class="o">.</span><span class="n">set_options</span><span class="p">({</span><span class="s1">&#39;basis&#39;</span><span class="p">:</span> <span class="s1">&#39;sto-3g&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;scf_type&#39;</span><span class="p">:</span> <span class="s1">&#39;pk&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;e_convergence&#39;</span><span class="p">:</span> <span class="mf">1e-8</span><span class="p">})</span>
+
+<span class="c1"># run an RHF calculation with psi4 and save the wavefunction object and RHF energy</span>
+<span class="n">scf_e</span><span class="p">,</span> <span class="n">wfn</span> <span class="o">=</span> <span class="n">psi4</span><span class="o">.</span><span class="n">energy</span><span class="p">(</span><span class="s1">&#39;scf&#39;</span><span class="p">,</span> <span class="n">return_wfn</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Memory set to 476.837 MiB by Python driver.
+</pre></div>
+</div>
+</div>
+</div>
+<p>The HF-PF method also needs information about the fundamental coupling strength
+between the molecule and the cavity photon.  We will define the cavity coupling vector <span class="math notranslate nohighlight">\(\vec{\lambda}\)</span> below.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define a lambda vector</span>
+<span class="n">lambda_vector</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Before we can build our Fock matrix, we’ll need to compute the following static one- and two-electron quantities:</p>
+<ul class="simple">
+<li><p>Electron repulsion integrals (ERIs) <strong>I</strong> between our AOs</p></li>
+<li><p>Overlap matrix <strong>S</strong></p></li>
+<li><p>Orthogonalization matrix <strong>A</strong> = <strong>S</strong><span class="math notranslate nohighlight">\(^{-1/2}\)</span></p></li>
+<li><p>Kinetic energy integral matrix <strong>T</strong></p></li>
+<li><p>Coulomb attraction integrals <strong>V</strong></p></li>
+<li><p>Core Hamiltonian matrix <strong>H = T + V</strong></p></li>
+<li><p>Dipole integrals <strong><span class="math notranslate nohighlight">\(\mu\)</span></strong> and <strong><span class="math notranslate nohighlight">\(\lambda\)</span></strong> vector dotted into them to form <strong>d</strong></p></li>
+<li><p>Quadrupole integrals <strong>Q</strong> and <strong><span class="math notranslate nohighlight">\(\lambda\)</span></strong> vector dotted into them to form <strong>q</strong></p></li>
+<li><p>Transformation vectors <strong>C</strong> from canonical HF calculation used to define guess Density Matrix <strong>D</strong></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># create instance of the mintshelper class</span>
+<span class="n">mints</span> <span class="o">=</span> <span class="n">psi4</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">MintsHelper</span><span class="p">(</span><span class="n">wfn</span><span class="o">.</span><span class="n">basisset</span><span class="p">())</span>
+
+<span class="c1"># Overlap matrix, S, and orthogonalization matrix, A</span>
+<span class="n">S</span> <span class="o">=</span> <span class="n">mints</span><span class="o">.</span><span class="n">ao_overlap</span><span class="p">()</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">mints</span><span class="o">.</span><span class="n">ao_overlap</span><span class="p">()</span>
+<span class="n">A</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">1.0e-16</span><span class="p">)</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+
+<span class="c1"># Number of basis Functions &amp; doubly occupied orbitals</span>
+<span class="n">nbf</span> <span class="o">=</span> <span class="n">S</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">ndocc</span> <span class="o">=</span> <span class="n">wfn</span><span class="o">.</span><span class="n">nalpha</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Number of occupied orbitals: </span><span class="si">%3d</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">ndocc</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Number of basis functions: </span><span class="si">%3d</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">nbf</span><span class="p">))</span>
+
+<span class="c1"># Memory check for ERI tensor</span>
+<span class="n">I_size</span> <span class="o">=</span> <span class="p">(</span><span class="n">nbf</span><span class="o">**</span><span class="mi">4</span><span class="p">)</span> <span class="o">*</span> <span class="mf">8.e-9</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Size of the ERI tensor will be </span><span class="si">{:4.2f}</span><span class="s1"> GB.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">I_size</span><span class="p">))</span>
+<span class="k">if</span> <span class="n">I_size</span> <span class="o">&gt;</span> <span class="n">numpy_memory</span><span class="p">:</span>
+    <span class="n">psi4</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">clean</span><span class="p">()</span>
+    <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;Estimated memory utilization (</span><span class="si">%4.2f</span><span class="s2"> GB) exceeds allotted memory </span><span class="se">\</span>
+<span class="s2">                     limit of </span><span class="si">%4.2f</span><span class="s2"> GB.&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">I_size</span><span class="p">,</span> <span class="n">numpy_memory</span><span class="p">))</span>
+
+<span class="c1"># Build ERI Tensor</span>
+<span class="n">I</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">mints</span><span class="o">.</span><span class="n">ao_eri</span><span class="p">())</span>
+
+<span class="c1"># Build core Hamiltonian for canonical HF theory</span>
+<span class="c1"># Kinetic energy matrix</span>
+<span class="n">T</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">mints</span><span class="o">.</span><span class="n">ao_kinetic</span><span class="p">())</span>
+<span class="c1"># e-N attraction matrix</span>
+<span class="n">V</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">mints</span><span class="o">.</span><span class="n">ao_potential</span><span class="p">())</span>
+<span class="c1"># canonical Core Hamiltonian</span>
+<span class="n">H_0</span> <span class="o">=</span> <span class="n">T</span> <span class="o">+</span> <span class="n">V</span>
+
+<span class="c1"># Prepare a guess density matrix from converged HF orbitals</span>
+<span class="n">C</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">wfn</span><span class="o">.</span><span class="n">Ca</span><span class="p">())</span>
+<span class="c1"># use canonical HF orbitals for guess of the HF-PF orbitals</span>
+<span class="n">Cocc</span> <span class="o">=</span> <span class="n">C</span><span class="p">[:,</span> <span class="p">:</span><span class="n">ndocc</span><span class="p">]</span>
+<span class="c1"># form guess density</span>
+<span class="n">D</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">einsum</span><span class="p">(</span><span class="s2">&quot;pi,qi-&gt;pq&quot;</span><span class="p">,</span> <span class="n">Cocc</span><span class="p">,</span> <span class="n">Cocc</span><span class="p">)</span>
+
+<span class="c1"># Prepare mu terms</span>
+<span class="c1"># nuclear dipole</span>
+<span class="n">mu_nuc_x</span> <span class="o">=</span> <span class="n">mol</span><span class="o">.</span><span class="n">nuclear_dipole</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">mu_nuc_y</span> <span class="o">=</span> <span class="n">mol</span><span class="o">.</span><span class="n">nuclear_dipole</span><span class="p">()[</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">mu_nuc_z</span> <span class="o">=</span> <span class="n">mol</span><span class="o">.</span><span class="n">nuclear_dipole</span><span class="p">()[</span><span class="mi">2</span><span class="p">]</span>
+
+<span class="c1"># electronic dipole integrals in AO basis</span>
+<span class="n">mu_ao_x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">mints</span><span class="o">.</span><span class="n">ao_dipole</span><span class="p">()[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">mu_ao_y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">mints</span><span class="o">.</span><span class="n">ao_dipole</span><span class="p">()[</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">mu_ao_z</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">mints</span><span class="o">.</span><span class="n">ao_dipole</span><span class="p">()[</span><span class="mi">2</span><span class="p">])</span>
+
+<span class="c1"># d_ao = \lambda \cdot \mu_ao</span>
+<span class="n">d_ao</span> <span class="o">=</span> <span class="n">lambda_vector</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">mu_ao_x</span>
+<span class="n">d_ao</span> <span class="o">+=</span> <span class="n">lambda_vector</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="n">mu_ao_y</span>
+<span class="n">d_ao</span> <span class="o">+=</span> <span class="n">lambda_vector</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">*</span> <span class="n">mu_ao_z</span>
+
+<span class="c1"># compute electronic dipole expectation values</span>
+<span class="n">mu_exp_x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">einsum</span><span class="p">(</span><span class="s2">&quot;pq,pq-&gt;&quot;</span><span class="p">,</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">mu_ao_x</span><span class="p">,</span> <span class="n">D</span><span class="p">)</span>
+<span class="n">mu_exp_y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">einsum</span><span class="p">(</span><span class="s2">&quot;pq,pq-&gt;&quot;</span><span class="p">,</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">mu_ao_y</span><span class="p">,</span> <span class="n">D</span><span class="p">)</span>
+<span class="n">mu_exp_z</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">einsum</span><span class="p">(</span><span class="s2">&quot;pq,pq-&gt;&quot;</span><span class="p">,</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">mu_ao_z</span><span class="p">,</span> <span class="n">D</span><span class="p">)</span>
+
+
+<span class="c1"># Store the total RHF dipole moment which contains electronic and nuclear contribution</span>
+<span class="n">rhf_dipole_moment</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">mu_exp_x</span> <span class="o">+</span> <span class="n">mu_nuc_x</span><span class="p">,</span> <span class="n">mu_exp_y</span> <span class="o">+</span> <span class="n">mu_nuc_y</span><span class="p">,</span> <span class="n">mu_exp_z</span> <span class="o">+</span> <span class="n">mu_nuc_z</span><span class="p">])</span>
+
+<span class="c1"># store &lt;d&gt; = \lambda \cdot &lt;\mu&gt;</span>
+<span class="n">d_exp</span> <span class="o">=</span> <span class="n">lambda_vector</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">mu_exp_x</span> <span class="o">+</span> <span class="n">lambda_vector</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="n">mu_exp_y</span> <span class="o">+</span> <span class="n">lambda_vector</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">*</span> <span class="n">mu_exp_z</span>
+
+<span class="c1"># Prepare the Quadrupole terms</span>
+<span class="n">Q_ao_xx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">mints</span><span class="o">.</span><span class="n">ao_quadrupole</span><span class="p">()[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">Q_ao_xy</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">mints</span><span class="o">.</span><span class="n">ao_quadrupole</span><span class="p">()[</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">Q_ao_xz</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">mints</span><span class="o">.</span><span class="n">ao_quadrupole</span><span class="p">()[</span><span class="mi">2</span><span class="p">])</span>
+<span class="n">Q_ao_yy</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">mints</span><span class="o">.</span><span class="n">ao_quadrupole</span><span class="p">()[</span><span class="mi">3</span><span class="p">])</span>
+<span class="n">Q_ao_yz</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">mints</span><span class="o">.</span><span class="n">ao_quadrupole</span><span class="p">()[</span><span class="mi">4</span><span class="p">])</span>
+<span class="n">Q_ao_zz</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">mints</span><span class="o">.</span><span class="n">ao_quadrupole</span><span class="p">()[</span><span class="mi">5</span><span class="p">])</span>
+
+<span class="c1"># 1 electron quadrupole term</span>
+<span class="n">q_ao</span> <span class="o">=</span> <span class="o">-</span><span class="mf">0.5</span> <span class="o">*</span> <span class="n">lambda_vector</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">lambda_vector</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">Q_ao_xx</span>
+<span class="n">q_ao</span> <span class="o">-=</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">lambda_vector</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="n">lambda_vector</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="n">Q_ao_yy</span> 
+<span class="n">q_ao</span> <span class="o">-=</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">lambda_vector</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">*</span> <span class="n">lambda_vector</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">*</span> <span class="n">Q_ao_zz</span>
+
+<span class="n">q_ao</span> <span class="o">-=</span> <span class="n">lambda_vector</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">lambda_vector</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="n">Q_ao_xy</span>
+<span class="n">q_ao</span> <span class="o">-=</span> <span class="n">lambda_vector</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">lambda_vector</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">*</span> <span class="n">Q_ao_xz</span>
+<span class="n">q_ao</span> <span class="o">-=</span> <span class="n">lambda_vector</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="n">lambda_vector</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">*</span> <span class="n">Q_ao_yz</span>
+
+<span class="c1"># O^{DSE}</span>
+<span class="n">O_DSE</span> <span class="o">=</span> <span class="n">q_ao</span> <span class="o">-</span> <span class="n">d_exp</span> <span class="o">*</span> <span class="n">d_ao</span> 
+
+
+<span class="c1"># Constant quadratic dipole energy term</span>
+<span class="n">d_c</span> <span class="o">=</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">d_exp</span> <span class="o">**</span> <span class="mi">2</span>
+
+<span class="c1"># Core Hamiltonian including 1-electron DSE term</span>
+<span class="n">H</span> <span class="o">=</span> <span class="n">H_0</span> <span class="o">+</span> <span class="n">O_DSE</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number of occupied orbitals:   5
+Number of basis functions:   7
+
+Size of the ERI tensor will be 0.00 GB.
+</pre></div>
+</div>
+</div>
+</div>
+<p>With all of the prerequisite variable having been established, we can continue onto our HF-PF procedure. We will begin by establishing our initial HF-PF energy using
+the PF-Fock matrix and the guess density matrix obtained from the canonical HF calucation. We will also pull the convergence criteria for the energy and Density Matrix from the Psi4 options.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Start SCF iterations:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="n">E</span> <span class="o">=</span> <span class="mf">0.0</span>
+<span class="n">Enuc</span> <span class="o">=</span> <span class="n">mol</span><span class="o">.</span><span class="n">nuclear_repulsion_energy</span><span class="p">()</span>
+<span class="n">Eold</span> <span class="o">=</span> <span class="mf">0.0</span>
+<span class="n">E_1el_crhf</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">einsum</span><span class="p">(</span><span class="s2">&quot;pq,pq-&gt;&quot;</span><span class="p">,</span> <span class="n">H_0</span> <span class="o">+</span> <span class="n">H_0</span><span class="p">,</span> <span class="n">D</span><span class="p">)</span>
+<span class="n">E_1el</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">einsum</span><span class="p">(</span><span class="s2">&quot;pq,pq-&gt;&quot;</span><span class="p">,</span> <span class="n">H</span> <span class="o">+</span> <span class="n">H</span><span class="p">,</span> <span class="n">D</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Canonical RHF One-electron energy = </span><span class="si">%4.16f</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">E_1el_crhf</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;CQED-RHF One-electron energy      = </span><span class="si">%4.16f</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">E_1el</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Nuclear repulsion energy          = </span><span class="si">%4.16f</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">Enuc</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Dipole energy                     = </span><span class="si">%4.16f</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">d_c</span><span class="p">)</span>
+
+<span class="c1"># Set convergence criteria for energy and density</span>
+<span class="n">E_conv</span> <span class="o">=</span> <span class="mf">1.0e-8</span>
+<span class="n">D_conv</span> <span class="o">=</span> <span class="mf">1.0e-7</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Start SCF iterations:
+
+Canonical RHF One-electron energy = -120.1995577633950774
+CQED-RHF One-electron energy      = -120.1919714779295276
+Nuclear repulsion energy          = 8.0023664821734215
+Dipole energy                     = 0.0003429186890945
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">psi4</span><span class="o">.</span><span class="n">fcidump</span><span class="p">(</span><span class="n">wfn</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">I</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">T</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="n">V</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span>
+<span class="k">assert</span> <span class="n">np</span><span class="o">.</span><span class="n">isclose</span><span class="p">(</span><span class="o">-</span><span class="mf">3.25607590836978673110E+01</span><span class="p">,(</span><span class="n">T</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="n">V</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]),</span><span class="mf">1e-6</span><span class="p">,</span><span class="mf">1e-6</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4.785065404705505
+-32.57739534291943
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">AssertionError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">7</span><span class="p">],</span> <span class="n">line</span> <span class="mi">4</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="nb">print</span><span class="p">(</span><span class="n">I</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="nb">print</span><span class="p">(</span><span class="n">T</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="n">V</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span>
+<span class="ne">----&gt; </span><span class="mi">4</span> <span class="k">assert</span> <span class="n">np</span><span class="o">.</span><span class="n">isclose</span><span class="p">(</span><span class="o">-</span><span class="mf">3.25607590836978673110E+01</span><span class="p">,(</span><span class="n">T</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="n">V</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]),</span><span class="mf">1e-6</span><span class="p">,</span><span class="mf">1e-6</span><span class="p">)</span>
+
+<span class="ne">AssertionError</span>: 
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now that we have our initial energies calculated and our convergences set, we can begin the SCF procedure. This procedure effectively follows the typical HF procedure, however, here we are considering two additional terms to append to the Fock matrix. These terms constitute the two electron contribution, seen in equation 15. These terms take on the shape of the J and K matrices that arise in the typical HF procedure. The created Fock matrix is comprised of all four of these terms. In addition, we will add on our core Hamiltonian–which has already been adapted to consider our PF contributions–to the Fock matrix. We will use this Fock matrix as well as our initial Density matrix to calculate the self consistent field energy–in which we also consider our nuclear repulsion energy and dipole energy.</p>
+<p>With our first energy calculated, we will now diagonalize our Fock matrix to gather a new coefficient matrix. We use this to build a new density matrix.
+With the new density matrix established, we must update our electronic dipole expectation values, to which we add the nuclear dipole terms as well. Additionally, we will update the expectation value of the polarization vector-electronic dipole dot product, as well as the 1 electron dipole term.</p>
+<p>Finally, we will use these udpated terms to further augment our core Hamiltonian and our dipole energy.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="c1"># maxiter</span>
+<span class="n">maxiter</span> <span class="o">=</span> <span class="mi">500</span>
+<span class="k">for</span> <span class="n">SCF_ITER</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">maxiter</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+
+    <span class="c1"># Canonical 2ERI contribution to Fock matrix - Eq. (15)</span>
+    <span class="n">J</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">einsum</span><span class="p">(</span><span class="s2">&quot;pqrs,rs-&gt;pq&quot;</span><span class="p">,</span> <span class="n">I</span><span class="p">,</span> <span class="n">D</span><span class="p">)</span>
+    <span class="n">K</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">einsum</span><span class="p">(</span><span class="s2">&quot;prqs,rs-&gt;pq&quot;</span><span class="p">,</span> <span class="n">I</span><span class="p">,</span> <span class="n">D</span><span class="p">)</span>
+
+    <span class="c1"># Pauli-Fierz 2-e dipole-dipole terms - Eq. (15)</span>
+    <span class="n">M</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">einsum</span><span class="p">(</span><span class="s2">&quot;pq,rs,rs-&gt;pq&quot;</span><span class="p">,</span> <span class="n">d_ao</span><span class="p">,</span> <span class="n">d_ao</span><span class="p">,</span> <span class="n">D</span><span class="p">)</span>
+    <span class="n">N</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">einsum</span><span class="p">(</span><span class="s2">&quot;pr,qs,rs-&gt;pq&quot;</span><span class="p">,</span> <span class="n">d_ao</span><span class="p">,</span> <span class="n">d_ao</span><span class="p">,</span> <span class="n">D</span><span class="p">)</span>
+
+    <span class="c1"># PF-Fock Matrix</span>
+    <span class="n">F</span> <span class="o">=</span> <span class="n">H</span> <span class="o">+</span> <span class="n">J</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">-</span> <span class="n">K</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">M</span> <span class="o">-</span> <span class="n">N</span>
+
+
+    <span class="c1">### Check Convergence of the Density Matrix</span>
+    <span class="n">diis_e</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">einsum</span><span class="p">(</span><span class="s2">&quot;ij,jk,kl-&gt;il&quot;</span><span class="p">,</span> <span class="n">F</span><span class="p">,</span> <span class="n">D</span><span class="p">,</span> <span class="n">S</span><span class="p">)</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">einsum</span><span class="p">(</span><span class="s2">&quot;ij,jk,kl-&gt;il&quot;</span><span class="p">,</span> <span class="n">S</span><span class="p">,</span> <span class="n">D</span><span class="p">,</span> <span class="n">F</span><span class="p">)</span>
+    <span class="n">diis_e</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">diis_e</span><span class="p">)</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+    <span class="n">dRMS</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">diis_e</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span> <span class="o">**</span> <span class="mf">0.5</span>
+
+    <span class="c1"># SCF energy and update</span>
+    <span class="n">SCF_E</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">einsum</span><span class="p">(</span><span class="s2">&quot;pq,pq-&gt;&quot;</span><span class="p">,</span> <span class="n">F</span> <span class="o">+</span> <span class="n">H</span><span class="p">,</span> <span class="n">D</span><span class="p">)</span> <span class="o">+</span> <span class="n">Enuc</span> <span class="o">+</span> <span class="n">d_c</span>
+
+    <span class="nb">print</span><span class="p">(</span>
+        <span class="s2">&quot;SCF Iteration </span><span class="si">%3d</span><span class="s2">: Energy = </span><span class="si">%4.16f</span><span class="s2">   dE = </span><span class="si">% 1.5E</span><span class="s2">   dRMS = </span><span class="si">%1.5E</span><span class="s2">&quot;</span>
+        <span class="o">%</span> <span class="p">(</span><span class="n">SCF_ITER</span><span class="p">,</span> <span class="n">SCF_E</span><span class="p">,</span> <span class="p">(</span><span class="n">SCF_E</span> <span class="o">-</span> <span class="n">Eold</span><span class="p">),</span> <span class="n">dRMS</span><span class="p">)</span>
+    <span class="p">)</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">SCF_E</span> <span class="o">-</span> <span class="n">Eold</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">E_conv</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">dRMS</span> <span class="o">&lt;</span> <span class="n">D_conv</span><span class="p">):</span>
+        <span class="k">break</span>
+
+    <span class="n">Eold</span> <span class="o">=</span> <span class="n">SCF_E</span>
+
+    <span class="c1"># Diagonalize Fock matrix</span>
+    <span class="n">Fp</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">F</span><span class="p">)</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>  
+    <span class="n">e</span><span class="p">,</span> <span class="n">C2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">eigh</span><span class="p">(</span><span class="n">Fp</span><span class="p">)</span> 
+    <span class="c1"># Back transform</span>
+    <span class="n">C</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">C2</span><span class="p">)</span>  
+    <span class="n">Cocc</span> <span class="o">=</span> <span class="n">C</span><span class="p">[:,</span> <span class="p">:</span><span class="n">ndocc</span><span class="p">]</span>
+    <span class="c1"># update density</span>
+    <span class="n">D</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">einsum</span><span class="p">(</span><span class="s2">&quot;pi,qi-&gt;pq&quot;</span><span class="p">,</span> <span class="n">Cocc</span><span class="p">,</span> <span class="n">Cocc</span><span class="p">)</span>  
+
+    <span class="c1"># update electronic dipole expectation value</span>
+    <span class="n">mu_exp_x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">einsum</span><span class="p">(</span><span class="s2">&quot;pq,pq-&gt;&quot;</span><span class="p">,</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">mu_ao_x</span><span class="p">,</span> <span class="n">D</span><span class="p">)</span>
+    <span class="n">mu_exp_y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">einsum</span><span class="p">(</span><span class="s2">&quot;pq,pq-&gt;&quot;</span><span class="p">,</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">mu_ao_y</span><span class="p">,</span> <span class="n">D</span><span class="p">)</span>
+    <span class="n">mu_exp_z</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">einsum</span><span class="p">(</span><span class="s2">&quot;pq,pq-&gt;&quot;</span><span class="p">,</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">mu_ao_z</span><span class="p">,</span> <span class="n">D</span><span class="p">)</span>
+
+    <span class="c1"># update \lambda \cdot &lt;\mu&gt;</span>
+    <span class="n">d_exp</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="n">lambda_vector</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">mu_exp_x</span>
+        <span class="o">+</span> <span class="n">lambda_vector</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="n">mu_exp_y</span>
+        <span class="o">+</span> <span class="n">lambda_vector</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">*</span> <span class="n">mu_exp_z</span>
+    <span class="p">)</span>
+    
+    <span class="c1"># update 1-electron DSE term</span>
+    <span class="n">O_DSE</span> <span class="o">=</span> <span class="n">q_ao</span> <span class="o">-</span> <span class="n">d_exp</span> <span class="o">*</span> <span class="n">d_ao</span> 
+
+
+    <span class="c1"># update Core Hamiltonian</span>
+    <span class="n">H</span> <span class="o">=</span> <span class="n">H_0</span> <span class="o">+</span> <span class="n">O_DSE</span>
+
+    <span class="c1"># update constant dipole energy</span>
+    <span class="n">d_c</span> <span class="o">=</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">d_exp</span> <span class="o">**</span> <span class="mi">2</span>
+
+    <span class="k">if</span> <span class="n">SCF_ITER</span> <span class="o">==</span> <span class="n">maxiter</span><span class="p">:</span>
+        <span class="n">psi4</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">clean</span><span class="p">()</span>
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;Maximum number of SCF cycles exceeded.&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Total time for SCF iterations: </span><span class="si">%.3f</span><span class="s2"> seconds </span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">t</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;QED-HF   energy: </span><span class="si">%.8f</span><span class="s2"> hartree&quot;</span> <span class="o">%</span> <span class="n">SCF_E</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Psi4  SCF energy: </span><span class="si">%.8f</span><span class="s2"> hartree&quot;</span> <span class="o">%</span> <span class="n">scf_e</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SCF Iteration   1: Energy = -75.9842660741772846   dE = -7.59843E+01   dRMS = 1.26670E-04
+SCF Iteration   2: Energy = -75.9842727678951348   dE = -6.69372E-06   dRMS = 6.47374E-05
+SCF Iteration   3: Energy = -75.9842736898977762   dE = -9.22003E-07   dRMS = 3.36301E-05
+SCF Iteration   4: Energy = -75.9842739340413544   dE = -2.44144E-07   dRMS = 2.37326E-05
+SCF Iteration   5: Energy = -75.9842740176217291   dE = -8.35804E-08   dRMS = 1.45497E-05
+SCF Iteration   6: Energy = -75.9842740493105708   dE = -3.16888E-08   dRMS = 9.93085E-06
+SCF Iteration   7: Energy = -75.9842740619681365   dE = -1.26576E-08   dRMS = 6.34142E-06
+SCF Iteration   8: Energy = -75.9842740671847565   dE = -5.21662E-09   dRMS = 4.25736E-06
+SCF Iteration   9: Energy = -75.9842740693776051   dE = -2.19285E-09   dRMS = 2.76243E-06
+SCF Iteration  10: Energy = -75.9842740703112867   dE = -9.33682E-10   dRMS = 1.84008E-06
+SCF Iteration  11: Energy = -75.9842740707120043   dE = -4.00718E-10   dRMS = 1.20286E-06
+SCF Iteration  12: Energy = -75.9842740708850073   dE = -1.73003E-10   dRMS = 7.97910E-07
+SCF Iteration  13: Energy = -75.9842740709595859   dE = -7.45786E-11   dRMS = 5.23576E-07
+SCF Iteration  14: Energy = -75.9842740709920150   dE = -3.24292E-11   dRMS = 3.46492E-07
+SCF Iteration  15: Energy = -75.9842740710060696   dE = -1.40545E-11   dRMS = 2.27832E-07
+SCF Iteration  16: Energy = -75.9842740710121802   dE = -6.11067E-12   dRMS = 1.50566E-07
+SCF Iteration  17: Energy = -75.9842740710147808   dE = -2.60059E-12   dRMS = 9.91190E-08
+Total time for SCF iterations: 0.060 seconds 
+
+QED-HF   energy: -75.98427407 hartree
+Psi4  SCF energy: -75.98979579 hartree
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Compare to psi4numpy implementation</span>
+<span class="n">expected_qed_hf_energy</span> <span class="o">=</span> <span class="o">-</span><span class="mf">75.98427407</span>
+<span class="n">psi4</span><span class="o">.</span><span class="n">compare_values</span><span class="p">(</span><span class="n">expected_qed_hf_energy</span><span class="p">,</span> <span class="n">SCF_E</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="s1">&#39;SCF Energy&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>    SCF Energy............................................................................PASSED
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<section id="references">
+<h3>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>[<a class="reference external" href="https://journals.aps.org/prx/pdf/10.1103/PhysRevX.10.041043">Haugland:2020:041043</a>] T. S. Haughland, E. Ronco, E. F. Kjonstad, A. Rubio, H. Koch, <em>Phys. Rev. X</em>, <strong>10</strong>, 041043 (2020)</p></li>
+<li><p><a class="reference external" href="https://aip.scitation.org/doi/10.1063/5.0038748">[DePrince:2021:094112]</a> A. E. DePrince III, <em>J. Chem. Phys.</em> <strong>154</strong>, 094113 (2021).</p></li>
+<li><p><a class="reference external" href="https://aip.scitation.org/doi/10.1063/5.0091953">[McTague:2022:154103]</a>] J. McTague, J. J. Foley IV, <em>J. Chem. Phys.</em> <strong>156</strong>, 154103 (2022)</p></li>
+</ul>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./content/drafts"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Hartree-Fock Self-Consistent Field Theory for the Pauli-Fierz Hamiltonian (QED-HF)</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#i-theoretical-overview">I. Theoretical Overview</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#electronic-term"><em>Electronic Term</em></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#photonic-term"><em>Photonic Term</em></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bilinear-coupling-term"><em>Bilinear Coupling Term</em></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dipole-self-energy-term"><em>Dipole Self Energy Term</em></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hartree-fock-reference"><em>Hartree-Fock Reference</em></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-implementation">II. Implementation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Jay Foley
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

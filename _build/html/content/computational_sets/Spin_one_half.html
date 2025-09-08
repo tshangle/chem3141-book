@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -63,7 +63,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Useful Formulae" href="../resources/formula_sheet.html" />
-    <link rel="prev" title="Dynamics of particle in a box with a delta potential" href="pib_delta_potential_dynamics.html" />
+    <link rel="prev" title="Additional Notes on Spin" href="note05.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -203,37 +203,11 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Problem Sets</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../problem_sets/ps_1.html">Problem Set 1</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Advanced Topics</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../advanced_topics/HF_Coupled_to_Cavity_Tensor_To_Complete.html">Introduction to Molecular CQED</a></li>
-
-
-
-
-
-
-<li class="toctree-l1"><a class="reference internal" href="../advanced_topics/Linear_Variational_Method_Quartic_Oscillator_and_Zeeman_Effect.html">Linear Variational Method - Anharmonic Oscillator</a></li>
-
-
-<li class="toctree-l1"><a class="reference internal" href="../advanced_topics/Zeeman_Effect_Hydrogen_Atom.html">Zeeman Effect</a></li>
-
-
+<li class="toctree-l1"><a class="reference internal" href="../problem_sets/ps_2.html">Problem Set 2</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Computational Sets</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="CO_Perturbation_Theory.html">Computing Fundamental Transition of CO under different levels of approximation</a></li>
-
-
-
-<li class="toctree-l1"><a class="reference internal" href="hydrogen_wavefunctions.html">DEMO: H wavefunctions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="linear_variational_method.html">Linear Variational Method</a></li>
-
 <li class="toctree-l1"><a class="reference internal" href="note05.html">Additional Notes on Spin</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pib_delta_potential_dynamics.html">Dynamics of particle in a box with a delta potential</a></li>
-
-
-
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Computational Set 1: Introduction to Spin 1/2</a></li>
 
 
@@ -671,20 +645,22 @@ PChem
 we will use 2-dimensional numpy matrices with
 a single column and multiple rows to denote a column vector as a representation of a ket.  We can take the Hermitian conjugate of our kets to get bras, which are represented as row vectors.</p>
 <p>Here we will introduce the vector representation of special spin states (spinors) that have precise value of z-spin, that is, they are the eigenstates of the <span class="math notranslate nohighlight">\(\hat{S}_z\)</span> operator:</p>
-<p>\begin{equation}
+<div class="math notranslate nohighlight">
+\[\begin{split}
 |\alpha \rangle=
 \begin{bmatrix}
-1 \
-0 \
+  1 \\
+  0 \\
 \end{bmatrix}
-\end{equation}</p>
-<p>\begin{equation}
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
 |\beta \rangle =
 \begin{bmatrix}
-0 \
-1 \
+  0 \\
+  1 \\
 \end{bmatrix}
-\end{equation}</p>
+\end{split}\]</div>
 <p>We refer to these column vector representations of states as kets.</p>
 <p><span class="math notranslate nohighlight">\(|\alpha\rangle\)</span> can be formed using the following syntax:
 <code class="docutils literal notranslate"><span class="pre">ket_alpha</span> <span class="pre">=</span> <span class="pre">np.array([[1],</span> <span class="pre">[0]])</span></code></p>
@@ -872,13 +848,14 @@ we are using <span class="math notranslate nohighlight">\(\chi_n\)</span> and <s
 <section id="define-the-sz-operator">
 <h3>🧩 Define the Sz Operator<a class="headerlink" href="#define-the-sz-operator" title="Link to this heading">#</a></h3>
 <p>The spin operator <span class="math notranslate nohighlight">\(S_z\)</span> for a spin-½ particle is defined as:</p>
-<p>\begin{equation}
+<div class="math notranslate nohighlight">
+\[\begin{split}
 \mathbb{S}_z = \frac{\hbar}{2}
 \begin{bmatrix}
-1 &amp; 0 \
+1 &amp; 0 \\
 0 &amp; -1
 \end{bmatrix}
-\end{equation}</p>
+\end{split}\]</div>
 <p>Using <code class="docutils literal notranslate"><span class="pre">np.array</span></code>, define this matrix in Python using <code class="docutils literal notranslate"><span class="pre">hbar</span> <span class="pre">=</span> <span class="pre">1</span></code> (already provided). Then run the cell to check the printed result and confirm the shape is <code class="docutils literal notranslate"><span class="pre">(2,</span> <span class="pre">2)</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -904,11 +881,12 @@ we are using <span class="math notranslate nohighlight">\(\chi_n\)</span> and <s
 <section id="matrix-vector-products-operator-action-on-states">
 <h2>🧮 Matrix-Vector Products: Operator Action on States<a class="headerlink" href="#matrix-vector-products-operator-action-on-states" title="Link to this heading">#</a></h2>
 <p>An important property of the basis kets <span class="math notranslate nohighlight">\(|\alpha \rangle\)</span> and <span class="math notranslate nohighlight">\(|\beta \rangle\)</span> is that they are <strong>eigenstates</strong> of the <span class="math notranslate nohighlight">\(\hat{S}_z\)</span> operator:</p>
-<p>\begin{equation}
+<div class="math notranslate nohighlight">
+\[
 \hat{S}_z |\alpha \rangle = +\frac{\hbar}{2}|\alpha \rangle
 \quad\text{and}\quad
 \hat{S}_z |\beta \rangle = -\frac{\hbar}{2}|\beta \rangle
-\end{equation}</p>
+\]</div>
 <p>In NumPy, we represent this using a <strong>matrix-vector product</strong> like this:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Sz_ket_alpha</span> <span class="o">=</span> <span class="n">Sz</span> <span class="o">@</span> <span class="n">ket_alpha</span>
 </pre></div>
@@ -948,10 +926,11 @@ Let’s build a function to apply any matrix operator to a ket state.</p>
 <section id="test-your-operator-function">
 <h3>🧪 Test Your Operator Function<a class="headerlink" href="#test-your-operator-function" title="Link to this heading">#</a></h3>
 <p>Let’s test your <code class="docutils literal notranslate"><span class="pre">compute_operator_on_state</span></code> function by applying the spin operator <span class="math notranslate nohighlight">\(S_z\)</span> to each basis state:</p>
-<p>\begin{equation}
+<div class="math notranslate nohighlight">
+\[
 S_z |\alpha\rangle = \frac{\hbar}{2} |\alpha\rangle, \quad
 S_z |\beta\rangle = -\frac{\hbar}{2} |\beta\rangle
-\end{equation}</p>
+\]</div>
 <ol class="arabic simple">
 <li><p>Use your function to compute <code class="docutils literal notranslate"><span class="pre">Sz</span> <span class="pre">&#64;</span> <span class="pre">ket_alpha</span></code> and <code class="docutils literal notranslate"><span class="pre">Sz</span> <span class="pre">&#64;</span> <span class="pre">ket_beta</span></code></p></li>
 <li><p>Manually define what the <strong>expected results</strong> should be</p></li>
@@ -999,9 +978,10 @@ S_z |\beta\rangle = -\frac{\hbar}{2} |\beta\rangle
 <section id="hermitian-matrices">
 <h2>🔁 Hermitian Matrices<a class="headerlink" href="#hermitian-matrices" title="Link to this heading">#</a></h2>
 <p>In quantum mechanics, operators are represented by <strong>Hermitian matrices</strong>. These matrices have a special property:</p>
-<p>\begin{equation}
+<div class="math notranslate nohighlight">
+\[
 A^\dagger = A
-\end{equation}</p>
+\]</div>
 <p>That is, a Hermitian matrix is <strong>equal to its own adjoint</strong> (or Hermitian transpose), which is defined as the <strong>complex conjugate transpose</strong>.</p>
 <p>For example, to verify that the spin operator <span class="math notranslate nohighlight">\(S_z\)</span> is Hermitian:</p>
 <ol class="arabic simple">
@@ -1486,12 +1466,12 @@ You can compute matrix products using either of the following equivalent syntaxe
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="pib_delta_potential_dynamics.html"
+       href="note05.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Dynamics of particle in a box with a delta potential</p>
+        <p class="prev-next-title">Additional Notes on Spin</p>
       </div>
     </a>
     <a class="right-next"
