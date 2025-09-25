@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -203,6 +203,7 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Problem Sets</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../problem_sets/ps_1.html">Problem Set 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../problem_sets/ps_2.html">Problem Set 2</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Computational Sets</span></p>
 <ul class="nav bd-sidenav">
@@ -445,6 +446,8 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comparison-between-linear-and-angular-momentum">Comparison between linear and angular momentum</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chemical-realizations-of-rotations-in-2d">Chemical realizations of rotations in 2D</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#angular-momentum">Angular Momentum</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spherical-polar-coordinates">Spherical Polar Coordinates</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-particle-on-a-ring-model">The Particle-on-a-Ring Model</a></li>
@@ -473,8 +476,72 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="chapter-5-angular-momentum-and-rotational-motion">
 <h1>Chapter 5: Angular Momentum, and Rotational Motion<a class="headerlink" href="#chapter-5-angular-momentum-and-rotational-motion" title="Link to this heading">#</a></h1>
-<p>Prof. Eugene DePrince, Florida State University</p>
-<p>In the previous notebooks, we discussed quantum mechanical problems involving translational and vibrational motion. In this notebook, we explore the properties of the operators corresponding to the angular momentum of a microscopic particle and model problems for rotational motion. We will find analytic solutions the Schrödinger equation for the particle-on-a-ring and particle-on-a-sphere models, which are models for rotational in two or three dimensions, respectively. The particle-on-a-sphere model is also known as the rigid rotor. We will also use an alternative approach based on “ladder” operators to find eigenvalues of some angular momentum operators. We close with a discussion of spin angular momentum and the associated spin operators and eigenfunctions.</p>
+<p>Prof. Eugene DePrince, Florida State University, Prof. Jay Foley, UNC Charlotte</p>
+<p>In the previous notebooks, we discussed quantum mechanical problems involving translational and vibrational motion. In this notebook, we explore the properties of the operators corresponding to the angular momentum of a microscopic particle and model problems for rotational motion. We will find analytic solutions the Schrödinger equation for the particle-on-a-ring and particle-on-a-sphere models, which are models for rotational in two or three dimensions, respectively. The particle-on-a-sphere model is also known as the rigid rotor. We will also use an alternative approach based on “ladder” operators to find eigenvalues of some angular momentum operators. The properties of angular momentum discussed in this chapter have many similarities (but also key differences) with spin angular momentum discussed in the first chapter of this book, so we will reiterate some of the salient points about spin angular momentum at the end.</p>
+<section id="comparison-between-linear-and-angular-momentum">
+<h2>Comparison between linear and angular momentum<a class="headerlink" href="#comparison-between-linear-and-angular-momentum" title="Link to this heading">#</a></h2>
+<p>The picture we can often have in our mind for rotational motion in two dimensions is the rotation of two masses about a fixed axis where each mass is constrained to lie in a common plane.  We illustrate that with a diatomic rotating in a plan, and with a figure skater rotating in a plane.
+<img alt="Slide 1 image" src="../../_images/slide01_img01.png" /></p>
+<p><strong>What are the key properties and descriptors that we use for rotational motion, and how do they differ from linear motion?</strong></p>
+<p>The following table summarizes these different properties and descriptors.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Quantity</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Equation (LaTeX)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Mass <span class="math notranslate nohighlight">\(m\)</span></p></td>
+<td><p>Resistance to the effect of a force</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>Velocity <span class="math notranslate nohighlight">\(v\)</span></p></td>
+<td><p>Rate of change of position</p></td>
+<td><p><span class="math notranslate nohighlight">\( v = \frac{dx}{dt} \)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Angular Velocity <span class="math notranslate nohighlight">\(\omega\)</span></p></td>
+<td><p>Rate of change of angle of orientation</p></td>
+<td><p><span class="math notranslate nohighlight">\( \omega = \frac{d\theta}{dt} \)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Linear Momentum <span class="math notranslate nohighlight">\(p\)</span></p></td>
+<td><p>Product of mass and velocity</p></td>
+<td><p><span class="math notranslate nohighlight">\( p = m v\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Kinetic Energy <span class="math notranslate nohighlight">\(T\)</span> (linear)</p></td>
+<td><p>Translational kinetic energy</p></td>
+<td><p><span class="math notranslate nohighlight">\( T = \frac{1}{2} m v^2 = \frac{p^2}{2m} \)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Moment of Inertia <span class="math notranslate nohighlight">\(I\)</span></p></td>
+<td><p>Resistance to the effect of an angular force (torque)</p></td>
+<td><p><span class="math notranslate nohighlight">\( I = \sum_i m_i r_i^2 = \mu R^2 \)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Reduced Mass <span class="math notranslate nohighlight">\(\mu\)</span></p></td>
+<td><p>Defined in terms of two masses <span class="math notranslate nohighlight">\(m_1, m_2\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\mu = \frac{m_1 \cdot m_2}{m_1 + m_2} \)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Angular Momentum <span class="math notranslate nohighlight">\(L\)</span></p></td>
+<td><p>Rotational analog of linear momentum</p></td>
+<td><p><span class="math notranslate nohighlight">\( L = I \omega\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Kinetic Energy <span class="math notranslate nohighlight">\(T\)</span>(rotational)</p></td>
+<td><p>Rotational kinetic energy</p></td>
+<td><p><span class="math notranslate nohighlight">\( T = \frac{1}{2} I \omega^2 = \frac{L^2}{2I} \)</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="chemical-realizations-of-rotations-in-2d">
+<h2>Chemical realizations of rotations in 2D<a class="headerlink" href="#chemical-realizations-of-rotations-in-2d" title="Link to this heading">#</a></h2>
+<p>The kind of constrained rotational motion just described might not sound particularly relevant to chemistry, but in fact it is actually more common than you might think.  The following two scenarios arise in many contexts in chemistry</p>
+<ol class="arabic simple">
+<li><p>The rotational motion of a molecule adsorbed to a solid surface, which occurs broadly in hetergeneous catalysis, surface science, etc
+<img alt="Slide 1 image" src="../../_images/slide02_img02.png" /></p></li>
+<li><p>The rotational orbits of electrons in aromatic systems like benzene, porphyrin, etc
+<img alt="Slide 1 image" src="../../_images/slide02_img01.png" /></p></li>
+</ol>
+</section>
 <section id="angular-momentum">
 <h2>Angular Momentum<a class="headerlink" href="#angular-momentum" title="Link to this heading">#</a></h2>
 <p>Consider a particle of mass, <span class="math notranslate nohighlight">\(m\)</span>, with position <span class="math notranslate nohighlight">\(\vec{r} = (x, y, z)\)</span> and linear momentum <span class="math notranslate nohighlight">\(\vec{p} = (p_x, p_y, p_z).\)</span> The angular momentum for this particle is given by the cross product of the position and momentum vectors, i.e.,</p>
@@ -1725,6 +1792,8 @@ $<span class="math notranslate nohighlight">\(\begin{align}
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comparison-between-linear-and-angular-momentum">Comparison between linear and angular momentum</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chemical-realizations-of-rotations-in-2d">Chemical realizations of rotations in 2D</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#angular-momentum">Angular Momentum</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spherical-polar-coordinates">Spherical Polar Coordinates</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-particle-on-a-ring-model">The Particle-on-a-Ring Model</a></li>

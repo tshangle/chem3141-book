@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -203,6 +203,7 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Problem Sets</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../problem_sets/ps_1.html">Problem Set 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../problem_sets/ps_2.html">Problem Set 2</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Computational Sets</span></p>
 <ul class="nav bd-sidenav">
@@ -489,7 +490,10 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spin-angular-momentum">Spin Angular Momentum</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spin-angular-momentum">Spin Angular Momentum</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#practice-problems">Practice Problems</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#computational-notebook">Computational Notebook</a></li>
@@ -885,6 +889,99 @@ $<span class="math notranslate nohighlight">\(\begin{align}
 \end{align}\)</span>$</p>
 </div></blockquote>
 </div></blockquote>
+<section id="practice-problems">
+<h3>Practice Problems<a class="headerlink" href="#practice-problems" title="Link to this heading">#</a></h3>
+<p><strong>Question 11</strong></p>
+<p>Show that</p>
+<div class="math notranslate nohighlight">
+\[
+[\hat{S}^2, \hat{S}_x] = 0, \quad
+[\hat{S}^2, \hat{S}_y] = 0, \quad
+[\hat{S}^2, \hat{S}_z] = 0
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+[\hat{S}_x, \hat{S}_y] = i\hbar \hat{S}_z, \quad
+[\hat{S}_z, \hat{S}_x] = i\hbar \hat{S}_y, \quad
+[\hat{S}_y, \hat{S}_z] = i\hbar \hat{S}_x
+\]</div>
+<details>
+<summary><strong>Show Solution</strong></summary>
+<p>We need to show the commutation relations of spin operators.</p>
+<div class="math notranslate nohighlight">
+\[
+[\hat{S}^2, \hat{S}_x] = 0, \quad
+[\hat{S}^2, \hat{S}_y] = 0, \quad
+[\hat{S}^2, \hat{S}_z] = 0
+\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight">
+\[
+[\hat{S}_x, \hat{S}_y] = i\hbar \hat{S}_z, \quad
+[\hat{S}_z, \hat{S}_x] = i\hbar \hat{S}_y, \quad
+[\hat{S}_y, \hat{S}_z] = i\hbar \hat{S}_x
+\]</div>
+<p>This follows from the algebra of angular momentum operators and<br />
+<span class="math notranslate nohighlight">\(\hat{S}^2 = \hat{S}_x^2 + \hat{S}_y^2 + \hat{S}_z^2\)</span>.</p>
+</details>
+<hr class="docutils" />
+<p><strong>Question 12</strong></p>
+<p>Find spin eigenfunctions of <span class="math notranslate nohighlight">\(\hat{S}_x\)</span> and <span class="math notranslate nohighlight">\(\hat{S}_y\)</span>.<br />
+Are these eigenfunctions also eigenfunctions of <span class="math notranslate nohighlight">\(\hat{S}^2\)</span>?</p>
+<details>
+<summary><strong>Show Solution</strong></summary>
+<ul class="simple">
+<li><p>Eigenfunctions of <span class="math notranslate nohighlight">\(\hat{S}_x\)</span>:<br />
+$<span class="math notranslate nohighlight">\(
+\tfrac{1}{\sqrt{2}}(|\alpha\rangle \pm |\beta\rangle)
+\)</span>$</p></li>
+<li><p>Eigenfunctions of <span class="math notranslate nohighlight">\(\hat{S}_y\)</span>:<br />
+$<span class="math notranslate nohighlight">\(
+\tfrac{1}{\sqrt{2}}(|\alpha\rangle \pm i|\beta\rangle)
+\)</span>$</p></li>
+<li><p>All of these are also eigenfunctions of <span class="math notranslate nohighlight">\(\hat{S}^2\)</span>, since<br />
+<span class="math notranslate nohighlight">\(\hat{S}^2\)</span> commutes with every component of <span class="math notranslate nohighlight">\(\hat{S}\)</span>.</p></li>
+</ul>
+</details>
+<hr class="docutils" />
+<p><strong>Question 13</strong></p>
+<p>Consider raising and lowering spin operators</p>
+<div class="math notranslate nohighlight">
+\[
+\hat{S}_\pm = \hat{S}_x \pm i\hat{S}_y
+\]</div>
+<p>Show that</p>
+<div class="math notranslate nohighlight">
+\[
+\hat{S}_+|\alpha\rangle = 0, \quad
+\hat{S}_+|\beta\rangle = \hbar|\alpha\rangle
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+\hat{S}_-|\alpha\rangle = \hbar|\beta\rangle, \quad
+\hat{S}_-|\beta\rangle = 0
+\]</div>
+<details>
+<summary><strong>Show Solution</strong></summary>
+<p>The raising and lowering operators are defined as</p>
+<div class="math notranslate nohighlight">
+\[
+\hat{S}_\pm = \hat{S}_x \pm i\hat{S}_y
+\]</div>
+<p>Their action on spin states:</p>
+<div class="math notranslate nohighlight">
+\[
+\hat{S}_+|\alpha\rangle = 0, \quad
+\hat{S}_+|\beta\rangle = \hbar|\alpha\rangle
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+\hat{S}_-|\alpha\rangle = \hbar|\beta\rangle, \quad
+\hat{S}_-|\beta\rangle = 0
+\]</div>
+<p>This follows from the matrix representations of <span class="math notranslate nohighlight">\(\hat{S}_x\)</span> and <span class="math notranslate nohighlight">\(\hat{S}_y\)</span>.</p>
+</details>
+</section>
 </section>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="computational-notebook">
@@ -1020,7 +1117,10 @@ Physics. Phys. T oday 2003, 56, 53–59.</p></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spin-angular-momentum">Spin Angular Momentum</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spin-angular-momentum">Spin Angular Momentum</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#practice-problems">Practice Problems</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#computational-notebook">Computational Notebook</a></li>
