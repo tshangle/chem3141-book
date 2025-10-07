@@ -194,6 +194,9 @@
 
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Chapter 4: Vibrational Motion</a></li>
 
+
+
+
 <li class="toctree-l1"><a class="reference internal" href="rotation.html">Chapter 5: Angular Momentum, and Rotational Motion</a></li>
 <li class="toctree-l1"><a class="reference internal" href="hydrogen.html">Chapter 6: The Hydrogen Atom</a></li>
 <li class="toctree-l1"><a class="reference internal" href="variation.html">Chapter 7: The Variation Theorem</a></li>
@@ -492,6 +495,15 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reflection-symmetry-of-the-vibrational-probability-density">Reflection: Symmetry of the Vibrational Probability Density</a></li>
 </ul>
 </li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#quantum-tunneling-in-the-morse-potential">🌉 Quantum Tunneling in the Morse Potential</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">🧭 Question</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#guided-exercise-tunneling-probability-for-the-ground-state-of-co">🧩 Guided Exercise: Tunneling Probability for the Ground State of CO</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-complete-the-following-block-of-code-to-compute-the-classical-turning-points">Step 1: Complete the following block of code to compute the classical turning points</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-integrate-the-probability-density-over-the-range-of-r-outside-of-rtp-l-and-rtp-r">Step 2: Integrate the probability density over the range of r outside of rtp_l and rtp_r</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reflection-comparing-r-in-harmonic-vs-morse-oscillators">Reflection: Comparing ⟨r⟩ in Harmonic vs. Morse Oscillators</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#transition-state-optimization">Transition State Optimization</a></li>
 </ul>
@@ -555,7 +567,9 @@ V(x) = \frac{1}{2} k (x - x_e)^2
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: pyscf in /Users/jfoley19/miniconda3/envs/jbook/lib/python3.11/site-packages (2.9.0)
-Requirement already satisfied: numpy!=1.16,!=1.17,&gt;=1.13 in /Users/jfoley19/miniconda3/envs/jbook/lib/python3.11/site-packages (from pyscf) (1.26.4)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: numpy!=1.16,!=1.17,&gt;=1.13 in /Users/jfoley19/miniconda3/envs/jbook/lib/python3.11/site-packages (from pyscf) (1.26.4)
 Requirement already satisfied: scipy&gt;=1.6.0 in /Users/jfoley19/miniconda3/envs/jbook/lib/python3.11/site-packages (from pyscf) (1.15.3)
 Requirement already satisfied: h5py&gt;=2.7 in /Users/jfoley19/miniconda3/envs/jbook/lib/python3.11/site-packages (from pyscf) (3.13.0)
 Requirement already satisfied: setuptools in /Users/jfoley19/miniconda3/envs/jbook/lib/python3.11/site-packages (from pyscf) (78.1.1)
@@ -569,9 +583,7 @@ Requirement already satisfied: scipy in /Users/jfoley19/miniconda3/envs/jbook/li
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: pyberny in /Users/jfoley19/miniconda3/envs/jbook/lib/python3.11/site-packages (0.6.3)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: numpy&lt;2.0,&gt;=1.15 in /Users/jfoley19/miniconda3/envs/jbook/lib/python3.11/site-packages (from pyberny) (1.26.4)
+Requirement already satisfied: numpy&lt;2.0,&gt;=1.15 in /Users/jfoley19/miniconda3/envs/jbook/lib/python3.11/site-packages (from pyberny) (1.26.4)
 </pre></div>
 </div>
 </div>
@@ -3696,7 +3708,7 @@ c = 2.99792458 \times 10^{10} \: \text{cm/s}
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>geometric-optimize called with the following command line:
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/jfoley19/miniconda3/envs/jbook/lib/python3.11/site-packages/ipykernel_launcher.py -f /private/var/folders/dp/63x0n7nd4_q9b8cbskjk1xpr0000gp/T/tmpandiznhz.json --HistoryManager.hist_file=:memory:
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/jfoley19/miniconda3/envs/jbook/lib/python3.11/site-packages/ipykernel_launcher.py -f /private/var/folders/dp/63x0n7nd4_q9b8cbskjk1xpr0000gp/T/tmp418zt47h.json --HistoryManager.hist_file=:memory:
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
@@ -3795,7 +3807,7 @@ c = 2.99792458 \times 10^{10} \: \text{cm/s}
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-=# <span class=" -Color -Color-Bold"> geomeTRIC started. Version: 1.1 </span> #=-
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Current date and time: 2025-10-06 15:49:16
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Current date and time: 2025-10-07 15:02:03
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>#========================================================#
@@ -3807,8 +3819,8 @@ c = 2.99792458 \times 10^{10} \: \text{cm/s}
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>#========================================================#
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>customengine              &lt;pyscf.geomopt.geometric_solver.PySCFEngine object at 0x16a293b10&gt; 
-input                     /var/folders/dp/63x0n7nd4_q9b8cbskjk1xpr0000gp/T/tmp9opr0m_8/e25cede3-67da-4c96-963e-350e58ac0073 
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>customengine              &lt;pyscf.geomopt.geometric_solver.PySCFEngine object at 0x168971650&gt; 
+input                     /var/folders/dp/63x0n7nd4_q9b8cbskjk1xpr0000gp/T/tmpmp2t_26f/ae1ef557-d93f-4703-915f-29a91f566d72 
 logIni                    /Users/jfoley19/miniconda3/envs/jbook/lib/python3.11/site-packages/pyscf/geomopt/log.ini 
 </pre></div>
 </div>
@@ -3923,7 +3935,7 @@ Rotation-C 1-2
     
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Time elapsed since start of run_optimizer: 0.340 seconds
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Time elapsed since start of run_optimizer: 0.335 seconds
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C          -0.00000000        0.00000000        0.04492827
@@ -4217,7 +4229,7 @@ v = 0,1,2,\dots,\left\lfloor s-\tfrac12 \right\rfloor.
 <span class="n">ke</span>   <span class="o">=</span> <span class="n">morse_ke</span><span class="p">(</span><span class="n">we</span><span class="p">,</span> <span class="n">mu</span><span class="p">)</span>
 <span class="n">a</span>    <span class="o">=</span> <span class="n">morse_a</span><span class="p">(</span><span class="n">we</span><span class="p">,</span> <span class="n">mu</span><span class="p">,</span> <span class="n">De</span><span class="p">)</span>
 <span class="n">lam</span>  <span class="o">=</span> <span class="n">morse_lambda</span><span class="p">(</span><span class="n">mu</span><span class="p">,</span> <span class="n">De</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
-<span class="n">vmax</span> <span class="o">=</span> <span class="n">vmax</span><span class="p">(</span><span class="n">lam</span><span class="p">)</span>
+<span class="n">v_max</span> <span class="o">=</span> <span class="n">vmax</span><span class="p">(</span><span class="n">lam</span><span class="p">)</span>
 
 <span class="c1"># Build grid and compute potential</span>
 <span class="n">r</span><span class="p">,</span> <span class="n">dr</span> <span class="o">=</span> <span class="n">make_rgrid</span><span class="p">(</span><span class="n">re</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
@@ -4228,10 +4240,14 @@ v = 0,1,2,\dots,\left\lfloor s-\tfrac12 \right\rfloor.
 <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
 
 <span class="c1"># Morse potential (converted back to cm⁻¹ for plotting + Te offset)</span>
+
 <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">r</span><span class="o">*</span><span class="mf">1e10</span><span class="p">,</span> <span class="n">V</span><span class="o">/</span><span class="n">FAC</span> <span class="o">+</span> <span class="n">Te</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Morse Potential&#39;</span><span class="p">)</span>
 
+<span class="k">if</span> <span class="n">v_max</span> <span class="o">&gt;</span> <span class="mi">1000</span><span class="p">:</span>
+    <span class="n">v_max</span> <span class="o">=</span> <span class="mi">10</span>
+
 <span class="c1"># Energy levels and turning points</span>
-<span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">vmax</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+<span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">v_max</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
     <span class="n">E</span> <span class="o">=</span> <span class="n">energy_morse_J</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">we</span><span class="p">,</span> <span class="n">wexe</span><span class="p">)</span>
     <span class="n">rm</span><span class="p">,</span> <span class="n">rp</span> <span class="o">=</span> <span class="n">turning_points</span><span class="p">(</span><span class="n">E</span><span class="p">,</span> <span class="n">De</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">re</span><span class="p">)</span>
     <span class="n">ax</span><span class="o">.</span><span class="n">hlines</span><span class="p">(</span><span class="n">E</span><span class="o">/</span><span class="n">FAC</span> <span class="o">+</span> <span class="n">Te</span><span class="p">,</span> <span class="n">rm</span><span class="o">*</span><span class="mf">1e10</span><span class="p">,</span> <span class="n">rp</span><span class="o">*</span><span class="mf">1e10</span><span class="p">,</span>
@@ -4315,6 +4331,243 @@ for the Morse‐oscillator eigenstates you just plotted.</p>
 <img alt="../../_images/99e34fa0ce06c1cab5c5c00ba956b4ee72223dbc1ed3228b0e9eb2f960ff75f7.png" src="../../_images/99e34fa0ce06c1cab5c5c00ba956b4ee72223dbc1ed3228b0e9eb2f960ff75f7.png" />
 </div>
 </div>
+</section>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="quantum-tunneling-in-the-morse-potential">
+<h1>🌉 Quantum Tunneling in the Morse Potential<a class="headerlink" href="#quantum-tunneling-in-the-morse-potential" title="Link to this heading">#</a></h1>
+<p>You will use the code below to compute probability density of the ground vibrational state of CO within the Morse oscillator model, which you will then use to compute the tunneling probability associated with the ground state.</p>
+<p>Recall that the tunneling probability can computed as:</p>
+<div class="math notranslate nohighlight">
+\[
+P_{tunneling} = \int_{-\infty}^{r_{tp,l}} P_{v}(r) dr + \int_{r_{tp, r}}^{\infty} P_{v}(r) dr
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(r_{tp,l}\)</span> is the left turning point and <span class="math notranslate nohighlight">\(r_{tp, r}\)</span> is the right turning point.</p>
+<section id="id1">
+<h2>🧭 Question<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Use the code output to report the <strong>classical turning points</strong> <span class="math notranslate nohighlight">\( r_{tp,l} \)</span> and <span class="math notranslate nohighlight">\( r_{tp,r} \)</span> for the ground state.</p></li>
+<li><p>Compute the probability of tunneling to the right of <span class="math notranslate nohighlight">\(r_{tp,r}\)</span> <code class="docutils literal notranslate"><span class="pre">P_tunneling_right</span></code>, which integrates the probability density beyond <span class="math notranslate nohighlight">\( r_{tp,r} \)</span>.</p>
+<ul class="simple">
+<li><p>What is the <strong>numerical value</strong> of this tunneling probability?</p></li>
+<li><p>Is it significant compared to the total probability (≈1)?</p></li>
+</ul>
+</li>
+<li><p>Compute the probability of tunneling to the left of <span class="math notranslate nohighlight">\(r_{tp,l}\)</span> <code class="docutils literal notranslate"><span class="pre">P_tunneling_left</span></code>, which integrates the probability density below <span class="math notranslate nohighlight">\( r_{tp,l} \)</span>.</p>
+<ul class="simple">
+<li><p>What is the <strong>numerical value</strong> of this tunneling probability?</p></li>
+<li><p>Is it significant compared to the total probability (≈1)?</p></li>
+</ul>
+</li>
+<li><p>How would you expect this tunneling probability to the right change for higher vibrational quantum numbers <span class="math notranslate nohighlight">\( v &gt; 0 \)</span>?  Why?</p></li>
+</ol>
+</section>
+<section id="guided-exercise-tunneling-probability-for-the-ground-state-of-co">
+<h2>🧩 Guided Exercise: Tunneling Probability for the Ground State of CO<a class="headerlink" href="#guided-exercise-tunneling-probability-for-the-ground-state-of-co" title="Link to this heading">#</a></h2>
+<p>In this activity, you will compute the <strong>tunneling probability</strong> for the ground vibrational state of a Morse oscillator representing CO.</p>
+<p>The code below provides the basic setup of the molecule and Morse parameters.<br />
+Your task will be to:</p>
+<ol class="arabic simple">
+<li><p>Compute the <strong>classical turning points</strong> for ( v = 0 ),</p></li>
+<li><p>Identify the <strong>forbidden region</strong> (( r &gt; r_{tp,r} )),</p></li>
+<li><p>Integrate the <strong>probability density</strong> in this region to estimate the <em>tunneling probability</em>.</p></li>
+</ol>
+<hr class="docutils" />
+<p>A number of helper functions, including <code class="docutils literal notranslate"><span class="pre">def</span> <span class="pre">turning_points(E,</span> <span class="pre">De,</span> <span class="pre">a,</span> <span class="pre">re):</span></code>, are provided to compute the left and right turning points for a given state with energy <code class="docutils literal notranslate"><span class="pre">E</span></code> and a potential defined by <code class="docutils literal notranslate"><span class="pre">De</span></code>, <code class="docutils literal notranslate"><span class="pre">a</span></code>, and <code class="docutils literal notranslate"><span class="pre">re</span></code>.  (The parameter <code class="docutils literal notranslate"><span class="pre">a</span></code> is equivalent to the parameter <span class="math notranslate nohighlight">\(\beta\)</span> from our notes).</p>
+<p>Run the cell below to compute the value of these parameters.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">scipy.constants</span><span class="w"> </span><span class="kn">import</span> <span class="n">h</span><span class="p">,</span> <span class="n">hbar</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">u</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">scipy.special</span><span class="w"> </span><span class="kn">import</span> <span class="n">genlaguerre</span><span class="p">,</span> <span class="n">gamma</span><span class="p">,</span> <span class="n">factorial</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+
+<span class="c1"># Factor for conversion from cm⁻¹ to J</span>
+<span class="n">FAC</span> <span class="o">=</span> <span class="mi">100</span> <span class="o">*</span> <span class="n">h</span> <span class="o">*</span> <span class="n">c</span>
+
+<span class="c1"># ——— Utility Functions ———</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">reduced_mass</span><span class="p">(</span><span class="n">mA</span><span class="p">,</span> <span class="n">mB</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Return reduced mass (kg) for atoms of mass mA, mB in amu.&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">mA</span> <span class="o">*</span> <span class="n">mB</span> <span class="o">/</span> <span class="p">(</span><span class="n">mA</span> <span class="o">+</span> <span class="n">mB</span><span class="p">)</span> <span class="o">*</span> <span class="n">u</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">dissociation_energy</span><span class="p">(</span><span class="n">we</span><span class="p">,</span> <span class="n">wexe</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Return De (J) from vibrational constants we, wexe in cm⁻¹.&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">we</span><span class="o">**</span><span class="mi">2</span> <span class="o">/</span> <span class="p">(</span><span class="mi">4</span> <span class="o">*</span> <span class="n">wexe</span><span class="p">)</span> <span class="o">*</span> <span class="n">FAC</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">morse_ke</span><span class="p">(</span><span class="n">we</span><span class="p">,</span> <span class="n">mu</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Return effective spring constant ke (kg·s⁻²).&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">c</span> <span class="o">*</span> <span class="mi">100</span> <span class="o">*</span> <span class="n">we</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">*</span> <span class="n">mu</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">morse_a</span><span class="p">(</span><span class="n">we</span><span class="p">,</span> <span class="n">mu</span><span class="p">,</span> <span class="n">De</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Return Morse parameter a (m⁻¹).&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">we</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">mu</span> <span class="o">/</span> <span class="n">De</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">c</span> <span class="o">*</span> <span class="mi">100</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">morse_lambda</span><span class="p">(</span><span class="n">mu</span><span class="p">,</span> <span class="n">De</span><span class="p">,</span> <span class="n">a</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Return λ = sqrt(2µDe)/(aħ).&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">mu</span> <span class="o">*</span> <span class="n">De</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">a</span> <span class="o">*</span> <span class="n">hbar</span><span class="p">)</span>
+
+    
+<span class="k">def</span><span class="w"> </span><span class="nf">make_rgrid</span><span class="p">(</span><span class="n">re</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">f</span><span class="o">=</span><span class="mf">0.999</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Build an r–grid (m) from rmin to rmax where V(rmin)=De and V(rmax)=f·De.</span>
+<span class="sd">    Returns (r_array, dr).</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">rmin</span> <span class="o">=</span> <span class="n">re</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="n">a</span>
+    <span class="n">rmax</span> <span class="o">=</span> <span class="n">re</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">f</span><span class="p">)</span> <span class="o">/</span> <span class="n">a</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">rmin</span><span class="p">,</span> <span class="n">rmax</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">retstep</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">energy_morse_J</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">we</span><span class="p">,</span> <span class="n">wexe</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Morse oscillator level E_v in joules.&quot;&quot;&quot;</span>
+    <span class="n">vp</span> <span class="o">=</span> <span class="n">v</span> <span class="o">+</span> <span class="mf">0.5</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">we</span> <span class="o">*</span> <span class="n">vp</span> <span class="o">-</span> <span class="n">wexe</span> <span class="o">*</span> <span class="n">vp</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">FAC</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">turning_points</span><span class="p">(</span><span class="n">E</span><span class="p">,</span> <span class="n">De</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">re</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Classical turning points (rm, rp) at energy E (J).&quot;&quot;&quot;</span>
+    <span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">E</span> <span class="o">/</span> <span class="n">De</span><span class="p">)</span>
+    <span class="n">rm</span> <span class="o">=</span> <span class="n">re</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">b</span><span class="p">)</span> <span class="o">/</span> <span class="n">a</span>
+    <span class="n">rp</span> <span class="o">=</span> <span class="n">re</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">b</span><span class="p">)</span> <span class="o">/</span> <span class="n">a</span>
+    <span class="k">return</span> <span class="n">rm</span><span class="p">,</span> <span class="n">rp</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">morse_wavefunction</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">lam</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">re</span><span class="p">,</span> <span class="n">norm_peak</span><span class="o">=</span><span class="mf">1.0</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Unnormalized Morse wavefunction ψ_v(r), scaled to `norm_peak`.</span>
+<span class="sd">    Returns ψ(r).</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">z</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">lam</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">a</span> <span class="o">*</span> <span class="p">(</span><span class="n">r</span> <span class="o">-</span> <span class="n">re</span><span class="p">))</span>
+    <span class="n">alpha</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="p">(</span><span class="n">lam</span> <span class="o">-</span> <span class="n">v</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
+    <span class="n">L</span> <span class="o">=</span> <span class="n">genlaguerre</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">alpha</span><span class="p">)</span>
+    <span class="n">psi</span> <span class="o">=</span> <span class="p">(</span><span class="n">z</span><span class="o">**</span><span class="p">(</span><span class="n">lam</span> <span class="o">-</span> <span class="n">v</span> <span class="o">-</span> <span class="mf">0.5</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">z</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">L</span><span class="p">(</span><span class="n">z</span><span class="p">))</span>
+    <span class="c1"># scale to peak value norm_peak</span>
+    <span class="k">return</span> <span class="n">psi</span> <span class="o">*</span> <span class="p">(</span><span class="n">norm_peak</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">psi</span><span class="p">)))</span> <span class="o">/</span> <span class="mi">30</span>
+
+    
+<span class="c1"># ——— Example: CO molecule ———</span>
+
+<span class="c1"># Input data</span>
+<span class="n">mA</span><span class="p">,</span> <span class="n">mB</span>    <span class="o">=</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">35.0</span>          <span class="c1"># masses (amu)</span>
+<span class="n">we</span><span class="p">,</span> <span class="n">wexe</span>  <span class="o">=</span> <span class="mf">2990.945</span><span class="p">,</span> <span class="mf">52.818595</span> <span class="c1"># vibrational constants (cm⁻¹)</span>
+<span class="n">re</span><span class="p">,</span> <span class="n">Te</span>    <span class="o">=</span> <span class="mf">1.27455e-10</span><span class="p">,</span> <span class="mf">0.0</span>   <span class="c1"># equilibrium bond length (m), electronic energy (arbitrary zero)</span>
+
+<span class="c1"># Derived parameters</span>
+<span class="n">mu</span>   <span class="o">=</span> <span class="n">reduced_mass</span><span class="p">(</span><span class="n">mA</span><span class="p">,</span> <span class="n">mB</span><span class="p">)</span>
+<span class="n">De</span>   <span class="o">=</span> <span class="n">dissociation_energy</span><span class="p">(</span><span class="n">we</span><span class="p">,</span> <span class="n">wexe</span><span class="p">)</span>
+<span class="n">ke</span>   <span class="o">=</span> <span class="n">morse_ke</span><span class="p">(</span><span class="n">we</span><span class="p">,</span> <span class="n">mu</span><span class="p">)</span>
+<span class="n">a</span>    <span class="o">=</span> <span class="n">morse_a</span><span class="p">(</span><span class="n">we</span><span class="p">,</span> <span class="n">mu</span><span class="p">,</span> <span class="n">De</span><span class="p">)</span>
+<span class="n">lam</span>  <span class="o">=</span> <span class="n">morse_lambda</span><span class="p">(</span><span class="n">mu</span><span class="p">,</span> <span class="n">De</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
+<span class="n">v_max</span> <span class="o">=</span> <span class="n">vmax</span><span class="p">(</span><span class="n">lam</span><span class="p">)</span>
+
+<span class="c1"># Build grid for the wavefunction and probability density</span>
+<span class="n">r</span><span class="p">,</span> <span class="n">dr</span> <span class="o">=</span> <span class="n">make_rgrid</span><span class="p">(</span><span class="n">re</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
+
+<span class="c1"># define quantum number for ground state</span>
+<span class="n">v</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="c1"># compute psi_v </span>
+<span class="n">psi_v</span> <span class="o">=</span> <span class="n">morse_wavefunction</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">lam</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">re</span><span class="p">)</span>
+
+<span class="c1"># compute P_v = psi_v^* psi_v</span>
+<span class="n">P_v</span> <span class="o">=</span> <span class="n">psi_v</span> <span class="o">**</span> <span class="mi">2</span>
+
+<span class="c1"># compute normalization constant based on area under P_v</span>
+<span class="n">norm</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">trapz</span><span class="p">(</span><span class="n">P_v</span><span class="p">,</span> <span class="n">r</span><span class="p">)</span>
+
+<span class="c1"># normalized probability density</span>
+<span class="n">P_v_norm</span> <span class="o">=</span> <span class="n">P_v</span> <span class="o">/</span> <span class="n">norm</span>
+
+<span class="c1"># get E for v = 0</span>
+<span class="n">E</span> <span class="o">=</span> <span class="n">energy_morse_J</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">we</span><span class="p">,</span> <span class="n">wexe</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="step-1-complete-the-following-block-of-code-to-compute-the-classical-turning-points">
+<h1>Step 1: Complete the following block of code to compute the classical turning points<a class="headerlink" href="#step-1-complete-the-following-block-of-code-to-compute-the-classical-turning-points" title="Link to this heading">#</a></h1>
+<p>The values of <code class="docutils literal notranslate"><span class="pre">E</span></code>, <code class="docutils literal notranslate"><span class="pre">De</span></code>, <code class="docutils literal notranslate"><span class="pre">a</span></code>, and <code class="docutils literal notranslate"><span class="pre">re</span></code> have been assigned by the previous block; utilize the
+<code class="docutils literal notranslate"><span class="pre">turning_points(E,</span> <span class="pre">De,</span> <span class="pre">a,</span> <span class="pre">re)</span></code> function to assign the values of <code class="docutils literal notranslate"><span class="pre">rtp_l,</span> <span class="pre">rtp_r</span></code> below.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># TODO: Compute classical turning points</span>
+<span class="c1"># Use the provided helper function turning_points(E, De, a, re)</span>
+<span class="c1"># and print their values in meters.</span>
+
+<span class="n">rtp_l</span><span class="p">,</span> <span class="n">rtp_r</span> <span class="o">=</span> <span class="err">?</span><span class="o">??</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot; Left turning point:  </span><span class="si">{</span><span class="n">rtp_l</span><span class="si">:</span><span class="s2">.4e</span><span class="si">}</span><span class="s2"> m&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot; Right turning point: </span><span class="si">{</span><span class="n">rtp_r</span><span class="si">:</span><span class="s2">.4e</span><span class="si">}</span><span class="s2"> m&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">18</span><span class="p">],</span> <span class="n">line</span> <span class="mi">5</span>
+    <span class="n">rtp_l</span><span class="p">,</span> <span class="n">rtp_r</span> <span class="o">=</span> <span class="err">?</span><span class="o">??</span>
+                   <span class="o">^</span>
+<span class="ne">SyntaxError</span>: invalid syntax
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="step-2-integrate-the-probability-density-over-the-range-of-r-outside-of-rtp-l-and-rtp-r">
+<h1>Step 2: Integrate the probability density over the range of r outside of rtp_l and rtp_r<a class="headerlink" href="#step-2-integrate-the-probability-density-over-the-range-of-r-outside-of-rtp-l-and-rtp-r" title="Link to this heading">#</a></h1>
+<p>We can integrate the (normalized) probability density <code class="docutils literal notranslate"><span class="pre">P_v_norm</span></code> with respect to <code class="docutils literal notranslate"><span class="pre">r</span></code> by using numpy’s <code class="docutils literal notranslate"><span class="pre">trapz</span></code> method, which implements the trapezoid rule to approximate an integral.</p>
+<p><code class="docutils literal notranslate"><span class="pre">integraded_P</span> <span class="pre">=</span> <span class="pre">np.trapz(P_v_norm,</span> <span class="pre">r)</span></code></p>
+<p>where this will integrate over all values of r, which should give us 1 by definition of normalized probability density!</p>
+<p>We would like to apply the same approach to only the tunneling region.  We can use the <code class="docutils literal notranslate"><span class="pre">np.where()</span></code> method to find the indices of all
+values of the <code class="docutils literal notranslate"><span class="pre">r</span></code> array that are less than or equal to <code class="docutils literal notranslate"><span class="pre">rtp_l</span></code>, and we can use this function a second time to find the indices of all values
+of the <code class="docutils literal notranslate"><span class="pre">r</span></code> array that are greater than or equal to <code class="docutils literal notranslate"><span class="pre">rtp_r</span></code>.  This will allow us to use the <code class="docutils literal notranslate"><span class="pre">np.trapz()</span></code> method on only the <em>slice</em> of the
+probability density that corresponds to the tunneling regions.</p>
+<p>The syntax for the left tunneling region is shown in this Markdown block; implement this syntax in the following code cell and also apply it to the right tunneling region to complete the question.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># get all indices of r values &lt;= rtp_l and store to l_idx</span>
+<span class="n">l_idx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">r</span> <span class="o">&lt;=</span> <span class="n">rtp_l</span><span class="p">)</span>
+
+<span class="c1"># get the slice of r values to the left of rtp_l</span>
+<span class="n">r_left</span> <span class="o">=</span> <span class="n">r</span><span class="p">[</span><span class="n">l_idx</span><span class="p">]</span>
+
+<span class="c1"># get the slice of P_v_norm values to the left of rtp_l</span>
+<span class="n">P_v_left</span> <span class="o">=</span> <span class="n">P_v_norm</span><span class="p">[</span><span class="n">l_idx</span><span class="p">]</span>
+
+<span class="c1"># compute integral of the probability density on the slice of values to the left of rtp_l</span>
+<span class="n">P_tunneling_left</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">trapz</span><span class="p">(</span><span class="n">P_v_left</span><span class="p">,</span> <span class="n">r_left</span><span class="p">)</span>
+
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># TODO: get all indices of r values &lt;= rtp_l and store to l_idx</span>
+<span class="n">l_idx</span> <span class="o">=</span> <span class="err">?</span><span class="o">??</span>
+
+<span class="c1"># TODO: get the slice of r values to the left of rtp_l</span>
+<span class="n">r_left</span> <span class="o">=</span> <span class="err">?</span><span class="o">??</span>
+
+<span class="c1"># TODO: get the slice of P_v_norm values to the left of rtp_l</span>
+<span class="n">P_v_left</span> <span class="o">=</span> <span class="err">?</span><span class="o">??</span>
+
+<span class="c1"># TODO: get all indices of r values &gt;= rtp_l and store to r_idx</span>
+<span class="n">r_idx</span> <span class="o">=</span> <span class="err">?</span><span class="o">??</span>
+
+<span class="c1"># TODO: get the slice of r values to the right of rtp_r</span>
+<span class="n">r_right</span> <span class="o">=</span> <span class="err">?</span><span class="o">??</span>
+
+<span class="c1"># TODO: get the slice of P_v_norm values to the right of rtp_lr</span>
+<span class="n">P_v_right</span> <span class="o">=</span> <span class="err">?</span><span class="o">??</span>
+
+
+<span class="c1"># Integrate the probability density on the left of rtp_l</span>
+<span class="n">P_tunneling_left</span> <span class="o">=</span> <span class="err">?</span><span class="o">??</span>
+
+<span class="c1"># Integrate the probability density on the right of rtp_r</span>
+<span class="n">P_tunneling_right</span> <span class="o">=</span> <span class="err">?</span><span class="o">??</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot; Probability of tunneling on left  side: </span><span class="si">{</span><span class="n">P_tunneling_left</span><span class="si">:</span><span class="s2">.4e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot; Probability of tunneling on right side: </span><span class="si">{</span><span class="n">P_tunneling_right</span><span class="si">:</span><span class="s2">.4e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
@@ -4377,15 +4630,7 @@ for the Morse‐oscillator eigenstates you just plotted.</p>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> re is 1.27455e-10
-</pre></div>
 </div>
-<img alt="../../_images/3e63ff746a3f60b4cd86069659d2f871e157f50a72da85a3a8841efb8db3d319.png" src="../../_images/3e63ff746a3f60b4cd86069659d2f871e157f50a72da85a3a8841efb8db3d319.png" />
-</div>
-</div>
-</section>
-</section>
 <section id="reflection-comparing-r-in-harmonic-vs-morse-oscillators">
 <h2>Reflection: Comparing ⟨r⟩ in Harmonic vs. Morse Oscillators<a class="headerlink" href="#reflection-comparing-r-in-harmonic-vs-morse-oscillators" title="Link to this heading">#</a></h2>
 <p>Take a moment to think about how the expectation value of the bond length, ⟨r⟩, changes as you go to higher vibrational states in each model.</p>
@@ -4454,944 +4699,6 @@ for the Morse‐oscillator eigenstates you just plotted.</p>
 <span class="n">freq</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">wfn</span><span class="o">.</span><span class="n">frequencies</span><span class="p">())</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">freq</span><span class="p">)):</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The harmonic frequency for mode </span><span class="si">%i</span><span class="s1"> is </span><span class="si">%8.1f</span><span class="s1"> cm^-1&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">freq</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Creating a UserComputer
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>    			-----------------------------------------
-
-    			 OPTKING 3.0: for geometry optimizations 
-
-    			     By R.A. King, Bethel University     
-
-    			        with contributions from          
-
-    			    A.V. Copan, J. Cayton, A. Heide      
-
-    			-----------------------------------------
-
-    
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>		 -- Optimization Parameters --
-	accept_symmetry_breaking       =           False
-	add_auxiliary_bonds            =           False
-	alg_geom_maxiter               =              50
-	auxiliary_bond_factor          =             2.5
-	bt_dx_conv                     =           1e-07
-	bt_dx_rms_change_conv          =           1e-12
-	bt_max_iter                    =              25
-	bt_pinv_rcond                  =           1e-06
-	cart_hess_read                 =           False
-	conjugate_gradient_type        =        FLETCHER
-	consecutive_backsteps_allowed  =               0
-	conv_max_DE                    =           1e-06
-	conv_max_disp                  =          0.0012
-	conv_max_force                 =          0.0003
-	conv_rms_disp                  =              -1
-	conv_rms_force                 =              -1
-	covalent_connect               =             1.3
-	dynamic_level                  =               0
-	dynamic_level_max              =               0
-	ensure_bt_convergence          =           False
-	ext_force_bend                 =              []
-	ext_force_cartesian            =              []
-	ext_force_dihedral             =              []
-	ext_force_distance             =              []
-	ext_force_oofp                 =              []
-	fix_val_near_pi                =            1.57
-	flexible_g_convergence         =           False
-	frag_mode                      =          SINGLE
-	frag_ref_atoms                 =            None
-	freeze_all_dihedrals           =           False
-	freeze_intrafrag               =           False
-	frozen_bend                    =              []
-	frozen_cartesian               =              []
-	frozen_dihedral                =              []
-	frozen_distance                =              []
-	frozen_oofp                    =              []
-	full_hess_every                =              -1
-	g_convergence                  =           QCHEM
-	generate_intcos_exit           =           False
-	geom_maxiter                   =              50
-	h_bond_connect                 =             4.3
-	hess_update                    =          BOFILL
-	hess_update_den_tol            =           1e-07
-	hess_update_dq_tol             =             0.5
-	hess_update_limit              =            True
-	hess_update_limit_max          =             1.0
-	hess_update_limit_scale        =             0.5
-	hess_update_use_last           =               4
-	hessian_file                   =            None
-	i_max_DE                       =            True
-	i_max_disp                     =            True
-	i_max_force                    =            True
-	i_rms_disp                     =           False
-	i_rms_force                    =           False
-	i_untampered                   =            True
-	include_oofp                   =           False
-	interfrag_collinear_tol        =            0.01
-	interfrag_coords               =            None
-	interfrag_dist_inv             =           False
-	interfrag_mode                 =           FIXED
-	interfrag_trust                =             0.5
-	interfrag_trust_max            =             1.0
-	interfrag_trust_min            =           0.001
-	interfragment_connect          =             1.8
-	intrafrag_hess                 =        SCHLEGEL
-	intrafrag_trust                =             0.2
-	intrafrag_trust_max            =             1.0
-	intrafrag_trust_min            =           0.001
-	irc_direction                  =         FORWARD
-	irc_points                     =              20
-	irc_step_size                  =             0.2
-	keep_intcos                    =           False
-	linear_bend_threshold          =            3.05
-	linesearch                     =           False
-	linesearch_step                =             0.1
-	max_disp_g_convergence         =          0.0012
-	max_energy_g_convergence       =           1e-06
-	max_force_g_convergence        =          0.0003
-	opt_coordinates                =       REDUNDANT
-	opt_type                       =              TS
-	output_type                    =            FILE
-	print_lvl                      =               1
-	program                        =            psi4
-	ranged_bend                    =              []
-	ranged_cartesian               =              []
-	ranged_dihedral                =              []
-	ranged_distance                =              []
-	ranged_oofp                    =              []
-	redundant_eval_tol             =           1e-10
-	rfo_follow_root                =           False
-	rfo_normalization_max          =             100
-	rfo_root                       =               0
-	rms_disp_g_convergence         =          0.0012
-	rms_force_g_convergence        =          0.0003
-	rsrfo_alpha_max                =     100000000.0
-	sd_hessian                     =             1.0
-	simple_step_scaling            =           False
-	small_bend_fix_threshold       =            0.35
-	steepest_descent_type          =         OVERLAP
-	step_type                      =        RS_I_RFO
-	test_B                         =           False
-	test_derivative_B              =           False
-	trajectory                     =           False
-	unfreeze_dihedrals             =              []
-	v3d_tors_angle_lim             =           0.017
-	v3d_tors_cos_tol               =           1e-10
-	working_consecutive_backsteps  =               0
-	working_steps_since_last_H     =               0
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Molsys:
-
-	                            ===&gt; Fragment 1 &lt;== 
-
-	 Z (Atomic Numbers)          Masses                          Geom                  
-	       1.000000             1.007825         -1.10471506  1.78097707  0.00000000   
-	       6.000000            12.000000         -1.10471506 -0.48669428  0.00000000   
-	       7.000000            14.003074          1.02619898  0.28889500  0.00000000   
-
-	 - Coordinate -           - BOHR/RAD -       - ANG/DEG -
-	 R(1,2)           =         2.267671           1.200000
-	 R(2,3)           =         2.267671           1.200000
-	 B(1,2,3)         =         1.221730          70.000000
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PLANNING Atomic:  keywords={&#39;GUESS_MIX&#39;: 1, &#39;OPT_TYPE&#39;: &#39;TS&#39;, &#39;REFERENCE&#39;: &#39;UHF&#39;, &#39;function_kwargs&#39;: {}}
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Compute gradient(): method=scf, basis=cc-pvdz, molecule=default, nre=23.857982670886777
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Return gradient(): -92.80803908504582
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[-0.01521711 -0.00156408 -0.00000000]
- [-0.04525649 -0.00425280  0.00000000]
- [ 0.06047360  0.00581687  0.00000000]]
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Projected (PHP) Hessian matrix
-	   0.246653   0.000000   0.000000
-	   0.000000   1.048231   0.000000
-	   0.000000   0.000000   0.160000
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	         Geometry (au)                                       Gradient (au)
-  -1.1047150590   1.7809770712   0.0000000000		  -0.0152171138  -0.0015640773  -0.0000000000
-  -1.1047150590  -0.4866942794   0.0000000000		  -0.0452564888  -0.0042527951   0.0000000000
-   1.0261989755   0.2888950010   0.0000000000		   0.0604736025   0.0058168724   0.0000000000
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hessian eigenvalues 	  0.160000  0.246653  1.048231
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Transforming the PES with image function to search for a saddlepoint
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	Using RFO solution 1.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	Determining Cartesian step for fragment 1.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	Successfully converged to displaced geometry.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	RMS(dx):  2.844e-12 	Max(dx):  5.599e-12 	RMS(dq):  3.846e-16
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	        --- Internal Coordinate Step in ANG or DEG, aJ/ANG or AJ/DEG ---
-	-------------------------------------------------------------------------------
-	           Coordinate      Previous         Force          Change          New 
-	           ----------      --------        ------          ------        ------
-	               R(1,2)       1.20000        0.01289        0.00142       1.20142
-	               R(2,3)       1.20000       -0.48457       -0.02248       1.17752
-	             B(1,2,3)      70.00000       -0.00263       11.19673      81.19673
-	-------------------------------------------------------------------------------
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	|target step| :    0.2000000147
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	gradient     :    0.0212059371
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	hessian      :    0.2000724102
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	|target step| :    0.2000000147
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	gradient     :    0.0212059371
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	hessian      :    0.2000724102
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	Norm of achieved step-size    0.2000000147
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	Norm of achieved step-size (cart):    0.2613697647
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Molsys:
-
-	                            ===&gt; Fragment 1 &lt;== 
-
-	 Z (Atomic Numbers)          Masses                          Geom                  
-	       1.000000             1.007825         -1.26632950  1.84574921  0.00000000   
-	       6.000000            12.000000         -1.03485350 -0.41277288  0.00000000   
-	       7.000000            14.003074          1.11795185  0.15020146  0.00000000   
-
-	 - Coordinate -           - BOHR/RAD -       - ANG/DEG -
-	 R(1,2)           =         2.270353           1.201419
-	 R(2,3)           =         2.225199           1.177525
-	 B(1,2,3)         =         1.417150          81.196733
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Performing convergence check.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	                                 ==&gt; Convergence Check &lt;==                                  
-    
-	Measures of convergence in internal coordinates in au.
-    
-	Criteria marked as inactive (o), active &amp; met (*), and active &amp; unmet ( ).
-
-	----------------------------------------------------------------------------------------------~
-	   Step    Total Energy     Delta E     Max Force     RMS Force      Max Disp      RMS Disp   ~
-	----------------------------------------------------------------------------------------------~
-	  Convergence Criteria     1.00e-06 *    3.00e-04 *             o    1.20e-03 *             o~
-	----------------------------------------------------------------------------------------------~
-	     1     -92.80803909   -9.28e+01      5.88e-02      3.94e-02 o    1.95e-01      1.15e-01 o  ~
-	----------------------------------------------------------------------------------------------
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	Convergence check returned False
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PLANNING Atomic:  keywords={&#39;SCF__GUESS&#39;: &#39;READ&#39;, &#39;GUESS_MIX&#39;: 1, &#39;SCF__INTS_TOLERANCE&#39;: 1e-12, &#39;OPT_TYPE&#39;: &#39;TS&#39;, &#39;REFERENCE&#39;: &#39;UHF&#39;, &#39;function_kwargs&#39;: {}}
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Compute gradient(): method=scf, basis=cc-pvdz, molecule=default, nre=23.9100719117882
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Return gradient(): -92.80581337337402
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[-0.00066441  0.02469373  0.00000000]
- [-0.01414719 -0.02630158 -0.00000000]
- [ 0.01481160  0.00160785  0.00000000]]
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	Performing BOFILL update.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	Using 1 previous steps for update.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	Steps to be used in Hessian update:  1
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	Updated Hessian (in au) 
- 	   0.204453  -0.006079   0.130239
-	  -0.006079   1.050546   0.003595
-	   0.130239   0.003595  -0.169868
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Projected (PHP) Hessian matrix
-	   0.204453  -0.006079   0.130239
-	  -0.006079   1.050546   0.003595
-	   0.130239   0.003595  -0.169868
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	         Geometry (au)                                       Gradient (au)
-  -1.1400048663   2.0090935076   0.0000000000		  -0.0006644051   0.0246937338   0.0000000000
-  -1.1400048663  -0.2612595783   0.0000000000		  -0.0141471933  -0.0263015791  -0.0000000000
-   1.0589806090   0.0792897481   0.0000000000		   0.0148115984   0.0016078452   0.0000000000
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	Current Step Report 
- 
-	Current energy:       -92.8058133734
-	Energy change for the previous step:
-		Actual       :         0.0022257117
-		Projected    :         0.0079256120
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	Energy ratio =    0.28083
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	Energy ratio indicates iffy step.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	Intrafrag trust radius decreased to   0.05.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	Near start of optimization, so ignoring bad step.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hessian eigenvalues 	 -0.210745  0.245280  1.050596
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Transforming the PES with image function to search for a saddlepoint
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	Using RFO solution 1.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	Determining Cartesian step for fragment 1.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	Successfully converged to displaced geometry.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	RMS(dx):  2.284e-08 	Max(dx):  4.243e-08 	RMS(dq):  3.626e-16
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	        --- Internal Coordinate Step in ANG or DEG, aJ/ANG or AJ/DEG ---
-	-------------------------------------------------------------------------------
-	           Coordinate      Previous         Force          Change          New 
-	           ----------      --------        ------          ------        ------
-	               R(1,2)       1.20142       -0.20344       -0.02173       1.17969
-	               R(2,3)       1.17752       -0.12262       -0.00603       1.17149
-	             B(1,2,3)      81.19673       -0.00011       -1.49778      79.69896
-	-------------------------------------------------------------------------------
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	|target step| :    0.0500002083
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	gradient     :   -0.0244644978
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	hessian      :    0.2565328135
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	|target step| :    0.0500002083
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	gradient     :   -0.0244644978
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	hessian      :    0.2565328135
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	Norm of achieved step-size    0.0500002083
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	Norm of achieved step-size (cart):    0.0576791592
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Molsys:
-
-	                            ===&gt; Fragment 1 &lt;== 
-
-	 Z (Atomic Numbers)          Masses                          Geom                  
-	       1.000000             1.007825         -1.11073877  1.97499909  0.00000000   
-	       6.000000            12.000000         -1.14730545 -0.25398361  0.00000000   
-	       7.000000            14.003074          1.03701510  0.10610821  0.00000000   
-
-	 - Coordinate -           - BOHR/RAD -       - ANG/DEG -
-	 R(1,2)           =         2.229283           1.179686
-	 R(2,3)           =         2.213803           1.171494
-	 B(1,2,3)         =         1.391009          79.698955
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Performing convergence check.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	                                 ==&gt; Convergence Check &lt;==                                  
-    
-	Measures of convergence in internal coordinates in au.
-    
-	Criteria marked as inactive (o), active &amp; met (*), and active &amp; unmet ( ).
-
-	----------------------------------------------------------------------------------------------
-	   Step    Total Energy     Delta E     Max Force     RMS Force      Max Disp      RMS Disp   
-	----------------------------------------------------------------------------------------------
-	  Convergence Criteria     1.00e-06 *    3.00e-04 *             o    1.20e-03 *             o
-	----------------------------------------------------------------------------------------------
-	     2     -92.80581337    2.23e-03      2.47e-02      1.67e-02 o    4.11e-02      2.89e-02 o  ~
-	----------------------------------------------------------------------------------------------
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	Convergence check returned False
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PLANNING Atomic:  keywords={&#39;SCF__GUESS&#39;: &#39;READ&#39;, &#39;GUESS_MIX&#39;: 1, &#39;SCF__INTS_TOLERANCE&#39;: 1e-12, &#39;OPT_TYPE&#39;: &#39;TS&#39;, &#39;REFERENCE&#39;: &#39;UHF&#39;, &#39;function_kwargs&#39;: {}}
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Compute gradient(): method=scf, basis=cc-pvdz, molecule=default, nre=24.122028704402826
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Return gradient(): -92.80670434577289
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[-0.00069834  0.01201206  0.00000000]
- [-0.00041747 -0.01150012 -0.00000000]
- [ 0.00111581 -0.00051194  0.00000000]]
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	Performing BOFILL update.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	Using 2 previous steps for update.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	Steps to be used in Hessian update:  2 1
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	Updated Hessian (in au) 
- 	   0.227682   0.024412   0.139602
-	   0.024412   1.077889   0.007040
-	   0.139602   0.007040  -0.160754
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Projected (PHP) Hessian matrix
-	   0.227682   0.024412   0.139602
-	   0.024412   1.077889   0.007040
-	   0.139602   0.007040  -0.160754
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	         Geometry (au)                                       Gradient (au)
-  -1.1291877918   1.9408746179   0.0000000000		  -0.0006983416   0.0120120612   0.0000000000
-  -1.1291877918  -0.2884080018   0.0000000000		  -0.0004174663  -0.0115001224  -0.0000000000
-   1.0489323430   0.1074645465   0.0000000000		   0.0011158079  -0.0005119388   0.0000000000
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	Current Step Report 
- 
-	Current energy:       -92.8067043458
-	Energy change for the previous step:
-		Actual       :        -0.0008909724
-		Projected    :        -0.0009003105
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	Energy ratio =    0.98963
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	Energy ratio indicates good step.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	Intrafrag trust radius increased to   0.15.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hessian eigenvalues 	 -0.205721  0.271848  1.078689
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Transforming the PES with image function to search for a saddlepoint
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	Using RFO solution 1.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	Determining Cartesian step for fragment 1.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	Successfully converged to displaced geometry.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	RMS(dx):  1.525e-08 	Max(dx):  2.999e-08 	RMS(dq):  2.867e-16
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	        --- Internal Coordinate Step in ANG or DEG, aJ/ANG or AJ/DEG ---
-	-------------------------------------------------------------------------------
-	           Coordinate      Previous         Force          Change          New 
-	           ----------      --------        ------          ------        ------
-	               R(1,2)       1.17969       -0.09896       -0.02023       1.15945
-	               R(2,3)       1.17149       -0.00829        0.00005       1.17154
-	             B(1,2,3)      79.69896       -0.00012       -1.34799      78.35096
-	-------------------------------------------------------------------------------
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	|target step| :    0.0448938116
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	gradient     :   -0.0110443649
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	hessian      :    0.2455293845
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	|target step| :    0.0448938116
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	gradient     :   -0.0110443649
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	hessian      :    0.2455293845
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	Norm of achieved step-size    0.0448938116
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	Norm of achieved step-size (cart):    0.0498207786
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Molsys:
-
-	                            ===&gt; Fragment 1 &lt;== 
-
-	 Z (Atomic Numbers)          Masses                          Geom                  
-	       1.000000             1.007825         -1.10418702  1.91007297  0.00000000   
-	       6.000000            12.000000         -1.14031008 -0.28067665  0.00000000   
-	       7.000000            14.003074          1.03505387  0.13053485  0.00000000   
-
-	 - Coordinate -           - BOHR/RAD -       - ANG/DEG -
-	 R(1,2)           =         2.191047           1.159452
-	 R(2,3)           =         2.213889           1.171539
-	 B(1,2,3)         =         1.367482          78.350962
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Performing convergence check.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	                                 ==&gt; Convergence Check &lt;==                                  
-    
-	Measures of convergence in internal coordinates in au.
-    
-	Criteria marked as inactive (o), active &amp; met (*), and active &amp; unmet ( ).
-
-	----------------------------------------------------------------------------------------------
-	   Step    Total Energy     Delta E     Max Force     RMS Force      Max Disp      RMS Disp   
-	----------------------------------------------------------------------------------------------
-	  Convergence Criteria     1.00e-06 *    3.00e-04 *             o    1.20e-03 *             o
-	----------------------------------------------------------------------------------------------
-	     3     -92.80670435   -8.91e-04      1.20e-02      7.02e-03 o    3.82e-02      2.59e-02 o  ~
-	----------------------------------------------------------------------------------------------
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	Convergence check returned False
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PLANNING Atomic:  keywords={&#39;SCF__GUESS&#39;: &#39;READ&#39;, &#39;GUESS_MIX&#39;: 1, &#39;SCF__INTS_TOLERANCE&#39;: 1e-12, &#39;OPT_TYPE&#39;: &#39;TS&#39;, &#39;REFERENCE&#39;: &#39;UHF&#39;, &#39;function_kwargs&#39;: {}}
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Compute gradient(): method=scf, basis=cc-pvdz, molecule=default, nre=24.225152735258785
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Return gradient(): -92.80694788500729
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[-0.00056414 -0.00128253  0.00000000]
- [-0.00064708  0.00160287 -0.00000000]
- [ 0.00121123 -0.00032035 -0.00000000]]
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	Performing BOFILL update.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	Using 3 previous steps for update.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	Steps to be used in Hessian update:  3 2 1
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	Updated Hessian (in au) 
- 	   0.238129   0.009896   0.130771
-	   0.009896   1.074084   0.005700
-	   0.130771   0.005700  -0.157422
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Projected (PHP) Hessian matrix
-	   0.238129   0.009896   0.130771
-	   0.009896   1.074084   0.005700
-	   0.130771   0.005700  -0.157422
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	         Geometry (au)                                       Gradient (au)
-  -1.1240909918   1.8775499654   0.0000000000		  -0.0005641421  -0.0012825263   0.0000000000
-  -1.1240909918  -0.3134974527   0.0000000000		  -0.0006470838   0.0016028740  -0.0000000000
-   1.0441977909   0.1335226521   0.0000000000		   0.0012112259  -0.0003203476  -0.0000000000
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	Current Step Report 
- 
-	Current energy:       -92.8069478850
-	Energy change for the previous step:
-		Actual       :        -0.0002435392
-		Projected    :        -0.0002478974
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	Energy ratio =    0.98242
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	Energy ratio indicates good step.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	Intrafrag trust radius increased to   0.45.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hessian eigenvalues 	 -0.196752  0.277298  1.074244
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Transforming the PES with image function to search for a saddlepoint
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	Using RFO solution 1.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	Determining Cartesian step for fragment 1.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	Successfully converged to displaced geometry.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	RMS(dx):  1.765e-12 	Max(dx):  3.206e-12 	RMS(dq):  2.564e-16
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	        --- Internal Coordinate Step in ANG or DEG, aJ/ANG or AJ/DEG ---
-	-------------------------------------------------------------------------------
-	           Coordinate      Previous         Force          Change          New 
-	           ----------      --------        ------          ------        ------
-	               R(1,2)       1.15945        0.01057        0.00041       1.15987
-	               R(2,3)       1.17154       -0.00924       -0.00058       1.17096
-	             B(1,2,3)      78.35096       -0.00009        0.48487      78.83583
-	-------------------------------------------------------------------------------
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	|target step| :    0.0085691610
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	gradient     :    0.0009598752
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	hessian      :   -0.1120038600
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	|target step| :    0.0085691610
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	gradient     :    0.0009598752
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	hessian      :   -0.1120038600
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	Norm of achieved step-size    0.0085691610
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	Norm of achieved step-size (cart):    0.0112368075
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Molsys:
-
-	                            ===&gt; Fragment 1 &lt;== 
-
-	 Z (Atomic Numbers)          Masses                          Geom                  
-	       1.000000             1.007825         -1.13090605  1.88098793  0.00000000   
-	       6.000000            12.000000         -1.12102112 -0.31082094  0.00000000   
-	       7.000000            14.003074          1.04794298  0.12740817  0.00000000   
-
-	 - Coordinate -           - BOHR/RAD -       - ANG/DEG -
-	 R(1,2)           =         2.191831           1.159867
-	 R(2,3)           =         2.212792           1.170959
-	 B(1,2,3)         =         1.375945          78.835828
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Performing convergence check.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	                                 ==&gt; Convergence Check &lt;==                                  
-    
-	Measures of convergence in internal coordinates in au.
-    
-	Criteria marked as inactive (o), active &amp; met (*), and active &amp; unmet ( ).
-
-	----------------------------------------------------------------------------------------------
-	   Step    Total Energy     Delta E     Max Force     RMS Force      Max Disp      RMS Disp   
-	----------------------------------------------------------------------------------------------
-	  Convergence Criteria     1.00e-06 *    3.00e-04 *             o    1.20e-03 *             o
-	----------------------------------------------------------------------------------------------
-	     4     -92.80694789   -2.44e-04      1.28e-03      1.22e-03 o    8.46e-03      4.95e-03 o  ~
-	----------------------------------------------------------------------------------------------
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	Convergence check returned False
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PLANNING Atomic:  keywords={&#39;SCF__GUESS&#39;: &#39;READ&#39;, &#39;GUESS_MIX&#39;: 1, &#39;SCF__INTS_TOLERANCE&#39;: 1e-12, &#39;OPT_TYPE&#39;: &#39;TS&#39;, &#39;REFERENCE&#39;: &#39;UHF&#39;, &#39;function_kwargs&#39;: {}}
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Compute gradient(): method=scf, basis=cc-pvdz, molecule=default, nre=24.220786714952347
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Return gradient(): -92.80694434684641
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[ 0.00006412 -0.00002088 -0.00000000]
- [-0.00002395 -0.00003593  0.00000000]
- [-0.00004018  0.00005681  0.00000000]]
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	Performing BOFILL update.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	Using 4 previous steps for update.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	Steps to be used in Hessian update:  4 3 2 1
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	Updated Hessian (in au) 
- 	   0.233122   0.009233   0.127938
-	   0.009233   1.073234   0.004887
-	   0.127938   0.004887  -0.160017
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Projected (PHP) Hessian matrix
-	   0.233122   0.009233   0.127938
-	   0.009233   1.073234   0.004887
-	   0.127938   0.004887  -0.160017
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	         Geometry (au)                                       Gradient (au)
-  -1.1254542536   1.8879353416   0.0000000000		   0.0000641246  -0.0000208767  -0.0000000000
-  -1.1254542536  -0.3038958165   0.0000000000		  -0.0000239467  -0.0000359345   0.0000000000
-   1.0454641608   0.1245470317   0.0000000000		  -0.0000401779   0.0000568112   0.0000000000
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	Current Step Report 
- 
-	Current energy:       -92.8069443468
-	Energy change for the previous step:
-		Actual       :         0.0000035382
-		Projected    :         0.0000041128
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	Energy ratio =    0.86029
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	Energy ratio indicates good step.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	Intrafrag trust radius increased to      1.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hessian eigenvalues 	 -0.197988  0.270959  1.073368
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Transforming the PES with image function to search for a saddlepoint
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	Using RFO solution 1.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	Determining Cartesian step for fragment 1.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	Successfully converged to displaced geometry.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	RMS(dx):  4.729e-08 	Max(dx):  9.657e-08 	RMS(dq):  1.118e-15
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	        --- Internal Coordinate Step in ANG or DEG, aJ/ANG or AJ/DEG ---
-	-------------------------------------------------------------------------------
-	           Coordinate      Previous         Force          Change          New 
-	           ----------      --------        ------          ------        ------
-	               R(1,2)       1.15987        0.00017        0.00021       1.16008
-	               R(2,3)       1.17096        0.00023        0.00001       1.17097
-	             B(1,2,3)      78.83583        0.00001       -0.03213      78.80370
-	-------------------------------------------------------------------------------
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	|target step| :    0.0006870921
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	gradient     :    0.0001015988
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	hessian      :   -0.1478676804
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	|target step| :    0.0006870921
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	gradient     :    0.0001015988
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	hessian      :   -0.1478676804
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	Norm of achieved step-size    0.0006870921
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	Norm of achieved step-size (cart):    0.0006925174
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Molsys:
-
-	                            ===&gt; Fragment 1 &lt;== 
-
-	 Z (Atomic Numbers)          Masses                          Geom                  
-	       1.000000             1.007825         -1.12506954  1.88796382  0.00000000   
-	       6.000000            12.000000         -1.12558985 -0.30426355  0.00000000   
-	       7.000000            14.003074          1.04521504  0.12488629  0.00000000   
-
-	 - Coordinate -           - BOHR/RAD -       - ANG/DEG -
-	 R(1,2)           =         2.192227           1.160077
-	 R(2,3)           =         2.212818           1.170973
-	 B(1,2,3)         =         1.375384          78.803701
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Performing convergence check.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	                                 ==&gt; Convergence Check &lt;==                                  
-    
-	Measures of convergence in internal coordinates in au.
-    
-	Criteria marked as inactive (o), active &amp; met (*), and active &amp; unmet ( ).
-
-	----------------------------------------------------------------------------------------------
-	   Step    Total Energy     Delta E     Max Force     RMS Force      Max Disp      RMS Disp   
-	----------------------------------------------------------------------------------------------
-	  Convergence Criteria     1.00e-06 *    3.00e-04 *             o    1.20e-03 *             o
-	----------------------------------------------------------------------------------------------
-	     5     -92.80694435    3.54e-06      1.41e-04 *    8.37e-05 o    5.61e-04 *    3.97e-04 o  ~
-	----------------------------------------------------------------------------------------------
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	                      ===&gt; Final Convergence Report &lt;===                     
-
-	----------------------------------------------------------------------------
-	|   Required Criteria    |  One or More Criteria  |   Alternate Criteria   |
-	----------------------------------------------------------------------------
-	| [x]     max_force      | [ ]       max_DE       |                        |
-	|                        | [x]      max_disp      |                        |
-	----------------------------------------------------------------------------
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	Convergence check returned True
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	Converged in 5 steps!
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	Final energy is    -92.8069443468464
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	Final structure (Angstroms): 
-	Fragment 1 (Ang)
-
-	    H  -0.5953611611   0.9990674267   0.0000000000
-	    C  -0.5956364952  -0.1610093348   0.0000000000
-	    N   0.5531039794   0.0660869763   0.0000000000
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	Optimization Finished
-
-	==&gt; Optimization Summary &lt;==
-
-        
-	Measures of convergence in internal coordinates in au. (Any backward steps not shown.)
-        
-	---------------------------------------------------------------------------------------------------------------  ~
-        
-	 Step         Total Energy             Delta E       MAX Force       RMS Force        MAX Disp        RMS Disp   ~
-        
-	---------------------------------------------------------------------------------------------------------------  ~
-        
-	     1     -92.808039085046    -92.808039085046      0.05881609      0.03938079      0.19541986      0.11547006  ~
-	     2     -92.805813373374      0.002225711672      0.02469373      0.01666898      0.04107047      0.02886763  ~
-	     3     -92.806704345773     -0.000890972399      0.01201206      0.00701726      0.03823520      0.02591945  ~
-	     4     -92.806947885007     -0.000243539234      0.00128252      0.00121527      0.00846252      0.00494741  ~
-	     5     -92.806944346846      0.000003538161      0.00014055      0.00008366      0.00056072      0.00039669  ~
-	----------------------------------------------------------------------------------------------------------------
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Preparing OptimizationResult
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PLANNING Atomic:  keywords={&#39;GUESS_MIX&#39;: 1, &#39;SCF__INTS_TOLERANCE&#39;: 1e-12, &#39;OPT_TYPE&#39;: &#39;TS&#39;, &#39;REFERENCE&#39;: &#39;UHF&#39;, &#39;function_kwargs&#39;: {}}
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PLANNING Atomic:  keywords={&#39;SCF__D_CONVERGENCE&#39;: 1e-08, &#39;SCF__E_CONVERGENCE&#39;: 1e-08, &#39;GUESS_MIX&#39;: 1, &#39;SCF__INTS_TOLERANCE&#39;: 1e-12, &#39;OPT_TYPE&#39;: &#39;TS&#39;, &#39;REFERENCE&#39;: &#39;UHF&#39;, &#39;function_kwargs&#39;: {}}
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Compute gradient(): method=scf, basis=cc-pvdz, molecule=default, nre=24.220786714952354
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Optimizer: Optimization complete!
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Return gradient(): -92.80694434684615
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[ 0.00006412 -0.00002087 -0.00000000]
- [-0.00002396 -0.00003594  0.00000000]
- [-0.00004016  0.00005682 -0.00000000]]
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Compute hessian(): method=scf, basis=cc-pvdz, molecule=default, nre=24.220786714952354
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Return hessian(): -92.80694434684615
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[-0.03563030 -0.05427614  0.00000000  0.04069603  0.09123981 -0.00000000 -0.00506573 -0.03696366  0.00000000]
- [-0.05427614  0.29037575  0.00000000  0.06012139 -0.23445271 -0.00000000 -0.00584524 -0.05592305  0.00000000]
- [ 0.00000000  0.00000000 -0.00001531  0.00000000 -0.00000000 -0.00001423 -0.00000000 -0.00000000  0.00002954]
- [ 0.04069603  0.06012139  0.00000000  1.15019248  0.13380248  0.00000000 -1.19088851 -0.19392387 -0.00000000]
- [ 0.09123981 -0.23445271 -0.00000000  0.13380248  0.18675835  0.00000000 -0.22504229  0.04769435 -0.00000000]
- [-0.00000000 -0.00000000 -0.00001423  0.00000000  0.00000000  0.00002526 -0.00000000 -0.00000000 -0.00001103]
- [-0.00506573 -0.00584524 -0.00000000 -1.19088851 -0.22504229 -0.00000000  1.19595424  0.23088753  0.00000000]
- [-0.03696366 -0.05592305 -0.00000000 -0.19392387  0.04769435 -0.00000000  0.23088753  0.00822869  0.00000000]
- [ 0.00000000  0.00000000  0.00002954 -0.00000000 -0.00000000 -0.00001103  0.00000000  0.00000000 -0.00001851]]
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Warning: thermodynamics relations excluded imaginary frequencies: [&#39;1184.8256i&#39;]
-The harmonic frequency for mode 0 is  -1184.8 cm^-1
-The harmonic frequency for mode 1 is   2230.3 cm^-1
-The harmonic frequency for mode 2 is   2885.4 cm^-1
 </pre></div>
 </div>
 </div>
@@ -5510,6 +4817,15 @@ The harmonic frequency for mode 2 is   2885.4 cm^-1
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reflection-symmetry-of-the-vibrational-probability-density">Reflection: Symmetry of the Vibrational Probability Density</a></li>
 </ul>
 </li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#quantum-tunneling-in-the-morse-potential">🌉 Quantum Tunneling in the Morse Potential</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">🧭 Question</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#guided-exercise-tunneling-probability-for-the-ground-state-of-co">🧩 Guided Exercise: Tunneling Probability for the Ground State of CO</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-complete-the-following-block-of-code-to-compute-the-classical-turning-points">Step 1: Complete the following block of code to compute the classical turning points</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-integrate-the-probability-density-over-the-range-of-r-outside-of-rtp-l-and-rtp-r">Step 2: Integrate the probability density over the range of r outside of rtp_l and rtp_r</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reflection-comparing-r-in-harmonic-vs-morse-oscillators">Reflection: Comparing ⟨r⟩ in Harmonic vs. Morse Oscillators</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#transition-state-optimization">Transition State Optimization</a></li>
 </ul>

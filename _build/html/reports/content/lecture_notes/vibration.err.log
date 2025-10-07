@@ -22,84 +22,22 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-fig = plt.figure()
+# TODO: Compute classical turning points
+# Use the provided helper function turning_points(E, De, a, re)
+# and print their values in meters.
 
-# lists of 2d line objects ... each frame will be an element in the list
-line2, = plt.plot([], [], color = 'red', lw=2, label = 'quantum')
-line1, = plt.plot([], [], color = 'blue', lw=2, label = 'classical')
+rtp_l, rtp_r = ???
 
-# figure details
-plt.xlim(-7, 7)
-plt.ylim(0, 1)
-plt.xlabel('displacement')
-plt.ylabel('probability')
-plt.legend(loc='upper left')
+print(f" Left turning point:  {rtp_l:.4e} m")
+print(f" Right turning point: {rtp_r:.4e} m")
 
-# animation function
-def probability_density(v):
 
-    # energy
-    my_energy = hbar * omega * ( v + 0.5)
-
-    # turning point E = V(x) = 1/2 k x^2 = 2 m nu^2 pi^2 x^2
-    my_x_tp = np.sqrt(my_energy / (2 * m * nu**2 * np.pi**2 ))
-
-    # grid [-x_tp:x_tp]
-    x_classical = np.linspace(-my_x_tp+0.1, my_x_tp-0.1, 5000, dtype = np.float64)
-
-    # grid [-7:7]
-    x_quantum = np.linspace(-7, 7, 5000, dtype = np.float64)
-
-    # hermite polynomial
-    H_v = scipy.special.hermite(v)
-
-    # normalization constant
-    N_v = ( 2**v * math.factorial(v))**(-0.5) * (alpha/np.pi)**0.25
-
-    # wave function
-    psi_v = N_v * np.exp(-alpha*x_quantum**2/2) * H_v(alpha**0.5 * x_quantum)
-    P_quantum = psi_v.conj() * psi_v
-
-    # P = 1/(pi * sqrt(xtp^2 - x^2))
-    P_classical = 1.0 / ( np.pi * np.sqrt(my_x_tp**2 - x_classical**2))
-
-    P.append(my_P)
-
-    line1.set_data(x_classical, P_classical)
-    line2.set_data(x_quantum, P_quantum)
-    
-    return (line1, line2)
-
-from matplotlib import animation
-
-anim = animation.FuncAnimation(fig, probability_density, frames=31, interval=300, blit=True)
-
-from IPython.display import HTML
-HTML(anim.to_html5_video())
 ------------------
 
 
-[31m---------------------------------------------------------------------------[39m
-[31mRuntimeError[39m                              Traceback (most recent call last)
-[36mCell[39m[36m [39m[32mIn[10][39m[32m, line 54[39m
-[32m     51[39m anim = animation.FuncAnimation(fig, probability_density, frames=[32m31[39m, interval=[32m300[39m, blit=[38;5;28;01mTrue[39;00m)
-[32m     53[39m [38;5;28;01mfrom[39;00m[38;5;250m [39m[34;01mIPython[39;00m[34;01m.[39;00m[34;01mdisplay[39;00m[38;5;250m [39m[38;5;28;01mimport[39;00m HTML
-[32m---> [39m[32m54[39m HTML(anim.to_html5_video())
+  [36mCell[39m[36m [39m[32mIn[18][39m[32m, line 5[39m
+[31m    [39m[31mrtp_l, rtp_r = ???[39m
+                   ^
+[31mSyntaxError[39m[31m:[39m invalid syntax
 
-[36mFile [39m[32m~/miniconda3/envs/jbook/lib/python3.11/site-packages/matplotlib/animation.py:1302[39m, in [36mAnimation.to_html5_video[39m[34m(self, embed_limit)[39m
-[32m   1299[39m path = Path(tmpdir, [33m"[39m[33mtemp.m4v[39m[33m"[39m)
-[32m   1300[39m [38;5;66;03m# We create a writer manually so that we can get the[39;00m
-[32m   1301[39m [38;5;66;03m# appropriate size for the tag[39;00m
-[32m-> [39m[32m1302[39m Writer = writers[mpl.rcParams[[33m'[39m[33manimation.writer[39m[33m'[39m]]
-[32m   1303[39m writer = Writer(codec=[33m'[39m[33mh264[39m[33m'[39m,
-[32m   1304[39m                 bitrate=mpl.rcParams[[33m'[39m[33manimation.bitrate[39m[33m'[39m],
-[32m   1305[39m                 fps=[32m1000.[39m / [38;5;28mself[39m._interval)
-[32m   1306[39m [38;5;28mself[39m.save([38;5;28mstr[39m(path), writer=writer)
-
-[36mFile [39m[32m~/miniconda3/envs/jbook/lib/python3.11/site-packages/matplotlib/animation.py:121[39m, in [36mMovieWriterRegistry.__getitem__[39m[34m(self, name)[39m
-[32m    119[39m [38;5;28;01mif[39;00m [38;5;28mself[39m.is_available(name):
-[32m    120[39m     [38;5;28;01mreturn[39;00m [38;5;28mself[39m._registered[name]
-[32m--> [39m[32m121[39m [38;5;28;01mraise[39;00m [38;5;167;01mRuntimeError[39;00m([33mf[39m[33m"[39m[33mRequested MovieWriter ([39m[38;5;132;01m{[39;00mname[38;5;132;01m}[39;00m[33m) not available[39m[33m"[39m)
-
-[31mRuntimeError[39m: Requested MovieWriter (ffmpeg) not available
 
