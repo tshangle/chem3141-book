@@ -22,13 +22,8 @@ parts:
 
   - caption: Computational Sets
     chapters:
-      - file: content/computational_sets/CO_Perturbation_Theory
-      - file: content/computational_sets/hydrogen_wavefunctions
-      - file: content/computational_sets/linear_variational_method
-      - file: content/computational_sets/note05
-      - file: content/computational_sets/pib_delta_potential_dynamics
       - file: content/computational_sets/Spin_one_half
-
+      - file: content/computational_sets/two_qubit_entangled
   - caption: Resources
     chapters:
       - file: content/resources/formula_sheet
