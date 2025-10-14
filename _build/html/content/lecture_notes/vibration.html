@@ -210,9 +210,10 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Computational Sets</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../computational_sets/note05.html">Additional Notes on Spin</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../computational_sets/Spin_one_half.html">Computational Set 1: Introduction to Spin 1/2</a></li>
 
+
+<li class="toctree-l1"><a class="reference internal" href="../computational_sets/two_qubit_entangled.html">Computational Set 2: Entangling Operations through strong light-matter coupling</a></li>
 
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Resources</span></p>
@@ -583,7 +584,9 @@ Requirement already satisfied: scipy in /Users/jfoley19/miniconda3/envs/jbook/li
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: pyberny in /Users/jfoley19/miniconda3/envs/jbook/lib/python3.11/site-packages (0.6.3)
-Requirement already satisfied: numpy&lt;2.0,&gt;=1.15 in /Users/jfoley19/miniconda3/envs/jbook/lib/python3.11/site-packages (from pyberny) (1.26.4)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: numpy&lt;2.0,&gt;=1.15 in /Users/jfoley19/miniconda3/envs/jbook/lib/python3.11/site-packages (from pyberny) (1.26.4)
 </pre></div>
 </div>
 </div>
@@ -3708,7 +3711,7 @@ c = 2.99792458 \times 10^{10} \: \text{cm/s}
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>geometric-optimize called with the following command line:
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/jfoley19/miniconda3/envs/jbook/lib/python3.11/site-packages/ipykernel_launcher.py -f /private/var/folders/dp/63x0n7nd4_q9b8cbskjk1xpr0000gp/T/tmp418zt47h.json --HistoryManager.hist_file=:memory:
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/jfoley19/miniconda3/envs/jbook/lib/python3.11/site-packages/ipykernel_launcher.py -f /private/var/folders/dp/63x0n7nd4_q9b8cbskjk1xpr0000gp/T/tmplsb9hb0j.json --HistoryManager.hist_file=:memory:
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
@@ -3807,7 +3810,7 @@ c = 2.99792458 \times 10^{10} \: \text{cm/s}
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-=# <span class=" -Color -Color-Bold"> geomeTRIC started. Version: 1.1 </span> #=-
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Current date and time: 2025-10-07 15:02:03
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Current date and time: 2025-10-09 08:00:01
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>#========================================================#
@@ -3819,8 +3822,8 @@ c = 2.99792458 \times 10^{10} \: \text{cm/s}
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>#========================================================#
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>customengine              &lt;pyscf.geomopt.geometric_solver.PySCFEngine object at 0x168971650&gt; 
-input                     /var/folders/dp/63x0n7nd4_q9b8cbskjk1xpr0000gp/T/tmpmp2t_26f/ae1ef557-d93f-4703-915f-29a91f566d72 
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>customengine              &lt;pyscf.geomopt.geometric_solver.PySCFEngine object at 0x128ddea50&gt; 
+input                     /var/folders/dp/63x0n7nd4_q9b8cbskjk1xpr0000gp/T/tmp03ogy802/710bcb46-7e62-49b8-96e4-6fa044ee5322 
 logIni                    /Users/jfoley19/miniconda3/envs/jbook/lib/python3.11/site-packages/pyscf/geomopt/log.ini 
 </pre></div>
 </div>
@@ -3935,7 +3938,7 @@ Rotation-C 1-2
     
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Time elapsed since start of run_optimizer: 0.335 seconds
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Time elapsed since start of run_optimizer: 0.318 seconds
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C          -0.00000000        0.00000000        0.04492827
@@ -4406,6 +4409,10 @@ Your task will be to:</p>
 <span class="k">def</span><span class="w"> </span><span class="nf">morse_lambda</span><span class="p">(</span><span class="n">mu</span><span class="p">,</span> <span class="n">De</span><span class="p">,</span> <span class="n">a</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Return λ = sqrt(2µDe)/(aħ).&quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">mu</span> <span class="o">*</span> <span class="n">De</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">a</span> <span class="o">*</span> <span class="n">hbar</span><span class="p">)</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">vmax</span><span class="p">(</span><span class="n">lam</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Maximum bound-state quantum number.&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">floor</span><span class="p">(</span><span class="n">lam</span> <span class="o">-</span> <span class="mf">0.5</span><span class="p">))</span>
 
     
 <span class="k">def</span><span class="w"> </span><span class="nf">make_rgrid</span><span class="p">(</span><span class="n">re</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">f</span><span class="o">=</span><span class="mf">0.999</span><span class="p">):</span>
