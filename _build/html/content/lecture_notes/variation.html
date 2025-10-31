@@ -200,6 +200,7 @@
 <li class="toctree-l1"><a class="reference internal" href="rotation.html">Chapter 5: Angular Momentum, and Rotational Motion</a></li>
 <li class="toctree-l1"><a class="reference internal" href="hydrogen.html">Chapter 6: The Hydrogen Atom</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Chapter 7: The Variation Theorem</a></li>
+
 <li class="toctree-l1"><a class="reference internal" href="perturbation.html">Chapter 8: Perturbation Theory</a></li>
 <li class="toctree-l1"><a class="reference internal" href="SphHarm_visualize.html">Visualizing Spherical harmonics</a></li>
 </ul>
@@ -215,7 +216,12 @@
 
 <li class="toctree-l1"><a class="reference internal" href="../computational_sets/two_qubit_entangled.html">Computational Set 2: Entangling Operations through strong light-matter coupling</a></li>
 
-<li class="toctree-l1"><a class="reference internal" href="../computational_sets/CO_Perturbation_Theory_Quartic.html">Vibrational Transitions in CO Using Perturbation THeory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../computational_sets/CO_Perturbation_Theory_Quartic.html">Vibrational Transitions in CO Using Perturbation Theory</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="../computational_sets/Newton-Raphson.html">🧭 Guided Exercise: Newton–Raphson Step for a Quadratic Function</a></li>
+
+
 
 
 </ul>
@@ -453,6 +459,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Chapter 7: The Variation Theorem</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-variation-theorem-for-ground-states">The Variation Theorem for Ground States</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-variation-theorem-for-excited-states">The Variation Theorem for Excited States</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-linear-variation-method">The Linear Variation Method</a><ul class="nav section-nav flex-column">
@@ -463,6 +470,24 @@ document.write(`
 </ul>
 </li>
 </ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#approach">Approach</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#form-of-the-trial-wavefunction">Form of the trial wavefunction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#form-of-the-energy-functional-of-the-trial-wavefunction">Form of the energy functional of the trial wavefunction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#atomic-units">Atomic Units</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solving-the-linear-variational-problem">Solving the Linear Variational Problem</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#questions-part-1">Questions Part 1:</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#variational-optimization">Variational optimization</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#visualizing-the-variational-ground-state">Visualizing the variational ground-state</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#questions-part-2">Questions Part 2:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#behavior-of-total-energy-kinetic-energy-and-potential-energy-functionals-with-basis-set-size">Behavior of Total Energy, Kinetic Energy, and Potential Energy functionals with basis set size.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#finite-well">Finite Well</a></li>
+</ul>
+</li>
+</ul>
+
             </nav>
         </div>
     </div>
@@ -475,7 +500,7 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="chapter-7-the-variation-theorem">
 <h1>Chapter 7: The Variation Theorem<a class="headerlink" href="#chapter-7-the-variation-theorem" title="Link to this heading">#</a></h1>
-<p>Prof. Eugene DePrince, Florida State University</p>
+<p>Prof. Eugene DePrince, Florida State University, Prof. Jay Foley, UNC Charlotte</p>
 <p>The preceding notebooks have considered analytically solvable model problems that culminated in the hydrogenic atom problem. For other, more complicated problems, it will not be possible, in general, to find exact analytic solutions to the time-independent Schrödinger equation. As such, this notebook describes one strategy to find approximate solutions to the Schrödinger equation using the variation theorem.</p>
 <section id="the-variation-theorem-for-ground-states">
 <h2>The Variation Theorem for Ground States<a class="headerlink" href="#the-variation-theorem-for-ground-states" title="Link to this heading">#</a></h2>
@@ -605,12 +630,6 @@ N x(L-x)\text{, } &amp;0 \le x \le L \\
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="../../_images/dc4a2233bfd4a94c9461a9a23250697916bfe9ee0d82dd3accfa7b2cc0965b96.png" src="../../_images/dc4a2233bfd4a94c9461a9a23250697916bfe9ee0d82dd3accfa7b2cc0965b96.png" />
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>W =    4.99792 Eh
-</pre></div>
-</div>
-</div>
 </div>
 <p>How does this result compare to the true ground-state energy for the PIB problem? Recall</p>
 <div class="math notranslate nohighlight">
@@ -737,13 +756,6 @@ W = \frac{\langle \phi | \hat{H} \phi \rangle}{\langle \phi |\phi \rangle}
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c1 =    1.50478
-c2 =    0.37209
-w  =    4.93487 Eh
-</pre></div>
-</div>
-</div>
 </div>
 <p>Wow! The variational integral, <span class="math notranslate nohighlight">\(W,\)</span> shows only a 0.001% error relative to the exact ground-state energy for the PIB problem, 4.93480 <span class="math notranslate nohighlight">\(E_\text{h}\)</span>! Now, let’s normalize <span class="math notranslate nohighlight">\(\phi\)</span> and visualize it relative to the exact ground-state wave function.</p>
 <div class="cell docutils container">
@@ -766,9 +778,6 @@ w  =    4.93487 Eh
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../../_images/698a078e1f93b76f77b04e9628deebb3a8e744e67449b60924c1e8a872a9db48.png" src="../../_images/698a078e1f93b76f77b04e9628deebb3a8e744e67449b60924c1e8a872a9db48.png" />
 </div>
 </div>
 <p>We can see that the approximate wave function, <span class="math notranslate nohighlight">\(\phi,\)</span> is indistinguishable from <span class="math notranslate nohighlight">\(\psi_1\)</span> on the scale of this figure.</p>
@@ -918,9 +927,6 @@ N x(L-x)(L/2 - x) \text{, } &amp;0 \le x \le L \\
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../../_images/06097f324b3124ac8c41b6904280d000e5d9ae643dc64ad6723532f462333c64.png" src="../../_images/06097f324b3124ac8c41b6904280d000e5d9ae643dc64ad6723532f462333c64.png" />
 </div>
 </div>
 <p>As can be seen, this trial function seems like it will be a reasonable approximation to the true wave function for the <span class="math notranslate nohighlight">\(n=2\)</span> state.</p>
@@ -1543,12 +1549,6 @@ c &amp;= H_{11} H_{22} - H_{12}H_{21}
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>W1  =    4.93487 Eh
-W3  =   51.06507 Eh
-</pre></div>
-</div>
-</div>
 </div>
 <p>Wow! <span class="math notranslate nohighlight">\(W_1\)</span> calculcated in this way, which provides an estimate for the exact ground-state energy, <span class="math notranslate nohighlight">\(E_1,\)</span> is identical to the estimate we found earlier by explicit numerical minimization of the variational integral. As a reminder, this estimate shows only a 0.001% error relative to the exact ground-state energy for the PIB problem, 4.93480 <span class="math notranslate nohighlight">\(E_\text{h}\)</span>! Moreover, we also have an estimate to the energy of the first excited state of even parity, which corresponds to the second excited-state energy overall, <span class="math notranslate nohighlight">\(E_3\)</span>. Recall</p>
 <div class="math notranslate nohighlight">
@@ -1634,12 +1634,6 @@ H_{ij} &amp;= \langle f_i | \hat{H} | f_j \rangle \\
 
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;W2  = </span><span class="si">%10.5f</span><span class="s2"> Eh&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">W2</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;W4  = </span><span class="si">%10.5f</span><span class="s2"> Eh&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">W4</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>W2  =   19.75077 Eh
-W4  =  100.24872 Eh
 </pre></div>
 </div>
 </div>
@@ -1760,7 +1754,518 @@ W_1 &amp; 0 &amp; 0 &amp; ... \\
 {\bf C}^{-1} {\bf H} {\bf C} &amp;= {\bf W}
 \end{align}\]</div>
 <p>This expression indicates that the eigenvectors of <span class="math notranslate nohighlight">\({\bf H}\)</span> form a matrix that bring the Hamiltonian to diagonal form. In other words, if the basis used to represent the Hamiltonian is orthonormal, then the linear variational problem reduces to the search for the set of vectors that diagonalize <span class="math notranslate nohighlight">\({\bf H}\)</span>.</p>
-<p>As an example, let us revisit the one-dimensional finite square well potential problem. For this problem, the potential has the form</p>
+<p>We will apply the Linear Variational Method to the particle in a box of length <span class="math notranslate nohighlight">\(10\)</span> atomic units
+with a delta function potential centered at <span class="math notranslate nohighlight">\(x=5\)</span> atomic units. We will plot the delta function potential and the infinite potential walls at <span class="math notranslate nohighlight">\(x = 0\)</span> and <span class="math notranslate nohighlight">\(x = 10\)</span>
+in the next cell using the python library <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> and the special function from the <code class="docutils literal notranslate"><span class="pre">scipy</span></code> library called
+<code class="docutils literal notranslate"><span class="pre">signal.unit_impulse</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">scipy</span><span class="w"> </span><span class="kn">import</span> <span class="n">signal</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">matplotlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+
+<span class="c1"># create an array of x-values between 0 and 10</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">500</span><span class="p">)</span>
+
+<span class="c1"># create the delta function potential.  Need to specify that it will be in the middle </span>
+<span class="c1"># of 500 samples along x.  We will scale this by the amplitude of the normalized energy </span>
+<span class="c1"># eigenstates so that this potential appears on the same scale as the eigenfunctions</span>
+<span class="n">V_x</span> <span class="o">=</span> <span class="n">signal</span><span class="o">.</span><span class="n">unit_impulse</span><span class="p">(</span><span class="mi">500</span><span class="p">,</span> <span class="n">idx</span><span class="o">=</span><span class="s1">&#39;mid&#39;</span><span class="p">)</span> <span class="o">*</span> <span class="mi">2</span><span class="o">/</span><span class="mi">10</span>
+<span class="n">V_0</span> <span class="o">=</span> <span class="n">signal</span><span class="o">.</span><span class="n">unit_impulse</span><span class="p">(</span><span class="mi">500</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">*</span> <span class="mi">5</span>
+<span class="n">V_L</span> <span class="o">=</span> <span class="n">signal</span><span class="o">.</span><span class="n">unit_impulse</span><span class="p">(</span><span class="mi">500</span><span class="p">,</span> <span class="mi">499</span><span class="p">)</span> <span class="o">*</span> <span class="mi">5</span>
+<span class="n">V</span> <span class="o">=</span> <span class="n">V_x</span> <span class="o">+</span> <span class="n">V_0</span> <span class="o">+</span> <span class="n">V_L</span>
+
+<span class="c1"># now plot V_x against x</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">V</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Potential&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Position (atomic units)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Potential (atomic units)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="o">/</span><span class="mi">10</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="approach">
+<h1>Approach<a class="headerlink" href="#approach" title="Link to this heading">#</a></h1>
+<p>We can write the Hamiltonian for this system between <span class="math notranslate nohighlight">\(x=0\)</span> and <span class="math notranslate nohighlight">\(x=10\)</span> as follows:</p>
+<div class="math notranslate nohighlight">
+\[\hat{H} = -\frac{\hbar^2}{2m} \frac{d^2}{dx^2} + \delta(x-5), \]</div>
+<p>and we notice that this looks very similar to the Hamiltonian we know from the ordinary particle in a box
+except for the presence of this peculiar spikey potential right in the middle of the box.  We could try to find <a class="reference external" href="https://arxiv.org/pdf/1001.0311.pdf">the exact eigenfunctions for this Hamiltonian</a>, but we can also obtain insights and reasonably good results utilizing approximate methods, such as the <a class="reference external" href="https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Supplemental_Modules_(Physical_and_Theoretical_Chemistry)/Quantum_Mechanics/17%3A_Quantum_Calculations/Variational_Method#:~:text=The%20Variational%20Method%20is%20a,the%20known%20and%20approximated%20energies">Variational Method</a> or <a class="reference external" href="https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Book%3A_Quantum_States_of_Atoms_and_Molecules_(Zielinksi_et_al)/09%3A_The_Electronic_States_of_the_Multielectron_Atoms/9.03%3A_Perturbation_Theory">Perturbation Theory</a>.  Here we will use the Variational Method.</p>
+<section id="form-of-the-trial-wavefunction">
+<h2>Form of the trial wavefunction<a class="headerlink" href="#form-of-the-trial-wavefunction" title="Link to this heading">#</a></h2>
+<p>In particular, we will optimize the trial wavefunction given by
+\begin{equation}
+\Phi(x) = \sum_{n=1}^N c_n \psi_n(x)
+\end{equation}
+where the expansion coefficients <span class="math notranslate nohighlight">\(c_n\)</span> are real numbers
+and <span class="math notranslate nohighlight">\(\psi_n(x)\)</span> are the energy eigenfunctions of the ordinary particle in a box that has no potential
+between <span class="math notranslate nohighlight">\(x=0\)</span> and <span class="math notranslate nohighlight">\(x=L\)</span>.  In particular, these eigenfunctions have the form
+\begin{equation}
+\psi_n(x) = \sqrt{\frac{2}{10} } {\rm sin}\left(\frac{n \pi x}{10} \right).
+\end{equation}</p>
+</section>
+<section id="form-of-the-energy-functional-of-the-trial-wavefunction">
+<h2>Form of the energy functional of the trial wavefunction<a class="headerlink" href="#form-of-the-energy-functional-of-the-trial-wavefunction" title="Link to this heading">#</a></h2>
+<p>We will seek to minimize the energy functional of the trial wavefunction through the expansion coefficients, where the
+energy functional of the trial wavefunction can be written as
+\begin{equation}
+E_{trial} = \frac{\int_0^{10} \Phi^* (x) : \hat{H} : \Phi(x) dx }{\int_0^{10} \Phi^* (x) : \Phi(x) dx },
+\end{equation}
+where we have recognized that the boundaries of the box are at <span class="math notranslate nohighlight">\(x=0\)</span> and <span class="math notranslate nohighlight">\(x=10\)</span>, so our range of integration
+goes between these boundaries.</p>
+</section>
+<section id="atomic-units">
+<h2>Atomic Units<a class="headerlink" href="#atomic-units" title="Link to this heading">#</a></h2>
+<p>We will express our Hamiltonian in atomic units where <span class="math notranslate nohighlight">\(\hbar = 1\)</span> and <span class="math notranslate nohighlight">\(m = 1\)</span>, so we can write the Hamiltonian in
+this unit system as:
+\begin{equation}
+\hat{H} = -\frac{1}{2} \frac{d^2}{dx^2} + \delta(x-5).
+\end{equation}
+We further note that the Hamiltonian can be written as a sum
+of kinetic and potential operators, <span class="math notranslate nohighlight">\(\hat{H} = \hat{T} + \hat{V}\)</span>
+where <span class="math notranslate nohighlight">\(\hat{T} = -\frac{1}{2} \frac{d^2}{dx^2}\)</span> and <span class="math notranslate nohighlight">\(\hat{V} = \delta(x-5)\)</span>.  For the ordinary particle in a box, the Hamiltonian only contains <span class="math notranslate nohighlight">\(\hat{T}\)</span>, so we can note that the particle in a box energy eigenfunctions obey the following eigenvalue equation with the kinetic energy operator (in atomic units)
+\begin{equation}
+\hat{T} \psi_n(x) = \frac{\pi^2 n^2}{200} \psi_n(x) \equiv E_n \psi_n(x).<br />
+\end{equation}</p>
+</section>
+<section id="solving-the-linear-variational-problem">
+<h2>Solving the Linear Variational Problem<a class="headerlink" href="#solving-the-linear-variational-problem" title="Link to this heading">#</a></h2>
+<p>The Linear Variational Method is carried out by minimizing <span class="math notranslate nohighlight">\(E_{trial}\)</span> with respect to the expansion coefficients in <span class="math notranslate nohighlight">\(\Phi(x)\)</span>.  This leads
+to the condition that the partial derivative of the trial energy with
+respect to each expansion coefficient is zero:
+\begin{equation}
+\frac{\partial}{\partial c_m} E_{trial} = 0 ; ; \forall ; m.
+\end{equation}
+When this is true, the trial energy and the expansion
+coefficients satisfy the following equations:
+\begin{equation}
+E_{trial} c_m = \sum_{n=1}^N H_{nm} c_n,
+\end{equation}
+where
+\begin{equation}
+H_{nm} = \int_0^{10} \psi^*<em>n(x) \hat{H} \psi_m(x) dx.
+\end{equation}
+This can be written as an eigenvalue equation
+\begin{equation}
+{\bf H} {\bf c} = E</em>{trial} {\bf c},
+\end{equation}
+where <span class="math notranslate nohighlight">\({\bf H}\)</span> is the matrix whose elements are given by <span class="math notranslate nohighlight">\(H_{nm}\)</span> and <span class="math notranslate nohighlight">\({\bf c}\)</span> is the vector of coefficients.</p>
+</section>
+<section id="questions-part-1">
+<h2>Questions Part 1:<a class="headerlink" href="#questions-part-1" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>The matrix element <span class="math notranslate nohighlight">\(H_{nm}\)</span> can be expressed as a sum of kinetic and potential matrix elements, <span class="math notranslate nohighlight">\(T_{nm} + V_{nm}\)</span> where
+\begin{equation}
+T_{nm} = \int_0^{10} \psi^<em><em>n(x) \hat{T} \psi_m(x) dx
+\end{equation}
+and
+\begin{equation}
+V</em>{nm} = \int_0^{10} \psi^</em>_n(x) \hat{V} \psi_m(x) dx.
+\end{equation}
+Write a general expression for the elements of <span class="math notranslate nohighlight">\(T_{nm}\)</span> and <span class="math notranslate nohighlight">\(V_{nm}\)</span>
+for our particle in a box with a delta potential.</p></li>
+<li><p>Write two python functions <code class="docutils literal notranslate"><span class="pre">Kinetic_matrix_element(n,</span> <span class="pre">m)</span></code>, <code class="docutils literal notranslate"><span class="pre">Potential_matrix_element(n,</span> <span class="pre">m)</span></code> that take the indices <span class="math notranslate nohighlight">\(n\)</span> and <span class="math notranslate nohighlight">\(m\)</span> and return the corresponding value of <span class="math notranslate nohighlight">\(T_{nm}\)</span> and <span class="math notranslate nohighlight">\(V_{nm}\)</span>.  Skeleton code for this function follows.  Three helper functions are provided:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">def</span> <span class="pre">energy_eigenvalue(n,</span> <span class="pre">L,</span> <span class="pre">m)</span></code> that can provide the energy eigenvalues of the ordinary particle in a box for energy eigenstate <span class="math notranslate nohighlight">\(n\)</span>, length <span class="math notranslate nohighlight">\(L\)</span>, and mass <span class="math notranslate nohighlight">\(m\)</span></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">def</span> <span class="pre">energy_eigenfunction(n,</span> <span class="pre">L,</span> <span class="pre">x)</span></code> that can provide the value(s) of the energy eigenfunction of the ordinary particle in a box for energy eigenstate <span class="math notranslate nohighlight">\(n\)</span> with length <span class="math notranslate nohighlight">\(L\)</span> evaluated at x-value(s) <span class="math notranslate nohighlight">\(x\)</span>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">def</span> <span class="pre">Hamiltonian_matrix_element(n,</span> <span class="pre">m)</span></code> that will call the <code class="docutils literal notranslate"><span class="pre">Kinetic_matrix_element</span></code> and <code class="docutils literal notranslate"><span class="pre">Potential_matrix_element</span></code> functions to return the total Hamiltonian matrix element value.</p></li>
+</ul>
+</li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">energy_eigenvalue</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">L</span><span class="p">,</span> <span class="n">M</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Calculate the energy eigenvalue for a particle in a box.</span>
+<span class="sd">    </span>
+<span class="sd">    Arguments</span>
+<span class="sd">    ---------</span>
+<span class="sd">    n : int</span>
+<span class="sd">        Quantum number (positive integer) for the particle in a box state</span>
+<span class="sd">    L : float</span>
+<span class="sd">        Length of the box in atomic units</span>
+<span class="sd">    M : float</span>
+<span class="sd">        Mass of the particle in atomic units</span>
+<span class="sd">        </span>
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    E_n : float</span>
+<span class="sd">        Energy eigenvalue in atomic units</span>
+<span class="sd">        </span>
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+<span class="sd">    Uses the formula: E_n = n² π² / (2 M L²)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">n</span><span class="o">**</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">**</span><span class="mi">2</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">M</span> <span class="o">*</span> <span class="n">L</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">energy_eigenfunction</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">L</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Evaluate the normalized eigenfunction for a particle in a box.</span>
+<span class="sd">    </span>
+<span class="sd">    Arguments</span>
+<span class="sd">    ---------</span>
+<span class="sd">    n : int</span>
+<span class="sd">        Quantum number (positive integer) for the particle in a box state</span>
+<span class="sd">    L : float</span>
+<span class="sd">        Length of the box in atomic units</span>
+<span class="sd">    x : float or numpy.ndarray</span>
+<span class="sd">        Position(s) where the eigenfunction is evaluated (atomic units)</span>
+<span class="sd">        </span>
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    psi_n : float or numpy.ndarray</span>
+<span class="sd">        Value(s) of the normalized eigenfunction ψ_n(x)</span>
+<span class="sd">        </span>
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+<span class="sd">    Uses the formula: ψ_n(x) = √(2/L) sin(nπx/L)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span> <span class="o">/</span> <span class="n">L</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">n</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">x</span> <span class="o">/</span> <span class="n">L</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">Hamiltonian_matrix_element</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">L</span><span class="p">,</span> <span class="n">M</span><span class="p">,</span> <span class="n">x_delta</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Calculate the Hamiltonian matrix element &lt;n|H|m&gt;.</span>
+<span class="sd">    </span>
+<span class="sd">    Arguments</span>
+<span class="sd">    ---------</span>
+<span class="sd">    n : int</span>
+<span class="sd">        Quantum number for the bra state |n⟩</span>
+<span class="sd">    m : int</span>
+<span class="sd">        Quantum number for the ket state |m⟩</span>
+<span class="sd">    L : float</span>
+<span class="sd">        Length of the box in atomic units</span>
+<span class="sd">    M : float</span>
+<span class="sd">        Mass of the particle in atomic units</span>
+<span class="sd">    x_delta : float</span>
+<span class="sd">        Position of the delta function potential in atomic units</span>
+<span class="sd">        </span>
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    H_nm : float</span>
+<span class="sd">        Matrix element ⟨n|H|m⟩ = ⟨n|T|m⟩ + ⟨n|V|m⟩</span>
+<span class="sd">        </span>
+<span class="sd">    Example</span>
+<span class="sd">    -------</span>
+<span class="sd">    &gt;&gt;&gt; H_12 = Hamiltonian_matrix_element(1, 2, L=10.0, M=1.0, x_delta=5.0)</span>
+<span class="sd">    &gt;&gt;&gt; H_33 = Hamiltonian_matrix_element(3, 3, L=10.0, M=1.0, x_delta=5.0)</span>
+<span class="sd">    </span>
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+<span class="sd">    For n == m: ⟨n|H|n⟩ = E_n + ⟨n|V|n⟩</span>
+<span class="sd">    For n != m: ⟨n|H|m⟩ = ⟨n|V|m⟩</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">T_nm</span> <span class="o">=</span> <span class="n">Kinetic_matrix_element</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">L</span><span class="p">,</span> <span class="n">M</span><span class="p">)</span>
+    <span class="n">V_nm</span> <span class="o">=</span> <span class="n">Potential_matrix_element</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">L</span><span class="p">,</span> <span class="n">x_delta</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">T_nm</span> <span class="o">+</span> <span class="n">V_nm</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">Kinetic_matrix_element</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">L</span><span class="p">,</span> <span class="n">M</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Calculate the kinetic energy matrix element &lt;n|T|m&gt;.</span>
+<span class="sd">    </span>
+<span class="sd">    Arguments</span>
+<span class="sd">    ---------</span>
+<span class="sd">    n : int</span>
+<span class="sd">        Quantum number for the bra state |n⟩</span>
+<span class="sd">    m : int</span>
+<span class="sd">        Quantum number for the ket state |m⟩</span>
+<span class="sd">    L : float</span>
+<span class="sd">        Length of the box in atomic units</span>
+<span class="sd">    M : float</span>
+<span class="sd">        Mass of the particle in atomic units</span>
+<span class="sd">        </span>
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    T_nm : float</span>
+<span class="sd">        Matrix element ⟨n|T|m⟩ = E_m δ_nm</span>
+<span class="sd">        </span>
+<span class="sd">    Example</span>
+<span class="sd">    -------</span>
+<span class="sd">    &gt;&gt;&gt; T_12 = Kinetic_matrix_element(1, 2, L=10.0, M=1.0)  # Returns 0</span>
+<span class="sd">    &gt;&gt;&gt; T_33 = Kinetic_matrix_element(3, 3, L=10.0, M=1.0)  # Returns E_3</span>
+<span class="sd">    </span>
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+<span class="sd">    The kinetic energy matrix is diagonal: ⟨n|T|m⟩ = E_m if n == m, else 0</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="n">m</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">energy_eigenvalue</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">L</span><span class="p">,</span> <span class="n">M</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mf">0.0</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">Potential_matrix_element</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">L</span><span class="p">,</span> <span class="n">x_delta</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Calculate the potential energy matrix element &lt;n|V|m&gt; for V = δ(x - x_delta).</span>
+<span class="sd">    </span>
+<span class="sd">    Arguments</span>
+<span class="sd">    ---------</span>
+<span class="sd">    n : int</span>
+<span class="sd">        Quantum number for the bra state |n⟩</span>
+<span class="sd">    m : int</span>
+<span class="sd">        Quantum number for the ket state |m⟩</span>
+<span class="sd">    L : float</span>
+<span class="sd">        Length of the box in atomic units</span>
+<span class="sd">    x_delta : float</span>
+<span class="sd">        Position of the delta function potential in atomic units</span>
+<span class="sd">        </span>
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    V_nm : float</span>
+<span class="sd">        Matrix element ⟨n|V|m⟩ = ψ_n(x_delta) * ψ_m(x_delta)</span>
+<span class="sd">        </span>
+<span class="sd">    Example</span>
+<span class="sd">    -------</span>
+<span class="sd">    &gt;&gt;&gt; V_12 = Potential_matrix_element(1, 2, L=10.0, x_delta=5.0)</span>
+<span class="sd">    &gt;&gt;&gt; V_33 = Potential_matrix_element(3, 3, L=10.0, x_delta=5.0)</span>
+<span class="sd">    </span>
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+<span class="sd">    For a delta function potential V(x) = V_0 δ(x - x_delta), the matrix element is</span>
+<span class="sd">    ⟨n|V|m⟩ = V_0 ψ_n(x_delta) * ψ_m(x_delta)</span>
+<span class="sd">    This implementation assumes V_0 = 1.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">energy_eigenfunction</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">L</span><span class="p">,</span> <span class="n">x_delta</span><span class="p">)</span> <span class="o">*</span> <span class="n">energy_eigenfunction</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">L</span><span class="p">,</span> <span class="n">x_delta</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="variational-optimization">
+<h3>Variational optimization<a class="headerlink" href="#variational-optimization" title="Link to this heading">#</a></h3>
+<p>Since we see that the linear Variational Method can be cast as an eigenvalue equation <span class="math notranslate nohighlight">\({\bf H} {\bf c} = E {\bf c}\)</span>,
+we can find the Variational ground-state energy and wavefunction through the following steps:</p>
+<ul class="simple">
+<li><p>Build the matrix <span class="math notranslate nohighlight">\({\bf H}\)</span>; we will do this in the basis of energy eigenfunctions of the ordinary particle in a box</p></li>
+<li><p>Diagonalize <span class="math notranslate nohighlight">\({\bf H}\)</span>; the lowest eigenvalue will be the variational approximation to the ground-state energy and the corresponding eigenvector will represent the expansion coeefficients for the variational ground-state wavefunction in terms of the basis functions.</p></li>
+</ul>
+<p>We can use <code class="docutils literal notranslate"><span class="pre">np.linalg.eigh()</span></code> to diagonalize the Hamiltonian matrix.</p>
+<p>The following code block contains a helper function called <code class="docutils literal notranslate"><span class="pre">build_matrices(n_basis)</span></code> that will
+build and return the Hamiltonian, Kinetic Energy, and Potential Energy matrices defined above.<br />
+The argument <code class="docutils literal notranslate"><span class="pre">n_basis</span></code> will be used to determine the number of basis functions, and the
+size of the resulsing matrices will be <code class="docutils literal notranslate"><span class="pre">n_basis</span> <span class="pre">x</span> <span class="pre">n_basis</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">build_matrices</span><span class="p">(</span><span class="n">n_basis</span><span class="p">,</span> <span class="n">L</span><span class="p">,</span> <span class="n">M</span><span class="p">,</span> <span class="n">x_delta</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Build the Hamiltonian, Kinetic, and Potential energy matrices.</span>
+<span class="sd">    </span>
+<span class="sd">    Arguments</span>
+<span class="sd">    ---------</span>
+<span class="sd">    n_basis : int</span>
+<span class="sd">        Number of basis functions used to build the matrices</span>
+<span class="sd">    L : float</span>
+<span class="sd">        Length of the box in atomic units</span>
+<span class="sd">    M : float</span>
+<span class="sd">        Mass of the particle in atomic units</span>
+<span class="sd">    x_delta : float</span>
+<span class="sd">        Position of the delta function potential in atomic units</span>
+<span class="sd">        </span>
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    H : numpy.ndarray</span>
+<span class="sd">        Total Hamiltonian matrix (n_basis × n_basis)</span>
+<span class="sd">    T : numpy.ndarray</span>
+<span class="sd">        Kinetic energy matrix (n_basis × n_basis)</span>
+<span class="sd">    V : numpy.ndarray</span>
+<span class="sd">        Potential energy matrix (n_basis × n_basis)</span>
+<span class="sd">         </span>
+<span class="sd">    Example</span>
+<span class="sd">    -------</span>
+<span class="sd">    &gt;&gt;&gt; H, T, V = build_matrices(n_basis=3, L=10.0, M=1.0, x_delta=5.0)</span>
+<span class="sd">    </span>
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+<span class="sd">    Matrix indices run from 0 to n_basis-1, corresponding to quantum numbers</span>
+<span class="sd">    n, m from 1 to n_basis.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">H</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">n_basis</span><span class="p">,</span> <span class="n">n_basis</span><span class="p">))</span>
+    <span class="n">T</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">n_basis</span><span class="p">,</span> <span class="n">n_basis</span><span class="p">))</span>
+    <span class="n">V</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">n_basis</span><span class="p">,</span> <span class="n">n_basis</span><span class="p">))</span>
+    
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_basis</span><span class="p">):</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>  <span class="c1"># i starts from 0 but quantum number n starts at 1</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_basis</span><span class="p">):</span>
+            <span class="n">m</span> <span class="o">=</span> <span class="n">j</span> <span class="o">+</span> <span class="mi">1</span>  <span class="c1"># j starts at 0 but quantum number m starts at 1</span>
+            <span class="n">H</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">Hamiltonian_matrix_element</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">L</span><span class="p">,</span> <span class="n">M</span><span class="p">,</span> <span class="n">x_delta</span><span class="p">)</span>
+            <span class="n">T</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">Kinetic_matrix_element</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">L</span><span class="p">,</span> <span class="n">M</span><span class="p">)</span>
+            <span class="n">V</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">Potential_matrix_element</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">L</span><span class="p">,</span> <span class="n">x_delta</span><span class="p">)</span>
+    
+    <span class="k">return</span> <span class="n">H</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">V</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The following line calls our <code class="docutils literal notranslate"><span class="pre">build_matrices</span></code> function to build <span class="math notranslate nohighlight">\({\bf H}\)</span>, <span class="math notranslate nohighlight">\({\bf T}\)</span>, and <span class="math notranslate nohighlight">\({\bf V}\)</span> matrices.
+We will call the array that stores <span class="math notranslate nohighlight">\({\bf H}\)</span> <code class="docutils literal notranslate"><span class="pre">Hamiltonian_matrix</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n_basis</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">Hamiltonian_matrix</span><span class="p">,</span> <span class="n">Kinetic_matrix</span><span class="p">,</span> <span class="n">Potential_matrix</span> <span class="o">=</span> <span class="n">build_matrices</span><span class="p">(</span><span class="n">n_basis</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">L</span><span class="o">=</span><span class="mf">10.0</span><span class="p">,</span> <span class="n">M</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">x_delta</span><span class="o">=</span><span class="mf">5.0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The following lines will find the eigenvalues and eigenvectors of <span class="math notranslate nohighlight">\({\bf H}\)</span>.  The lowest energy
+eigenvalue will be the variational estimate of the ground-state energy and the associated eigenvector
+will be the variational estimate of the ground-state wavefunction.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># compute eigenvalues and eigenvectors of Hamiltonian_matrix</span>
+<span class="c1"># store eigenvalues to E_opt and eigenvectors to c_opt</span>
+<span class="n">E_opt</span><span class="p">,</span> <span class="n">c_opt</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">eigh</span><span class="p">(</span><span class="n">Hamiltonian_matrix</span><span class="p">)</span>
+
+<span class="c1"># print lowest eigenvalues corresponding to the </span>
+<span class="c1"># variational estimate of the ground state energy</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">F</span><span class="s1">&#39;The variational ground state energy with </span><span class="si">{</span><span class="n">n_basis</span><span class="si">}</span><span class="s1"> basis functions is </span><span class="si">{</span><span class="n">E_opt</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">:</span><span class="s1">.6f</span><span class="si">}</span><span class="s1"> atomic units&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="visualizing-the-variational-ground-state">
+<h3>Visualizing the variational ground-state<a class="headerlink" href="#visualizing-the-variational-ground-state" title="Link to this heading">#</a></h3>
+<p>Now that we have the variational eigenvectors (along with the eigenvalues), we can visualize the
+variational ground-state wavefunction by expanding it in terms of the basis functions <span class="math notranslate nohighlight">\(\psi_n(x)\)</span> using
+the expansion coefficients from the ground-state eigenvector:
+$<span class="math notranslate nohighlight">\( \Phi(x) = \sum_n c_n \psi_n(x). \)</span>$
+The ground-state eigenvector can be accessed as a slice of <code class="docutils literal notranslate"><span class="pre">c_opt</span></code> as follows:
+<code class="docutils literal notranslate"><span class="pre">c_opt[:,0]</span></code></p>
+<p>We will build a numpy array of values from this expansion and plot it using <code class="docutils literal notranslate"><span class="pre">pyplot</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">L</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="c1"># Initialize a numpy array for Phi_gs as an array of zeros with the same length as x</span>
+<span class="n">Phi_gs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+<span class="c1"># Loop through the basis states and add c_n ψ_n(x) to Phi_gs </span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_basis</span><span class="p">):</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>  <span class="c1"># Quantum number starts at 1</span>
+    <span class="n">Phi_gs</span> <span class="o">+=</span> <span class="n">c_opt</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">energy_eigenfunction</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">L</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+    
+<span class="c1"># Plot the variational ground state along with the ground state of the ordinary PIB</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">Phi_gs</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Variational Ground-State Probability Density&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">energy_eigenfunction</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">L</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;PIB Ground State Probability Density&quot;</span><span class="p">)</span>
+
+<span class="c1"># Optionally plot the delta potential</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">V</span><span class="p">,</span> <span class="s2">&quot;purple&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Potential&quot;</span><span class="p">)</span>
+
+<span class="c1"># Set y-axis limits (scaled by box length)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span> <span class="o">/</span> <span class="n">L</span> <span class="o">*</span> <span class="mf">1.5</span><span class="p">)</span>
+
+<span class="c1"># Add labels and legend</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Position (a.u.)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Probability Density (a.u.⁻¹)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="questions-part-2">
+<h2>Questions Part 2:<a class="headerlink" href="#questions-part-2" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Is the energy you calculated above higher or lower than the ground state energy of the ordinary particle in a box system (that is, without the delta function potential)?</p></li>
+<li><p>Why do you think mixing in functions that correspond to excited states in the ordinary particle in a box system actually helped to improve (i.e. lower) your energy in the system with the delta function potential?</p></li>
+<li><p>Increase the number of basis functions to 50 (so that <span class="math notranslate nohighlight">\({\bf H}\)</span> is a 50x50 matrix and <span class="math notranslate nohighlight">\({\bf c}\)</span> is a vector with 50 entries) and repeat your calculation of the variational estimate of the ground state energy.  Does the energy improve (lower) compared to what it was when 3 basis functions were used?  Do you notice any difference in the plot of the variational estimate of the ground-state probability density?</p></li>
+</ol>
+</section>
+<section id="behavior-of-total-energy-kinetic-energy-and-potential-energy-functionals-with-basis-set-size">
+<h2>Behavior of Total Energy, Kinetic Energy, and Potential Energy functionals with basis set size.<a class="headerlink" href="#behavior-of-total-energy-kinetic-energy-and-potential-energy-functionals-with-basis-set-size" title="Link to this heading">#</a></h2>
+<p>Typically speaking, the quality of the variational ground-state energy improves with the basis set size.
+Here we will look at the behavior of the total energy, the kinetic energy, and the potential energy of the
+trial wavefunction as a function of basis set size.</p>
+<p>For a given trial wavefunction (as determined by the variationally determined ground-state eigenvector <span class="math notranslate nohighlight">\({\bf c}\)</span>,
+we can define the total energy as
+\begin{equation}
+E = {\bf c}^t {\bf H} {\bf c}
+\end{equation}
+the kinetic energy as
+\begin{equation}
+T = {\bf c}^t {\bf T} {\bf c},
+\end{equation}
+and the potential energy as
+\begin{equation}
+V = {\bf c}^t {\bf V} {\bf c}.
+\end{equation}</p>
+<p>where <span class="math notranslate nohighlight">\({\bf c}^t\)</span> is just the transpose of <span class="math notranslate nohighlight">\({\bf c}\)</span>. We will perform this computation for
+basis set sizes spanning <code class="docutils literal notranslate"><span class="pre">n_basis</span> <span class="pre">=</span> <span class="pre">2</span></code> to <code class="docutils literal notranslate"><span class="pre">n_basis</span> <span class="pre">=</span> <span class="pre">202</span></code>, and we will compare to the
+ground state and first excited state of the ordinary particle in a box (<span class="math notranslate nohighlight">\(E_1\)</span> and <span class="math notranslate nohighlight">\(E_2\)</span>).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define physical parameters</span>
+<span class="n">L</span> <span class="o">=</span> <span class="mf">10.0</span>      <span class="c1"># Length of the box in atomic units</span>
+<span class="n">M</span> <span class="o">=</span> <span class="mf">1.0</span>       <span class="c1"># Mass of the particle in atomic units</span>
+<span class="n">x_delta</span> <span class="o">=</span> <span class="mf">5.0</span> <span class="c1"># Position of the delta function potential in atomic units</span>
+
+<span class="c1"># Initialize lists to store results</span>
+<span class="n">n_basis_list</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">E_list</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">T_list</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">V_list</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">E_1_list</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">E_2_list</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="c1"># Loop over different basis set sizes</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">202</span><span class="p">,</span> <span class="mi">2</span><span class="p">):</span>
+    <span class="n">n_basis_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    
+    <span class="c1"># Build matrices with proper parameters</span>
+    <span class="n">H</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">V</span> <span class="o">=</span> <span class="n">build_matrices</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">L</span><span class="p">,</span> <span class="n">M</span><span class="p">,</span> <span class="n">x_delta</span><span class="p">)</span>
+    
+    <span class="c1"># Diagonalize Hamiltonian to get eigenvalues and eigenvectors</span>
+    <span class="n">e_t</span><span class="p">,</span> <span class="n">c_t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">eigh</span><span class="p">(</span><span class="n">H</span><span class="p">)</span>
+    
+    <span class="c1"># Store ground state energy</span>
+    <span class="n">E_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">e_t</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    
+    <span class="c1"># Calculate kinetic energy expectation value: &lt;Ψ|T|Ψ&gt;</span>
+    <span class="n">T_c</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="n">c_t</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">])</span>
+    <span class="n">T_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="n">c_t</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]),</span> <span class="n">T_c</span><span class="p">))</span>
+    
+    <span class="c1"># Calculate potential energy expectation value: &lt;Ψ|V|Ψ&gt;</span>
+    <span class="n">V_c</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">V</span><span class="p">,</span> <span class="n">c_t</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">])</span>
+    <span class="n">V_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="n">c_t</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]),</span> <span class="n">V_c</span><span class="p">))</span>
+    
+    <span class="c1"># Store unperturbed PIB energies for first two states</span>
+    <span class="n">E_1_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">T</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>  <span class="c1"># E_1 = n=1 eigenvalue</span>
+    <span class="n">E_2_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">T</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>  <span class="c1"># E_2 = n=2 eigenvalue</span>
+
+<span class="c1"># Convert to numpy arrays for easier manipulation</span>
+<span class="n">n_basis_list</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">n_basis_list</span><span class="p">)</span>
+<span class="n">E_list</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">E_list</span><span class="p">)</span>
+<span class="n">T_list</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">T_list</span><span class="p">)</span>
+<span class="n">V_list</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">V_list</span><span class="p">)</span>
+<span class="n">E_1_list</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">E_1_list</span><span class="p">)</span>
+<span class="n">E_2_list</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">E_2_list</span><span class="p">)</span>
+    
+
+    
+    
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">n_basis_list</span><span class="p">,</span> <span class="n">E_list</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;E&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">n_basis_list</span><span class="p">,</span> <span class="n">T_list</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;T&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">n_basis_list</span><span class="p">,</span> <span class="n">V_list</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;V&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">n_basis_list</span><span class="p">,</span> <span class="n">E_1_list</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;E_1&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">n_basis_list</span><span class="p">,</span> <span class="n">E_2_list</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;E_2&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="finite-well">
+<h2>Finite Well<a class="headerlink" href="#finite-well" title="Link to this heading">#</a></h2>
+<p>As a second example, let us revisit the one-dimensional finite square well potential problem. For this problem, the potential has the form</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{align}
 V(x) = \begin{cases}
@@ -1885,12 +2390,6 @@ H_{ij} &amp;= \langle f_i | \hat{H} | f_j \rangle \\
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>W1 =  2.29461 Eh
-W2 =  8.13541 Eh
-</pre></div>
-</div>
-</div>
 </div>
 <p>Recall that the exact energies for this problem that we determined in an earlier notebook were</p>
 <div class="math notranslate nohighlight">
@@ -1924,12 +2423,8 @@ E_2 &amp;= 8.13715 E_\text{h}
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="../../_images/07951565d7fa958cb1bbcd47ee9eed6e6b68011fb57da8e3e2d1f48a24ee9ff2.png" src="../../_images/07951565d7fa958cb1bbcd47ee9eed6e6b68011fb57da8e3e2d1f48a24ee9ff2.png" />
-</div>
 </div>
 <p>If you plot these approximate wave functions alongside the exact wave functions determined in a previous notebook, you will find that they are indistinguishable on the scale of this figure.</p>
-</section>
 </section>
 </section>
 
@@ -1997,6 +2492,7 @@ E_2 &amp;= 8.13715 E_\text{h}
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Chapter 7: The Variation Theorem</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-variation-theorem-for-ground-states">The Variation Theorem for Ground States</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-variation-theorem-for-excited-states">The Variation Theorem for Excited States</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-linear-variation-method">The Linear Variation Method</a><ul class="nav section-nav flex-column">
@@ -2007,6 +2503,24 @@ E_2 &amp;= 8.13715 E_\text{h}
 </ul>
 </li>
 </ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#approach">Approach</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#form-of-the-trial-wavefunction">Form of the trial wavefunction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#form-of-the-energy-functional-of-the-trial-wavefunction">Form of the energy functional of the trial wavefunction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#atomic-units">Atomic Units</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solving-the-linear-variational-problem">Solving the Linear Variational Problem</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#questions-part-1">Questions Part 1:</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#variational-optimization">Variational optimization</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#visualizing-the-variational-ground-state">Visualizing the variational ground-state</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#questions-part-2">Questions Part 2:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#behavior-of-total-energy-kinetic-energy-and-potential-energy-functionals-with-basis-set-size">Behavior of Total Energy, Kinetic Energy, and Potential Energy functionals with basis set size.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#finite-well">Finite Well</a></li>
+</ul>
+</li>
+</ul>
+
   </nav></div>
 
 </div></div>
