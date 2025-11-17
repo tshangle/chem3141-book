@@ -499,7 +499,7 @@ document.write(`
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-potential-energy-scan">⚙️ Step 1: Potential Energy Scan</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-numerical-gradient-from-energy-differences">🧮 Step 2: Numerical Gradient from Energy Differences</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#step-8-1d-newtonraphson-geometry-optimization-of-co">🧮 Step 8: 1D Newton–Raphson Geometry Optimization of CO</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#preview-toward-quasi-newton-bfgs">🌱 Preview: Toward Quasi-Newton (BFGS)</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#toward-quasi-newton-bfgs">🌱 Toward Quasi-Newton (BFGS)</a></li>
 </ul>
 
             </nav>
@@ -1313,13 +1313,16 @@ the second derivative (curvature) numerically using finite differences.</p>
 </div>
 </div>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="preview-toward-quasi-newton-bfgs">
-<h1>🌱 Preview: Toward Quasi-Newton (BFGS)<a class="headerlink" href="#preview-toward-quasi-newton-bfgs" title="Link to this heading">#</a></h1>
-<p>In the next section, we’ll generalize this:</p>
-<p>Replace explicit finite-difference Hessians with an updated estimate of curvature.</p>
-<p>Apply the BFGS update rule, which efficiently refines the Hessian using gradient changes between steps.</p>
-<p>This will bring us from the conceptually exact but expensive Newton–Raphson approach
-to a practically efficient optimization algorithm used in real quantum chemistry geometry optimizers.</p>
+<section class="tex2jax_ignore mathjax_ignore" id="toward-quasi-newton-bfgs">
+<h1>🌱 Toward Quasi-Newton (BFGS)<a class="headerlink" href="#toward-quasi-newton-bfgs" title="Link to this heading">#</a></h1>
+<p>Quasi-Newton methods like BFGS avoid explicit construction of the Hessian matrix, and instead approximate the Hessian information using gradient information.  One common quasi-Newton method is called the BFGS algorithm, which you can read about <a class="reference external" href="https://towardsdatascience.com/bfgs-in-a-nutshell-an-introduction-to-quasi-newton-methods-21b0e13ee504/">here</a> and <a class="reference external" href="https://en.wikipedia.org/wiki/Broyden%E2%80%93Fletcher%E2%80%93Goldfarb%E2%80%93Shanno_algorithm">here</a>.</p>
+<p><strong>Next Steps</strong>
+Try your hand at adding a function <code class="docutils literal notranslate"><span class="pre">BFGS_Update</span></code> that will take in position and gradient information and return an approximate Hessian matrix following the BFGS algorithm.  Some questions to consider include:</p>
+<ol class="arabic simple">
+<li><p>How many positions vectors are needed (do you just need the current position vector, the current and one past position vectors, more?)</p></li>
+<li><p>How many gradient vectors are needed (do you just need the current gradient vector, the current and one past gradient vectors, more?)</p></li>
+<li><p>Are you directly building an approximation to the Hessian, or to the inverse of the Hessian?  Why?</p></li>
+</ol>
 </section>
 
     <script type="text/x-thebe-config">
@@ -1417,7 +1420,7 @@ to a practically efficient optimization algorithm used in real quantum chemistry
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-potential-energy-scan">⚙️ Step 1: Potential Energy Scan</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-numerical-gradient-from-energy-differences">🧮 Step 2: Numerical Gradient from Energy Differences</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#step-8-1d-newtonraphson-geometry-optimization-of-co">🧮 Step 8: 1D Newton–Raphson Geometry Optimization of CO</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#preview-toward-quasi-newton-bfgs">🌱 Preview: Toward Quasi-Newton (BFGS)</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#toward-quasi-newton-bfgs">🌱 Toward Quasi-Newton (BFGS)</a></li>
 </ul>
 
   </nav></div>

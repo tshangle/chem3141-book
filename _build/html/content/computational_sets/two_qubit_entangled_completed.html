@@ -219,10 +219,19 @@
 <li class="toctree-l1"><a class="reference internal" href="CO_Perturbation_Theory_Quartic.html">Vibrational Transitions in CO Using Perturbation Theory</a></li>
 
 
+<li class="toctree-l1"><a class="reference internal" href="CO_Variational.html">Vibrational Transitions in CO Using Variational Method</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Newton-Raphson.html">🧭 Guided Exercise: Newton–Raphson Step for a Quadratic Function</a></li>
 
 
 
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="linear_variational_method.html">Linear Variational Method</a></li>
 
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Resources</span></p>
@@ -1203,7 +1212,7 @@ forming superpositions that resemble the <strong>lower and upper polaritons</str
 <span class="c1"># 💡 Hint: The order of tensor products matters! </span>
 <span class="c1">#          (cavity ⊗ qubit1 ⊗ qubit2)</span>
 <span class="c1"># psi0 = np.kron( ..., np.kron( ..., ... ))</span>
-<span class="n">psi0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">kron</span><span class="p">(</span><span class="n">z_ket</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">kron</span><span class="p">(</span><span class="n">e_ket</span><span class="p">,</span> <span class="n">g_ket</span><span class="p">))</span>
+<span class="n">psi0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">kron</span><span class="p">(</span><span class="n">o_ket</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">kron</span><span class="p">(</span><span class="n">g_ket</span><span class="p">,</span> <span class="n">g_ket</span><span class="p">))</span>
 
 <span class="c1"># --- Example check (uncomment after building your vector) ---</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Shape of psi0:&quot;</span><span class="p">,</span> <span class="n">psi0</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
@@ -1477,7 +1486,7 @@ Shape of population array: (800, 8)
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/5e65fc93e32b18efe8d2e8d5a7d5896f0cf68fd1945a0a486aa92df9ef55331c.png" src="../../_images/5e65fc93e32b18efe8d2e8d5a7d5896f0cf68fd1945a0a486aa92df9ef55331c.png" />
+<img alt="../../_images/0c0d0d4122e3b0cdd214bd8b96f95be4482b5bf8f467f554c5c4c08584553b71.png" src="../../_images/0c0d0d4122e3b0cdd214bd8b96f95be4482b5bf8f467f554c5c4c08584553b71.png" />
 </div>
 </div>
 </section>
@@ -1528,7 +1537,7 @@ you’ll lose coherence and the Bell state fidelity will drop.
 
 <span class="c1"># --- ✏️ TODO 1: Construct the target Bell state |Ψ&gt; ---</span>
 <span class="c1"># 💡 Hint: It’s the antisymmetric superposition of |0ge&gt; and |0eg&gt;.</span>
-<span class="n">target_ket</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span> <span class="n">np</span><span class="o">.</span><span class="n">kron</span><span class="p">(</span><span class="n">z_ket</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">kron</span><span class="p">(</span><span class="n">g_ket</span><span class="p">,</span> <span class="n">e_ket</span><span class="p">))</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">kron</span><span class="p">(</span><span class="n">z_ket</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">kron</span><span class="p">(</span><span class="n">e_ket</span><span class="p">,</span> <span class="n">g_ket</span><span class="p">)))</span>
+<span class="n">target_ket</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span> <span class="n">np</span><span class="o">.</span><span class="n">kron</span><span class="p">(</span><span class="n">z_ket</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">kron</span><span class="p">(</span><span class="n">g_ket</span><span class="p">,</span> <span class="n">e_ket</span><span class="p">))</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">kron</span><span class="p">(</span><span class="n">z_ket</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">kron</span><span class="p">(</span><span class="n">e_ket</span><span class="p">,</span> <span class="n">g_ket</span><span class="p">)))</span>
 
 <span class="c1"># --- ✏️ TODO 2: Form the corresponding density matrix ρ_target = |Ψ⟩⟨Ψ| ---</span>
 <span class="n">target_rho</span> <span class="o">=</span> <span class="n">target_ket</span> <span class="o">@</span> <span class="n">target_ket</span><span class="o">.</span><span class="n">conj</span><span class="p">()</span><span class="o">.</span><span class="n">T</span>
@@ -1560,8 +1569,8 @@ you’ll lose coherence and the Bell state fidelity will drop.
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Final density matrix (ρ_final):
 [[ 0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00]
- [ 0.00  0.50 -0.50  0.00  0.00  0.00  0.00  0.00]
- [ 0.00 -0.50  0.50  0.00  0.00  0.00  0.00  0.00]
+ [ 0.00  0.50  0.50  0.00  0.00  0.00  0.00  0.00]
+ [ 0.00  0.50  0.50  0.00  0.00  0.00  0.00  0.00]
  [ 0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00]
  [ 0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00]
  [ 0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00]
@@ -1570,8 +1579,8 @@ you’ll lose coherence and the Bell state fidelity will drop.
 
 Target density matrix (ρ_target):
 [[ 0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00]
- [ 0.00  0.50 -0.50  0.00  0.00  0.00  0.00  0.00]
- [ 0.00 -0.50  0.50  0.00  0.00  0.00  0.00  0.00]
+ [ 0.00  0.50  0.50  0.00  0.00  0.00  0.00  0.00]
+ [ 0.00  0.50  0.50  0.00  0.00  0.00  0.00  0.00]
  [ 0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00]
  [ 0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00]
  [ 0.00  0.00  0.00  0.00  0.00  0.00  0.00  0.00]
