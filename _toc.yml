@@ -28,6 +28,7 @@ parts:
       - file: content/computational_sets/CO_Variational
       - file: content/computational_sets/Newton-Raphson
       - file: content/computational_sets/linear_variational_method
+      - file: content/computational_sets/Visualization_of_Spherical_Harmonics
 
   - caption: Resources
     chapters:
