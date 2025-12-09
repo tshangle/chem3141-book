@@ -54,6 +54,101 @@ then the bibliography is inserted with:
 This is just a simple starter to get you started.
 You can learn a lot more at [jupyterbook.org](https://jupyterbook.org).
 
+## Workflow for Pull Requests
+
+## 1. Prepare Your Notebook
+1. Finish writing your Jupyter notebook (`.ipynb`).
+2. Give it a descriptive filename  
+   *Example: `computational_set_05.ipynb`*.
+
+## 2. Place the Notebook in the Correct Folder
+On your computer, locate your local clone of your **fork** of the repository.  
+For a computational notebook, move it into the folder `chem3141-book/conent/computational_sets/
+
+
+Ensure the notebook is inside this directory.
+
+---
+
+## 3. Open GitHub Desktop
+1. Launch **GitHub Desktop**.
+2. Confirm that the **Current Repository** is your fork of `chem3141-book`.
+
+---
+
+## 4. Review Changes
+GitHub Desktop will show the new notebook under **Changes**.
+
+- Make sure your notebook file is checked in the list.
+
+---
+
+## 5. Write a Commit Message
+In the bottom-left panel:
+
+- **Summary:**  
+  `Add new computational set notebook`
+
+- **Description (optional):**  
+  Brief explanation of what the notebook contains.
+
+---
+
+## 6. Commit the Changes
+Click:
+
+**Commit to main**  
+(or whichever branch you are working on)
+
+---
+
+## 7. Push Changes to Your Fork on GitHub
+Click:
+
+**Push origin**
+
+This uploads your changes to your GitHub fork.
+
+---
+
+## 8. Open a Pull Request
+GitHub Desktop may show a banner with **Create Pull Request** — click it.
+
+If not:
+
+1. Go to your fork on GitHub.com  
+2. Click **Compare & pull request**
+
+---
+
+## 9. Fill Out the Pull Request Form
+- **Title:**  
+  `Add new notebook to computational_sets folder`
+
+- **Description:**  
+  Briefly describe the notebook and why you're adding it.
+
+Check that:
+- **base repository:** the main `chem3141-book`  
+- **base branch:** `main`  
+- **compare branch:** your fork’s branch (usually `main`)
+
+---
+
+## 10. Submit the Pull Request
+Click:
+
+**Create pull request**
+
+Your submission is now ready for review by the course maintainers!
+
+---
+
+## 🎉 You’re Done!
+Once the pull request is reviewed and merged, your notebook will become part of the official course materials.
+
+
+
 ## Workflow for making edits
 
 1.  Make edits within the main branch
